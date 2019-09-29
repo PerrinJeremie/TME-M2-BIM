@@ -1,0 +1,32 @@
+From Figure 1:
+
+
+bovine ––––*
+           |
+pigs   ––––*––*
+	      |
+horse  –––––––*––*
+		 |
+mouse  ––––––––––*–––––
+
+From UPGMA :
+
+
+horse  ––––*
+           |
+pigs   ––––*––*
+	      |
+bovine –––––––*––*
+		 |
+mouse  ––––––––––*–––––
+
+
+From NJ : (Similar to Figure 1)
+
+bovine ––––*
+           |
+pigs   ––––*––*
+	      |
+horse  –––––––*––*
+		 |
+mouse  ––––––––––*–––––

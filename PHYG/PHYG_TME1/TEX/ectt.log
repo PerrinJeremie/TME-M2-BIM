@@ -1,0 +1,1307 @@
+This is METAFONT, Version 2.7182818 (TeX Live 2016/Debian) (preloaded base=mf 2018.12.10)  27 SEP 2019 22:04
+**\mode:=ljfour; mag:=1; nonstopmode; input ectt
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/ectt.mf
+>> gensize
+! Internal quantity `designsize' must receive a known value.
+<to be read again> 
+                   ;
+l.21 font_size (gensize*pt#);
+                             
+I can't set an internal quantity to anything but a known
+numeric value, so I'll have to ignore this assignment.
+
+>> basedef
+! Isolated expression.
+<to be read again> 
+                   (
+l.22 basedef                             (
+                                                8,      9,     10,     12);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.22 basedef                             (
+                                                8,      9,     10,     12);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.23 gendef   [1/36pt#](
+                         u#             )(     17,   18.9,     21,   24.7);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.23 gendef   [1/36pt#](
+                         u#             )(     17,   18.9,     21,   24.7);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.24 gendef   [1/36pt#](
+                         width_adj#     )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.24 gendef   [1/36pt#](
+                         width_adj#     )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.25 gendef   [1/36pt#](
+                         serif_fit#     )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.25 gendef   [1/36pt#](
+                         serif_fit#     )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.26 gendef   [1/36pt#](
+                         cap_serif_fit# )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.26 gendef   [1/36pt#](
+                         cap_serif_fit# )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.27 gendef   [1/36pt#](
+                         letter_fit#    )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.27 gendef   [1/36pt#](
+                         letter_fit#    )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.28 gendef   [1/36pt#](
+                         body_height#   )(    200,    225,    250,    300);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.28 gendef   [1/36pt#](
+                         body_height#   )(    200,    225,    250,    300);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.29 gendef   [1/36pt#](
+                         asc_height#    )(    176,    198,    220,    264);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.29 gendef   [1/36pt#](
+                         asc_height#    )(    176,    198,    220,    264);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.30 gendef   [1/36pt#](
+                         cap_height#    )(    176,    198,    220,    264);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.30 gendef   [1/36pt#](
+                         cap_height#    )(    176,    198,    220,    264);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.31 gendef   [1/36pt#](
+                         fig_height#    )(    176,    198,    220,    264);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.31 gendef   [1/36pt#](
+                         fig_height#    )(    176,    198,    220,    264);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.32 gendef   [1/36pt#](
+                         x_height#      )(    124,  139.5,    155,    186);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.32 gendef   [1/36pt#](
+                         x_height#      )(    124,  139.5,    155,    186);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.33 gendef   [1/36pt#](
+                         math_axis#     )(     88,     99,    110,    132);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.33 gendef   [1/36pt#](
+                         math_axis#     )(     88,     99,    110,    132);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.34 gendef   [1/36pt#](
+                         bar_height#    )(     63,     71,     79,     95);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.34 gendef   [1/36pt#](
+                         bar_height#    )(     63,     71,     79,     95);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.35 gendef   [1/36pt#](
+                         comma_depth#   )(     40,     45,     50,     60);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.35 gendef   [1/36pt#](
+                         comma_depth#   )(     40,     45,     50,     60);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.36 gendef   [1/36pt#](
+                         desc_depth#    )(     64,     72,     80,     96);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.36 gendef   [1/36pt#](
+                         desc_depth#    )(     64,     72,     80,     96);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.37 gendef   [1/36pt#](
+                         acc_height#    )(     60,   67.5,     75,     90);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.37 gendef   [1/36pt#](
+                         acc_height#    )(     60,   67.5,     75,     90);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.38 gendef   [1/36pt#](
+                         dot_height#    )(     60,   67.5,     75,     90);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.38 gendef   [1/36pt#](
+                         dot_height#    )(     60,   67.5,     75,     90);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.39 gendef   [1/36pt#](
+                         udot_height#   )(   47.2,   53.1,     59,   70.8);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.39 gendef   [1/36pt#](
+                         udot_height#   )(   47.2,   53.1,     59,   70.8);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.40 gendef   [1/36pt#](
+                         crisp#         )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.40 gendef   [1/36pt#](
+                         crisp#         )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.41 gendef   [1/36pt#](
+                         tiny#          )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.41 gendef   [1/36pt#](
+                         tiny#          )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.42 gendef   [1/36pt#](
+                         fine#          )(     18,     20,     21,     22);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.42 gendef   [1/36pt#](
+                         fine#          )(     18,     20,     21,     22);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.43 gendef   [1/36pt#](
+                         thin_join#     )(     18,     20,     21,     22);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.43 gendef   [1/36pt#](
+                         thin_join#     )(     18,     20,     21,     22);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.44 gendef   [1/36pt#](
+                         hair#          )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.44 gendef   [1/36pt#](
+                         hair#          )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.45 gendef   [1/36pt#](
+                         stem#          )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.45 gendef   [1/36pt#](
+                         stem#          )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.46 gendef   [1/36pt#](
+                         curve#         )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.46 gendef   [1/36pt#](
+                         curve#         )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.47 gendef   [1/36pt#](
+                         ess#           )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.47 gendef   [1/36pt#](
+                         ess#           )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.48 gendef   [1/36pt#](
+                         flare#         )(     28,     30,     32,     35);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.48 gendef   [1/36pt#](
+                         flare#         )(     28,     30,     32,     35);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.49 gendef   [1/36pt#](
+                         dot_size#      )(     31,     33,     36,     39);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.49 gendef   [1/36pt#](
+                         dot_size#      )(     31,     33,     36,     39);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.50 gendef   [1/36pt#](
+                         cap_hair#      )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.50 gendef   [1/36pt#](
+                         cap_hair#      )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.51 gendef   [1/36pt#](
+                         cap_stem#      )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.51 gendef   [1/36pt#](
+                         cap_stem#      )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.52 gendef   [1/36pt#](
+                         cap_curve#     )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.52 gendef   [1/36pt#](
+                         cap_curve#     )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.53 gendef   [1/36pt#](
+                         cap_ess#       )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.53 gendef   [1/36pt#](
+                         cap_ess#       )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.54 gendef   [1/36pt#](
+                         rule_thickness#)(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.54 gendef   [1/36pt#](
+                         rule_thickness#)(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.55 gendef   [1/36pt#](
+                         dish#          )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.55 gendef   [1/36pt#](
+                         dish#          )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.56 gendef   [1/36pt#](
+                         bracket#       )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.56 gendef   [1/36pt#](
+                         bracket#       )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.57 gendef   [1/36pt#](
+                         jut#           )(     27,     31,     34,     39);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.57 gendef   [1/36pt#](
+                         jut#           )(     27,     31,     34,     39);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.58 gendef   [1/36pt#](
+                         cap_jut#       )(     27,     31,     34,     39);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.58 gendef   [1/36pt#](
+                         cap_jut#       )(     27,     31,     34,     39);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.59 gendef   [1/36pt#](
+                         beak_jut#      )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.59 gendef   [1/36pt#](
+                         beak_jut#      )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.60 gendef   [1/36pt#](
+                         beak#          )(     27,     31,     34,     39);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.60 gendef   [1/36pt#](
+                         beak#          )(     27,     31,     34,     39);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.61 gendef   [1/36pt#](
+                         vair#          )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.61 gendef   [1/36pt#](
+                         vair#          )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.62 gendef   [1/36pt#](
+                         notch_cut#     )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.62 gendef   [1/36pt#](
+                         notch_cut#     )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.63 gendef   [1/36pt#](
+                         bar#           )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.63 gendef   [1/36pt#](
+                         bar#           )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.64 gendef   [1/36pt#](
+                         slab#          )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.64 gendef   [1/36pt#](
+                         slab#          )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.65 gendef   [1/36pt#](
+                         cap_bar#       )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.65 gendef   [1/36pt#](
+                         cap_bar#       )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.66 gendef   [1/36pt#](
+                         cap_band#      )(     19,     21,     22,     25);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.66 gendef   [1/36pt#](
+                         cap_band#      )(     19,     21,     22,     25);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.67 gendef   [1/36pt#](
+                         cap_notch_cut# )(     22,     24,     25,     28);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.67 gendef   [1/36pt#](
+                         cap_notch_cut# )(     22,     24,     25,     28);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.68 gendef   [1/36pt#](
+                         serif_drop#    )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.68 gendef   [1/36pt#](
+                         serif_drop#    )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.69 gendef   [1/36pt#](
+                         stem_corr#     )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.69 gendef   [1/36pt#](
+                         stem_corr#     )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.70 gendef   [1/36pt#](
+                         vair_corr#     )(      0,      0,      0,      0);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.70 gendef   [1/36pt#](
+                         vair_corr#     )(      0,      0,      0,      0);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.71 gendef   [1/36pt#](
+                         apex_corr#     )(      8,      9,     10,     11);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.71 gendef   [1/36pt#](
+                         apex_corr#     )(      8,      9,     10,     11);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.72 gendef   [1/36pt#](
+                         o#             )(      3,    3.5,      4,      5);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.72 gendef   [1/36pt#](
+                         o#             )(      3,    3.5,      4,      5);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef0.02777
+! Isolated expression.
+<to be read again> 
+                   (
+l.73 gendef   [1/36pt#](
+                         apex_o#        )(      3,      3,      3,      4);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.73 gendef   [1/36pt#](
+                         apex_o#        )(      3,      3,      3,      4);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef
+! Isolated expression.
+<to be read again> 
+                   (
+l.75 gendef            (
+                         fudge          )(    .81,    .81,    .81,    .81);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.75 gendef            (
+                         fudge          )(    .81,    .81,    .81,    .81);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> gendef
+! Isolated expression.
+<to be read again> 
+                   (
+l.76 gendef            (
+                         math_spread    )(   [-1],   [-1],   [-1],   [-1]);
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+! Extra tokens will be flushed.
+<to be read again> 
+                   (
+l.76 gendef            (
+                         math_spread    )(   [-1],   [-1],   [-1],   [-1]);
+I've just read as much of that statement as I could fathom,
+so a semicolon should have been next. It's very puzzling...
+but I'll try to get myself back together, by ignoring
+everything up to the next `;'. Please insert a semicolon
+now in front of anything that you don't want me to delete.
+(See Chapter 27 of The METAFONTbook for an example.)
+
+>> square_dots
+>> false
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.80 square_dots:=false;
+                        
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> hefty
+>> true
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.81 hefty:=true;
+                 
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> serifs
+>> true
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.82 serifs:=true;
+                  
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> monospace
+>> true
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.83 monospace:=true;
+                     
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> true_mono
+>> true
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.84 true_mono:=true;
+                     
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> variant_g
+>> false
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.85 variant_g:=false;
+                      
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> low_asterisk
+>> true
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.86 low_asterisk:=true;
+                        
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> math_fitting
+>> false
+! Equation cannot be performed (numeric=boolean).
+<to be read again> 
+                   ;
+l.87 math_fitting:=false;
+                         
+I'm sorry, but I don't know how to make such things equal.
+(See the two expressions just above the error message.)
+
+>> clear_extra_memory
+! Isolated expression.
+<to be read again> 
+                   ;
+l.89 clear_extra_memory;
+                        
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+>> generate.exroman
+! Isolated expression.
+<to be read again> 
+                   ;
+l.93 endinput;
+              
+I couldn't find an `=' or `:=' after the
+expression that is shown above this error message,
+so I guess I'll just ignore it and carry on.
+
+)
+! Emergency stop.
+<*> \mode:=ljfour; mag:=1; nonstopmode; input ectt
+                                                  
+*** (job aborted, no legal end found)
+
+

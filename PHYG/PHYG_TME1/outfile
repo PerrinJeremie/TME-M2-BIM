@@ -1,0 +1,303 @@
+
+  72 Populations
+
+Neighbor-Joining/UPGMA method version 3.697
+
+
+ Neighbor-joining method
+
+ Negative branch lengths allowed
+
+
+  +Xiphophoru
+  ! 
+  !               +-----Oreochromi
+  !            +-16  
+  !            !  ! +Nothobranc
+  !            !  +-6 
+  !            !    +Nothobranc
+  !            !  
+  !         +-18     +-------Oryzias_la
+  !         !  !     !  
+  !         !  !  +-12   +---Epinephelu
+  !         !  !  !  ! +-5 
+  !         !  !  !  +-7 +---Paralichth
+  !      +-19  +-15    ! 
+  !      !  !     !    +Platichthy
+  !      !  !     !  
+  !      !  !     +-----Kryptolebi
+  !      !  !  
+  !      !  +------Tetraodon_
+  !      !  
+  !      !            +-Xenopus_la
+  !      !     +-----17  
+  !      !     !      +-Xenopus_Si
+  3-----21     !  
+  !      !     !                    +Coregonus_
+  !      !     !                  +-9 
+  !      !     !                  ! ! +Salmo_sala
+  !      !     !               +-20 +-8 
+  !      !     !               !  !   +Oncorhynch
+  !      !     !            +-22  !  
+  !      !     !            !  !  +Oncorhynch
+  !      !     !        +--24  !  
+  !      !     !        !   !  +Oncorhynch
+  !      +----31        !   !  
+  !            !     +-29   +Oncorhynch
+  !            !     !  !  
+  !            !     !  !  +-Pelteobagr
+  !            !  +-30  +-25  
+  !            !  !  !     +-Ictalurus_
+  !            !  !  !  
+  !            !  !  !  +---Barbus_bar
+  !            !  !  +-27  
+  !            !  !     +--Danio_reri
+  !            !  !  
+  !            !  !  +---------Ambystoma_
+  !            !  !  !  
+  !            +-32  !        +-------------Strongyloc
+  !               !  !        !  
+  !               !  !     +-26      +-------Saccogloss
+  !               !  !     !  !   +-11  
+  !               !  !     !  !   !  +--------Branchiost
+  !               !  !     !  +--13  
+  !               !  !     !      !      +-----Euprymna_s
+  !               !  !     !      !    +-1 
+  !               +-33     !      +----2 +Crassostre
+  !                  !  +-28           ! 
+  !                  !  !  !           +-Mytilus_ga
+  !                  !  !  !  
+  !                  !  !  !         +-Anolis_car
+  !                  !  !  !       +-4 
+  !                  !  !  !   +--10 +Meleagris_
+  !                  !  !  !   !   !  
+  !                  !  !  +--23   +Taeniopygi
+  !                  !  !      !  
+  !                  +-34      !  +--Tetraodon_
+  !                     !      +-14  
+  !                     !         +-Ornithorhy
+  !                     !  
+  !                     !  +---------Gallus_gal
+  !                     !  !  
+  !                     !  !   +---Monodelphi
+  !                     !  !   !  
+  !                     !  !   !  +--Loxodonta_
+  !                     +-35   !  !  
+  !                        !   !  !                 +Bubalus_bu
+  !                        !   !  !              +-40  
+  !                        !   !  !              !  !  +Bos_taurus
+  !                        !   !  !           +-43  +-39  
+  !                        !   !  !           !  !     +Bos_primig
+  !                        +--38  !        +-52  !  
+  !                            !  !        !  !  +Ovis_aries
+  !                            !  !        !  !  
+  !                            !  !     +-61  +Muntiacus_
+  !                            !  !     !  !  
+  !                            !  !     !  !  +-Delphinapt
+  !                            !  !     !  +-57  
+  !                            !  !     !     +-Sus_scrofa
+  !                            !  !  +-64  
+  !                            !  !  !  !     +Equus_asin
+  !                            +-65  !  !  +-55  
+  !                               !  !  !  !  !  +Equus_caba
+  !                               !  !  !  !  +-44  
+  !                               !  !  !  !     +Equidae   
+  !                               !  !  +-63  
+  !                               !  !     !     +-Ailuropoda
+  !                               !  !     !  +-46  
+  !                               !  !     +-56  +Canis_lupu
+  !                               !  !        !  
+  !                               !  !        +-Felis_catu
+  !                               !  !  
+  !                               !  !              +-Mastomys_n
+  !                               !  !           +-42  
+  !                               !  !           !  !  +-Rattus_nor
+  !                               !  !           !  +-41  
+  !                               !  !           !     !  +Mus_muscul
+  !                               !  !        +-59     +-36  
+  !                               !  !        !  !        +Murid_herp
+  !                               +-66        !  !  
+  !                                  !        !  !  +----Meriones_u
+  !                                  !     +-62  +-54  
+  !                                  !     !  !     !  +Mesocricet
+  !                                  !     !  !     +-37  
+  !                                  !     !  !        +Cricetulus
+  !                                  !     !  !  
+  !                                  !     !  +-Nannospala
+  !                                  !  +-69  
+  !                                  !  !  !     +Marmota_mo
+  !                                  !  !  !  +-45  
+  !                                  !  !  !  !  +Otospermop
+  !                                  !  !  !  !  
+  !                                  !  !  !  !  +-Oryctolagu
+  !                                  !  !  +-68  !  
+  !                                  !  !     !  !        +-Tupaia_bel
+  !                                  !  !     !  !        !  
+  !                                  !  !     !  !     +-51     +Chlorocebu
+  !                                  !  !     !  !     !  !  +-47  
+  !                                  !  !     +-67     !  !  !  +Macaca_mul
+  !                                  +-70        !     !  +-50  
+  !                                     !        !     !     !     +Nomascus_l
+  !                                     !        !  +-58     !  +-48  
+  !                                     !        !  !  !     +-49  +Homo_sapie
+  !                                     !        !  !  !        !  
+  !                                     !        +-60  !        +Pongo_abel
+  !                                     !           !  !  
+  !                                     !           !  +-Callithrix
+  !                                     !           !  
+  !                                     !           +Zea_mays  
+  !                                     !  
+  !                                     !  +--Cavia_porc
+  !                                     +-53  
+  !                                        +-Heteroceph
+  ! 
+  +Xiphophoru
+
+
+remember: this is an unrooted tree!
+
+Between        And            Length
+-------        ---            ------
+   3          Xiphophoru      0.00053
+   3            21            0.21862
+  21            19            0.05112
+  19            18            0.01508
+  18            16            0.02196
+  16          Oreochromi      0.18486
+  16             6            0.05653
+   6          Nothobranc     -0.00081
+   6          Nothobranc      0.00456
+  18            15            0.02615
+  15            12            0.02599
+  12          Oryzias_la      0.24007
+  12             7            0.02803
+   7             5            0.01644
+   5          Epinephelu      0.13101
+   5          Paralichth      0.13560
+   7          Platichthy      0.01488
+  15          Kryptolebi      0.20697
+  19          Tetraodon_      0.21014
+  21            31            0.18992
+  31            17            0.22163
+  17          Xenopus_la      0.06241
+  17          Xenopus_Si      0.06379
+  31            32            0.02817
+  32            30            0.04149
+  30            29            0.02034
+  29            24            0.13317
+  24            22            0.02481
+  22            20            0.04073
+  20             9            0.06591
+   9          Coregonus_      0.02396
+   9             8            0.01078
+   8          Salmo_sala      0.02091
+   8          Oncorhynch      0.02074
+  20          Oncorhynch     -0.07160
+  22          Oncorhynch     -0.03120
+  24          Oncorhynch     -0.01346
+  29            25            0.10378
+  25          Pelteobagr      0.05466
+  25          Ictalurus_      0.05401
+  30            27            0.04935
+  27          Barbus_bar      0.12074
+  27          Danio_reri      0.10649
+  32            33            0.00199
+  33          Ambystoma_      0.31457
+  33            34            0.02034
+  34            28            0.09598
+  28            26            0.07572
+  26          Strongyloc      0.46204
+  26            13            0.14247
+  13            11            0.02212
+  11          Saccogloss      0.25422
+  11          Branchiost      0.31200
+  13             2            0.16812
+   2             1            0.02519
+   1          Euprymna_s      0.19477
+   1          Crassostre     -0.00749
+   2          Mytilus_ga      0.03577
+  28            23            0.12685
+  23            10            0.11793
+  10             4            0.02591
+   4          Anolis_car      0.05672
+   4          Meleagris_     -0.01928
+  10          Taeniopygi     -0.00603
+  23            14            0.07562
+  14          Tetraodon_      0.06879
+  14          Ornithorhy      0.04948
+  34            35            0.05525
+  35          Gallus_gal      0.32859
+  35            38            0.11233
+  38          Monodelphi      0.11905
+  38            65            0.10621
+  65          Loxodonta_      0.10610
+  65            66            0.00369
+  66            64            0.00744
+  64            61            0.02047
+  61            52            0.02746
+  52            43            0.02855
+  43            40            0.02764
+  40          Bubalus_bu      0.02172
+  40            39            0.00799
+  39          Bos_taurus      0.00371
+  39          Bos_primig     -0.00099
+  43          Ovis_aries      0.02581
+  52          Muntiacus_      0.00356
+  61            57            0.00956
+  57          Delphinapt      0.03458
+  57          Sus_scrofa      0.05341
+  64            63            0.00854
+  63            55            0.02406
+  55          Equus_asin      0.00715
+  55            44            0.03226
+  44          Equus_caba      0.00766
+  44          Equidae        -0.00382
+  63            56            0.02099
+  56            46            0.02921
+  46          Ailuropoda      0.04200
+  46          Canis_lupu      0.03864
+  56          Felis_catu      0.06815
+  66            70            0.01452
+  70            69            0.00138
+  69            62            0.01957
+  62            59            0.01172
+  59            42            0.06178
+  42          Mastomys_n      0.06457
+  42            41            0.00565
+  41          Rattus_nor      0.05271
+  41            36            0.06730
+  36          Mus_muscul     -0.00172
+  36          Murid_herp      0.00963
+  59            54            0.00791
+  54          Meriones_u      0.13848
+  54            37            0.09317
+  37          Mesocricet      0.02189
+  37          Cricetulus      0.02510
+  62          Nannospala      0.06105
+  69            68            0.00376
+  68            45            0.06193
+  45          Marmota_mo      0.01651
+  45          Otospermop      0.00951
+  68            67            0.00394
+  67          Oryctolagu      0.06373
+  67            60            0.02409
+  60            58            0.00705
+  58            51            0.02077
+  51          Tupaia_bel      0.05871
+  51            50            0.00569
+  50            47            0.02298
+  47          Chlorocebu      0.00195
+  47          Macaca_mul      0.00315
+  50            49            0.00722
+  49            48            0.00445
+  48          Nomascus_l      0.03584
+  48          Homo_sapie      0.00866
+  49          Pongo_abel      0.01118
+  58          Callithrix      0.06525
+  60          Zea_mays       -0.01492
+  70            53            0.03947
+  53          Cavia_porc      0.09307
+  53          Heteroceph      0.03965
+   3          Xiphophoru      0.00592
+
+

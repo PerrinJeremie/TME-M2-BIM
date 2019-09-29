@@ -1,0 +1,114 @@
+\documentclass[]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % If you write in English
+\usepackage{a4wide}
+\usepackage{graphicx}
+
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{fancyvrb}
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=1em, % separation between frame and text
+	rulecolor=\color{Gray},
+	%,
+	labelposition=topline
+}
+
+%opening
+\title{TME1 - PHYG}
+\author{Jérémie Perrin}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercise 1 : UPGMA}
+\begin{figure}[h]
+	\includegraphics*[width = \linewidth, height =0.7\textheight]{ex1.jpg}
+\end{figure}
+
+\section{Exercise 2 : NJ}
+\begin{figure}[h]
+	\includegraphics*[width = \linewidth, height =0.7\textheight]{ex2.jpg}
+\end{figure}
+The most reliable tree is the one from Neighbor Joining. The matrix being additive, the Neighbor Joining algorithm constructs a tree which conserves the distance. Since the matrix is not ultrametric the UPGMA algorithm does not build a tree which conserves the distances. UPGMA constructs a rooted tree with all leaves being at same distance from the root, a property not all trees have.
+
+\newpage
+
+\section{Exercise 3 : PAH}
+\subsection{Question 1}
+\VerbatimInput[	label=\fbox{\color{Black}Aligned sequences - Clustal}]{3_1.txt}
+
+\subsection{Question 2}
+\VerbatimInput[	label=\fbox{\color{Black}Distance Matrix - Protdist}]{3_2.txt}
+
+\subsection{Question 3}
+\begin{figure}[h]
+\includegraphics*[width = \linewidth]{NJ_PH4H.pdf}
+\caption{NJ tree based on PH4H}
+\end{figure}
+\begin{figure}[h]
+	\includegraphics*[width = \linewidth]{UPGMA_PH4H.pdf}
+	\caption{UPGMA tree based on PH4H}
+\end{figure}
+
+\subsection{Question 4}
+The trees are the same if you consider that the root is actually the leaf. The topology is the same and distance very alike.
+
+
+\section{Exercise 4 : CFTR}
+\subsection{Question 1}
+\VerbatimInput[	label=\fbox{\color{Black}Distance Matrix - Protdist}]{4_1.txt}
+
+\newpage
+
+\subsection{Question 2}
+\begin{figure}[h]
+	\includegraphics*[width = 0.9\linewidth]{NJ_CFTR.pdf}
+	\caption{NJ tree based on CFTR}
+\end{figure}
+
+\begin{figure}[!h]
+	\includegraphics*[width = \linewidth]{UPGMA_CFTR.pdf}
+	\caption{UPGMA tree based on CFTR}
+\end{figure}
+
+\newpage 
+
+\subsection{Question 3}
+In UPGMA : Distant speciation and separate from the rest.
+IN NJ  : Also look separate from the rest.
+
+In the distance matrix the distance value is 0.098185. CFTR is very similar in mouse and rat. And both species are very different from all other species.
+
+\newpage 
+
+\subsection{Question 4}
+\VerbatimInput[	label=\fbox{\color{Black}Simplified Trees}]{4_4.txt}
+
+The pig is closer to bovine. The neighbor joining tree is correct, while UPGMA puts the horse closer to the pig.
+
+\newpage
+
+\section{Exercise 5 : P53}
+\subsection{Question 1}
+\begin{figure}[!h]
+	\includegraphics*[width = \linewidth, height = 0.85\textheight]{NJ_P53.pdf}
+	\caption{NJ tree based on P53}
+\end{figure}
+
+\subsection{Question 2}
+\VerbatimInput[	label=\fbox{\color{Black}Simplified Trees}]{5_2.txt}
+
+\subsection{Question 3}
+Based on the simplified tree, we observe that P53 NJ tree is correct while the one based on CFTR is not.
+\end{document}
+
+
