@@ -7,6 +7,11 @@ import pandas as pd
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 import statsmodels.sandbox.stats.multicomp as sm
+import math
+
+#########––––––––––––––––––––––––––––––––––––###########
+##                IMPORTING DATA                      ##
+#########––––––––––––––––––––––––––––––––––––###########
 
 breast_data = pd.read_table("BreastDiagnostic.txt", sep =",")
 mice_data = pd.ExcelFile("Data_Cortex_Nuclear.xls")
@@ -14,6 +19,10 @@ mice_data = mice_data.parse()
 mice_data.fillna(method = "bfill", inplace=True)
 mice_data.fillna(0, inplace=True)
 
+
+################––––––––––––––––––––––––#################
+##            PLOTTING CORRELATION MATRIX              ##
+################––––––––––––––––––––––––#################
 
 classes = breast_data.values[:,1]
 bdf = breast_data.values[:,2:]
@@ -32,23 +41,40 @@ plt.colorbar()
 plt.show()
 '''
 
+#############–––––––––––––––––––––––––––––##############
+##              MANN-WHITNEY-WILCOXON                 ##
+#############–––––––––––––––––––––––––––––##############
+
 wilcc = np.zeros((nmeas))
+Mft = []
+Bft = []
+for i in range(nobs):
+	if classes[i] == 'M':
+		Mft.append(bdf[i,:])
+	else:
+		Bft.append(bdf[i,:])
+Mft = np.array(Mft)
+Bft = np.array(Bft)
+
 for k in range(nmeas):
-	Mft = []
-	Bft = []
-
-	for i in range(nobs):
-		if classes[i] == 'M':
-			Mft.append(bdf[i,k])
-		else:
-			Bft.append(bdf[i,k])
-
-	Mft = np.array(Mft)
-	Bft = np.array(Bft)
-
-	wilcc[k] = stats.wilcoxon(Mft,Bft,)[1]
+	wilcc[k] = stats.mannwhitneyu(Mft[:,k],Bft[:,k],alternative='two-sided')[1]
 
 print(wilcc)
+
+#########–––––––––––––––––––––––––––––––––––––##########
+##                    MULTIPLE TEST                   ##
+#########–––––––––––––––––––––––––––––––––––––##########
+
+'''
+
+There is a choice in between two p-values correction techniques:
+	- FDR correction
+	- FWER correction
+
+'''
+
+
+
 
 '''
 mdf = mice_data.values[:,1:-4]
