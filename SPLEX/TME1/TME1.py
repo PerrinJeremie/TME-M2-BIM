@@ -81,7 +81,28 @@ print(wilcc_corrected)
 ##############–––––––––––––––––––––––––––###############
 ##              COMPARING DISTRIBUTIONS               ##
 ##############–––––––––––––––––––––––––––###############
+Mft = Mft.astype(np.float) 
+Bft = Bft.astype(np.float) 
+st, pval = stats.ttest_ind(Mft,Bft)
 
+plt.boxplot(Mft)
+plt.boxplot(Bft)
+plt.show()
+
+'''
+BLABLA JE SAIS PAS
+
+'''
+
+
+
+#######––––––––––––––––––––––––––––––––––––––––––#######
+##                       ADABOOST                     ##
+#######––––––––––––––––––––––––––––––––––––––––––#######
+
+'''
+Ca ca a l'air chouette, il faut s'amuser
+'''
 
 
 '''
