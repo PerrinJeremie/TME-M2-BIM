@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# -*- coding: latin-1 -*-
 				##############################
                                 ##       TME1 - SPLEX       ##
 				##############################
@@ -72,8 +74,13 @@ There is a choice to be made between two p-values correction techniques:
 	The most stringent method being FWER and the least FDR. FDR is less stringent because on average it rejects a higher number of true null hypothesis but at the same time this allows it to capture more false null hypothesis.
 We also note that controlling the FWER also corrects FDR, so it is more stringent.
 '''
+wilcc_corrected = sm.multipletests(wilcc,method="holm-sidak")
+print(wilcc_corrected)
 
 
+##############–––––––––––––––––––––––––––###############
+##              COMPARING DISTRIBUTIONS               ##
+##############–––––––––––––––––––––––––––###############
 
 
 
