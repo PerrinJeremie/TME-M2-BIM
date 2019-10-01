@@ -4,9 +4,10 @@ import re
 import sys
 import math
 import matplotlib.pyplot as pplot
+import ForceField
 
 class Atom:
-	def __init__(self, x, y, z, numRes=-1, resType="X", sse="X",bvalue=0):
+	def __init__(self, x, y, z, numRes=-1, resType="X", sse="X",bvalue=0,chain="-",atomname="CA"):
 		self.x = x
 		self.y = y
 		self.z = z
@@ -14,6 +15,8 @@ class Atom:
 		self.resType=resType #code 3 lettres de l'aa
 		self.sse=sse #Code 1 lettre de la Structure secondaire
 		self.bvalue=bvalue
+		self.chain = chain
+		self.atomname=atomname
 
 #EXPDTA    X-RAY D
 #str->str
@@ -52,6 +55,12 @@ def getAtom(ligne,allAtoms):
 	x = float(ligne[30:38])
 	y = float(ligne[38:46])
 	z = float(ligne[46:54])
+	if atomname in ['H1','H2','H3'] :
+		atomname = 'H'
+	if atomname == "OXT":
+		atomname = 'O'
+	if resname == "HIS":
+		resname = "HID"
 	#Autres champs
 	#inscode = re_whitespaces.sub('',ligne[26])
 	#atomnumber = int(ligne[6:11])
@@ -61,7 +70,7 @@ def getAtom(ligne,allAtoms):
 	#element = re_whitespaces.sub('',ligne[76:78])
 	#charge = re_whitespaces.sub('',ligne[78:80])
 	if (atomname=="CA" or allAtoms):
-		return chain, Atom(x,y,z,resnumber, resname)
+		return chain, Atom(x,y,z,resnumber, resname,chain=chain,atomname=atomname)
 	else:
 		return chain, None
 		
@@ -454,6 +463,51 @@ def main() :
 	_ = calculCV(lesAtomes1,20)
 	writePDB(filename1,filename2,lesAtomes1,["A","B"])
 '''	
+
+##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
+##                              PARTIE E                                ##
+##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
+
+F = 332.0522 
+
+def champsForce(dist,Re,q,eps):
+	epsij = math.sqrt(eps[0]*eps[1])
+	Reij = Re[0]+Re[1]
+	A = epsij*(Reij)**8
+	B = 2*epsij*(Reij)**6
+	return A/dist**8 - B/dist**6 + F*q[0]*q[1]/(20*dist)
+
+def computeE(chainAtoms1, chainAtoms2):
+	dcharge = ForceField.chargePDB()
+	dvdw, depsilon = ForceField.epsilon_vdw_PDB()
+	s = 0
+	for a in chainAtoms1:
+		epsi = depsilon[a.resType][a.atomname]
+		Rie = dvdw[a.resType][a.atomname]
+		qi = dcharge[a.resType][a.atomname]
+		for b in chainAtoms2:
+			Rij = distanceAtoms(a,b)
+			epsj = depsilon[b.resType][b.atomname]
+			Rje = dvdw[a.resType][a.atomname]
+			qj = dcharge[a.resType][a.atomname]
+			s += champsForce(Rij,[Rie,Rje],[qi,qj],[epsi,epsj])
+	return s
+
+def main() :
+	if (len(sys.argv)<2):
+		print "USAGE: ", sys.argv[0], "<pdb infile>"
+		sys.exit(1)
+
+	filename1 = sys.argv[1]
+	_, _, _, _, lesAtomes=readPDB(filename1, ["A","B"], allAtoms = True)
+	lesAtomesA = [a for a in lesAtomes if a.chain == "A"]
+	lesAtomesB = [a for a in lesAtomes if a.chain == "B"]
+	print "Nb Atomes lus chainA, chainB :", len(lesAtomesA), len(lesAtomesB)
+	s = computeE(lesAtomesA,lesAtomesB)
+	print(s)
+	#_ = calculCV(lesAtomes1,20)
+	#writePDB(filename1,filename2,lesAtomes1,["A","B"])
+
 
 
 ##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
