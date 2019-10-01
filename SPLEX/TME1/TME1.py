@@ -66,12 +66,13 @@ print(wilcc)
 #########–––––––––––––––––––––––––––––––––––––##########
 
 '''
-
-There is a choice in between two p-values correction techniques:
+There is a choice to be made between two p-values correction techniques:
 	- FDR correction
 	- FWER correction
-
+	The most stringent method being FWER and the least FDR. FDR is less stringent because on average it rejects a higher number of true null hypothesis but at the same time this allows it to capture more false null hypothesis.
+We also note that controlling the FWER also corrects FDR, so it is more stringent.
 '''
+
 
 
 
