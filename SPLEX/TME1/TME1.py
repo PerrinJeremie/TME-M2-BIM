@@ -9,6 +9,8 @@ import pandas as pd
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 import statsmodels.sandbox.stats.multicomp as sm
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.datasets import make_classification
 import math
 
 #########––––––––––––––––––––––––––––––––––––###########
@@ -18,8 +20,8 @@ import math
 breast_data = pd.read_table("BreastDiagnostic.txt", sep =",")
 mice_data = pd.ExcelFile("Data_Cortex_Nuclear.xls")
 mice_data = mice_data.parse()
-mice_data.fillna(method = "bfill", inplace=True)
-mice_data.fillna(0, inplace=True)
+#mice_data.fillna(method = "bfill", inplace=True)
+mice_data.fillna(mice_data.median(), inplace=True)
 
 
 ################––––––––––––––––––––––––#################
@@ -35,6 +37,7 @@ for i in range(nmeas):
 		(c,p) = stats.pearsonr(bdf[:,i],bdf[:,j])
 		m[i,j,0] = c
 		m[i,j,1] = p
+
 
 
 '''
@@ -81,6 +84,7 @@ print(wilcc_corrected)
 ##############–––––––––––––––––––––––––––###############
 ##              COMPARING DISTRIBUTIONS               ##
 ##############–––––––––––––––––––––––––––###############
+
 print(Mft)
 Mft = Mft.astype(np.float) 
 Bft = Bft.astype(np.float) 
@@ -88,14 +92,20 @@ st, pval = stats.ttest_ind(Mft,Bft)
 
 print(sm.multipletests(pval,method="holm-sidak"))
 
-plt.boxplot(Mft)
-plt.boxplot(Bft)
+
+plt.figure()
+plt.boxplot([Mft[14], Bft[14]])
+plt.title("Attribut discriminant")
+plt.figure()
+plt.boxplot([Mft[0], Bft[0]])
+plt.title("Attribut non discriminant")
+#plt.boxplot(Bft[0])
 plt.show()
 
 '''
 
-
 '''
+
 
 
 
@@ -106,8 +116,15 @@ plt.show()
 '''
 Ca ca a l'air chouette, il faut s'amuser
 '''
+classifier = AdaBoostClassifier(n_estimators=100, random_state=0)
 
+X = np.concatenate((np.random.normal(loc=15, size=(500,1)) + np.random.normal(loc=10, size=(500,1))), axis=0)
+y = np.concatenate((np.ones((500)) + np.zeros((500))))
 
+print(X)
+print(y)
+classifier.fit(X,y)
+print(classifier.predict([[16]]))
 '''
 mdf = mice_data.values[:,1:-4]
 nobs,nmeas = mdf.shape
@@ -126,7 +143,3 @@ plt.imshow(m[:,:,0])
 plt.colorbar()
 plt.show()
 '''
-
-
-
-
