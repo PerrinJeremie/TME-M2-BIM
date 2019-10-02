@@ -81,16 +81,19 @@ print(wilcc_corrected)
 ##############–––––––––––––––––––––––––––###############
 ##              COMPARING DISTRIBUTIONS               ##
 ##############–––––––––––––––––––––––––––###############
+print(Mft)
 Mft = Mft.astype(np.float) 
 Bft = Bft.astype(np.float) 
 st, pval = stats.ttest_ind(Mft,Bft)
+
+print(sm.multipletests(pval,method="holm-sidak"))
 
 plt.boxplot(Mft)
 plt.boxplot(Bft)
 plt.show()
 
 '''
-BLABLA JE SAIS PAS
+
 
 '''
 
