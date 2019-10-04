@@ -35,22 +35,43 @@ X3, Y3 = make_moons(n_samples=200, shuffle=True, noise=None, random_state=None)
 #plt.show()
 
 #######–––––––––––––––––––––––––––––––––––######
-##                 K-MEANS                    ##
+##                   K-MEANS                  ##
 #######–––––––––––––––––––––––––––––––––––######
 
-km = KMeans(n_clusters=2, init='k-means++', max_iter=100, n_init=1)
+km2 = KMeans(n_clusters=2, init='k-means++', max_iter=100, n_init=1)
+km3 = KMeans(n_clusters=2, init='k-means++', max_iter=100, n_init=1)
 
-km.fit(X1)
-plt.scatter(X1[:, 0], X1[:, 1], s=10, c=km.labels_)
+km2.fit(X1)
+plt.scatter(X1[:, 0], X1[:, 1], s=10, c=km2.labels_)
 plt.show()
 
 
-km.fit(X2)
-plt.scatter(X2[:, 0], X2[:, 1], s=10, c=km.labels_)
+km3.fit(X2)
+plt.scatter(X2[:, 0], X2[:, 1], s=10, c=km3.labels_)
 plt.show()
 
-km.fit(X2)
-plt.scatter(X3[:, 0], X3[:, 1], s=10, c=km.labels_)
+km2.fit(X3)
+plt.scatter(X3[:, 0], X3[:, 1], s=10, c=km2.labels_)
 plt.show()
+
+##############––––––––––––––––––––###############
+##          HIERARCHICAL CLUSTERING            ##
+##############––––––––––––––––––––###############
+
+for linkage in (’ward’, ’average’, ’complete’):
+	clustering2 = AgglomerativeClustering(linkage=linkage, n_clusters=2)
+	clustering3 = AgglomerativeClustering(linkage=linkage, n_clusters=3)
+	clustering2.fit(X1)
+	plt.scatter(X2[:, 0], X2[:, 1], s=10, c=km3.labels_)
+plt.show(
+	clustering3.fit(X2)
+	clustering2.fit(X3)
+
+
+
+
+##############–––––––––––––––––––––###############
+##             SPECTRAL CLUSTERING              ##
+##############–––––––––––––––––––––###############
 
 
