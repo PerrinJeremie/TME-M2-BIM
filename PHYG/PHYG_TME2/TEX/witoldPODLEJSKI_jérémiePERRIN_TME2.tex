@@ -1,5 +1,6 @@
 \documentclass[]{article}
 
+\usepackage{float}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel} % If you write in English
@@ -35,46 +36,66 @@
 \subsection{Question 2}
 \subsection{Question 3}
 \subsection{Question 4}
+We assume that the topogy of the graph is the following :
 
+\begin{figure}[h!]
+	\includegraphics*[width = 10cm]{image/topology.png}
+\end{figure}
+
+Lets compute the parsimony scores of that tree with the Sankoff and fitch algorithms.
+
+\subsubsection*{$\bullet$ Sankoff }
+We compute score tree nucleotide by nucleotide.
 \begin{figure}[h]
 	\includegraphics*[width = \linewidth]{image/tree_1.png}
+	\caption{Sankoff score tree for the first nucleotide  }
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{image/tree_2.png}
+	\caption{Sankoff score tree for the second nucleotide  }	
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{image/tree_3-4.png}
+	\caption{Sankoff score tree for the third and fourth nucleotide  }
 \end{figure}
 
-\begin{figure}[h]
-	\includegraphics*[width = \linewidth]{image/tree_5.png}
+\begin{figure}[h!]
+	\includegraphics*[width = \linewidth]{image/tree_5.png}\\
+	\caption{Sankoff score tree for the fifth nucleotide  }
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{image/tree_6.png}
+	\caption{Sankoff score tree for the sixth nucleotide  }
 \end{figure}
+
+\subsubsection*{$\bullet$ Sankoff }
+Again we proceed nucletide by nucleotide.
 \subsection{Question 5}
 
 
 
 \section{Exercise 2 : Reconstruction using reversal distances}
 \subsection{Question 1}
+So we launch an entire genome comparison between human and mouse with the human as a reference.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\includegraphics*[width = \linewidth]{../human_mouse.png}
-	\caption{\label{h_m} Genome comparison between human (reference) and mouse }
+	\caption{ Genome comparison between human (reference) and mouse }
 \end{figure}
 
+As we can see, most of the genome is the same between this two species. However the genes are not in the same chromosomes and they seems mixed by recombination.
 
 
 \subsection{Question 2}
-
-\begin{figure}[h]
-	\includegraphics*[width = \linewidth]{../H1_M4.png}
+So now we look at the homologous genes in the first human chromosome and the fourth mouse chromosome.
+\begin{figure}[H]
+	\includegraphics*[width = 11cm]{../H1_M4.png}
 	\caption{\label{h1_m4} Genome comparison of the first human chromosome and fourth mouse chromosome }
 \end{figure}
+So we can see that there is the same alignment of genes in the two chromosomes, but it is reverse. The reversal distance is about one, that mean that at least one event (recombination) is needed to go to a chromosome to an other.   
 \subsection{Question 3}
 
 \begin{tabular}{|*{5}{c|}}
@@ -95,12 +116,12 @@
 
 \subsection{Question 4}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../UPGMA1.pdf}
 	\caption{\label{upgma1} UPGMA tree according to the matrix above }
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../NJ1.pdf}
 	\caption{\label{nj1} Neighbor-Joinning tree according to the matrix above }
 \end{figure}
@@ -108,12 +129,12 @@
 \subsection{Question 5}
 
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../files/UPGMA.pdf}
 	\caption{\label{upgma2} Neighbor-Joinning tree for all mammals }
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../files/NJ.pdf}
 	\caption{\label{nj2} Neighbor-Joinning tree for all mammals }
 \end{figure}
