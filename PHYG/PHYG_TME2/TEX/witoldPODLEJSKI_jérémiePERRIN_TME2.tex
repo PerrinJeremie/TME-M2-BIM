@@ -1,5 +1,6 @@
 \documentclass[]{article}
 
+\usepackage{float}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel} % If you write in English
@@ -102,7 +103,17 @@ $
 \end{proof}
 \newpage
 \subsection{Question 4}
-\subsubsection{Sankoff's Algorithm}
+We assume that the topogy of the graph is the following :
+
+\begin{figure}[h!]
+	\includegraphics*[width = 10cm]{image/topology.png}
+\end{figure}
+
+Lets compute the parsimony scores of that tree with the Sankoff and fitch algorithms.
+
+\subsubsection*{$\bullet$ Sankoff }
+We compute score tree nucleotide by nucleotide.
+
 \begin{figure}[h!]
 	\begin{tabular}{cc}
 			\includegraphics*[width = 65mm]{image/tree_1.png} &   \includegraphics*[width = 65mm]{image/tree_2.png} \\
@@ -115,11 +126,15 @@ $
 	\end{tabular}
 \end{figure}
 
+
+
 \subsection{Question 5}
 The main idea of the nearest neighbor interchange algorithm is to find in a neighborhood of a given tree, a better tree than the tree we have and then iterate the search. The neighborhood of a tree can be defined in different ways depending on the distance in the tree space. Most of the time the distance between two trees is derived from a set of operations. That is to say we have a number of operations we can apply to the tree to modify it, and the distance between two trees is the minimal number of operations to turn one tree into another.\\
 It is said to be heuristic because it is actually a local optimization procedure. Starting from a tree we only get better every operation, but we therefore only find a local optimum. 
 \section{Exercise 2 : Reconstruction using reversal distances}
 \subsection{Question 1}
+So we launch an entire genome comparison between human and mouse with the human as a reference.
+
 
 \begin{figure}[h!]
 	\centering
@@ -127,18 +142,25 @@ It is said to be heuristic because it is actually a local optimization procedure
 	\caption{\label{h_m} Genome comparison between human (reference) and mouse }
 \end{figure}
 
+As we can see, most of the genome is the same between this two species. However the genes are not in the same chromosomes and they seems mixed by recombination.
 
 
 \subsection{Question 2}
-The reversal distance between two sequences is the least number of inversion operation necessary to turn one sequence into the other. A big part of each chrommosome is left in white because the sequences are not homologuous therefore no sequence of inversion can turn one sequence into the other. 
-\begin{figure}[h!!]
-	\centering
-	\includegraphics*[height = 0.5\textheight]{../H1_M4.png}
+
+The reversal distance between two sequences is the least number of inversion operation necessary to turn one sequence into the other. A big part of each chrommosome is left in white because the sequences are not homologuous therefore no sequence of inversion can turn one sequence into the other. \\
+
+Now we look at the homologous genes in the first human chromosome and the fourth mouse chromosome.
+\begin{figure}[H]
+	\includegraphics*[width = 11cm]{../H1_M4.png}
 	\caption{\label{h1_m4} Genome comparison of the first human chromosome and fourth mouse chromosome }
 \end{figure}
+	We can see that there is the same alignment of genes in the two chromosomes, but it is reverse. The reversal distance is about one, that mean that at least one event (recombination) is needed to go from a chromosome to an other.   
 
 \subsection{Question 3}
 
+	So by making a whole genome comparison between different mamamls (human, mouse, cow and chimp) we obtain the reverse distances between these species. We can write it in the following matrix :
+	\\
+	
 \begin{tabular}{|*{5}{c|}}
 	\hline
 	   & Human  & Mouse  & Cow  & Chimp \\
@@ -158,20 +180,28 @@ The reversal distance between two sequences is the least number of inversion ope
 \subsection{Question 4}
 
 
-\begin{figure}[h!!]
+With this matrix we can launch UPGMA and NJ algorithms, and the results are the following :
+ 
+\begin{figure}[h!]
+
 	\includegraphics*[width = \linewidth]{../UPGMA1.pdf}
 	\caption{\label{upgma1} UPGMA tree according to the matrix above }
 \end{figure}
+
 
 \begin{figure}[h!!]
 	\includegraphics*[width = \linewidth]{../NJ1.pdf}
 	\caption{\label{nj1} Neighbor-Joinning tree according to the matrix above }
 \end{figure}
 
+
 UPGMA is not correct because mice should be closer to humans than cows.\\
 The analysis for NJ is a bit trickier since the tree is not rooted, depending on where we put the root it can be correct or not. But topologically it is.\\
+These trees are not correct, in fact human and chimp are closer of mouse than cow and the trees show the contrary. 
+
 \subsection{Question 5}
 
+With a more complete distance matrix we launch again these algorithms :
 
 \begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../files/UPGMA.pdf}
@@ -184,14 +214,22 @@ The analysis for NJ is a bit trickier since the tree is not rooted, depending on
 \end{figure}
 
 \subsection{Question 6}
-None of those trees is correct. The limitation for UPGMA is the fact that it assumes a constant mutation rate. The limitation for NJ is that we have an unrooted tree, we would for example need an outgroup to root the tree. In any case, the construction depends on the distance matrix we have and the number of available taxa.
+
+None of those trees is correct. The limitation for UPGMA is the fact that it assumes a constant mutation rate. The limitation for NJ is that we have an unrooted tree, we would for example need an outgroup to root the tree. In any case, the construction depends on the distance matrix we have and the number of available taxa.\\
+
+These last trees are still not correct. The used aproach is limited because it is only based on recombination, it also assumes that the good historical sequence of recombinations is the simplest. Maybe we are seeing the result of some convergences between human and cow for example.
+
 
 %\subsection{Question 1}
 %\VerbatimInput[	label=\fbox{\color{Black}Aligned sequences - Clustal}]{3_1.txt}
 \section{Exercise 3 : Reconstruction using characters}
 \subsection{Question 1}
+
 Convergent evolution is the evolutionnary process of similar features in two distinct species. It creates analogy of traits but these traits are not homologuous, their last common ancestor does not share the trait.\\
 Divergent evolution is the evolutionnary process which bring species apart through the evolution and accumulation of distinct features in the different groups, it leads to speciation.
+Divergent evolution creates differences between species and drive population to genomic diversity.
+A contrario, convergent evolution bring species closer by getting the same characters.
+
 \subsection{Question 2}
 \begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../ex3/PARS.pdf}
@@ -204,12 +242,11 @@ It is correct, all placental mammals are grouped and both opossum and fish are o
 	\caption{\label{nj2} Parsimony tree without enlarged malleolus }
 \end{figure}
 Now that we do not take into account the enlarged malleolus, the whale is no longer part of the placental mammal group, and the opossum is.\\
-The character responsible for this incorrect tree is the ability to live in water.
+The characters responsible for this incorrect tree is the ability to live in water for the whale. The opossum is now very close from human and chimp, this is due to the opposable thumb which are both convergent characters.\\
 
 \subsection{Question 4}
+There is two obvious convergences in this table, as it has been said there is the opposable thumb among opossum and primates (human, chimp).
 "Lives in water" is a case of convergent evolution though it is actually more of an atavism ( a special case of convergent evolution).\\
-"Opposable thumb" is also a case of convergent evolution when you compare opossum to (human, chimps).
-
 
 \end{document}
 
