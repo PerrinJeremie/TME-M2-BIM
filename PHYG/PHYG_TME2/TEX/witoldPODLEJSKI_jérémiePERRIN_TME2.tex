@@ -90,14 +90,17 @@ As we can see, most of the genome is the same between this two species. However 
 
 
 \subsection{Question 2}
-So now we look at the homologous genes in the first human chromosome and the fourth mouse chromosome.
+Now we look at the homologous genes in the first human chromosome and the fourth mouse chromosome.
 \begin{figure}[H]
 	\includegraphics*[width = 11cm]{../H1_M4.png}
 	\caption{\label{h1_m4} Genome comparison of the first human chromosome and fourth mouse chromosome }
 \end{figure}
-So we can see that there is the same alignment of genes in the two chromosomes, but it is reverse. The reversal distance is about one, that mean that at least one event (recombination) is needed to go to a chromosome to an other.   
+	We can see that there is the same alignment of genes in the two chromosomes, but it is reverse. The reversal distance is about one, that mean that at least one event (recombination) is needed to go to a chromosome to an other.   
 \subsection{Question 3}
 
+	So by making a whole genome comparison between different mamals (human, mouse, cow and chimp) we obtain the reverse distances between these species. We can write it in the following matrix :
+	\\
+	
 \begin{tabular}{|*{5}{c|}}
 	\hline
 	   & Human  & Mouse  & Cow  & Chimp \\
@@ -116,18 +119,23 @@ So we can see that there is the same alignment of genes in the two chromosomes, 
 
 \subsection{Question 4}
 
-\begin{figure}[h!]
+With this matrix we can launch UPGMA and NJ algorithms, and the results are the following :
+ 
+\begin{figure}[H]
 	\includegraphics*[width = \linewidth]{../UPGMA1.pdf}
 	\caption{\label{upgma1} UPGMA tree according to the matrix above }
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\includegraphics*[width = \linewidth]{../NJ1.pdf}
 	\caption{\label{nj1} Neighbor-Joinning tree according to the matrix above }
 \end{figure}
 
+These trees are not correct, in fact human and chimp are closer of mouse than cow and the trees show the contrary. 
+
 \subsection{Question 5}
 
+With a more complete distance matrix we launch again these algorithms :
 
 \begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../files/UPGMA.pdf}
@@ -140,13 +148,32 @@ So we can see that there is the same alignment of genes in the two chromosomes, 
 \end{figure}
 
 \subsection{Question 6}
+These last trees are still not correct. The used aproach is limited because it is only based on recombination, it also assumes that the good historical sequence of recombinations is the simplest. Maybe we are seeing the result of some convergences between human and cow for example.
+
 %\subsection{Question 1}
 %\VerbatimInput[	label=\fbox{\color{Black}Aligned sequences - Clustal}]{3_1.txt}
 \section{Exercise 3 : Reconstruction using characters}
 \subsection{Question 1}
+Divergent evolution creates differences between species and drive population to genomic diversity.
+ A contrario, convergent evolution bring species closer by getting the same characters.
 \subsection{Question 2}
+
+\begin{figure}[h!]
+	\includegraphics*[width = \linewidth]{../ex3/PARS.pdf}
+	\caption{Tree optain with pars method }
+\end{figure}
+That tree is correct, the subtree of mamals match with the given correct tree and it seems obvious that the opossum is closer from mamals than zebrafish.
 \subsection{Question 3}
+
+\begin{figure}[H]
+	\includegraphics*[width = \linewidth]{../ex3/PARS2.pdf}
+	\caption{Tree optain with pars method (without enlarged malleolus character)}
+\end{figure}
+
+When we remove the enlarged malleolus character from the computation, it appears that the resulting tree is greatly change. The opossum is now very close from human and chimp, this is due to the opposable thumb witch is a convergent character.
+
 \subsection{Question 4}
+There is two obvious convergences in this table, as it has been said there is the opposable thumb among opossum and primates (human, chimp). There is also the fact that whale and zebrafish live in water witch is a convergence.
 
 \end{document}
 
