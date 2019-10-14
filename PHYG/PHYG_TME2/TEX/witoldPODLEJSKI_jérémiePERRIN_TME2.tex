@@ -106,22 +106,24 @@ $
 We assume that the topogy of the graph is the following :
 
 \begin{figure}[h!]
-	\includegraphics*[width = 10cm]{image/topology.png}
+	\centering
+	\includegraphics*[width = 3cm]{image/topology.png}
 \end{figure}
 
-Lets compute the parsimony scores of that tree with the Sankoff and fitch algorithms.
+Lets compute the parsimony scores of that tree with the Sankoff and Fitch algorithms.
 
 \subsubsection*{$\bullet$ Sankoff }
 We compute score tree nucleotide by nucleotide.
 
 \begin{figure}[h!]
+	\centering
 	\begin{tabular}{cc}
-			\includegraphics*[width = 65mm]{image/tree_1.png} &   \includegraphics*[width = 65mm]{image/tree_2.png} \\
+			\includegraphics*[width = 50mm]{image/tree_1.png} &   \includegraphics*[width = 50mm]{image/tree_2.png} \\
 		(a) first & (b) second \\[6pt]
-		\includegraphics*[width = 65mm]{image/tree_3-4.png} &   \includegraphics*[width = 65mm]{image/tree_5.png} \\
+		\includegraphics*[width = 50mm]{image/tree_3-4.png} &   \includegraphics*[width = 50mm]{image/tree_5.png} \\
 		(c) third \& fourth & (d) fifth \\[6pt]
-		\includegraphics*[width = 65mm]{image/tree_6.png}&
-		\includegraphics*[width = 65mm]{image/final.png}\\
+		\includegraphics*[width = 50mm]{image/tree_6.png}&
+		\includegraphics*[width = 50mm]{image/final.png}\\
 		(e) sixth & (f) possible minimal tree \\[6pt]
 	\end{tabular}
 \end{figure}
@@ -130,7 +132,10 @@ We compute score tree nucleotide by nucleotide.
 
 \subsection{Question 5}
 The main idea of the nearest neighbor interchange algorithm is to find in a neighborhood of a given tree, a better tree than the tree we have and then iterate the search. The neighborhood of a tree can be defined in different ways depending on the distance in the tree space. Most of the time the distance between two trees is derived from a set of operations. That is to say we have a number of operations we can apply to the tree to modify it, and the distance between two trees is the minimal number of operations to turn one tree into another.\\
-It is said to be heuristic because it is actually a local optimization procedure. Starting from a tree we only get better every operation, but we therefore only find a local optimum. 
+It is said to be heuristic because it is actually a local optimization procedure. Starting from a tree we only get better every operation, but we therefore only find a local optimum.
+
+
+\newpage 
 \section{Exercise 2 : Reconstruction using reversal distances}
 \subsection{Question 1}
 So we launch an entire genome comparison between human and mouse with the human as a reference.
@@ -143,7 +148,6 @@ So we launch an entire genome comparison between human and mouse with the human 
 \end{figure}
 
 As we can see, most of the genome is the same between this two species. However the genes are not in the same chromosomes and they seems mixed by recombination.
-
 
 \subsection{Question 2}
 
@@ -175,8 +179,7 @@ Now we look at the homologous genes in the first human chromosome and the fourth
 	\hline
 	
 \end{tabular}
-
-\newpage 
+ 
 \subsection{Question 4}
 
 
