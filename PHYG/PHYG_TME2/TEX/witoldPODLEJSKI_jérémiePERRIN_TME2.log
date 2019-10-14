@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.12.18)  14 OCT 2019 17:10
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.13)  14 OCT 2019 16:47
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.12.18)  14 OCT 2019 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -367,18 +363,9 @@ Package: babel 2016/04/23 3.9r The Babel package
 Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-<<<<<<< HEAD
 File: babel.def 2016/04/23 3.9r Babel common definitions
-\babel@savecnt=\count87
-\U@D=\dimen103
-=======
-File: babel.def 2018/02/14 3.18 Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count89
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
 )
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
@@ -413,27 +400,18 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count88
+\Gread@gobject=\count89
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-<<<<<<< HEAD
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks17
-\thm@bodyfont=\toks18
-\thm@headfont=\toks19
-\thm@notefont=\toks20
-\thm@headpunct=\toks21
-=======
-Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks19
 \thm@bodyfont=\toks20
 \thm@headfont=\toks21
 \thm@notefont=\toks22
 \thm@headpunct=\toks23
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
 \thm@preskip=\skip43
 \thm@postskip=\skip44
 \thm@headsep=\skip45
@@ -540,8 +518,8 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \FV@StepNumber=\count104
 \FV@OutFile=\write3
 )
-\c@theorem=\count104
-\c@definition=\count105
+\c@theorem=\count105
+\c@definition=\count106
  (./witoldPODLEJSKI_jérémiePERRIN_TME2.aux
 
 LaTeX Warning: Label `nj2' multiply defined.
@@ -552,65 +530,34 @@ LaTeX Warning: Label `nj2' multiply defined.
 )
 \openout1 = `witoldPODLEJSKI_jérémiePERRIN_TME2.aux'.
 
-<<<<<<< HEAD
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
+\scratchcounter=\count107
 \scratchdimen=\dimen115
-\scratchbox=\box29
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count109
+\scratchbox=\box31
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count110
 \MPscratchDim=\dimen116
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
-=======
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen115
-\scratchbox=\box31
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen116
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks32
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
@@ -657,267 +604,189 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<<<<<<< HEAD
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
-=======
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-<<<<<<< HEAD
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
-=======
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<<<<<<< HEAD
 <image/parsimony.png, id=1, 854.19125pt x 241.90375pt>
 File: image/parsimony.png Graphic file (type png)
 
 <use image/parsimony.png>
-Package pdftex.def Info: image/parsimony.png used on input line 48.
+Package pdftex.def Info: image/parsimony.png used on input line 49.
 (pdftex.def)             Requested size: 276.00105pt x 78.16008pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/parsimony.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 73.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 74.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[2] <image/tree_1.png, id=32, 608.2725pt x 381.425pt>
+[2] <image/topology.png, id=32, 282.05376pt x 223.83624pt>
+File: image/topology.png Graphic file (type png)
+
+<use image/topology.png>
+Package pdftex.def Info: image/topology.png used on input line 109.
+(pdftex.def)             Requested size: 284.52756pt x 225.81665pt.
+ <image/tree_1.png, id=34, 608.2725pt x 381.425pt>
 File: image/tree_1.png Graphic file (type png)
- <use image/tree_1.png>
-Package pdftex.def Info: image/tree_1.png used on input line 108.
-(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
 
-<image/tree_2.png, id=34, 608.2725pt x 381.425pt>
+<use image/tree_1.png>
+Package pdftex.def Info: image/tree_1.png used on input line 119.
+(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
+ <image/tree_2.png, id=36, 608.2725pt x 381.425pt>
 File: image/tree_2.png Graphic file (type png)
- <use image/tree_2.png>
-Package pdftex.def Info: image/tree_2.png used on input line 108.
-(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
 
-<image/tree_3-4.png, id=36, 608.2725pt x 380.42125pt>
+<use image/tree_2.png>
+Package pdftex.def Info: image/tree_2.png used on input line 119.
+(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
+ <image/tree_3-4.png, id=38, 608.2725pt x 380.42125pt>
 File: image/tree_3-4.png Graphic file (type png)
- <use image/tree_3-4.png>
-Package pdftex.def Info: image/tree_3-4.png used on input line 110.
+
+<use image/tree_3-4.png>
+Package pdftex.def Info: image/tree_3-4.png used on input line 121.
 (pdftex.def)             Requested size: 184.9429pt x 115.6655pt.
-
-<image/tree_5.png, id=38, 608.2725pt x 381.425pt>
+ <image/tree_5.png, id=40, 608.2725pt x 381.425pt>
 File: image/tree_5.png Graphic file (type png)
- <use image/tree_5.png>
-Package pdftex.def Info: image/tree_5.png used on input line 110.
-(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
 
-<image/tree_6.png, id=40, 608.2725pt x 381.425pt>
+<use image/tree_5.png>
+Package pdftex.def Info: image/tree_5.png used on input line 121.
+(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
+ <image/tree_6.png, id=42, 608.2725pt x 381.425pt>
 File: image/tree_6.png Graphic file (type png)
- <use image/tree_6.png>
-Package pdftex.def Info: image/tree_6.png used on input line 112.
-(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
 
-<image/final.png, id=42, 573.14125pt x 269.005pt>
+<use image/tree_6.png>
+Package pdftex.def Info: image/tree_6.png used on input line 123.
+(pdftex.def)             Requested size: 184.9429pt x 115.97069pt.
+ <image/final.png, id=44, 573.14125pt x 269.005pt>
 File: image/final.png Graphic file (type png)
- <use image/final.png>
-Package pdftex.def Info: image/final.png used on input line 113.
+
+<use image/final.png>
+Package pdftex.def Info: image/final.png used on input line 124.
 (pdftex.def)             Requested size: 184.9429pt x 86.80167pt.
 
-Overfull \hbox (48.8858pt too wide) in paragraph at lines 107--116
+Overfull \hbox (48.8858pt too wide) in paragraph at lines 118--127
 [][] 
  []
 
-[3 <./image/tree_1.png> <./image/tree_2.png> <./image/tree_3-4.png> <./image/tr
-ee_5.png> <./image/tree_6.png> <./image/final.png>]
-<../human_mouse.png, id=59, 764.8575pt x 1027.84pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../human_mouse.png, id=46, 764.8575pt x 1027.84pt>
 File: ../human_mouse.png Graphic file (type png)
  <use ../human_mouse.png>
-Package pdftex.def Info: ../human_mouse.png used on input line 126.
+Package pdftex.def Info: ../human_mouse.png used on input line 141.
 (pdftex.def)             Requested size: 286.49406pt x 384.99832pt.
 
+[3 <./image/topology.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../H1_M4.png, id=61, 590.205pt x 748.7975pt>
+[4 <./image/tree_1.png> <./image/tree_2.png> <./image/tree_3-4.png> <./image/tr
+ee_5.png> <./image/tree_6.png> <./image/final.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+<../H1_M4.png, id=68, 590.205pt x 748.7975pt>
 File: ../H1_M4.png Graphic file (type png)
  <use ../H1_M4.png>
-Package pdftex.def Info: ../H1_M4.png used on input line 136.
-(pdftex.def)             Requested size: 216.75139pt x 275.0pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4] <../UPGMA1.pdf, id=66, 830.39844pt x 88.0729pt>
-File: ../UPGMA1.pdf Graphic file (type pdf)
- <use ../UPGMA1.pdf>
-Package pdftex.def Info: ../UPGMA1.pdf used on input line 162.
-(pdftex.def)             Requested size: 345.0pt x 36.59122pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../NJ1.pdf, id=68, 830.39844pt x 88.0729pt>
-File: ../NJ1.pdf Graphic file (type pdf)
- <use ../NJ1.pdf>
-Package pdftex.def Info: ../NJ1.pdf used on input line 167.
-(pdftex.def)             Requested size: 345.0pt x 36.59122pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
-
- []
-
-<../files/UPGMA.pdf, id=70, 861.67152pt x 139.42885pt>
-=======
-<image/topology.png, id=1, 282.05376pt x 223.83624pt>
-File: image/topology.png Graphic file (type png)
-<use image/topology.png>
-Package pdftex.def Info: image/topology.png  used on input line 42.
-(pdftex.def)             Requested size: 284.52756pt x 225.81665pt.
-<image/tree_1.png, id=4, 608.2725pt x 381.425pt>
-File: image/tree_1.png Graphic file (type png)
-<use image/tree_1.png>
-Package pdftex.def Info: image/tree_1.png  used on input line 50.
-(pdftex.def)             Requested size: 345.0pt x 216.34361pt.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/topology.png>]
-<image/tree_2.png, id=18, 608.2725pt x 381.425pt>
-File: image/tree_2.png Graphic file (type png)
-<use image/tree_2.png>
-Package pdftex.def Info: image/tree_2.png  used on input line 55.
-(pdftex.def)             Requested size: 345.0pt x 216.34361pt.
-<image/tree_3-4.png, id=20, 608.2725pt x 380.42125pt>
-File: image/tree_3-4.png Graphic file (type png)
-<use image/tree_3-4.png>
-Package pdftex.def Info: image/tree_3-4.png  used on input line 60.
-(pdftex.def)             Requested size: 345.0pt x 215.77428pt.
- [2 <./image/tree_1.png> <./image/tree_2.png>]
-<image/tree_5.png, id=31, 608.2725pt x 381.425pt>
-File: image/tree_5.png Graphic file (type png)
-<use image/tree_5.png>
-Package pdftex.def Info: image/tree_5.png  used on input line 65.
-(pdftex.def)             Requested size: 345.0pt x 216.34361pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
-
- []
-
-<image/tree_6.png, id=33, 608.2725pt x 381.425pt>
-File: image/tree_6.png Graphic file (type png)
-<use image/tree_6.png>
-Package pdftex.def Info: image/tree_6.png  used on input line 70.
-(pdftex.def)             Requested size: 345.0pt x 216.34361pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 <./image/tree_3-4.png> <./image/tree_5.png>]
-<../human_mouse.png, id=42, 764.8575pt x 1027.84pt>
-File: ../human_mouse.png Graphic file (type png)
-<use ../human_mouse.png>
-Package pdftex.def Info: ../human_mouse.png  used on input line 85.
-(pdftex.def)             Requested size: 345.0pt x 463.62158pt.
- [4 <./image/tree_6.png>]
-<../H1_M4.png, id=49, 590.205pt x 748.7975pt>
-File: ../H1_M4.png Graphic file (type png)
-<use ../H1_M4.png>
-Package pdftex.def Info: ../H1_M4.png  used on input line 95.
+Package pdftex.def Info: ../H1_M4.png used on input line 154.
 (pdftex.def)             Requested size: 312.9803pt x 397.0893pt.
-
-[5 <../human_mouse.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+ [5 <../human_mouse.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
 
-[6 <../H1_M4.png>]
-<../UPGMA1.pdf, id=61, 830.39844pt x 88.0729pt>
+[6 <../H1_M4.png>] [7] <../UPGMA1.pdf, id=84, 830.39844pt x 88.0729pt>
 File: ../UPGMA1.pdf Graphic file (type pdf)
+
 <use ../UPGMA1.pdf>
-Package pdftex.def Info: ../UPGMA1.pdf  used on input line 125.
+Package pdftex.def Info: ../UPGMA1.pdf used on input line 187.
 (pdftex.def)             Requested size: 345.0pt x 36.59122pt.
-<../NJ1.pdf, id=63, 830.39844pt x 88.0729pt>
+ <../NJ1.pdf, id=86, 830.39844pt x 88.0729pt>
 File: ../NJ1.pdf Graphic file (type pdf)
+
 <use ../NJ1.pdf>
-Package pdftex.def Info: ../NJ1.pdf  used on input line 130.
+Package pdftex.def Info: ../NJ1.pdf used on input line 193.
 (pdftex.def)             Requested size: 345.0pt x 36.59122pt.
-<../files/UPGMA.pdf, id=65, 861.67152pt x 139.42885pt>
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
+ <../files/UPGMA.pdf, id=88, 861.67152pt x 139.42885pt>
 File: ../files/UPGMA.pdf Graphic file (type pdf)
 
 <use ../files/UPGMA.pdf>
-<<<<<<< HEAD
-Package pdftex.def Info: ../files/UPGMA.pdf used on input line 177.
+Package pdftex.def Info: ../files/UPGMA.pdf used on input line 207.
 (pdftex.def)             Requested size: 345.0pt x 55.82585pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../files/NJ.pdf, id=72, 861.67152pt x 136.25291pt>
+ <../files/NJ.pdf, id=90, 861.67152pt x 136.25291pt>
 File: ../files/NJ.pdf Graphic file (type pdf)
- <use ../files/NJ.pdf>
-Package pdftex.def Info: ../files/NJ.pdf used on input line 182.
-=======
-Package pdftex.def Info: ../files/UPGMA.pdf  used on input line 141.
-(pdftex.def)             Requested size: 345.0pt x 55.82585pt.
-<../files/NJ.pdf, id=67, 861.67152pt x 136.25291pt>
-File: ../files/NJ.pdf Graphic file (type pdf)
+
 <use ../files/NJ.pdf>
-Package pdftex.def Info: ../files/NJ.pdf  used on input line 146.
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
+Package pdftex.def Info: ../files/NJ.pdf used on input line 212.
 (pdftex.def)             Requested size: 345.0pt x 54.55424pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ []
 
-<<<<<<< HEAD
-[5 <../human_mouse.png>] [6 <../H1_M4.png> <../UPGMA1.pdf> <../NJ1.pdf>]
-Overfull \hbox (7.164pt too wide) in paragraph at lines 193--195
+[8 <../UPGMA1.pdf> <../NJ1.pdf> <../files/UPGMA.pdf> <../files/NJ.pdf>]
+Overfull \hbox (7.164pt too wide) in paragraph at lines 228--232
 \T1/cmr/m/n/10 Divergent evo-lu-tion is the evo-lu-tion-nary pro-cess which bri
 ng species apart through
  []
 
-<../ex3/PARS.pdf, id=118, 878.68039pt x 160.34293pt>
+<../ex3/PARS.pdf, id=163, 878.68039pt x 160.34293pt>
 File: ../ex3/PARS.pdf Graphic file (type pdf)
  <use ../ex3/PARS.pdf>
-Package pdftex.def Info: ../ex3/PARS.pdf used on input line 197.
+Package pdftex.def Info: ../ex3/PARS.pdf used on input line 235.
 (pdftex.def)             Requested size: 345.0pt x 62.95674pt.
 
-<../ex3/PARS2.pdf, id=120, 878.68039pt x 163.51884pt>
+<../ex3/PARS2.pdf, id=165, 878.68039pt x 163.51884pt>
 File: ../ex3/PARS2.pdf Graphic file (type pdf)
  <use ../ex3/PARS2.pdf>
-Package pdftex.def Info: ../ex3/PARS2.pdf used on input line 203.
+Package pdftex.def Info: ../ex3/PARS2.pdf used on input line 241.
 (pdftex.def)             Requested size: 345.0pt x 64.20374pt.
 
-[7 <../files/UPGMA.pdf> <../files/NJ.pdf> <../ex3/PARS.pdf>] [8 <../ex3/PARS2.p
-df>] (./witoldPODLEJSKI_jérémiePERRIN_TME2.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
+
+ []
+
+[9 <../ex3/PARS.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
+
+ []
+
+[10 <../ex3/PARS2.pdf>] (./witoldPODLEJSKI_jérémiePERRIN_TME2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4417 strings out of 494335
- 55850 string characters out of 6163478
- 128904 words of memory out of 5000000
- 7652 multiletter control sequences out of 15000+600000
+ 4482 strings out of 494335
+ 56729 string characters out of 6163478
+ 130292 words of memory out of 5000000
+ 7712 multiletter control sequences out of 15000+600000
  16060 words of font info for 48 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 39i,12n,35p,592b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,35p,592b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600p
 k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600p
 k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600p
@@ -936,49 +805,11 @@ ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on witoldPODLEJSKI_jérémiePERRIN_TME2.pdf (8 pages, 466754 byt
-es).
+Output written on witoldPODLEJSKI_jérémiePERRIN_TME2.pdf (10 pages, 469673 by
+tes).
 PDF statistics:
- 443 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 446 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-[7 <../UPGMA1.pdf> <../NJ1.pdf> <../files/UPGMA.pdf>]
-<../ex3/PARS.pdf, id=124, 878.68039pt x 160.34293pt>
-File: ../ex3/PARS.pdf Graphic file (type pdf)
-<use ../ex3/PARS.pdf>
-Package pdftex.def Info: ../ex3/PARS.pdf  used on input line 162.
-(pdftex.def)             Requested size: 345.0pt x 62.95674pt.
-<../ex3/PARS2.pdf, id=126, 878.68039pt x 163.51884pt>
-File: ../ex3/PARS2.pdf Graphic file (type pdf)
-<use ../ex3/PARS2.pdf>
-Package pdftex.def Info: ../ex3/PARS2.pdf  used on input line 169.
-(pdftex.def)             Requested size: 345.0pt x 64.20374pt.
- [8 <../files/NJ.pdf> <../ex3/PARS.pdf>] [9 <../ex3/PARS2.pdf>]
-(./witoldPODLEJSKI_jérémiePERRIN_TME2.aux) ) 
-Here is how much of TeX's memory you used:
- 4474 strings out of 494923
- 56985 string characters out of 6180741
- 127008 words of memory out of 5000000
- 7682 multiletter control sequences out of 15000+600000
- 15374 words of font info for 47 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 41i,7n,35p,325b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/witold/.texlive2017/texmf
--var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/witold/.texlive2017/tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/witold/.texlive2017/t
-exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/witold/.texlive2017
-/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/witold/.texlive20
-17/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/witold/.texlive
-2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on witoldPODLEJSKI_jérémiePERRIN_TME2.pdf (9 pages, 361489 byt
-es).
-PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> cee66d070c66490f8cb44bde3c4d79680f99c69f
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
