@@ -84,7 +84,7 @@ By the way we have also shown that :
 Since $B_{2} = 1$ we have $$B_{n} = 2(n-2) + 1 = 2n - 3$$
 Now we will derive a closed form formula for the number of unrooted trees.
 \begin{theorem}
-	For all $n\geq 2$, $A_{n} = (2n-5)!! = \frac{(2n-3)!}{2^{n-3}(n-1)!}$
+	For all $n\geq 3$, $A_{n} = (2n-5)!! = \frac{(2n-3)!}{2^{n-3}(n-1)!}$ and $A_{2} = 1$
 \end{theorem}
 \begin{proof}For $n=2$, $A_{2} = 1$\\
 For $n\geq 3$, $A_{n} = B_{n-1}A_{n-1}$ since any unrooted tree with n leaves is an unrooted tree with n-1 leaves where we have place the last leaf on one branch.\\
@@ -103,7 +103,7 @@ $
 \end{proof}
 \newpage
 \subsection{Question 4}
-We assume that the topogy of the graph is the following :
+We assume that the topology of the graph is the following :
 
 \begin{figure}[h!]
 	\centering
@@ -132,7 +132,7 @@ We compute score tree nucleotide by nucleotide.
 
 \subsection{Question 5}
 The main idea of the nearest neighbor interchange algorithm is to find in a neighborhood of a given tree, a better tree than the tree we have and then iterate the search. The neighborhood of a tree can be defined in different ways depending on the distance in the tree space. Most of the time the distance between two trees is derived from a set of operations. That is to say we have a number of operations we can apply to the tree to modify it, and the distance between two trees is the minimal number of operations to turn one tree into another.\\
-It is said to be heuristic because it is actually a local optimization procedure. Starting from a tree we only get better every operation, but we therefore only find a local optimum.
+It is said to be heuristic because it is actually a local optimization procedure. Starting from a tree we get better at every operation, but we therefore only find a local optimum.
 
 
 \newpage 
@@ -151,14 +151,14 @@ As we can see, most of the genome is the same between this two species. However 
 
 \subsection{Question 2}
 
-The reversal distance between two sequences is the least number of inversion operation necessary to turn one sequence into the other. A big part of each chrommosome is left in white because the sequences are not homologuous therefore no sequence of inversion can turn one sequence into the other. \\
+The reversal distance between two sequences is the least number of inversion operation necessary to turn one sequence into the other. A big part of each chromosome is left in white because the sequences are not homologuous therefore no sequence of inversion can turn one sequence into the other. \\
 
 Now we look at the homologous genes in the first human chromosome and the fourth mouse chromosome.
 \begin{figure}[H]
 	\includegraphics*[width = 11cm]{../H1_M4.png}
 	\caption{\label{h1_m4} Genome comparison of the first human chromosome and fourth mouse chromosome }
 \end{figure}
-	We can see that there is the same alignment of genes in the two chromosomes, but it is reverse. The reversal distance is about one, that mean that at least one event (recombination) is needed to go from a chromosome to an other.   
+	We can see that there is the same alignment of genes in the two chromosomes, but it is reversed. The reversal distance is about one, that mean that at least one event (recombination) is needed to go from a chromosome to an other.   
 
 \subsection{Question 3}
 
@@ -220,7 +220,7 @@ With a more complete distance matrix we launch again these algorithms :
 
 None of those trees is correct. The limitation for UPGMA is the fact that it assumes a constant mutation rate. The limitation for NJ is that we have an unrooted tree, we would for example need an outgroup to root the tree. In any case, the construction depends on the distance matrix we have and the number of available taxa.\\
 
-These last trees are still not correct. The used aproach is limited because it is only based on recombination, it also assumes that the good historical sequence of recombinations is the simplest. Maybe we are seeing the result of some convergences between human and cow for example.
+The used aproach is limited because it is only based on recombination, it also assumes that the good historical sequence of recombinations is the simplest. Maybe we are seeing the result of some convergences between human and cow for example.
 
 
 %\subsection{Question 1}
@@ -228,17 +228,16 @@ These last trees are still not correct. The used aproach is limited because it i
 \section{Exercise 3 : Reconstruction using characters}
 \subsection{Question 1}
 
-Convergent evolution is the evolutionnary process of similar features in two distinct species. It creates analogy of traits but these traits are not homologuous, their last common ancestor does not share the trait.\\
+Convergent evolution is the evolutionnary process of similar features in two distinct species. It creates analogy of traits but these traits are not homologuous, their last common ancestor does not share the trait. Convergent evolution bring species closer by getting the same characters\\
 Divergent evolution is the evolutionnary process which bring species apart through the evolution and accumulation of distinct features in the different groups, it leads to speciation.
-Divergent evolution creates differences between species and drive population to genomic diversity.
-A contrario, convergent evolution bring species closer by getting the same characters.
+Divergent evolution creates differences between species and drives populations to genomic diversity.
 
 \subsection{Question 2}
 \begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../ex3/PARS.pdf}
 	\caption{\label{nj2} Parsimony tree }
 \end{figure}
-It is correct, all placental mammals are grouped and both opossum and fish are outside of this group. Although the (rat,mouse,whale) should be in a different subtree from (human,chimps), but I guess one would need more traits to distinguish them. 
+It is correct, all placental mammals are grouped and both opossum and fish are outside of this group. Although the (rat,mouse,whale) should be in a different subtree from (human,chimps), but we guess one would need more traits to distinguish them. 
 \subsection{Question 3}
 \begin{figure}[h!]
 	\includegraphics*[width = \linewidth]{../ex3/PARS2.pdf}
@@ -248,7 +247,7 @@ Now that we do not take into account the enlarged malleolus, the whale is no lon
 The characters responsible for this incorrect tree is the ability to live in water for the whale. The opossum is now very close from human and chimp, this is due to the opposable thumb which are both convergent characters.\\
 
 \subsection{Question 4}
-There is two obvious convergences in this table, as it has been said there is the opposable thumb among opossum and primates (human, chimp).
+There are two obvious convergent characters in this table, as it has been said there is the opposable thumb among opossum and primates (human, chimp).\\
 "Lives in water" is a case of convergent evolution though it is actually more of an atavism ( a special case of convergent evolution).\\
 
 \end{document}
