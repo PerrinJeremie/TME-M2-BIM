@@ -1,0 +1,58 @@
+\documentclass[french]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{graphicx}
+\graphicspath{{../Figures/}}
+\usepackage{default}
+\usepackage{amsfonts,amssymb}
+\usepackage{caption}
+
+\usetheme{metropolis}
+
+\setbeamercolor{framesubtitle}{fg=mDarkTeal}
+\addtobeamertemplate{frametitle}{}{%
+	\ifx\insertframesubtitle\@empty\else%
+	\usebeamerfont{framesubtitle}%
+	\usebeamercolor[fg]{framesubtitle}%
+	\insertframesubtitle%
+	\fi%
+}
+\title{Offre d'Emploi}
+\subtitle{BAYER}
+
+\author{Witold Podlejski, Jérémie Perrin}
+
+\date{}
+\begin{document}
+	
+	\maketitle
+	
+	\begin{frame}[fragile]
+		\frametitle{L'offre}
+		\includegraphics*[width = \linewidth]{images/intro.png}\\
+		Offre d'emploi trouvée sur LinkedIn.
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Type d'emploi}
+		\centering
+		\includegraphics*[height= \textheight]{images/type.png}\\
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Les tâches}
+		\includegraphics*[width = \linewidth]{images/tasks.png}\\
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Les prérequis}
+		\includegraphics*[width = \linewidth]{images/you.png}\\
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Informations Supplémentaires}
+		\includegraphics*[width = \linewidth]{images/additional.png}\\
+	\end{frame}
+
+\end{document}
