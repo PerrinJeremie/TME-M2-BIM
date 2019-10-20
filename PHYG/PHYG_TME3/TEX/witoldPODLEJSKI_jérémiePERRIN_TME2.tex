@@ -1,0 +1,254 @@
+\documentclass[]{article}
+
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % If you write in English
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amssymb,amsmath}
+
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{fancyvrb}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=1em, % separation between frame and text
+	rulecolor=\color{Gray},
+	%,
+	labelposition=topline
+}
+
+%opening
+\title{TME2 - PHYG}
+\author{Witold PODLEJSKI \& Jérémie PERRIN}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercise 1 : Parsimony}
+\subsection{Question 1}
+Parsimony methods will try to give the explanatory evolution tree which will minimize in a certain way the number of mutation (or their cost) to explain the observable diversity.\\
+We give to explanatory evolution trees for one base:
+	
+For example if we consider that all mutations are equally likely, then parsimonious methods will prefer tree 1 to tree 2  in Figure ~\ref{fig:pars}.
+
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics*[width = 0.8\linewidth]{image/parsimony.png}
+ 	\caption{\label{fig:pars} Example to explain parsimony}
+ \end{figure}
+ 
+\subsection{Question 2}
+The small parsimony problem is the following :\\
+Given a tree, a cost matrix and the observable taxa. Give one explanatary evolution tree which minimizes the total cost.\\
+The large parsimony problem is the same without the tree topology as input therefore it is much harder since the space of trees with n leaves is big ( we will compute a closed form formula in the next question).
+
+\subsection{Question 3}
+\begin{definition}
+	Let us define $\mathcal{T}$ the set of all unrooted trees, and $\mathcal{T}_{n}$ the set of all unrooted trees of size n.\\
+	Let us define $B : \mathcal{T} \rightarrow \mathbb{N}$ with $B(t)$ the number of branches of tree $t$.\\
+	Let us also define $A_{n} = |\mathcal{T}_{n}|$ the number of unrooted trees with $n$ leaves.
+\end{definition}
+We will first show that all unrooted trees of $n$ species have the same number of branches.
+\begin{lemma}
+	For all $n\geq2$ there exists a value $B_{n}$ such that :\\
+	\begin{equation*}
+	\forall t \in \mathcal{T}_{n}, \quad B(t) = B_{n}
+	\end{equation*}
+\end{lemma}
+\begin{proof}
+	Let us prove the result by recursion :
+	\begin{itemize}
+	\item For $n = 2$, $|\mathcal{T}_{2}| = 1$ and therefore $B_{2}$ exists.\\
+	\item Suppose there exists $n_{0}$ such that $B_{n_{0}}$ exists. Let us prove that $B_{n_{0} + 1}$ also exists.
+	Let us have $t \in \mathcal{T}_{n_{0} + 1}$ if we consider two neighbor leaves and we regroup them we then have a tree $t' \in \mathcal{T}_{n_{0}}$. Therefore the number of edge of t is $2 + B_{n_{0}}$. Therefore we can define $B_{n_{0}+1} = 2 +  B_{n_{0}}$ and we notice that for all tree $t$ with $n_{0} + 1$ species we have $B(t) = B_{n_{0} + 1}$.
+	\end{itemize}
+	Therefore we have the result.
+\end{proof}
+By the way we have also shown that :
+\begin{equation*}
+	\forall n \geq 3, B_{n} = 2 + B_{n-1}
+\end{equation*}
+Since $B_{2} = 1$ we have $$B_{n} = 2(n-2) + 1 = 2n - 3$$
+Now we will derive a closed form formula for the number of unrooted trees.
+\begin{theorem}
+	For all $n\geq 3$, $A_{n} = (2n-5)!! = \frac{(2n-3)!}{2^{n-3}(n-1)!}$ and $A_{2} = 1$
+\end{theorem}
+\begin{proof}For $n=2$, $A_{2} = 1$\\
+For $n\geq 3$, $A_{n} = B_{n-1}A_{n-1}$ since any unrooted tree with n leaves is an unrooted tree with n-1 leaves where we have place the last leaf on one branch.\\
+Therefore, 
+\begin{align*}
+A_{n} &= (2(n-1)-3)A_{n-1}\\
+&= A_{2}{\displaystyle{\prod_{k=2}^{n-1} 2k - 3}}\\
+&= {\displaystyle \prod_{k=1}^{n-2} 2k - 1} = (2n-5)!!\\
+\end{align*}
+And we can write,
+$
+A_{n} = \frac{(2n - 5)!}{\displaystyle \prod_{k=1}^{n-3} 2k}
+=  \frac{(2n - 5)!}{2^{n-3}\displaystyle \prod_{k=1}^{n-3}k}
+= \frac{(2n - 5)!}{2^{n-3}(n-3)!}
+$
+\end{proof}
+\newpage
+\subsection{Question 4}
+We assume that the topology of the graph is the following :
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics*[width = 3cm]{image/topology.png}
+\end{figure}
+
+Lets compute the parsimony scores of that tree with the Sankoff and Fitch algorithms.
+
+\subsubsection*{$\bullet$ Sankoff }
+We compute score tree nucleotide by nucleotide.
+
+\begin{figure}[h!]
+	\centering
+	\begin{tabular}{cc}
+			\includegraphics*[width = 50mm]{image/tree_1.png} &   \includegraphics*[width = 50mm]{image/tree_2.png} \\
+		(a) first & (b) second \\[6pt]
+		\includegraphics*[width = 50mm]{image/tree_3-4.png} &   \includegraphics*[width = 50mm]{image/tree_5.png} \\
+		(c) third \& fourth & (d) fifth \\[6pt]
+		\includegraphics*[width = 50mm]{image/tree_6.png}&
+		\includegraphics*[width = 50mm]{image/final.png}\\
+		(e) sixth & (f) possible minimal tree \\[6pt]
+	\end{tabular}
+\end{figure}
+
+
+
+\subsection{Question 5}
+The main idea of the nearest neighbor interchange algorithm is to find in a neighborhood of a given tree, a better tree than the tree we have and then iterate the search. The neighborhood of a tree can be defined in different ways depending on the distance in the tree space. Most of the time the distance between two trees is derived from a set of operations. That is to say we have a number of operations we can apply to the tree to modify it, and the distance between two trees is the minimal number of operations to turn one tree into another.\\
+It is said to be heuristic because it is actually a local optimization procedure. Starting from a tree we get better at every operation, but we therefore only find a local optimum.
+
+
+\newpage 
+\section{Exercise 2 : Reconstruction using reversal distances}
+\subsection{Question 1}
+So we launch an entire genome comparison between human and mouse with the human as a reference.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics*[height = 0.7\textheight]{../human_mouse.png}
+	\caption{\label{h_m} Genome comparison between human (reference) and mouse }
+\end{figure}
+
+As we can see, most of the genome is the same between this two species. However the genes are not in the same chromosomes and they seems mixed by recombination.
+
+\subsection{Question 2}
+
+The reversal distance between two sequences is the least number of inversion operation necessary to turn one sequence into the other. A big part of each chromosome is left in white because the sequences are not homologuous therefore no sequence of inversion can turn one sequence into the other. \\
+
+Now we look at the homologous genes in the first human chromosome and the fourth mouse chromosome.
+\begin{figure}[H]
+	\includegraphics*[width = 11cm]{../H1_M4.png}
+	\caption{\label{h1_m4} Genome comparison of the first human chromosome and fourth mouse chromosome }
+\end{figure}
+	We can see that there is the same alignment of genes in the two chromosomes, but it is reversed. The reversal distance is about one, that mean that at least one event (recombination) is needed to go from a chromosome to an other.   
+
+\subsection{Question 3}
+
+	So by making a whole genome comparison between different mamamls (human, mouse, cow and chimp) we obtain the reverse distances between these species. We can write it in the following matrix :
+	\\
+	
+\begin{tabular}{|*{5}{c|}}
+	\hline
+	   & Human  & Mouse  & Cow  & Chimp \\
+	\hline
+	Human  & 0  & 302  & 257  & 18 \\
+	\hline
+	Mouse  & 302  & 0  & 360 & 306 \\
+	\hline
+	Cow  & 257  & 360 & 0 & 261 \\
+	\hline
+	Chimp  & 18 & 306 & 261 & 0 \\
+	\hline
+	
+\end{tabular}
+ 
+\subsection{Question 4}
+
+
+With this matrix we can launch UPGMA and NJ algorithms, and the results are the following :
+ 
+\begin{figure}[h!]
+
+	\includegraphics*[width = \linewidth]{../UPGMA1.pdf}
+	\caption{\label{upgma1} UPGMA tree according to the matrix above }
+\end{figure}
+
+
+\begin{figure}[h!!]
+	\includegraphics*[width = \linewidth]{../NJ1.pdf}
+	\caption{\label{nj1} Neighbor-Joinning tree according to the matrix above }
+\end{figure}
+
+
+UPGMA is not correct because mice should be closer to humans than cows.\\
+The analysis for NJ is a bit trickier since the tree is not rooted, depending on where we put the root it can be correct or not. But topologically it is.\\
+These trees are not correct, in fact human and chimp are closer of mouse than cow and the trees show the contrary. 
+
+\subsection{Question 5}
+
+With a more complete distance matrix we launch again these algorithms :
+
+\begin{figure}[h!]
+	\includegraphics*[width = \linewidth]{../files/UPGMA.pdf}
+	\caption{\label{upgma2} UPGMA tree for all mammals }
+\end{figure}
+
+\begin{figure}[h!]
+	\includegraphics*[width = \linewidth]{../files/NJ.pdf}
+	\caption{\label{nj2} Neighbor-Joinning tree for all mammals }
+\end{figure}
+
+\subsection{Question 6}
+
+None of those trees is correct. The limitation for UPGMA is the fact that it assumes a constant mutation rate. The limitation for NJ is that we have an unrooted tree, we would for example need an outgroup to root the tree. In any case, the construction depends on the distance matrix we have and the number of available taxa.\\
+
+The used aproach is limited because it is only based on recombination, it also assumes that the good historical sequence of recombinations is the simplest. Maybe we are seeing the result of some convergences between human and cow for example.
+
+
+%\subsection{Question 1}
+%\VerbatimInput[	label=\fbox{\color{Black}Aligned sequences - Clustal}]{3_1.txt}
+\section{Exercise 3 : Reconstruction using characters}
+\subsection{Question 1}
+
+Convergent evolution is the evolutionnary process of similar features in two distinct species. It creates analogy of traits but these traits are not homologuous, their last common ancestor does not share the trait. Convergent evolution bring species closer by getting the same characters\\
+Divergent evolution is the evolutionnary process which bring species apart through the evolution and accumulation of distinct features in the different groups, it leads to speciation.
+Divergent evolution creates differences between species and drives populations to genomic diversity.
+
+\subsection{Question 2}
+\begin{figure}[h!]
+	\includegraphics*[width = \linewidth]{../ex3/PARS.pdf}
+	\caption{\label{nj2} Parsimony tree }
+\end{figure}
+It is correct, all placental mammals are grouped and both opossum and fish are outside of this group. Although the (rat,mouse,whale) should be in a different subtree from (human,chimps), but we guess one would need more traits to distinguish them. 
+\subsection{Question 3}
+\begin{figure}[h!]
+	\includegraphics*[width = \linewidth]{../ex3/PARS2.pdf}
+	\caption{\label{nj2} Parsimony tree without enlarged malleolus }
+\end{figure}
+Now that we do not take into account the enlarged malleolus, the whale is no longer part of the placental mammal group, and the opossum is.\\
+The characters responsible for this incorrect tree is the ability to live in water for the whale. The opossum is now very close from human and chimp, this is due to the opposable thumb which are both convergent characters.\\
+
+\subsection{Question 4}
+There are two obvious convergent characters in this table, as it has been said there is the opposable thumb among opossum and primates (human, chimp).\\
+"Lives in water" is a case of convergent evolution though it is actually more of an atavism ( a special case of convergent evolution).\\
+
+\end{document}
+

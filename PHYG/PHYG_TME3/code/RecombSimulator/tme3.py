@@ -55,7 +55,7 @@ def deletion(genome,mean_del_len):
 	chrom_index, gene_index = choose_coordinates(genome)
 	inversion_len = poisson(mean_del_len)
 	while inversion_len > len(genome[chrom_index])-gene_index:
-		inversion_len = poisson(mean_inv_len)
+		inversion_len = poisson(mean_del_len)
 	if 0 in genome[chrom_index][gene_index:gene_index+inversion_len]:
 		genome[chrom_index][gene_index:gene_index+inversion_len] = [0]
 	else:

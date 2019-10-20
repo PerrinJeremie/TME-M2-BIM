@@ -1,0 +1,11 @@
+--------------------- Simulation 8 ----------------------
+root genome has 100 gene(s) on 4 chromosome(s):
+{ 1: 18, 2: 14, 3: 36, 4: 32}
+---------------------- Statistics -----------------------
+Inversions:     8
+Translocations: 2
+Duplications:   3
+Deletions:      2
+Fusions:        0
+Fissions:       0
+WGD:            0
