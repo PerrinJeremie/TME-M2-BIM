@@ -49,7 +49,7 @@
 \section{Exercise 2 : Implementation of simple events}
 Cf. folder "code".
 
-\section{Exercise 3 : Reconstruction using characters}
+\section{Exercise 3 : Small dataset simulation}
 \subsection{Question 1}
 
 Cf. folder "code/results/[1-10]".
@@ -58,7 +58,8 @@ Cf. folder "code/results/[1-10]".
 
 \begin{tabular}{|*{11}{c|}}
 	\hline
-	& Sim 1  & Sim 2  & Sim 3  & Sim 4 & Sim 5 & Sim 6 & Sim 7 & Sim 8 & Sim 9 & Sim 10 \\
+	& Sim 1  & Sim 2  & Sim 3  & Sim 4 & Sim 5
+	& Sim 6 & Sim 7 & Sim 8 & Sim 9 & Sim 10 \\
 	\hline
 	Inversion  & 7  & 10  & 11  & 11 & 12 & 10 & 7 & 8 &7&10 \\
 	\hline
@@ -82,12 +83,38 @@ Cf. folder "code/results/[1-10]".
 
 
 
-\subsection{Question 4}
+\subsection{Question 4-5}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\includegraphics*[width = \linewidth]{image/tree_1_true.pdf}
-	\caption{\label{nj2} Parsimony tree without enlarged malleolus }
+	\caption{ Real tree for simulation 1 }
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics*[width = \linewidth]{image/tree_1_MLGO.pdf}
+	\caption{The resulting tree of Maximum of likelihood algorithm for simulation 1 }
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics*[width = \linewidth]{image/tree_6_true.pdf}
+	\caption{ Real tree for simulation 6 }
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics*[width = \linewidth]{image/tree_6_MLGO.pdf}
+	\caption{The resulting tree of Maximum of likelihood algorithm for simulation 6 }
 \end{figure}
 
 \end{document}
 
+\section{Exercise 4 : Large dataset simulation}
+
+\begin{figure}[H]
+	\includegraphics*[width = \linewidth]{image/big_sim_tree_true.pdf}
+	\caption{ Real tree for the large dataset simulation }
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics*[width = \linewidth]{image/big_sim_tree_MLGO.pdf}
+	\caption{The resulting tree of Maximum of likelihood algorithm for the large dataset simulation }
+\end{figure}
