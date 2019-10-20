@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.12.18)  14 OCT 2019 18:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.13)  20 OCT 2019 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**witoldPODLEJSKI_jérémiePERRIN_TME2.tex
-(./witoldPODLEJSKI_jérémiePERRIN_TME2.tex
-LaTeX2e <2017/01/01> patch level 3
-Babel <3.9r> and hyphenation patterns for 32 language(s) loaded.
+**witoldPODLEJSKI_jérémiePERRIN_TME3.tex
+(./witoldPODLEJSKI_jérémiePERRIN_TME3.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -350,22 +350,28 @@ Now handling font encoding U ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/02/22 v2.0g Standard LaTeX package
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/02/22 v2.0g Standard LaTeX file
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/04/23 3.9r The Babel package
+Package: babel 2018/02/14 3.18 The Babel package
 
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2016/04/23 3.9r Babel common definitions
+File: babel.def 2018/02/14 3.18 Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count89
 )
 \l@british = a dialect from \language\l@english 
 \l@UKenglish = a dialect from \language\l@english 
@@ -374,14 +380,14 @@ File: babel.def 2016/04/23 3.9r Babel common definitions
 \l@newzealand = a dialect from \language\l@british 
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -392,21 +398,13 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count89
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2015/03/04 v2.20.2
+Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks19
 \thm@bodyfont=\toks20
 \thm@headfont=\toks21
@@ -429,7 +427,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
@@ -520,15 +518,8 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 )
 \c@theorem=\count105
 \c@definition=\count106
- (./witoldPODLEJSKI_jérémiePERRIN_TME2.aux
-
-LaTeX Warning: Label `nj2' multiply defined.
-
-
-LaTeX Warning: Label `nj2' multiply defined.
-
-)
-\openout1 = `witoldPODLEJSKI_jérémiePERRIN_TME2.aux'.
+ (./witoldPODLEJSKI_jérémiePERRIN_TME3.aux)
+\openout1 = `witoldPODLEJSKI_jérémiePERRIN_TME3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -542,7 +533,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen115
@@ -555,31 +547,21 @@ LaTeX Font Info:    ... okay on input line 36.
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks32
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
@@ -588,15 +570,32 @@ Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
@@ -614,200 +613,41 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<image/parsimony.png, id=1, 854.19125pt x 241.90375pt>
-File: image/parsimony.png Graphic file (type png)
-
-<use image/parsimony.png>
-Package pdftex.def Info: image/parsimony.png used on input line 49.
-(pdftex.def)             Requested size: 276.00105pt x 78.16008pt.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/parsimony.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-
+Overfull \hbox (101.45099pt too wide) in paragraph at lines 59--78
+[] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 74.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-[2] <image/topology.png, id=32, 282.05376pt x 223.83624pt>
-File: image/topology.png Graphic file (type png)
-
-<use image/topology.png>
-Package pdftex.def Info: image/topology.png used on input line 110.
-(pdftex.def)             Requested size: 85.35826pt x 67.73885pt.
- <image/tree_1.png, id=34, 608.2725pt x 381.425pt>
-File: image/tree_1.png Graphic file (type png)
-
-<use image/tree_1.png>
-Package pdftex.def Info: image/tree_1.png used on input line 121.
-(pdftex.def)             Requested size: 142.26378pt x 89.2042pt.
- <image/tree_2.png, id=36, 608.2725pt x 381.425pt>
-File: image/tree_2.png Graphic file (type png)
-
-<use image/tree_2.png>
-Package pdftex.def Info: image/tree_2.png used on input line 121.
-(pdftex.def)             Requested size: 142.26378pt x 89.2042pt.
- <image/tree_3-4.png, id=38, 608.2725pt x 380.42125pt>
-File: image/tree_3-4.png Graphic file (type png)
-
-<use image/tree_3-4.png>
-Package pdftex.def Info: image/tree_3-4.png used on input line 123.
-(pdftex.def)             Requested size: 142.26378pt x 88.96944pt.
- <image/tree_5.png, id=40, 608.2725pt x 381.425pt>
-File: image/tree_5.png Graphic file (type png)
-
-<use image/tree_5.png>
-Package pdftex.def Info: image/tree_5.png used on input line 123.
-(pdftex.def)             Requested size: 142.26378pt x 89.2042pt.
- <image/tree_6.png, id=42, 608.2725pt x 381.425pt>
-File: image/tree_6.png Graphic file (type png)
-
-<use image/tree_6.png>
-Package pdftex.def Info: image/tree_6.png used on input line 125.
-(pdftex.def)             Requested size: 142.26378pt x 89.2042pt.
- <image/final.png, id=44, 573.14125pt x 269.005pt>
-File: image/final.png Graphic file (type png)
-
-<use image/final.png>
-Package pdftex.def Info: image/final.png used on input line 126.
-(pdftex.def)             Requested size: 142.26378pt x 66.77083pt.
- [3 <./image/topology.png> <./image/tree_1.png> <./image/tree_2.png> <./image/t
-ree_3-4.png> <./image/tree_5.png> <./image/tree_6.png> <./image/final.png>] [4]
- <../human_mouse.png, id=66, 764.8575pt x 1027.84pt>
-File: ../human_mouse.png Graphic file (type png)
-
-<use ../human_mouse.png>
-Package pdftex.def Info: ../human_mouse.png used on input line 146.
-(pdftex.def)             Requested size: 286.49406pt x 384.99832pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
-
- []
-
-[5 <../human_mouse.png>] <../H1_M4.png, id=73, 590.205pt x 748.7975pt>
-File: ../H1_M4.png Graphic file (type png)
-
-<use ../H1_M4.png>
-Package pdftex.def Info: ../H1_M4.png used on input line 158.
-(pdftex.def)             Requested size: 312.9803pt x 397.0893pt.
- [6 <../H1_M4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 165--167
-
- []
-
-<../UPGMA1.pdf, id=80, 830.39844pt x 88.0729pt>
-File: ../UPGMA1.pdf Graphic file (type pdf)
- <use ../UPGMA1.pdf>
-Package pdftex.def Info: ../UPGMA1.pdf used on input line 190.
-(pdftex.def)             Requested size: 345.0pt x 36.59122pt.
-
-<../NJ1.pdf, id=82, 830.39844pt x 88.0729pt>
-File: ../NJ1.pdf Graphic file (type pdf)
- <use ../NJ1.pdf>
-Package pdftex.def Info: ../NJ1.pdf used on input line 196.
-(pdftex.def)             Requested size: 345.0pt x 36.59122pt.
-
-<../files/UPGMA.pdf, id=84, 861.67152pt x 139.42885pt>
-File: ../files/UPGMA.pdf Graphic file (type pdf)
-
-<use ../files/UPGMA.pdf>
-Package pdftex.def Info: ../files/UPGMA.pdf used on input line 210.
-(pdftex.def)             Requested size: 345.0pt x 55.82585pt.
-
+<image/tree_1_true.pdf, id=1, 744.38098pt x 763.65298pt>
+File: image/tree_1_true.pdf Graphic file (type pdf)
+<use image/tree_1_true.pdf>
+Package pdftex.def Info: image/tree_1_true.pdf  used on input line 88.
+(pdftex.def)             Requested size: 345.0pt x 353.92973pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../files/NJ.pdf, id=86, 861.67152pt x 136.25291pt>
-File: ../files/NJ.pdf Graphic file (type pdf)
- <use ../files/NJ.pdf>
-Package pdftex.def Info: ../files/NJ.pdf used on input line 215.
-(pdftex.def)             Requested size: 345.0pt x 54.55424pt.
+[1
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
- []
-
-[7 <../UPGMA1.pdf> <../NJ1.pdf>]
-Overfull \hbox (7.164pt too wide) in paragraph at lines 231--234
-\T1/cmr/m/n/10 Divergent evo-lu-tion is the evo-lu-tion-nary pro-cess which bri
-ng species apart through
- []
-
-<../ex3/PARS.pdf, id=126, 878.68039pt x 160.34293pt>
-File: ../ex3/PARS.pdf Graphic file (type pdf)
- <use ../ex3/PARS.pdf>
-Package pdftex.def Info: ../ex3/PARS.pdf used on input line 237.
-(pdftex.def)             Requested size: 345.0pt x 62.95674pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <../files/UPGMA.pdf> <../files/NJ.pdf>]
-<../ex3/PARS2.pdf, id=165, 878.68039pt x 163.51884pt>
-File: ../ex3/PARS2.pdf Graphic file (type pdf)
- <use ../ex3/PARS2.pdf>
-Package pdftex.def Info: ../ex3/PARS2.pdf used on input line 243.
-(pdftex.def)             Requested size: 345.0pt x 64.20374pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--252
-
- []
-
-[9 <../ex3/PARS.pdf> <../ex3/PARS2.pdf>]
-(./witoldPODLEJSKI_jérémiePERRIN_TME2.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./image/tree_1_true.pd
+f>] (./witoldPODLEJSKI_jérémiePERRIN_TME3.aux) ) 
 Here is how much of TeX's memory you used:
- 4482 strings out of 494335
- 56729 string characters out of 6163478
- 130291 words of memory out of 5000000
- 7712 multiletter control sequences out of 15000+600000
- 16060 words of font info for 48 fonts, out of 8000000 for 9000
- 350 hyphenation exceptions out of 8191
- 39i,12n,35p,592b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600p
-k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600p
-k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600p
-k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600p
-k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600p
-k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600p
-k> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600p
-k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on witoldPODLEJSKI_jérémiePERRIN_TME2.pdf (9 pages, 469983 byt
-es).
+ 4413 strings out of 494923
+ 55778 string characters out of 6180741
+ 131144 words of memory out of 5000000
+ 7639 multiletter control sequences out of 15000+600000
+ 14598 words of font info for 46 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 41i,6n,35p,303b,237s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/witold/.texlive2017/t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/witold/.texlive2017
+/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/witold/.texlive20
+17/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/witold/.texlive
+2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/witold/.texli
+ve2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on witoldPODLEJSKI_jérémiePERRIN_TME3.pdf (2 pages, 51264 byte
+s).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
+ 173 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 12 words of extra memory for PDF output out of 10000 (max. 10000000)
 
