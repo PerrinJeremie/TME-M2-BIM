@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{amsthm}
 \usepackage{amssymb,amsmath}
-
+\usepackage{tabularx}
 \usepackage[dvipsnames]{xcolor}
 
 \usepackage{fancyvrb}
@@ -39,13 +39,20 @@
 
 \section{Exercise 1 : Genome evolution simulation}
 \subsection{Question 1}
-
+Since the evolution of genomes is a stochastic process, it is a good idea to simulate it to compare simulated results to what we observe. In order to simulate accurately such a process, we need a theoretical model of evolution. The statistical accordance of the simulated data with the data observed is one way we can validate a model of evolution, or at least have an idea of the most important effects one needs to take into account.\\
+In order to fully describe the evolution, a model needs :
+\begin{itemize}
+	\item A representation of the genome
+	\item A mutation rate ( how often does a rearrangement happens)
+	\item A list of rearrangements and their relative occurence
+\end{itemize}
  
 \subsection{Question 2}
-
+The choice of parameters is important because the model needs to reflect the evolutionnary process. Or at least should describe a process comparable to that of evolution so as to be able to compare the results of the simulation to the abserved data.\\
+If the model fails to describe the evolutionnary process then there would be no sense comparing its result to what we observe. Of course we cannot be sure that the model will indeed represent (even partially) the evolutionnary process. But if we are careful not too have a too complicated model ( which might indeed have results corresponding to observation), and still observe concordance with our data than we can safely assume that the model describes some part of what really happens.
 
 \subsection{Question 3}
-
+We cannot use the same parameters in between the different clades. That is so because the genomes might be very different and in some cases more prone to rearrangements. One example of such a distinction is noted in the thesis report where thay have to consider different number of events occuring depending on wether they study vertebrates or yeast.
 \section{Exercise 2 : Implementation of simple events}
 Cf. folder "code".
 
@@ -55,57 +62,48 @@ Cf. folder "code".
 Cf. folder "code/results/[1-10]".
 
 \subsection{Question 2}
-
+\begin{center}
 \begin{tabular}{|*{11}{c|}}
 	\hline
-	& Sim 1  & Sim 2  & Sim 3  & Sim 4 & Sim 5
-	& Sim 6 & Sim 7 & Sim 8 & Sim 9 & Sim 10 \\
+	& S1& S2  & S3  & S4 & S5
+	& S6& S7 & S8 & S9 & S10 \\
 	\hline
-	Inversion  & 7  & 10  & 11  & 11 & 12 & 10 & 7 & 8 &7&10 \\
+	Inversion     &9 &12&13&6 &8 &9 &10&11&9 &13 \\
 	\hline
-	Translocation &8&1&5&1&4&7&6&2&1&6 \\
+	Translocation &5 &6 &3 &9 &3 &4 &4 &4 &7 &4 \\
 	\hline
-	Duplication  & 0&1&0&1&2&0&1&3&3&0 \\
+	Duplication   &0 &0 &1 &2 &0 &1 &8 &0 &0 &0 \\
 	\hline
-	Deletions  & 0&2&1&1&2&0&3&2&4&0 \\
+	Deletions     &0 &1 &1 &0 &3 &0 &0 &1 &0 &0 \\
 	\hline
-	Fusions   &0&0&0&0&0&0&0&0&0&0 \\
+	Fusions       &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 \\
 	\hline
-	Fissions &0&0&0&0&0&0&0&0&0&0 \\
+	Fissions      &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 \\
 	\hline
-	WGD  &0&0&0&0&0&0&0&0&0&0 \\
+	WGD           &0 &0 &0 &0 &0 &0 &0 &0 &0 &0 \\
 	\hline
 \end{tabular}
-
-
+\end{center}
+\paragraph*{}
+Inversions are most frequents, out of the events we coded ourselves fission is the least present.
 
 \subsection{Question 3}
+Fissions did not appear in any of the simulations, since it only occurs once out of a thousand event on average. And since we only simulated around 150 events throughout the simulations it is understandable that not once did it occur.
 
-
-
+\newpage
 \subsection{Question 4-5}
 
-\begin{figure}[H]
-	\includegraphics*[width = \linewidth]{image/tree_1_true.pdf}
-	\caption{ Real tree for simulation 1 }
+\begin{figure}[h]
+	\centering
+	\includegraphics*[width = 0.5\linewidth]{image/new/tree3.png}
+	\caption{ Simulation 3 :  (A) Real tree (B) Gene Order Inferred }
 \end{figure}
 
-\begin{figure}[H]
-	\includegraphics*[width = \linewidth]{image/tree_1_MLGO.pdf}
-	\caption{The resulting tree of Maximum of likelihood algorithm for simulation 1 }
+\begin{figure}[h]
+	\centering
+	\includegraphics*[width = 0.5\linewidth]{image/new/tree7.png}
+	\caption{ Simulation 7 :  (A) Real tree (B) Gene Order Inferred }
 \end{figure}
-
-\begin{figure}[H]
-	\includegraphics*[width = \linewidth]{image/tree_6_true.pdf}
-	\caption{ Real tree for simulation 6 }
-\end{figure}
-
-\begin{figure}[H]
-	\includegraphics*[width = \linewidth]{image/tree_6_MLGO.pdf}
-	\caption{The resulting tree of Maximum of likelihood algorithm for simulation 6 }
-\end{figure}
-
-\end{document}
 
 \section{Exercise 4 : Large dataset simulation}
 
@@ -118,3 +116,4 @@ Cf. folder "code/results/[1-10]".
 	\includegraphics*[width = \linewidth]{image/big_sim_tree_MLGO.pdf}
 	\caption{The resulting tree of Maximum of likelihood algorithm for the large dataset simulation }
 \end{figure}
+\end{document}
