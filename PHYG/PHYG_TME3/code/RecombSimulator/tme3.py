@@ -40,12 +40,10 @@ def print_genome(genome):
 	It use a mean of the length to determine the number of genes that will be inverted"""
 def inversion(genome,mean_inv_len):
 	chrom_index, gene_index = choose_coordinates(genome)
-	while len(genome[chrom_index])-1 == gene_index:
-		chrom_index, gene_index = choose_coordinates(genome)
 	inversion_len = poisson(mean_inv_len)
-	while inversion_len < 2 or inversion_len > len(genome[chrom_index])-gene_index:
-		inversion_len = poisson(mean_inv_len)
-	genome[chrom_index][gene_index:gene_index+inversion_len] = genome[chrom_index][gene_index:gene_index+inversion_len][::-1]
+	while len(genome[chrom_index]) <= gene_index + inversion_len :
+		chrom_index, gene_index = choose_coordinates(genome)
+	genome[chrom_index][gene_index:gene_index+inversion_len] = [-x for x in genome[chrom_index][gene_index:gene_index+inversion_len][::-1]]
 	return(genome)
 
 """ EXERCISE 2 - Deletion function
@@ -53,14 +51,13 @@ def inversion(genome,mean_inv_len):
 	It use a mean of deletion length to determine the number of genes that will be deleted"""
 def deletion(genome,mean_del_len):
 	chrom_index, gene_index = choose_coordinates(genome)
-	inversion_len = poisson(mean_del_len)
-	while inversion_len > len(genome[chrom_index])-gene_index:
-		inversion_len = poisson(mean_del_len)
-	if 0 in genome[chrom_index][gene_index:gene_index+inversion_len]:
-		genome[chrom_index][gene_index:gene_index+inversion_len] = [0]
+	delete_len = poisson(mean_del_len)
+	while delete_len > len(genome[chrom_index])-gene_index:
+		delete_len = poisson(mean_del_len)
+	if 0 in genome[chrom_index][gene_index:gene_index+delete_len]:
+		genome[chrom_index][gene_index:gene_index+delete_len+1] = [0]
 	else:
-		genome[chrom_index][gene_index:gene_index+inversion_len] = []
-
+		genome[chrom_index][gene_index:gene_index+delete_len] = []
 	return(genome)
 
 """ EXERCISE 2 - Fission function
