@@ -44,11 +44,11 @@ In order to fully describe the evolution, a model needs :
 \begin{itemize}
 	\item A representation of the genome
 	\item A mutation rate ( how often does a rearrangement happens)
-	\item A list of rearrangements and their relative occurence
+	\item A list of rearrangements events and their relative occurence
 \end{itemize}
  
 \subsection{Question 2}
-The choice of parameters is important because the model needs to reflect the evolutionnary process. Or at least should describe a process comparable to that of evolution so as to be able to compare the results of the simulation to the abserved data.\\
+The choice of parameters is important because the model needs to reflect the evolutionnary process. Or at least should describe a process comparable to that of evolution so as to be able to compare the results of the simulation to the observed data.\\
 If the model fails to describe the evolutionnary process then there would be no sense comparing its result to what we observe. Of course we cannot be sure that the model will indeed represent (even partially) the evolutionnary process. But if we are careful not too have a too complicated model ( which might indeed have results corresponding to observation), and still observe concordance with our data than we can safely assume that the model describes some part of what really happens.
 
 \subsection{Question 3}
@@ -105,7 +105,7 @@ Fissions did not appear in any of the simulations, since it only occurs once out
 	\caption{ Simulation 7 :  (A) Real tree (B) Gene Order Inferred }
 \end{figure}
 
-When we compare the two trees for both simulations, we notice that GeneOrder does a convincing job in finding the tree underlying the simulated evolutions. Although the branch lengths are not exactly accurate, especially concerning the positionning of the root, the topology and speciation events are correctly inferred from the sequences.
+When we compare the two trees for both simulations, we notice that Gene Order algorithm does a convincing job in finding the tree underlying the simulated evolutions. Although the branch lengths are not exactly accurate, especially concerning the positionning of the root, the topology and speciation events are correctly inferred from the sequences.
 
 \section{Exercise 4 : Large dataset simulation}
 \begin{center}
@@ -140,4 +140,6 @@ When we compare the two trees for both simulations, we notice that GeneOrder doe
 	\includegraphics*[width = \linewidth]{image/big_sim_tree_MLGO.pdf}
 	\caption{The resulting tree of Maximum of likelihood algorithm for the large dataset simulation }
 \end{figure}
+
+As we can see the Maximum Likelihood Gene Order algorithm did not achieve to construct the right tree topology. This is due to the large amount of recombinaison event, in that case the simplest model is not necessarily the good one.
 \end{document}
