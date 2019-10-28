@@ -132,14 +132,9 @@ When we compare the two trees for both simulations, we notice that Gene Order al
 \end{center}
 
 \begin{figure}[H]
-	\includegraphics*[width = \linewidth]{image/big_sim_tree_true.pdf}
-	\caption{ Real tree for the large dataset simulation }
+	\includegraphics*[width = \linewidth]{image/new/large_1.png}
+	\caption{ Large Dataset Simulation 1. (A) Real tree (B) Inferred by MLGO}
 \end{figure}
 
-\begin{figure}[H]
-	\includegraphics*[width = \linewidth]{image/big_sim_tree_MLGO.pdf}
-	\caption{The resulting tree of Maximum of likelihood algorithm for the large dataset simulation }
-\end{figure}
-
-As we can see the Maximum Likelihood Gene Order algorithm did not achieve to construct the right tree topology. This is due to the large amount of recombinaison event, in that case the simplest model is not necessarily the good one.
+As we can see the Maximum Likelihood Gene Order algorithm did not achieve to reconstruct the right tree topology. This is due to the large amount of recombination events, in that case the Maximum Likelihood has a search space which is very big, it probably finds the best simplest chain of events which explains the observed data, but it is not necessarily the chain of events that was simulated.
 \end{document}
