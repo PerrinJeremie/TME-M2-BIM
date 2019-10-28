@@ -66,12 +66,16 @@ def fission(genome):
 	chrom_index, gene_index = choose_coordinates(genome)
 	while gene_index == 0 :
 		chrom_index, gene_index = choose_coordinates(genome)
-	genome[len(genome)+1] = genome[chrom_index][gene_index:]
-	genome[chrom_index] = genome[chrom_index][:gene_index-1]
+	genome[max(genome.keys()) + 1] = genome[chrom_index][gene_index:]
+	genome[chrom_index] = genome[chrom_index][:gene_index]
 	if 0 in genome[chrom_index]:
-		genome[len(genome)].insert(rd.randint(0,len(genome[len(genome)])-1),0)
+		genome[max(genome.keys())].insert(rd.randint(0,len(genome[max(genome.keys())])),0)
 	else:
-		genome[chrom_index].insert(rd.randint(0,len(genome[chrom_index])-1),0)
+		genome[chrom_index].insert(rd.randint(0,len(genome[chrom_index])),0)
+
+	if (not 0 in genome[chrom_index]) or (not 0 in genome[max(genome.keys())]):
+		print(genome[chrom_index])
+		print(genome[max(genome.keys())]) 
 	return(genome)
 
 

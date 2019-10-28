@@ -105,7 +105,31 @@ Fissions did not appear in any of the simulations, since it only occurs once out
 	\caption{ Simulation 7 :  (A) Real tree (B) Gene Order Inferred }
 \end{figure}
 
+When we compare the two trees for both simulations, we notice that GeneOrder does a convincing job in finding the tree underlying the simulated evolutions. Although the branch lengths are not exactly accurate, especially concerning the positionning of the root, the topology and speciation events are correctly inferred from the sequences.
+
 \section{Exercise 4 : Large dataset simulation}
+\begin{center}
+	\begin{tabular}{|*{11}{c|}}
+		\hline
+		& S1& S2  & S3  & S4 & S5
+		& S6& S7 & S8 & S9 & S10 \\
+		\hline
+		Inversion     &4656&5415&5086&5617&5315&5103&5056&4928&4847&5002 \\
+		\hline
+		Translocation &2357&2639&2532&2897&2599&2591&2580&2407&2340&2465 \\
+		\hline
+		Duplication   &384 &397 &412 &484 &447 &402 &465 &430 &408 &440  \\
+		\hline
+		Deletions     &397 &464 &417 &445 &444 &421 &427 &433 &411 &415  \\
+		\hline
+		Fusions       &10  &4   &5   &10  &8   &4   &7   &6   &6   &6    \\
+		\hline
+		Fissions      &7   &11  &13  &4   &10  &3   &12  &6   &10  &12   \\
+		\hline
+		WGD           &1   &0   &3   &1   &1   &1   &2   &0   &0   &1    \\
+		\hline
+	\end{tabular}
+\end{center}
 
 \begin{figure}[H]
 	\includegraphics*[width = \linewidth]{image/big_sim_tree_true.pdf}
