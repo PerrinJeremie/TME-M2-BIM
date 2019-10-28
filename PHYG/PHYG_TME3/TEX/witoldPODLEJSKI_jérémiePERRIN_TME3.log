@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.12.18)  28 OCT 2019 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.12.18)  28 OCT 2019 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,8 +660,13 @@ File: image/new/large_1.png Graphic file (type png)
 <use image/new/large_1.png>
 Package pdftex.def Info: image/new/large_1.png used on input line 135.
 (pdftex.def)             Requested size: 345.0pt x 344.99312pt.
- [4 <./image/new/large_1.png>] [5]
-(./witoldPODLEJSKI_jérémiePERRIN_TME3.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+[4 <./image/new/large_1.png>] [5] (./witoldPODLEJSKI_jérémiePERRIN_TME3.aux) 
+) 
 Here is how much of TeX's memory you used:
  4492 strings out of 494335
  56582 string characters out of 6163478
@@ -670,17 +675,16 @@ Here is how much of TeX's memory you used:
  15374 words of font info for 47 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  39i,6n,35p,531b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/gr3w/.texlive2016/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/gr3w/.texlive2016/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/gr3w/.texlive2016/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/gr3w/.texlive2016/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/gr3w/.texlive2016/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on witoldPODLEJSKI_jérémiePERRIN_TME3.pdf (5 pages, 152336 byt
+ </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
+> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk
+> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk
+> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
+> </home/gr3w/.texlive2016/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on witoldPODLEJSKI_jérémiePERRIN_TME3.pdf (5 pages, 152241 byt
 es).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
+ 200 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  34 words of extra memory for PDF output out of 10000 (max. 10000000)
