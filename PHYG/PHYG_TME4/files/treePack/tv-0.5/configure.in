@@ -1,0 +1,83 @@
+# $Id: configure.in,v 1.19 2005/08/31 14:08:28 rdmp1c Exp $
+
+dnl Process this file with autoconf to produce a configure script
+
+AC_INIT(tview.cpp)
+AM_INIT_AUTOMAKE(tv, 0.5)
+AC_PROG_CXX
+AC_LANG_CPLUSPLUS
+AC_PROG_INSTALL
+#AC_ARG_PROGRAM
+
+# We need ranlib to make the library, and we need to define make
+AC_PROG_RANLIB
+AC_PROG_MAKE_SET
+
+# Ensure that we set ENT (and set it to false). This flag affects
+# the Makefile for TreeLib
+AM_CONDITIONAL(ENT, false)
+
+
+
+dnl We need wxWindows to be installed
+AC_PATH_PROG(WX_CONFIG, wx-config, no)
+if [[ "$WX_CONFIG" = "no" ]] ; then
+   AC_MSG_ERROR("Could not find wx-config: is wxWindows installed?")
+fi
+
+dnl Set compiler flagsthat don't relate to wxWindows
+CXXFLAGS="$CXXFLAGS -Wno-deprecated"
+
+dnl We use wx-config to set the compiler flags. In wxWindows 2.2.x
+dnl this was done using `wx-config --cflags` regardless of whether
+dnl the code is C or C++. Version 2.3.x uses --cxxflags for C++.
+dnl Because --cxxflags is not a valid option for wx-config prior 
+dnl to 2.3.x, we need to check which version of wxWindows we are 
+dnl using and set $CXXFLAGS accordingly.
+dnl
+AC_MSG_CHECKING(wxWindows version)
+wx_version=`$WX_CONFIG --version`
+AC_MSG_RESULT($wx_version)
+case "$wx_version" in
+   2.2.*)  AC_MSG_WARN([wxWindows is older than 2.3., setting CXXFLAGS using --cflags])
+           CXXFLAGS="$CXXFLAGS `$WX_CONFIG --cflags` -DUSE_WXWINDOWS"
+           ;;
+   *)      CXXFLAGS="$CXXFLAGS `$WX_CONFIG --cxxflags` -DUSE_WXWINDOWS"
+           ;;
+esac
+
+LIBS="$LIBS `$WX_CONFIG --libs`"
+
+# Do we have SVG support? 
+# Set this to 0 when building an RPM on Linux,
+# otherwise test for existence of SVG library. 
+# The reason for this is wxGTK RPMs from wxWidgets.org
+# do  not have the required SVG library (which is a contribution)
+AC_MSG_CHECKING(whether we will use SVG)
+USE_SVG=0
+WX_SVG_LIB=
+if test "$USE_SVG" = 0 ; then
+   AC_MSG_RESULT(no)
+else
+   AC_MSG_RESULT(yes)
+
+  dnl Andreas Pokorny provided this patch to test for the presence of SVG support.
+  dnl Note that the name of the contributed SVG library changed between 2.4 and 2.6 (sigh)
+  case "$wx_version" in
+     2.4.*) WX_SVG_LIB=[`$WX_CONFIG --basename`_dcsvg-`echo ${wx_version} | sed -e "s:\.[0-9]\{1,\}$::"`]
+           ;;
+     *)    WX_SVG_LIB=[`$WX_CONFIG --basename`_svg-`echo ${wx_version} | sed -e "s:\.[0-9]\{1,\}$::"`]
+           ;;
+  esac
+
+  AC_CHECK_LIB($WX_SVG_LIB, main,  [], [AC_MSG_WARN("library required for SVG support not found")])
+fi
+
+
+if test "$USE_SVG" = 1 ; then
+   CXXFLAGS="$CXXFLAGS -DUSE_SVG"
+   LIBS="$LIBS -l$WX_SVG_LIB"
+fi
+
+AC_OUTPUT(Makefile ncl-2.0/Makefile ncl-2.0/src/Makefile TreeLib/Makefile tv.spec)
+

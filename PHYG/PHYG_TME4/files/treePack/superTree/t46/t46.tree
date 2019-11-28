@@ -1,0 +1,17 @@
+#nexus
+
+begin trees; [Treefile written Sun Dec 16 17:37:26 2012]
+[!
+   Mincut supertree computed from 27 trees in file "t46.tree"
+      Smallest source tree had 3 leaves
+      Largest source tree had 28 leaves
+   Rod Page unpublished algorithm used
+   Trees all equally weighted
+
+   supertree version 0.2.0
+   GTL version 1.0.0 (c) University of Passau
+
+   CPU time used = 0 seconds
+]
+	tree min_cut_supertree = [&R] (((((((ENTHI,DICDI,(((((CANAL,ZYGRO),(ASPCL,YARLI))'hc1',(SCHPO,YEAST))'hc6',(ENCCU,ENTBH))'hc4',LEIBR,TRYCR)'c3')'c3',(ARATH,VITVI),ORYSA)'c3',GIALA)'c2',(TETTH,PARTE,((BABBO,THEPA),(PLAF7,((((PLAKH,PLAVI),PLACH)'hc1',PLABE)'hc2',PLAYO)'hc1')'hc5')'hc5')'hc11',((((CAEBR,CAEEL),BRUMA)'hc1',(GUITH,NEMVE))'c0',(RAT,((((DANRE,HUMAN),TETNG)'hc3',CHICK)'hc5',(MACFA,((XENTR,(BRAFL,MOUSE))'hc2',SCHJA)'hc6')'hc4')'hc10')'hc5')'hc6')'c7',(DROER,DROME))'c0',DROSE)'hc1',DROMO)'c0';
+end;

@@ -1,0 +1,87 @@
+#nexus
+
+[!
+Data from Table A2.2 in Appendix 2 of:
+Kenrick, Paul, and Peter r. Crane. 1997. The origin and early diversification
+of land plants:  a cladistic study.  Smithsonian Institution Press, Washington.
+(ISBN 1-56098-729-4)
+]
+
+begin taxa;
+  dimension ntax=15;
+  taxlabels
+    Andreaea
+    Andreaeobryum
+    Anthoceros
+    Chara
+    Coleochaete
+    Equisetum
+    Haplomitrium
+    Horneophyton
+    Huperzia
+    Monoclea
+    Notothylas
+    Polytrichum
+    Sphaerocarpos
+    Sphagnum
+    Takakia
+  ;
+end;
+
+begin characters;
+   dimensions nchar=34;
+   format missing=? symbols="012";
+   charstatelabels
+       1 'Sporophyte cellularity' / unicellular multicellular,
+       2 'Sporophyte independence or dependence' / dependent independent,
+       3 'Well-developed sporangiophore' / absent present,
+       4 'Sporophyte branching' / absent present,
+       5 'Intercalary meristem' / absent present,
+       6 'Foot form' / bulbous tapering,
+       7 'Xylem-cell thickenings' / absent present,
+       8 'Sporangium' / absent present,
+       9 'Sporangium dehiscence' / linear operculate,
+      10 'Columella' / absent present,
+      11 'Elaters and pseudoelaters' / absent present,
+      12 'Zoospore flagella' / present absent,
+      13 'Perine' / absent present,
+      14 'Cuticle' / absent present,
+      15 'Stomates' / absent present,
+      16 'Gametophyte form' / thalloid axial,
+      17 'Gametophyte leaves' / absent present,
+      18 'Archegonium' / absent present,
+      19 'Anteridium morphology' / naked jacket,
+      20 'Antheridium development' / exogenous endogenous,
+      21 'Archegonium position' / superficial sunken,
+      22 'Gametangia distribution' / nonterminal terminal,
+      23 'Paraphyses' / absent present,
+      24 'Rhizoid cellularity' / unicellular multicellular,
+      25 'Protonema type' / nonfilamentous filamentous,
+      26 'Oil bodies' / absent present,
+      27 'Mucilage clefts' / absent present,
+      28 'Pseudopodium' / absent present,
+      29 'Pyrenoids' / present absent,
+      30 'Bicentriolar centrosomes' / orthogonal bicentriolar peripheral,
+      31 'Orientation of lamellae in multilayered structure' / '90 degrees' '40-45 degrees',
+      32 'Preprophase bands in mitosis' / absent present,
+      33 'Lunularic acid' / absent present,
+      34 'D-methionine' / 'not distinguished' distinguished
+   ;
+   matrix
+      Andreaea       1000010101011101111001111001?11??1
+      Andreaeobryum  1010010101011101111001111000??????
+      Anthoceros     100010010111011001111000001001??01
+      Chara          00????????01?0?1000000000000?000??
+      Coleochaete    00????????0000?00000000000000000??
+      Equisetum      1111001100011110011010000000?21?01
+      Haplomitrium   10000001001101011110010?0100111?1?
+      Horneophyton   11110?01?101?11101??1100??00??????
+      Huperzia       1111001100011111011011100000?????1
+      Monoclea       1000000100110100011000000100????1?
+      Notothylas     10001001011101100111100000100111??
+      Polytrichum    1010010111011111111001111000?11?01
+      Sphaerocarpos  1000000100110100011000000100111?10
+      Sphagnum       1000000111011111111001010001111101
+      Takakia        101001010101?1011110010??000111???
+   ;
+end;

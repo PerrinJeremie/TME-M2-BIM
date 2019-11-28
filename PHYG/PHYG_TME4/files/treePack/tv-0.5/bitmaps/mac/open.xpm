@@ -1,0 +1,27 @@
+/* XPM */
+static char * open_xpm[] = {
+/* columns rows colors chars-per-pixel */
+ "16 15 5 1",
+"  c None",
+"a c Black",
+"b c #808000",
+"c c #F8FC00",
+"d c #F8FCF8",
+/* pixels */
+"                ",
+"          aaa   ",
+"         a   a a",
+"              aa",
+"  aaa        aaa",
+" acdcaaaaaaa    ",
+" adcdcdcdcda    ",
+" acdcdcdcdca    ",
+" adcdcaaaaaaaaaa",
+" acdcabbbbbbbbba",
+" addabbbbbbbbba ",
+" acabbbbbbbbba  ",
+" aabbbbbbbbba   ",
+" aaaaaaaaaaa    ",
+"                "
+};
+                  

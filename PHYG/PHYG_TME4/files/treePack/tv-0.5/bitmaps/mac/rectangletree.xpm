@@ -1,0 +1,24 @@
+/* XPM */
+static char * rectangletree_xpm[] = {
+        /* columns rows colors chars-per-pixel */
+        "16 16 2 1",
+        "  c None",
+        "a c Black",
+        /* pixels */
+        "                ",
+        "                ",
+        "        aaaa    ",
+        "        a       ",
+        "   aaaaaa       ",
+        "   a    a       ",
+        "   a    aaaa    ",
+        "   a            ",
+        "   a            ",
+        "   a            ",
+        "   a    aaaa    ",
+        "   a    a       ",
+        "   aaaaaa       ",
+        "        a       ",
+        "        aaaa    ",
+        "                "
+        };

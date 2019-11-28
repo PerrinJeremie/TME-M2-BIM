@@ -1,0 +1,17 @@
+#nexus
+
+begin trees; [Treefile written Sun Dec 16 17:32:33 2012]
+[!
+   Mincut supertree computed from 2 trees in file "test.tree"
+      Smallest source tree had 4 leaves
+      Largest source tree had 5 leaves
+   Rod Page unpublished algorithm used
+   Trees all equally weighted
+
+   supertree version 0.2.0
+   GTL version 1.0.0 (c) University of Passau
+
+   CPU time used = 0 seconds
+]
+	tree min_cut_supertree = [&R] ((a,b),c,(d,e))'hc1';
+end;

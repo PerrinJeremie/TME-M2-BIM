@@ -1,0 +1,1453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 38;
+	objects = {
+		0249A665FF388DC511CA2CEA = {
+			isa = PBXApplicationReference;
+			path = "TreeView X.app";
+			refType = 3;
+		};
+		0249A669FF388E3911CA2CEA = {
+			isa = PBXFileReference;
+			name = "libstdc++.a";
+			path = "/usr/lib/libstdc++.a";
+			refType = 0;
+		};
+		0249A66AFF388E3911CA2CEA = {
+			fileRef = 0249A669FF388E3911CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//020
+//021
+//022
+//023
+//024
+//040
+//041
+//042
+//043
+//044
+		04313892FE3035C9C02AAC07 = {
+			buildActionMask = 2147483647;
+			files = (
+				B3D725A407EF0F1600D12E3F,
+			);
+			isa = PBXRezBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+//040
+//041
+//042
+//043
+//044
+//050
+//051
+//052
+//053
+//054
+		05952DFCFFF02D1B11CA0E50 = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				OPTIMIZATION_CFLAGS = "-O0";
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		05952DFDFFF02D1B11CA0E50 = {
+			buildRules = (
+			);
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//050
+//051
+//052
+//053
+//054
+//060
+//061
+//062
+//063
+//064
+		0640BAA4FFF0323A11CA0E50 = {
+			isa = PBXFrameworkReference;
+			name = ApplicationServices.framework;
+			path = /System/Library/Frameworks/ApplicationServices.framework;
+			refType = 0;
+		};
+		0640BAA5FFF0323A11CA0E50 = {
+			isa = PBXFrameworkReference;
+			name = CoreServices.framework;
+			path = /System/Library/Frameworks/CoreServices.framework;
+			refType = 0;
+		};
+//060
+//061
+//062
+//063
+//064
+//190
+//191
+//192
+//193
+//194
+		195DF8C9FE9D4F0611CA2CBB = {
+			children = (
+				0249A665FF388DC511CA2CEA,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+		};
+//190
+//191
+//192
+//193
+//194
+//200
+//201
+//202
+//203
+//204
+		20286C28FDCF999611CA2CEA = {
+			buildStyles = (
+				05952DFCFFF02D1B11CA0E50,
+				05952DFDFFF02D1B11CA0E50,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 20286C29FDCF999611CA2CEA;
+			projectDirPath = "";
+			targets = (
+				20286C34FDCF999611CA2CEA,
+			);
+		};
+		20286C29FDCF999611CA2CEA = {
+			children = (
+				F51C3E0A03C77CB501E7B49E,
+				F51C3DDC03C77A2301E7B49E,
+				20286C2AFDCF999611CA2CEA,
+				20286C2CFDCF999611CA2CEA,
+				20286C32FDCF999611CA2CEA,
+				195DF8C9FE9D4F0611CA2CBB,
+			);
+			isa = PBXGroup;
+			name = "¬´PROJECTNAME¬ª";
+			path = "";
+			refType = 4;
+		};
+		20286C2AFDCF999611CA2CEA = {
+			children = (
+				F53CB89103CB2010012A40F8,
+				F51C3E4B03C77F0C01E7B49E,
+				F51C3E4C03C77F0C01E7B49E,
+				F51C3E4D03C77F0C01E7B49E,
+				F51C3E4E03C77F0C01E7B49E,
+				F51C3E4F03C77F0C01E7B49E,
+				F51C3E5003C77F0C01E7B49E,
+				F51C3E5103C77F0C01E7B49E,
+			);
+			isa = PBXGroup;
+			name = Sources;
+			path = "";
+			refType = 4;
+		};
+		20286C2CFDCF999611CA2CEA = {
+			children = (
+				F5E2F10005F77C4601A80003,
+				F5E2F10505F7EAD201A80003,
+				F5E2F10605F7EAD201A80003,
+				B3D725A307EF0F1600D12E3F,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			path = "";
+			refType = 4;
+		};
+		20286C32FDCF999611CA2CEA = {
+			children = (
+				20286C33FDCF999611CA2CEA,
+				0249A669FF388E3911CA2CEA,
+				0640BAA4FFF0323A11CA0E50,
+				0640BAA5FFF0323A11CA0E50,
+				F5E2F0FE05F777E801A80003,
+				B3D725A507EF0F4D00D12E3F,
+				B3D725A607EF0F4D00D12E3F,
+				B3D725A707EF0F4D00D12E3F,
+				B3D725A807EF0F4D00D12E3F,
+				B3D725A907EF0F4D00D12E3F,
+				B3D725AA07EF0F4D00D12E3F,
+				B3D725AB07EF0F4D00D12E3F,
+				B3D725AC07EF0F4D00D12E3F,
+				B3D725AD07EF0F4D00D12E3F,
+				B3D725AE07EF0F4D00D12E3F,
+				B3D725B907EF198700D12E3F,
+				B3D725BB07EF19DC00D12E3F,
+			);
+			isa = PBXGroup;
+			name = "External Frameworks and Libraries";
+			path = "";
+			refType = 4;
+		};
+		20286C33FDCF999611CA2CEA = {
+			isa = PBXFrameworkReference;
+			name = Carbon.framework;
+			path = /System/Library/Frameworks/Carbon.framework;
+			refType = 0;
+		};
+		20286C34FDCF999611CA2CEA = {
+			buildPhases = (
+				20286C35FDCF999611CA2CEA,
+				20286C36FDCF999611CA2CEA,
+				20286C38FDCF999611CA2CEA,
+				20286C3BFDCF999611CA2CEA,
+				04313892FE3035C9C02AAC07,
+			);
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = /usr/local/lib;
+				HEADER_SEARCH_PATHS = "TreeLib/gport /usr/local/lib/wx/include/mac-ansi-release-static-2.5 /usr/local/include/wx-2.5";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CFLAGS = "-Wno-deprecated -D__WXMAC__  -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES -DUSE_WXWINDOWS -DNO_GCC_PRAGMA";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = Carbon.r;
+				PRODUCT_NAME = "TreeView X";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+				WRAPPER_EXTENSION = app;
+			};
+			dependencies = (
+			);
+			isa = PBXApplicationTarget;
+			name = tv;
+			productInstallPath = "$(HOME)/Applications";
+			productName = "¬´PROJECTNAME¬ª";
+			productReference = 0249A665FF388DC511CA2CEA;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>tre</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>doc.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>TreeViewX document</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>TEXT</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>TreeView X</string>
+	<key>CFBundleGetInfoString</key>
+	<string>TreeView X (c) 2004 Roderic D. M. Page</string>
+	<key>CFBundleIconFile</key>
+	<string>app.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>uk.ac.gla.zoology.treeviewx</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>TreeView X</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.4.1</string>
+	<key>CFBundleSignature</key>
+	<string>TreX</string>
+	<key>CFBundleVersion</key>
+	<string>0.5.0</string>
+	<key>CSResourcesFileMapped</key>
+	<true/>
+</dict>
+</plist>
+";
+		};
+		20286C35FDCF999611CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				F51C3DF203C77A7801E7B49E,
+				F51C3DF303C77A7801E7B49E,
+				F51C3DF403C77A7801E7B49E,
+				F51C3DF503C77A7801E7B49E,
+				F51C3DF603C77A7801E7B49E,
+				F51C3DF703C77A7801E7B49E,
+				F51C3DF803C77A7801E7B49E,
+				F51C3DF903C77A7801E7B49E,
+				F51C3E0703C77AF401E7B49E,
+				F51C3E2B03C77CE101E7B49E,
+				F51C3E2C03C77CE101E7B49E,
+				F51C3E2D03C77CE101E7B49E,
+				F51C3E2E03C77CE101E7B49E,
+				F51C3E2F03C77CE101E7B49E,
+				F51C3E3003C77CE101E7B49E,
+				F51C3E3103C77CE101E7B49E,
+				F51C3E3203C77CE101E7B49E,
+				F51C3E3303C77CE101E7B49E,
+				F51C3E3403C77CE101E7B49E,
+				F51C3E3503C77CE101E7B49E,
+				F51C3E3603C77CE101E7B49E,
+				F51C3E3703C77CE101E7B49E,
+				F51C3E3803C77CE101E7B49E,
+				F51C3E3903C77CE101E7B49E,
+				F51C3E3A03C77CE101E7B49E,
+				F51C3E5203C77F0C01E7B49E,
+				F51C3E5403C77F0C01E7B49E,
+				F51C3E5503C77F0C01E7B49E,
+				F53CB88903CB0666012A40F8,
+				F53CB88B03CB09B3012A40F8,
+				F5E2F10A05F7EFFC01A80003,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20286C36FDCF999611CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				F5E2F10705F7EAD201A80003,
+				F5E2F10805F7EAD201A80003,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20286C38FDCF999611CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				F51C3DFC03C77A7801E7B49E,
+				F51C3DFD03C77A7801E7B49E,
+				F51C3DFE03C77A7801E7B49E,
+				F51C3DFF03C77A7801E7B49E,
+				F51C3E0003C77A7801E7B49E,
+				F51C3E0103C77A7801E7B49E,
+				F51C3E0203C77A7801E7B49E,
+				F51C3E3B03C77CE101E7B49E,
+				F51C3E3C03C77CE101E7B49E,
+				F51C3E3D03C77CE101E7B49E,
+				F51C3E3E03C77CE101E7B49E,
+				F51C3E3F03C77CE101E7B49E,
+				F51C3E4003C77CE101E7B49E,
+				F51C3E4103C77CE101E7B49E,
+				F51C3E4203C77CE101E7B49E,
+				F51C3E4303C77CE101E7B49E,
+				F51C3E4403C77CE101E7B49E,
+				F51C3E4503C77CE101E7B49E,
+				F51C3E4603C77CE101E7B49E,
+				F51C3E4703C77CE101E7B49E,
+				F51C3E4803C77CE101E7B49E,
+				F51C3E4903C77CE101E7B49E,
+				F51C3E4A03C77CE101E7B49E,
+				F51C3E5603C77F0C01E7B49E,
+				F51C3E5703C77F0C01E7B49E,
+				F5FAAF5503C9DF66011CDE4E,
+				F53CB88F03CB0A26012A40F8,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20286C3BFDCF999611CA2CEA = {
+			buildActionMask = 2147483647;
+			files = (
+				20286C3CFDCF999611CA2CEA,
+				0249A66AFF388E3911CA2CEA,
+				B3D725AF07EF0F4D00D12E3F,
+				B3D725B007EF0F4D00D12E3F,
+				B3D725B107EF0F4D00D12E3F,
+				B3D725B207EF0F4D00D12E3F,
+				B3D725B307EF0F4D00D12E3F,
+				B3D725B407EF0F4D00D12E3F,
+				B3D725B507EF0F4D00D12E3F,
+				B3D725B607EF0F4D00D12E3F,
+				B3D725B707EF0F4D00D12E3F,
+				B3D725B807EF0F4D00D12E3F,
+				B3D725BA07EF198700D12E3F,
+				B3D725BC07EF19DC00D12E3F,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20286C3CFDCF999611CA2CEA = {
+			fileRef = 20286C33FDCF999611CA2CEA;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//200
+//201
+//202
+//203
+//204
+//B30
+//B31
+//B32
+//B33
+//B34
+		B3D725A307EF0F1600D12E3F = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = "libwx_mac-2.5.4.r";
+			path = "/usr/local/lib/libwx_mac-2.5.4.r";
+			refType = 0;
+		};
+		B3D725A407EF0F1600D12E3F = {
+			fileRef = B3D725A307EF0F1600D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725A507EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_base_carbon_net-2.5.a";
+			path = "/usr/local/lib/libwx_base_carbon_net-2.5.a";
+			refType = 0;
+		};
+		B3D725A607EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_base_carbon_xml-2.5.a";
+			path = "/usr/local/lib/libwx_base_carbon_xml-2.5.a";
+			refType = 0;
+		};
+		B3D725A707EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_base_carbon-2.5.a";
+			path = "/usr/local/lib/libwx_base_carbon-2.5.a";
+			refType = 0;
+		};
+		B3D725A807EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_mac_adv-2.5.a";
+			path = "/usr/local/lib/libwx_mac_adv-2.5.a";
+			refType = 0;
+		};
+		B3D725A907EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_mac_core-2.5.a";
+			path = "/usr/local/lib/libwx_mac_core-2.5.a";
+			refType = 0;
+		};
+		B3D725AA07EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_mac_html-2.5.a";
+			path = "/usr/local/lib/libwx_mac_html-2.5.a";
+			refType = 0;
+		};
+		B3D725AB07EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_mac_xrc-2.5.a";
+			path = "/usr/local/lib/libwx_mac_xrc-2.5.a";
+			refType = 0;
+		};
+		B3D725AC07EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwxjpeg-2.5.a";
+			path = "/usr/local/lib/libwxjpeg-2.5.a";
+			refType = 0;
+		};
+		B3D725AD07EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwxpng-2.5.a";
+			path = "/usr/local/lib/libwxpng-2.5.a";
+			refType = 0;
+		};
+		B3D725AE07EF0F4D00D12E3F = {
+			isa = PBXFileReference;
+			name = "libwxtiff-2.5.a";
+			path = "/usr/local/lib/libwxtiff-2.5.a";
+			refType = 0;
+		};
+		B3D725AF07EF0F4D00D12E3F = {
+			fileRef = B3D725A507EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B007EF0F4D00D12E3F = {
+			fileRef = B3D725A607EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B107EF0F4D00D12E3F = {
+			fileRef = B3D725A707EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B207EF0F4D00D12E3F = {
+			fileRef = B3D725A807EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B307EF0F4D00D12E3F = {
+			fileRef = B3D725A907EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B407EF0F4D00D12E3F = {
+			fileRef = B3D725AA07EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B507EF0F4D00D12E3F = {
+			fileRef = B3D725AB07EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B607EF0F4D00D12E3F = {
+			fileRef = B3D725AC07EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B707EF0F4D00D12E3F = {
+			fileRef = B3D725AD07EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B807EF0F4D00D12E3F = {
+			fileRef = B3D725AE07EF0F4D00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725B907EF198700D12E3F = {
+			isa = PBXFileReference;
+			name = "libwx_mac_svg-2.5.a";
+			path = "/usr/local/lib/libwx_mac_svg-2.5.a";
+			refType = 0;
+		};
+		B3D725BA07EF198700D12E3F = {
+			fileRef = B3D725B907EF198700D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B3D725BB07EF19DC00D12E3F = {
+			isa = PBXFileReference;
+			name = libz.dylib;
+			path = /usr/lib/libz.dylib;
+			refType = 0;
+		};
+		B3D725BC07EF19DC00D12E3F = {
+			fileRef = B3D725BB07EF19DC00D12E3F;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+//B30
+//B31
+//B32
+//B33
+//B34
+//F50
+//F51
+//F52
+//F53
+//F54
+		F51C3DDC03C77A2301E7B49E = {
+			children = (
+				F51C3E0303C77AF401E7B49E,
+				F51C3DDD03C77A7801E7B49E,
+				F51C3DDE03C77A7801E7B49E,
+				F51C3DE103C77A7801E7B49E,
+				F51C3DE203C77A7801E7B49E,
+				F51C3DE303C77A7801E7B49E,
+				F51C3DE403C77A7801E7B49E,
+				F51C3DE503C77A7801E7B49E,
+				F51C3DE603C77A7801E7B49E,
+				F51C3DE703C77A7801E7B49E,
+				F51C3DE803C77A7801E7B49E,
+				F51C3DE903C77A7801E7B49E,
+				F51C3DEA03C77A7801E7B49E,
+				F51C3DEB03C77A7801E7B49E,
+				F51C3DEC03C77A7801E7B49E,
+				F51C3DED03C77A7801E7B49E,
+				F51C3DEE03C77A7801E7B49E,
+				F51C3DEF03C77A7801E7B49E,
+				F5E2F10905F7EFFC01A80003,
+			);
+			isa = PBXGroup;
+			name = TreeLib;
+			refType = 4;
+		};
+		F51C3DDD03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = gtree.cpp;
+			path = TreeLib/gtree.cpp;
+			refType = 2;
+		};
+		F51C3DDE03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = gtree.h;
+			path = TreeLib/gtree.h;
+			refType = 2;
+		};
+		F51C3DE103C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = Parse.cpp;
+			path = TreeLib/Parse.cpp;
+			refType = 2;
+		};
+		F51C3DE203C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = Parse.h;
+			path = TreeLib/Parse.h;
+			refType = 2;
+		};
+		F51C3DE303C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = profile.h;
+			path = TreeLib/profile.h;
+			refType = 2;
+		};
+		F51C3DE403C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = tokeniser.cpp;
+			path = TreeLib/tokeniser.cpp;
+			refType = 2;
+		};
+		F51C3DE503C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = tokeniser.h;
+			path = TreeLib/tokeniser.h;
+			refType = 2;
+		};
+		F51C3DE603C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treedrawer.cpp;
+			path = TreeLib/treedrawer.cpp;
+			refType = 2;
+		};
+		F51C3DE703C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treedrawer.h;
+			path = TreeLib/treedrawer.h;
+			refType = 2;
+		};
+		F51C3DE803C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = TreeLib.cpp;
+			path = TreeLib/TreeLib.cpp;
+			refType = 2;
+		};
+		F51C3DE903C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = TreeLib.h;
+			path = TreeLib/TreeLib.h;
+			refType = 2;
+		};
+		F51C3DEA03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treeorder.cpp;
+			path = TreeLib/treeorder.cpp;
+			refType = 2;
+		};
+		F51C3DEB03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treeorder.h;
+			path = TreeLib/treeorder.h;
+			refType = 2;
+		};
+		F51C3DEC03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treereader.cpp;
+			path = TreeLib/treereader.cpp;
+			refType = 2;
+		};
+		F51C3DED03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treereader.h;
+			path = TreeLib/treereader.h;
+			refType = 2;
+		};
+		F51C3DEE03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treewriter.cpp;
+			path = TreeLib/treewriter.cpp;
+			refType = 2;
+		};
+		F51C3DEF03C77A7801E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treewriter.h;
+			path = TreeLib/treewriter.h;
+			refType = 2;
+		};
+		F51C3DF203C77A7801E7B49E = {
+			fileRef = F51C3DE203C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DF303C77A7801E7B49E = {
+			fileRef = F51C3DE303C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DF403C77A7801E7B49E = {
+			fileRef = F51C3DE503C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DF503C77A7801E7B49E = {
+			fileRef = F51C3DE703C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DF603C77A7801E7B49E = {
+			fileRef = F51C3DE903C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DF703C77A7801E7B49E = {
+			fileRef = F51C3DEB03C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DF803C77A7801E7B49E = {
+			fileRef = F51C3DED03C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DF903C77A7801E7B49E = {
+			fileRef = F51C3DEF03C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DFC03C77A7801E7B49E = {
+			fileRef = F51C3DE103C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DFD03C77A7801E7B49E = {
+			fileRef = F51C3DE403C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DFE03C77A7801E7B49E = {
+			fileRef = F51C3DE603C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3DFF03C77A7801E7B49E = {
+			fileRef = F51C3DE803C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E0003C77A7801E7B49E = {
+			fileRef = F51C3DEA03C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E0103C77A7801E7B49E = {
+			fileRef = F51C3DEC03C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E0203C77A7801E7B49E = {
+			fileRef = F51C3DEE03C77A7801E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E0303C77AF401E7B49E = {
+			children = (
+				F51C3E0403C77AF401E7B49E,
+			);
+			isa = PBXGroup;
+			name = gport;
+			refType = 4;
+		};
+		F51C3E0403C77AF401E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = gdefs.h;
+			path = TreeLib/gport/gdefs.h;
+			refType = 4;
+		};
+		F51C3E0703C77AF401E7B49E = {
+			fileRef = F51C3E0403C77AF401E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E0A03C77CB501E7B49E = {
+			children = (
+				F51C3E0B03C77CE101E7B49E,
+				F51C3E0C03C77CE101E7B49E,
+				F51C3E0D03C77CE101E7B49E,
+				F51C3E0E03C77CE101E7B49E,
+				F51C3E0F03C77CE101E7B49E,
+				F51C3E1003C77CE101E7B49E,
+				F51C3E1103C77CE101E7B49E,
+				F51C3E1203C77CE101E7B49E,
+				F51C3E1303C77CE101E7B49E,
+				F51C3E1403C77CE101E7B49E,
+				F51C3E1503C77CE101E7B49E,
+				F51C3E1603C77CE101E7B49E,
+				F51C3E1703C77CE101E7B49E,
+				F51C3E1803C77CE101E7B49E,
+				F51C3E1903C77CE101E7B49E,
+				F51C3E1A03C77CE101E7B49E,
+				F51C3E1B03C77CE101E7B49E,
+				F51C3E1C03C77CE101E7B49E,
+				F51C3E1D03C77CE101E7B49E,
+				F51C3E1E03C77CE101E7B49E,
+				F51C3E1F03C77CE101E7B49E,
+				F51C3E2003C77CE101E7B49E,
+				F51C3E2103C77CE101E7B49E,
+				F51C3E2203C77CE101E7B49E,
+				F51C3E2303C77CE101E7B49E,
+				F51C3E2403C77CE101E7B49E,
+				F51C3E2503C77CE101E7B49E,
+				F51C3E2603C77CE101E7B49E,
+				F51C3E2703C77CE101E7B49E,
+				F51C3E2803C77CE101E7B49E,
+				F51C3E2903C77CE101E7B49E,
+				F51C3E2A03C77CE101E7B49E,
+			);
+			isa = PBXGroup;
+			name = "ncl-2.0";
+			refType = 4;
+		};
+		F51C3E0B03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = assumptionsblock.cpp;
+			path = "ncl-2.0/src/assumptionsblock.cpp";
+			refType = 2;
+		};
+		F51C3E0C03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = assumptionsblock.h;
+			path = "ncl-2.0/src/assumptionsblock.h";
+			refType = 2;
+		};
+		F51C3E0D03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = charactersblock.cpp;
+			path = "ncl-2.0/src/charactersblock.cpp";
+			refType = 2;
+		};
+		F51C3E0E03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = charactersblock.h;
+			path = "ncl-2.0/src/charactersblock.h";
+			refType = 2;
+		};
+		F51C3E0F03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = datablock.cpp;
+			path = "ncl-2.0/src/datablock.cpp";
+			refType = 2;
+		};
+		F51C3E1003C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = datablock.h;
+			path = "ncl-2.0/src/datablock.h";
+			refType = 2;
+		};
+		F51C3E1103C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = discretedatum.cpp;
+			path = "ncl-2.0/src/discretedatum.cpp";
+			refType = 2;
+		};
+		F51C3E1203C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = discretedatum.h;
+			path = "ncl-2.0/src/discretedatum.h";
+			refType = 2;
+		};
+		F51C3E1303C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = discretematrix.cpp;
+			path = "ncl-2.0/src/discretematrix.cpp";
+			refType = 2;
+		};
+		F51C3E1403C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = discretematrix.h;
+			path = "ncl-2.0/src/discretematrix.h";
+			refType = 2;
+		};
+		F51C3E1503C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = distancedatum.cpp;
+			path = "ncl-2.0/src/distancedatum.cpp";
+			refType = 2;
+		};
+		F51C3E1603C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = distancedatum.h;
+			path = "ncl-2.0/src/distancedatum.h";
+			refType = 2;
+		};
+		F51C3E1703C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = distancesblock.cpp;
+			path = "ncl-2.0/src/distancesblock.cpp";
+			refType = 2;
+		};
+		F51C3E1803C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = distancesblock.h;
+			path = "ncl-2.0/src/distancesblock.h";
+			refType = 2;
+		};
+		F51C3E1903C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nexus.cpp;
+			path = "ncl-2.0/src/nexus.cpp";
+			refType = 2;
+		};
+		F51C3E1A03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nexus.h;
+			path = "ncl-2.0/src/nexus.h";
+			refType = 2;
+		};
+		F51C3E1B03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nexusblock.cpp;
+			path = "ncl-2.0/src/nexusblock.cpp";
+			refType = 2;
+		};
+		F51C3E1C03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nexusdefs.h;
+			path = "ncl-2.0/src/nexusdefs.h";
+			refType = 2;
+		};
+		F51C3E1D03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nexustoken.cpp;
+			path = "ncl-2.0/src/nexustoken.cpp";
+			refType = 2;
+		};
+		F51C3E1E03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nexustoken.h;
+			path = "ncl-2.0/src/nexustoken.h";
+			refType = 2;
+		};
+		F51C3E1F03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nxsdate.cpp;
+			path = "ncl-2.0/src/nxsdate.cpp";
+			refType = 2;
+		};
+		F51C3E2003C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nxsdate.h;
+			path = "ncl-2.0/src/nxsdate.h";
+			refType = 2;
+		};
+		F51C3E2103C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nxsstring.cpp;
+			path = "ncl-2.0/src/nxsstring.cpp";
+			refType = 2;
+		};
+		F51C3E2203C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nxsstring.h;
+			path = "ncl-2.0/src/nxsstring.h";
+			refType = 2;
+		};
+		F51C3E2303C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = setreader.cpp;
+			path = "ncl-2.0/src/setreader.cpp";
+			refType = 2;
+		};
+		F51C3E2403C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = setreader.h;
+			path = "ncl-2.0/src/setreader.h";
+			refType = 2;
+		};
+		F51C3E2503C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = taxablock.cpp;
+			path = "ncl-2.0/src/taxablock.cpp";
+			refType = 2;
+		};
+		F51C3E2603C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = taxablock.h;
+			path = "ncl-2.0/src/taxablock.h";
+			refType = 2;
+		};
+		F51C3E2703C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treesblock.cpp;
+			path = "ncl-2.0/src/treesblock.cpp";
+			refType = 2;
+		};
+		F51C3E2803C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = treesblock.h;
+			path = "ncl-2.0/src/treesblock.h";
+			refType = 2;
+		};
+		F51C3E2903C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = xnexus.cpp;
+			path = "ncl-2.0/src/xnexus.cpp";
+			refType = 2;
+		};
+		F51C3E2A03C77CE101E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = xnexus.h;
+			path = "ncl-2.0/src/xnexus.h";
+			refType = 2;
+		};
+		F51C3E2B03C77CE101E7B49E = {
+			fileRef = F51C3E0C03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E2C03C77CE101E7B49E = {
+			fileRef = F51C3E0E03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E2D03C77CE101E7B49E = {
+			fileRef = F51C3E1003C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E2E03C77CE101E7B49E = {
+			fileRef = F51C3E1203C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E2F03C77CE101E7B49E = {
+			fileRef = F51C3E1403C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3003C77CE101E7B49E = {
+			fileRef = F51C3E1603C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3103C77CE101E7B49E = {
+			fileRef = F51C3E1803C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3203C77CE101E7B49E = {
+			fileRef = F51C3E1A03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3303C77CE101E7B49E = {
+			fileRef = F51C3E1C03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3403C77CE101E7B49E = {
+			fileRef = F51C3E1E03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3503C77CE101E7B49E = {
+			fileRef = F51C3E2003C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3603C77CE101E7B49E = {
+			fileRef = F51C3E2203C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3703C77CE101E7B49E = {
+			fileRef = F51C3E2403C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3803C77CE101E7B49E = {
+			fileRef = F51C3E2603C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3903C77CE101E7B49E = {
+			fileRef = F51C3E2803C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3A03C77CE101E7B49E = {
+			fileRef = F51C3E2A03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3B03C77CE101E7B49E = {
+			fileRef = F51C3E0B03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3C03C77CE101E7B49E = {
+			fileRef = F51C3E0D03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3D03C77CE101E7B49E = {
+			fileRef = F51C3E0F03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3E03C77CE101E7B49E = {
+			fileRef = F51C3E1103C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E3F03C77CE101E7B49E = {
+			fileRef = F51C3E1303C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4003C77CE101E7B49E = {
+			fileRef = F51C3E1503C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4103C77CE101E7B49E = {
+			fileRef = F51C3E1703C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4203C77CE101E7B49E = {
+			fileRef = F51C3E1903C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4303C77CE101E7B49E = {
+			fileRef = F51C3E1B03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4403C77CE101E7B49E = {
+			fileRef = F51C3E1D03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4503C77CE101E7B49E = {
+			fileRef = F51C3E1F03C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4603C77CE101E7B49E = {
+			fileRef = F51C3E2103C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4703C77CE101E7B49E = {
+			fileRef = F51C3E2303C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4803C77CE101E7B49E = {
+			fileRef = F51C3E2503C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4903C77CE101E7B49E = {
+			fileRef = F51C3E2703C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4A03C77CE101E7B49E = {
+			fileRef = F51C3E2903C77CE101E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E4B03C77F0C01E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = tdoc.cpp;
+			refType = 2;
+		};
+		F51C3E4C03C77F0C01E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = tdoc.h;
+			refType = 2;
+		};
+		F51C3E4D03C77F0C01E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = tproject.h;
+			refType = 2;
+		};
+		F51C3E4E03C77F0C01E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = tv.cpp;
+			refType = 2;
+		};
+		F51C3E4F03C77F0C01E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = tv.h;
+			refType = 2;
+		};
+		F51C3E5003C77F0C01E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = tview.cpp;
+			refType = 2;
+		};
+		F51C3E5103C77F0C01E7B49E = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = tview.h;
+			refType = 2;
+		};
+		F51C3E5203C77F0C01E7B49E = {
+			fileRef = F51C3E4C03C77F0C01E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E5403C77F0C01E7B49E = {
+			fileRef = F51C3E4F03C77F0C01E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E5503C77F0C01E7B49E = {
+			fileRef = F51C3E5103C77F0C01E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E5603C77F0C01E7B49E = {
+			fileRef = F51C3E4B03C77F0C01E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F51C3E5703C77F0C01E7B49E = {
+			fileRef = F51C3E4E03C77F0C01E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F53CB88903CB0666012A40F8 = {
+			fileRef = F51C3E4D03C77F0C01E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F53CB88A03CB09B3012A40F8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = treeorder_dialog.h;
+			refType = 4;
+		};
+		F53CB88B03CB09B3012A40F8 = {
+			fileRef = F53CB88A03CB09B3012A40F8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F53CB88D03CB0A26012A40F8 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			path = treeorder_dialog.cpp;
+			refType = 4;
+		};
+		F53CB88F03CB0A26012A40F8 = {
+			fileRef = F53CB88D03CB0A26012A40F8;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F53CB89103CB2010012A40F8 = {
+			children = (
+				F53CB88A03CB09B3012A40F8,
+				F53CB88D03CB0A26012A40F8,
+			);
+			isa = PBXGroup;
+			name = Dialogs;
+			path = "";
+			refType = 2;
+		};
+		F5E2F0FE05F777E801A80003 = {
+			isa = PBXFileReference;
+			name = "libwx_mac-2.4.0.dylib";
+			path = "/usr/local/lib/libwx_mac-2.4.0.dylib";
+			refType = 0;
+		};
+		F5E2F10005F77C4601A80003 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = "libwx_mac-2.4.0.r";
+			path = "/usr/local/lib/libwx_mac-2.4.0.r";
+			refType = 0;
+		};
+		F5E2F10505F7EAD201A80003 = {
+			isa = PBXFileReference;
+			name = app.icns;
+			path = bitmaps/mac/app.icns;
+			refType = 2;
+		};
+		F5E2F10605F7EAD201A80003 = {
+			isa = PBXFileReference;
+			name = doc.icns;
+			path = bitmaps/mac/doc.icns;
+			refType = 2;
+		};
+		F5E2F10705F7EAD201A80003 = {
+			fileRef = F5E2F10505F7EAD201A80003;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5E2F10805F7EAD201A80003 = {
+			fileRef = F5E2F10605F7EAD201A80003;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5E2F10905F7EFFC01A80003 = {
+			fileEncoding = 30;
+			isa = PBXFileReference;
+			name = nodeiterator.h;
+			path = TreeLib/nodeiterator.h;
+			refType = 2;
+		};
+		F5E2F10A05F7EFFC01A80003 = {
+			fileRef = F5E2F10905F7EFFC01A80003;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5FAAF5503C9DF66011CDE4E = {
+			fileRef = F51C3E5003C77F0C01E7B49E;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+	};
+	rootObject = 20286C28FDCF999611CA2CEA;
+}

@@ -3,11 +3,12 @@
 import re
 import sys
 import math
+import numpy as np
 import matplotlib.pyplot as pplot
 import ForceField
 
 class Atom:
-	def __init__(self, x, y, z, numRes=-1, resType="X", sse="X",bvalue=0,chain="-",atomname="CA"):
+	def __init__(self, x, y, z, numRes=-1, resType="X", sse="X",bvalue=0,chain="-",atomname="CA",atomnum=-1):
 		self.x = x
 		self.y = y
 		self.z = z
@@ -17,6 +18,7 @@ class Atom:
 		self.bvalue=bvalue
 		self.chain = chain
 		self.atomname=atomname
+		self.atomnum=atomnum
 
 #EXPDTA    X-RAY D
 #str->str
@@ -37,15 +39,17 @@ def parse_nummdl(ligne):
 #DBREF 2JHQ A 1 226 UNP Q9KPK8 UNG_VIBCH 1    226
 #str->str
 def getChainDBREF(ligne):
+
 	chain = ligne[12]
 	if chain == " ":
 		chain ="-"
- 	return chain
- 	
-#ATOM   1272  CA  MET A 145      16.640  22.247  -9.383  1.00 56.65           C  
+	return chain
+
+#ATOM   1272  CA  MET A 145      16.640  22.247  -9.383  1.00 56.65           C
 #str->str*Atom ou None
 def getAtom(ligne,allAtoms):
 	re_whitespaces = re.compile("[ ]+")
+	atomnum = int(ligne[7:11])
 	resname = re_whitespaces.sub('',ligne[17:20])
 	atomname = re_whitespaces.sub('',ligne[12:16])
 	chain = ligne[21]
@@ -70,10 +74,10 @@ def getAtom(ligne,allAtoms):
 	#element = re_whitespaces.sub('',ligne[76:78])
 	#charge = re_whitespaces.sub('',ligne[78:80])
 	if (atomname=="CA" or allAtoms):
-		return chain, Atom(x,y,z,resnumber, resname,chain=chain,atomname=atomname)
+		return chain, Atom(x,y,z,resnumber, resname,chain=chain,atomname=atomname, atomnum=atomnum)
 	else:
 		return chain, None
-		
+
 #HELIX 1 HAGLYA 86 GLYA 94 1 9
 #str->[int]
 def getISeqNumHelix(ligne):
@@ -89,8 +93,8 @@ def getISeqNumHelix(ligne):
 	initSeqNum = int(ligne[21:25])
 	endChainID = re_whitespaces.sub('',ligne[31])
 	endSeqNum = int(ligne[33:37])
- 	if initChainID != endChainID:
- 		print "Problème deux chaines différentes ? ", initChainID, endChainID
+	if initChainID != endChainID:
+		print "Problème deux chaines différentes ? ", initChainID, endChainID
  		print ligne
  	else:
 		for i in range(initSeqNum, endSeqNum+1):
@@ -131,7 +135,7 @@ def ajouterSSEAtomes(lesAtomes, lesH, lesS):
 	iH=0
 	iS=0
 	#3)lesAtomes
-	print 
+	print
 	while iAt<len(lesAtomes) and (iH<len(lesH) or iS<len(lesS)):
 		if iH<len(lesH) and lesAtomes[iAt].numRes==lesH[iH]:
 			lesAtomes[iAt].sse="H"
@@ -152,11 +156,11 @@ def readPDB(nomFi, chaineVoulue=["-"], modelVoulu="1",allAtoms=False):
 		f = open(nomFi, "r")
 	except IOError:
 		print "readPDB:: Fichier <%s> introuvable, arret du programme"%(nomFi)
-		sys.exit(1) 
+		sys.exit(1)
 	#EXPDTA peut être sur plusieurs lignes
 	#Pour avoir la première, j'ajoute des espaces pour les champs continuation (colonnes 9 - 10)
 	re_expdta = re.compile("^EXPDTA {4}")
-	#Format: REMARK puis 3 espaces puis 2 puis un espace puis RESOLUTION et ANGSTROM à la fin 
+	#Format: REMARK puis 3 espaces puis 2 puis un espace puis RESOLUTION et ANGSTROM à la fin
 	re_resolution = re.compile("^REMARK {3}2 RESOLUTION.*ANGSTROMS")
 	re_atom = re.compile("^ATOM")
 	re_dbref = re.compile("^DBREF")
@@ -194,7 +198,6 @@ def readPDB(nomFi, chaineVoulue=["-"], modelVoulu="1",allAtoms=False):
 			lesResHelix+=getISeqNumHelix(ligne)
 		elif re_sheet.search(ligne):
 			lesResHelix+=getiSeqNumSheet(ligne)
-
 	lesAtomes=ajouterSSEAtomes(lesAtomes, lesResHelix, lesResSheet)
 
 	return  exp, resol, nbmdl, lesChaines, lesAtomes
@@ -211,7 +214,7 @@ def readsel(nomFi):
 		f = open(nomFi, "r")
 	except IOError:
 		print "readPDB:: Fichier <%s> introuvable, arret du programme"%(nomFi)
-		sys.exit(1) 
+		sys.exit(1)
 	l = []
 	for ligne in f:
 		i = int(ligne)
@@ -233,7 +236,7 @@ def selgoodatoms(lesAtomes,sel):
 
 #[Atom]*[Atom]->float
 def distanceAtoms(a1,a2):
-	return (a1.x-a2.x)**2 + (a1.y-a2.y)**2 + (a1.z-a2.z)**2
+	return math.sqrt((a1.x-a2.x)**2 + (a1.y-a2.y)**2 + (a1.z-a2.z)**2)
 
 #list([Atom])*list([Atom])*list(int)*list(int)->float
 def rmsd(lesAtomes1,lesAtomes2,sel_p1,sel_p2) :
@@ -248,7 +251,7 @@ def rmsd(lesAtomes1,lesAtomes2,sel_p1,sel_p2) :
 		s += x + y + z
 	s = math.sqrt(s/n)
 	return s
-       
+
 '''
 def main() :
 	if (len(sys.argv)<2):
@@ -256,7 +259,7 @@ def main() :
 		sys.exit(1)
 
 	filename1 = sys.argv[1]
-	filename2 = sys.argv[2]	
+	filename2 = sys.argv[2]
 	filename3 = sys.argv[3]
 	filename4 = sys.argv[4]
 	_, _, _, _, lesAtomes1=readPDB(filename1, ["A"])
@@ -313,12 +316,12 @@ def main() :
 		sys.exit(1)
 
 	filename1 = sys.argv[1]
-	filename2 = sys.argv[2]	
+	filename2 = sys.argv[2]
 	filename3 = sys.argv[3]
 	_, _, _, _, lesAtomes1=readPDB(filename1, ["A"])
 	sel1 = readsel(filename2)
 	sel2 = readsel(filename3)
-	
+
 	print "Nb Atomes lus Molec.1:", len(lesAtomes1)
 	print "Nb Atomes dans Select.1, Select.2:", len(sel1),",",len(sel2)
 
@@ -328,7 +331,7 @@ def main() :
 	pplot.imshow(M)
 	pplot.show()
 '''
-	
+
 ##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
 ##                                PARTIE D                              ##
 ##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
@@ -377,7 +380,7 @@ def calculCV(lesAtomes,rc):
 def protuberants_enfouis(lesAtomes,x,rc):
 	resCV = calculCV(lesAtomes,rc)
 	resList = sorted(resCV, key=resCV.__getitem__)
-	n = len(resList)	
+	n = len(resList)
 	return resList[0:int(x*n/100)],resList[int(n*(100-x)/100):]
 
 def writeAtom(ligne,outFile,atom):
@@ -396,17 +399,17 @@ def writePDB(nomFiIn,nomFiOut,lesAtomes,chaineVoulue=["A"],modelVoulu='1',allAto
 		f = open(nomFiIn, "r")
 	except IOError:
 		print "writePDB:: Fichier <%s> introuvable, arret du programme"%(nomFiIn)
-		sys.exit(1) 
+		sys.exit(1)
 
 	try:
 		g = open(nomFiOut, "w")
 	except IOError:
 		print "writePDB:: Fichier <%s> introuvable, arret du programme"%(nomFiOut)
-		sys.exit(1) 
+		sys.exit(1)
 	#EXPDTA peut être sur plusieurs lignes
 	#Pour avoir la première, j'ajoute des espaces pour les champs continuation (colonnes 9 - 10)
 	re_expdta = re.compile("^EXPDTA {4}")
-	#Format: REMARK puis 3 espaces puis 2 puis un espace puis RESOLUTION et ANGSTROM à la fin 
+	#Format: REMARK puis 3 espaces puis 2 puis un espace puis RESOLUTION et ANGSTROM à la fin
 	re_resolution = re.compile("^REMARK {3}2 RESOLUTION.*ANGSTROMS")
 	re_atom = re.compile("^ATOM")
 	re_dbref = re.compile("^DBREF")
@@ -462,13 +465,13 @@ def main() :
 
 	_ = calculCV(lesAtomes1,20)
 	writePDB(filename1,filename2,lesAtomes1,["A","B"])
-'''	
+'''
 
 ##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
 ##                              PARTIE E                                ##
 ##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
 
-F = 332.0522 
+F = 332.0522
 
 def champsForce(dist,Re,q,eps):
 	epsij = math.sqrt(eps[0]*eps[1])
@@ -493,7 +496,7 @@ def computeE(chainAtoms1, chainAtoms2):
 			s += champsForce(Rij,[Rie,Rje],[qi,qj],[epsi,epsj])
 	return s
 
-def main() :
+"""def main() :
 	if (len(sys.argv)<2):
 		print "USAGE: ", sys.argv[0], "<pdb infile>"
 		sys.exit(1)
@@ -506,7 +509,118 @@ def main() :
 	s = computeE(lesAtomesA,lesAtomesB)
 	print(s)
 	#_ = calculCV(lesAtomes1,20)
+	#writePDB(filename1,filename2,lesAtomes1,["A","B"])"""
+
+##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
+##                              PARTIE D                                ##
+##––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––##
+
+def kirchhoff_matrix(CA_list, force, cut_distance):
+
+	matrix = np.zeros((len(CA_list),len(CA_list)))
+	for index_ref, alpha_carbon_ref in enumerate(CA_list) :
+		 for index, alpha_carbon in enumerate(CA_list) :
+		  	if index != index_ref :
+				if distanceAtoms(alpha_carbon_ref,alpha_carbon)< cut_distance :
+					matrix[index_ref, index] = -force
+	for i in range(len(CA_list)):
+		matrix[i,i] = - np.sum(matrix[i,:])
+	return matrix
+
+def writePDB_elastic(nomFiIn,nomFiOut,lesAtomes, kirchhoff,chaineVoulue=["A"],modelVoulu='1',allAtoms=False):
+	try:
+		f = open(nomFiIn, "r")
+	except IOError:
+		print "writePDB:: Fichier <%s> introuvable, arret du programme"%(nomFiIn)
+		sys.exit(1)
+
+	try:
+		g = open(nomFiOut, "w")
+	except IOError:
+		print "writePDB:: Fichier <%s> introuvable, arret du programme"%(nomFiOut)
+		sys.exit(1)
+	#EXPDTA peut être sur plusieurs lignes
+	#Pour avoir la première, j'ajoute des espaces pour les champs continuation (colonnes 9 - 10)
+	re_expdta = re.compile("^EXPDTA {4}")
+	#Format: REMARK puis 3 espaces puis 2 puis un espace puis RESOLUTION et ANGSTROM à la fin
+	re_resolution = re.compile("^REMARK {3}2 RESOLUTION.*ANGSTROMS")
+	re_atom = re.compile("^ATOM")
+	re_dbref = re.compile("^DBREF")
+	re_nummdl = re.compile("^NUMMDL")
+	re_helix = re.compile("^HELIX")
+	re_sheet = re.compile("^SHEET")
+	re_model = re.compile("^MODEL")
+	re_end = re.compile("^END")
+	re_conect = re.compile("^CONECT")
+	exp=None
+	resol=None
+	nbmdl=None
+	numModel=None
+	lesResSheet=[]
+	lesResHelix=[]
+	lesChaines=[]
+	i = 0
+	for ligne in f:
+		if re_atom.search(ligne):
+			c,a=getAtom(ligne,allAtoms)
+			#print modelVoulu, numModel, c, chaineVoulue, a
+			if (numModel==None):
+				numModel=0
+			if (a!=None and (numModel==0 or str(numModel)==modelVoulu) and c in chaineVoulue) :
+				writeAtom(ligne,g,lesAtomes[i])
+				i+=1
+		else:
+			if re_end.search(ligne):
+				write_CONECT(kirchhoff, lesAtomes, g)
+			elif re_conect.search(ligne):
+				continue
+			g.write(ligne)
+			if re_expdta.search(ligne):
+				exp=parse_expdta(ligne)
+			elif re_resolution.search(ligne):
+				resol=parse_resol(ligne)
+			elif re_nummdl.search(ligne):
+				nbmdl=parse_nummdl(ligne)
+			elif re_dbref.search(ligne):
+				lesChaines.append(getChainDBREF(ligne))
+			elif re_model.search(ligne):
+				numModel=getNumModel(ligne)
+			elif re_helix.search(ligne):
+				lesResHelix+=getISeqNumHelix(ligne)
+			elif re_sheet.search(ligne):
+				lesResHelix+=getiSeqNumSheet(ligne)
+
+def write_CONECT(kirchhoff, lesAtomes, file):
+
+	for index_ref in range(len(lesAtomes)):
+		write_count = 0
+		for index in range(index_ref + 1,len(lesAtomes)):
+			if kirchhoff[index_ref,index] != 0 :
+				if write_count % 4 == 0:
+					file.write("\nCONECT")
+					file.write(str(lesAtomes[index_ref].atomnum).rjust(5))
+				file.write(str(lesAtomes[index].atomnum).rjust(5))
+				write_count += 1
+
+	file.write('\n')
+
+
+def main() :
+	if (len(sys.argv)<2):
+		print "USAGE: ", sys.argv[0], "<pdb infile>"
+		sys.exit(1)
+
+	filename1 = sys.argv[1]
+	_, _, _, _, lesAtomes=readPDB(filename1,chaineVoulue=["A"])
+
+	kirchhoff = kirchhoff_matrix(lesAtomes, 1, 7)
+	writePDB_elastic(filename1,'output.pdb',lesAtomes,kirchhoff,chaineVoulue=["A"])
+
+
+	#_ = calculCV(lesAtomes1,20)
 	#writePDB(filename1,filename2,lesAtomes1,["A","B"])
+
+
 
 
 
@@ -516,7 +630,3 @@ def main() :
 
 if __name__ == '__main__':
 	main()
-
-
-	
-	

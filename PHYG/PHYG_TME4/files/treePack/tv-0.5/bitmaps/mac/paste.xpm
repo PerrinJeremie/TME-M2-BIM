@@ -1,0 +1,30 @@
+/* XPM */
+static char *paste_xpm[] =
+{
+/* width height ncolors chars_per_pixel */
+"16 16 6 1",
+/* colors */
+"  c none",
+"B c #008080",
+"C c #C0C0C0",
+"D c #808080",
+"E c #FFFF00",
+"F c Black",
+/* pixels */
+"                ",
+"     FFFF       ",
+" FFFFFEEFFFFF   ",
+"FDDDFEFFEFDDDF  ",
+"FDDFCCCCCCFDDF  ",
+"FDDFFFFFFFFDDF  ",
+"FDDDDDDDDDDDDF  ",
+"FDDDDDBBBBBBBF  ",
+"FDDDDDB     BB  ",
+"FDDDDDB     B B ",
+"FDDDDDB BBB BBB ",
+"FDDDDDB       B ",
+"FDDDDDB BBBBB B ",
+" FFFFFB       B ",
+"      BBBBBBBBB ",
+"                "
+};

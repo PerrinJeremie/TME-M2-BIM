@@ -1,0 +1,302 @@
+
+***************************************************
+* This NEXUS file is designed to test the NCL by  *
+* presenting it with several different variants   *
+* of the CHARACTERS block.  After each variant,   *
+* a special 'showall' comment directs the nexus   *
+* reader to spit out the contents of all blocks   *
+* currently stored.  The file reference.txt holds *
+* the output expected (use the DOS command fc or  *
+* the UNIX command diff to compare your output to * 
+* reference.txt to see if your implementation is  * 
+* working correctly.                              *
+***************************************************
+
+Reading "TAXA" block...
+Finished with "TAXA" block.
+
+*************
+* Standard  *
+*************
+
+Reading "CHARACTERS" block...
+Finished with "CHARACTERS" block.
+
+********** Contents of the TAXA block **********
+
+TAXA block contains 6 taxa
+	1	P. fimbriata
+	2	P. robusta
+	3	P. americana
+	4	P. myriophylla
+	5	P. polygama
+	6	P. macrophylla
+
+********** Contents of the CHARACTERS block **********
+
+CHARACTERS block contains 6 taxa and 45 characters
+  Data type is "DNA"
+  Ignoring case
+  Data matrix entries are expected to be single symbols
+  Taxon labels are expected on left side of matrix
+  Matrix neither transposed nor interleaved
+  Missing data symbol is '?'
+  No match character specified
+  Gap character specified is '-'
+  Valid symbols are: ACGT
+  Equate macros in effect:
+    B = {CGT}
+    D = {AGT}
+    H = {ACT}
+    K = {GT}
+    M = {AC}
+    N = {ACGT}
+    R = {AG}
+    S = {CG}
+    V = {ACG}
+    W = {AT}
+    X = {ACGT}
+    Y = {CT}
+  No characters were eliminated
+  The following characters have been excluded:
+    (no characters excluded)
+  The following taxa have been deleted:
+    (no taxa deleted)
+  Data matrix:
+    P. fimbriata       ACCTCGGCTTAACGAACCTCGGCTTAACGAACCTCGGCTTAACGA
+    P. robusta         ACCTCGGCTTAACCAACCTCGGCTTAACGAACCTCGGCTTAACGA
+    P. americana       ACGTCGCTTTCA---ACGTCGCTTTCACCAACGTCGCTTTCACCA
+    P. myriophylla     ACGTCGCTTTCA---ACGTCGCTTTCACCAACGTC?CTTTCACCA
+    P. polygama        ACGTCGCTCTCACCAACGTCGCTTTCACCAACGTC?CTTTCACCA
+    P. macrophylla     ACGTCGCTCTCACCAACGTCGCTTTCACCAACGTCGCTTTCACCA
+
+**********
+* Tokens *
+**********
+
+Reading "CHARACTERS" block...
+Finished with "CHARACTERS" block.
+
+********** Contents of the TAXA block **********
+
+TAXA block contains 6 taxa
+	1	P. fimbriata
+	2	P. robusta
+	3	P. americana
+	4	P. myriophylla
+	5	P. polygama
+	6	P. macrophylla
+
+********** Contents of the CHARACTERS block **********
+
+CHARACTERS block contains 6 taxa and 3 characters
+  Data type is "standard"
+  Ignoring case
+  Multicharacter tokens allowed in data matrix
+  Taxon labels are expected on left side of matrix
+  Character and character state labels:
+	1	leaf margins
+		entire
+		fimbriate
+	2	flower color
+		white to cream
+		crimson
+	3	breeding system
+		hermaphroditic
+		gynomonoecious
+		gynodioecious
+		dioecious
+  Matrix neither transposed nor interleaved
+  Missing data symbol is '?'
+  No match character specified
+  No gap character specified
+  Valid symbols are: 01
+  No equate macros have been defined
+  No characters were eliminated
+  The following characters have been excluded:
+    (no characters excluded)
+  The following taxa have been deleted:
+    (no taxa deleted)
+  Data matrix:
+    P. fimbriata         fimbriate  crimson  gynomonoecious
+    P. robusta           fimbriate  crimson  gynomonoecious
+    P. americana         entire  white to cream  hermaphroditic
+    P. myriophylla       entire  white to cream  hermaphroditic
+    P. polygama          entire  white to cream  dioecious
+    P. macrophylla       entire  crimson  gynodioecious
+
+***********
+* Symbols *
+***********
+
+Reading "CHARACTERS" block...
+Finished with "CHARACTERS" block.
+
+********** Contents of the TAXA block **********
+
+TAXA block contains 6 taxa
+	1	P. fimbriata
+	2	P. robusta
+	3	P. americana
+	4	P. myriophylla
+	5	P. polygama
+	6	P. macrophylla
+
+********** Contents of the CHARACTERS block **********
+
+CHARACTERS block contains 6 taxa and 3 characters
+  Data type is "standard"
+  Ignoring case
+  Data matrix entries are expected to be single symbols
+  Taxon labels are expected on left side of matrix
+  Character and character state labels:
+	1	leaf margins
+		entire
+		fimbriate
+	2	flower color
+		white to cream
+		crimson
+	3	breeding system
+		hermaphroditic
+		gynomonoecious
+		gynodioecious
+		dioecious
+  Matrix neither transposed nor interleaved
+  Missing data symbol is '?'
+  No match character specified
+  No gap character specified
+  Valid symbols are: 0123
+  No equate macros have been defined
+  No characters were eliminated
+  The following characters have been excluded:
+    (no characters excluded)
+  The following taxa have been deleted:
+    (no taxa deleted)
+  Data matrix:
+    P. fimbriata       111
+    P. robusta         111
+    P. americana       000
+    P. myriophylla     000
+    P. polygama        003
+    P. macrophylla     012
+
+*****************************
+* Interleaved, missing taxa *
+*****************************
+
+Reading "CHARACTERS" block...
+Finished with "CHARACTERS" block.
+
+********** Contents of the TAXA block **********
+
+TAXA block contains 6 taxa
+	1	P. fimbriata
+	2	P. robusta
+	3	P. americana
+	4	P. myriophylla
+	5	P. polygama
+	6	P. macrophylla
+
+********** Contents of the CHARACTERS block **********
+
+CHARACTERS block contains 4 taxa and 15 characters
+  Data type is "DNA"
+  Ignoring case
+  Data matrix entries are expected to be single symbols
+  Taxon labels are expected on left side of matrix
+  Matrix interleaved but not transposed
+  Missing data symbol is '?'
+  No match character specified
+  No gap character specified
+  Valid symbols are: ACGT
+  Equate macros in effect:
+    B = {CGT}
+    D = {AGT}
+    H = {ACT}
+    K = {GT}
+    M = {AC}
+    N = {ACGT}
+    R = {AG}
+    S = {CG}
+    V = {ACG}
+    W = {AT}
+    X = {ACGT}
+    Y = {CT}
+  No characters were eliminated
+  The following characters have been excluded:
+    (no characters excluded)
+  The following taxa have been deleted:
+    (no taxa deleted)
+  Data matrix:
+    P. fimbriata       ACCTCGGCTTAACGA
+    P. robusta         ACCTCGGCTTAACCA
+    P. americana       ACGTCGCTCTCACCA
+    P. myriophylla     ACGTCGCTTTCACCA
+
+****************
+** transposed **
+****************
+
+Reading "CHARACTERS" block...
+Finished with "CHARACTERS" block.
+
+TAXA block contains 6 taxa
+	1	P. fimbriata
+	2	P. robusta
+	3	P. americana
+	4	P. myriophylla
+	5	P. polygama
+	6	P. macrophylla
+
+CHARACTERS block contains 6 taxa and 15 characters
+  Data type is "DNA"
+  Ignoring case
+  Data matrix entries are expected to be single symbols
+  Character labels are expected on left side of matrix
+  Character and character state labels:
+	1	site 1
+	2	site 2
+	3	site 3
+	4	site 4
+	5	site 5
+	6	site 6
+	7	site 7
+	8	site 8
+	9	site 9
+	10	site 10
+	11	site 11
+	12	site 12
+	13	site 13
+	14	site 14
+	15	site 15
+  Matrix transposed but not interleaved
+  Missing data symbol is '?'
+  No match character specified
+  No gap character specified
+  Valid symbols are: ACGT
+  Equate macros in effect:
+    B = {CGT}
+    D = {AGT}
+    H = {ACT}
+    K = {GT}
+    M = {AC}
+    N = {ACGT}
+    R = {AG}
+    S = {CG}
+    V = {ACG}
+    W = {AT}
+    X = {ACGT}
+    Y = {CT}
+  No characters were eliminated
+  The following characters have been excluded:
+    (no characters excluded)
+  The following taxa have been deleted:
+    (no taxa deleted)
+  Data matrix:
+    P. fimbriata       ACCTCGGCTTAACGA
+    P. robusta         ACCTCGGCTTAACCA
+    P. americana       ACGTCGCTCTCACCA
+    P. myriophylla     ACGTCGCTTTCACCA
+    P. polygama        ACCTCGCTTTCACGA
+    P. macrophylla     ACCTCGCTTTCACGA
+

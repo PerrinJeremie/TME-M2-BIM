@@ -1,0 +1,316 @@
+#NEXUS
+[MacClade 3.01 registered to Equator, UCMP]
+
+BEGIN DATA;
+DIMENSIONS  NTAX=27 NCHAR=113;
+
+[!This is the final revised morphological matrix for land plants (LP-MORPH),
+corrected 12/93,  per comments of co-authors.
+
+**used in the Ann .Mo. Bot. 81: 451-483 (Mishler et al. 1994) green plant synthesis paper.
+
+Characters are re-numbered as they are used in our text, but you can see Karen Renzaglia's old
+numbers (from the sperm data set, Garbary et al. 1993, Pl. Syst. & Evol.,
+which see for more details on characters), or reference to other literature
+(M&C = Mishler and Churchill, 1985, Cladistics 1:305-328) as footnotes to the characters.]
+FORMAT MISSING=? GAP=-  SYMBOLS= " 0 1 2 3 4 5 6";
+[OPTIONS  MSTAXA=UNCERTAIN ;]
+
+CHARLABELS
+	[1]	apical_cell_in_antheridia	[2]	div._pat._in_young_antheridia	[3]	endogenous_antheridia	[4]	antheridial_stalk	[5]	operculum_cells
+	[6]	sperm_in_pollen_tube	[7]	number_of_sperm_per_male_struc.	[8]	nascent_spermatids	[9]	diagonal_spindle_in_final_mitot	[10]	replication_of_the_centrioles
+	[11]	time_of_origin_of_centrioles	[12]	basal_bodies_and_flagella	[13]	bicentrioles	[14]	basal_body_position	[15]	proximal_extension_A
+	[16]	proximal_extension_B	[17]	stellate_transition	[18]	connect._fibers_betw._basal_bod	[19]	basal_body_structure	[20]	BB_staggering_assoc._w._MT_grow
+	[21]	regression_of_LS	[22]	'LS/AM_elongation_longit.'	[23]	spline_aperture	[24]	sline_aperture_location	[25]	position_of_developing_MLS
+	[26]	plaque_stratified_betw._blephar	[27]	'spline/LS_orientation'	[28]	posterior_notch_to_LS	[29]	LS_position	[30]	stray_spline_MT
+	[31]	accessory_band_of_MTs	[32]	maturational_elongation_of_AM	[33]	spline_shank	[34]	osmiophilic_crest	[35]	anterior_osmiophilic_crest
+	[36]	changes_in_BBs_at_mat.	[37]	matrix_around_BBs	[38]	posterior_of_the_stellate_patt.	[39]	flagellar_scales	[40]	late_blepharoplast_w._transient
+	[41]	direction_of_flagellar_emergenc	[42]	nuclear_shape_at_maturity	[43]	nuclear_posterior_shape	[44]	median_constriction	[45]	splin_attached_to_nucleus
+	[46]	spline_growth_assoc._w._nucl._s	[47]	direction_of_nuclear_compaction	[48]	condensed_chromatin_strands	[49]	diverticulum_during_shaping	[50]	number_of_gyres_of_nucleus
+	[51]	dense_body_in_ant._mitochondrio	[52]	mit._assoc._w._plastids_in_sper	[53]	mit._assoc._w._plastids_in_sper	[54]	specialized_ant._mito.	[55]	specialized_posterior_mito.
+	[56]	additional_mito._in_ant._of_cel	[57]	origin_of_AM	[58]	osmophilic_material_underneath	[59]	change_from_cristae_sacs_to_baf	[60]	monoplastidic_sperm
+	[61]	plastid_determines_division_pol	[62]	starch_grains_in_single_plastid	[63]	sperm_plastid_contacting_nucleu	[64]	fibrillenscheide	[65]	cytoplasmic_loss
+	[66]	embryo	[67]	cuticle	[68]	lunularic_acid	[69]	elaters	[70]	oil_bodies
+	[71]	'D-Methionine'	[72]	stomates	[73]	vert_div_of_zygote	[74]	xylem	[75]	phloem
+	[76]	perine_layer_on_spores	[77]	'aerial_sporophyte_axis_(persist'	[78]	columella	[79]	Multicellular_rhizoids	[80]	leaves_on_gam.
+	[81]	independent_sporophyte	[82]	branched_sporophyte	[83]	tracheids	[84]	lignin	[85]	'long_exserted_seta_(of_liv._typ'
+	[86]	oil_body_cells	[87]	spore_mother_cells_lobed	[88]	'capsule_2-4_valved'	[89]	'caps_wall_cells_w/_trans_thick'	[90]	thick_caps._wall
+	[91]	elongate_antheridia	[92]	aerial_calyptra	[93]	paraphyses	[94]	costate_leaves	[95]	peristome
+	[96]	operculum	[97]	cylindical_sprogen_layer	[98]	transfer_cells_on_gam_side	[99]	transfer_cells_on_spor.__side	[100]	seed
+	[101]	megaphyll	[102]	microphyll	[103]	'lateral,_broad_sporangia'	[104]	exarch_maturation_of_xylem	[105]	cp_DNA_inversion
+	[106]	sporangia_borne_on_leaves	[107]	trichomes	[108]	flavonoids	[109]	retention_of_zygote	[110]	sheathed_hairs
+	[111]	polyphenolics_induced_by_sex	[112]	parenchyma	[113]	beaked_muscilage_papillae
+	;
+STATELABELS
+	1  absent present,
+	2  'four-celled' 'two-celled',
+	3  absent present,
+	4  absent present,
+	5  absent present,
+	6  absent present,
+	7  1000+ '100-1000' '16-24' 2,
+	8  paired not_paired,
+	9  absent present,
+	10  present absent,
+	11  always_present sperm._mother_cells sperm._moth._cell_progenitor earlier,
+	12  two more_than_two,
+	13  present absent,
+	14  right_angles 'side-by-side' 'staggered_ant-post' staggered_continous,
+	15  absent long short,
+	16  'ventral_-_dorsal' ventral,
+	17  present absent,
+	18  present absent fine_filaments_w._centrin,
+	19  monomorphic dimorphic,
+	20  absent present,
+	21  absent complete partial,
+	22  parallel perpendicular,
+	23  absent present,
+	24  left_of_center right_of_center,
+	25  adjacent_to_BBs beneath_BBs,
+	26  absent present,
+	27  90_deg. 45_deg.,
+	28  absent present,
+	29  under_all_BBs under_ABB_only under_some_BBs,
+	30  absent present develops_late,
+	31  absent present,
+	32  absent posterior,
+	33  wide less_than_4_tubules,
+	34  absent present,
+	35  absent present,
+	36  absent dense_material_at_tip BB_cartwheel_w._plug BB_triplets_impreg._w._matrixma,
+	37  homogenous mottled,
+	38  extracell._or_partly entirely_intracell.,
+	39  present absent,
+	40  yes no,
+	41  toward_side toward_rear toward_anterior,
+	42  ovoid elongate,
+	43  not_expanded expanded,
+	44  absent present,
+	45  yes detached_at_maturity never_attached,
+	46  absent present,
+	47  outer_shell anterior_to_posterior at_equal_rates_along_nucl. general_increase_in_density,
+	48  'spaghetti-like' perpendicular_to_spline 'spiral-central_strand' general_compaction spikes irregular_plates solid_mass_from_ant._tip,
+	49  absent present,
+	50  not_coiled '0.5-3' greater_than_3,
+	51  absent present,
+	52  absent present,
+	53  absent present,
+	54  present absent,
+	55  present absent,
+	56  absent row_of_mito._behind_AM numerous_unspecialized,
+	57  fusion elongation,
+	58  absent present,
+	59  absent present,
+	60  present absent,
+	61  'present_-_at_poles' 'present_-_asymmetrical' absent,
+	62  more_than_one one,
+	63  absent present,
+	64  absent present,
+	65  absent partial 'complete_(or_tiny_remn.)',
+	66  absent present,
+	67  absent present,
+	68  absent present,
+	69  absent present,
+	70  absent present,
+	71  not_recognize recognize,
+	72  absent present,
+	73  absent present,
+	74  absent present,
+	75  absent present,
+	76  absent present,
+	77  absent present,
+	78  absent present,
+	79  absent present,
+	80  absent 'present_(of_moss_type)' 'present_(of_junger._type)',
+	81  absent present,
+	82  absent present,
+	83  absent present,
+	84  absent present,
+	85  absent present,
+	86  absent present,
+	87  absent present,
+	88  absent present,
+	89  absent present,
+	90  'absent_(unistrat.)' 'present_(2-10_strat.)',
+	91  absent present,
+	92  absent present,
+	93  absent present,
+	94  absent present,
+	95  absent present,
+	96  absent present,
+	97  absent present,
+	98  absent present,
+	99  absent present,
+	100  absent present,
+	101  absent present,
+	102  absent present,
+	103  absent present,
+	104  absent present,
+	105  absent present,
+	106  absent present,
+	107  absent present,
+	108  absent present,
+	109  absent present,
+	110  absent present,
+	111  absent present,
+	112  absent present,
+	113  absent present,
+;
+
+MATRIX
+					 [----+--10|----+--20|----+--30|----+--40|----+--50|----+--60|----+--70|----+--80|----+--90|----+-100|----+-110|---]
+CHARA            ?????0??0030?00?020???0??0???00?0000000?11000000010??1?1?011201020000000000000000000000000?0000000000000?00100000
+NITELL           ?????0??0030?00?020???0?000??00?0000000?11000000010001???0?1201020000000000000000000000000?0000000000000?00100000
+COLEOC_PUL       ?????0???000?00?0?0?000?000??0000000000?00?00???000000?1??0000?010000000000000000000000000?0000000000000?00011100
+COLEOC_ORB       ?????0??1000?00?0?0?000?000??0000000000?00?00???000000?1??0000?010000000000000000000000000?0000001000000?00011110
+PHAEOCEROS       0011000001101111100?200?101000010003001?1101001101111000011011102110001110000100000000000000000001000000?00010110
+NOTOTHYLAS       0011000001101111100?200?101000010003001?1101001101111000011011102110001110000100000000000000000001000000?00010110
+MARCHANTIA       000100000110121001112011101100000003001?1100001011001000001010112111110000000000000001000000000001100000000110110
+SPHAEROCARPOS    000100000110121001112011101100001003001?1100001011001000001010??211111000000000000000{01}000000000001100000?00110110
+PELLIA           010100000110121001112011101000000003001?1100101011001000001010112111110000000000000010111100000000000000?00110110
+BLASIA           0?0100000110121001112011101100000003001?1100001011001000001010112111110000000000000010111100000001100000?00110110
+JUNGERMANNIA     010100000110121001112011101000000003001?1100101011001000001010112111110000000002000010111100000000100000?00110110
+HAPLOMITRIUM     010100000110121?01112010101000?00?03001?11000015?10010000010?1??2111110000000000000010110000000001100000?00110110
+TREUBIA          01010000011012100111?010101000?00?03?01?11?0001???0??0000??0?0??211111000000000000001011110000000??00000?00110110
+SPHAGNUM         110100011110121011111011101012010003001?1100012201011000001001002110001100011111000000000001000100000000?00010110
+ANDREAEA         1101100111101210?1112011101010010003001?1100012201011000001000002110001001011111000000000011110000100000?00010111
+POLYTRICHUM      110110011110121001112011101011011003001?1100012201011000001000002110001101111111000000000011111110100000?00010110
+HYPNUM           110110011110121001112011101011010003001?1100012211011000001000002110001101111111000000000011111111100000000110110
+TAKAKIA          11011001111012100111?01110101??10?03?01?1100?????10?10000?1000??2110001001??11?10000000000110?0000100000?00110111
+LYCOPODIELLA     0?00001?1110140?020?010?1010000?0?00101?10?000??00001010?000?0001110001101111000111100000000000001100111000110110
+LYCOPODIUM       0?00001011101221020?010?101000010000101?10000?3310000010?0100010{12}110001101111000111100000000000001100111000110110
+SELAGINELLA      0??0?01??110?2210?0?200?101000010000101?110000?401001000?010?000211000110111100011110000000000000??00111000110110
+EQUISETUM        0?0000111111030?0100010?1110201001100011111000330100001110012?00111000110111100011110000000000000??00?00110110110
+PTERIDIUM        0?000021112103210?00010?111020100112?011111000330200001110012?001110001111111000111100000000000001101000111110110
+MARSILEA         0??0?0211121030?0100010?1110200000020011110000160200001010012?00111000111111100011110000000000000??01000?11110110
+OSMUNDA          0?000021112103210?00010?1110201001110011111000330100001110012?001110001111111000111100000000000001101000111110110
+GINKGO           ?????13?11?1030?0100010?1?1020000110011020?02???00000112?0012?0001100011011?100011110000000000000??11000111110110
+ZAMIA            ?????13?11?1030?0100010?1?1020000110011020?02???00000112?0012?0001100011011?100011110000000000000??11000111110110
+;
+END;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+
+	TYPESET * order_two  = unord: 1-6 8-49 51-113, ord: 7 50;
+
+	WTSET * CURRENT  = 1: 1-113;
+
+	EXSET  sperm_only  =  1-65;
+	EXSET  general_morph  =  66-113;
+
+END;
+begin paup;
+	constraint moss+trach =  (1,2,3,4,5,6,7,8,9,10,11,12,13,(14,15,16,17,18,19,20,21,22,23,24,25,26,27));
+	constraint horn+moss+trach = (1,2,3,4,7,8,9,10,11,12,13,(5,6,14,15,16,17,18,19,20,21,22,23,24,25,26,27));
+	constraint bryos = (1,2,3,4,(19,20,21,22,23,24,25,26,27,(5,6,7,8,9,10,11,12,13,14,15,16,17,18)));
+	
+end;
+
+BEGIN NOTES;
+	TEXT  CHARACTER=1 TEXT= 'KAREN''S_#2';
+	TEXT  CHARACTER=2 TEXT= 'KAREN''S_#3';
+	TEXT  CHARACTER=3 TEXT= 'KAREN''S_#5';
+	TEXT  CHARACTER=4 TEXT= 'KAREN''S_#6';
+	TEXT  CHARACTER=5 TEXT= 'KAREN''S_#7';
+	TEXT  CHARACTER=6 TEXT= 'KAREN''S_#8';
+	TEXT  CHARACTER=7 TEXT= 'KAREN''S_#10__!ORD';
+	TEXT  CHARACTER=8 TEXT= 'KAREN''S_#12';
+	TEXT  CHARACTER=9 TEXT= 'KAREN''S_#14';
+	TEXT  TAXON=20 TEXT= 'Lycopodium_obscurum_added_from_Karen''s_notes_sent_3/1/93_--_note_that_the_old_Lycop_is_now_Lycopodiella_!';
+	TEXT  CHARACTER=10 TEXT= 'KAREN''S_#15';
+	TEXT  CHARACTER=11 TEXT= 'KAREN''S_#16';
+	TEXT  CHARACTER=12 TEXT= 'KAREN''S_#17	';
+	TEXT  CHARACTER=13 TEXT= 'KAREN''S_#18';
+	TEXT  CHARACTER=14 TEXT= 'KAREN''S_#19		';
+	TEXT  CHARACTER=15 TEXT= 'KAREN''S_#20';
+	TEXT  CHARACTER=16 TEXT= 'KAREN''S_#21';
+	TEXT  CHARACTER=17 TEXT= 'KAREN''S_#22';
+	TEXT  CHARACTER=18 TEXT= 'KAREN''S_#24';
+	TEXT  CHARACTER=19 TEXT= 'KAREN''S_#25';
+	TEXT  CHARACTER=20 TEXT= 'KAREN''S_#26';
+	TEXT  CHARACTER=21 TEXT= 'KAREN''S_#27';
+	TEXT  CHARACTER=22 TEXT= 'KAREN''S_#28';
+	TEXT  CHARACTER=23 TEXT= 'KAREN''S_#30';
+	TEXT  CHARACTER=24 TEXT= 'KAREN''S_#31';
+	TEXT  CHARACTER=25 TEXT= 'KAREN''S_#32';
+	TEXT  CHARACTER=26 TEXT= 'KAREN''S_#34';
+	TEXT  CHARACTER=27 TEXT= 'KAREN''S_#35';
+	TEXT  CHARACTER=28 TEXT= 'KAREN''S_#37';
+	TEXT  CHARACTER=29 TEXT= 'KAREN''S_#38';
+	TEXT  CHARACTER=30 TEXT= 'KAREN''S_#39';
+	TEXT  CHARACTER=31 TEXT= 'KAREN''S_#40';
+	TEXT  CHARACTER=32 TEXT= 'KAREN''S_#44';
+	TEXT  CHARACTER=33 TEXT= 'KAREN''S_#47';
+	TEXT  CHARACTER=34 TEXT= 'KAREN''S_#49';
+	TEXT  CHARACTER=35 TEXT= 'KAREN''S_#50';
+	TEXT  CHARACTER=36 TEXT= 'KAREN''S_#51';
+	TEXT  CHARACTER=37 TEXT= 'KAREN''S_#52';
+	TEXT  CHARACTER=38 TEXT= 'KAREN''S_#53';
+	TEXT  CHARACTER=39 TEXT= 'KAREN''S_#54';
+	TEXT  CHARACTER=40 TEXT= 'KAREN''S_#55';
+	TEXT  CHARACTER=41 TEXT= 'KAREN''S_#57';
+	TEXT  CHARACTER=42 TEXT= 'KAREN''S_#58';
+	TEXT  CHARACTER=43 TEXT= 'KAREN''S_#59';
+	TEXT  CHARACTER=44 TEXT= 'KAREN''S_#61';
+	TEXT  CHARACTER=45 TEXT= 'KAREN''S_#63';
+	TEXT  CHARACTER=46 TEXT= 'KAREN''S_#64';
+	TEXT  CHARACTER=47 TEXT= 'KAREN''S_#65';
+	TEXT  CHARACTER=48 TEXT= 'KAREN''S_#66';
+	TEXT  CHARACTER=49 TEXT= 'KAREN''S_#67	';
+	TEXT  CHARACTER=50 TEXT= 'KAREN''S_#69__ORD!';
+	TEXT  CHARACTER=51 TEXT= 'KAREN''S_#70';
+	TEXT  CHARACTER=52 TEXT= 'KAREN''S_#71';
+	TEXT  CHARACTER=53 TEXT= 'KAREN''S_#72';
+	TEXT  CHARACTER=54 TEXT= 'KAREN''S_#74';
+	TEXT  CHARACTER=55 TEXT= 'new_character_added_by_Karen_3/1/93';
+	TEXT  CHARACTER=56 TEXT= 'KAREN''S_#75';
+	TEXT  CHARACTER=57 TEXT= 'KAREN''S_#76';
+	TEXT  CHARACTER=58 TEXT= 'KAREN''S_#77';
+	TEXT  CHARACTER=59 TEXT= 'KAREN''S_#79';
+	TEXT  CHARACTER=60 TEXT= 'KAREN''S_#80';
+	TEXT  CHARACTER=61 TEXT= 'KAREN''S_#81';
+	TEXT  CHARACTER=62 TEXT= 'KAREN''S_#83';
+	TEXT  CHARACTER=63 TEXT= 'KAREN''S_#84';
+	TEXT  CHARACTER=64 TEXT= 'KAREN''S_#86';
+	TEXT  CHARACTER=65 TEXT= 'KAREN''S_#89';
+	TEXT  CHARACTER=77 TEXT= 'of_moss/tracheophyte_type';
+	TEXT  CHARACTER=80 TEXT= unord.;
+	TEXT  CHARACTER=85 TEXT= 'of_the_liverwort_type_(non-homologous_to_those_of_the_moss/tracheophyte_lineage)__--__M&C_char._#9';
+	TEXT  CHARACTER=88 TEXT= 'on_a_regular_basis_(Andreaea_considered_non-homologous)_--_M&C_char._#14';
+	TEXT  CHARACTER=108 TEXT= see_Markham_in_Zinsmeister_&_Mues;
+	TEXT  CHARACTER=90 TEXT= 'caps._wall_2-10_cells_thick_--__M&C_char._#19_--_thick_caps._walls_in_horn.,_mosses,_and_tracheo._considered_non-nomologous';
+	TEXT  CHARACTER=89 TEXT= M&C_char._#18;
+	TEXT  CHARACTER=86 TEXT= M&C_char._#10;
+	TEXT  CHARACTER=87 TEXT= M&C_char._#13;
+	TEXT  TAXON=18 CHARACTER=80 TEXT= considered_homologous_with_mosses;
+	TEXT  TAXON=15 CHARACTER=94 TEXT= assuming_loss_in_some_spp.;
+	TEXT  TAXON=17 CHARACTER=94 TEXT= assuming_loss_in_some_spp.;
+	TEXT  TAXON=15 CHARACTER=74 TEXT= possible_homology_in_Andreobryum_?;
+	TEXT  CHARACTER=82 TEXT= with_multiple_sporangia;
+	TEXT  CHARACTER=109 TEXT= through_sporogenesis;
+	TEXT  TAXON=15 CHARACTER=72 TEXT= fide_Murray_1988;
+	TEXT  TAXON=15 CHARACTER=93 TEXT= fide_Murray_1988;
+	TEXT  TAXON=15 CHARACTER=113 TEXT= 'in_Andreaobryum_only_(fide_Murray_1988),_Andreaea_has_normal_moss-like_muscilage_papillae';
+	TEXT  CHARACTER=113 TEXT= homology_accepted_from__Murray_1988;
+	TEXT  CHARACTER=106 TEXT= Bremer_char._#_64;
+	TEXT  CHARACTER=107 TEXT= Bremer_#_67;
+	TEXT  CHARACTER=105 TEXT= from_Raubeson_and_Jansen_1992;
+	TEXT  CHARACTER=103 TEXT= Crane;
+	TEXT  CHARACTER=104 TEXT= Crane;
+	TEXT  CHARACTER=102 TEXT= Crane;
+	TEXT  TAXON=4 CHARACTER=9 TEXT= not_sure_of_homology_with_mosses_+_tracheophytes;
+	TEXT  CHARACTER=74 TEXT= 'N.B.,_homology_between_mosses_and_tracheophytes_not_agreed_to_by_all_co-authors';
+	TEXT  CHARACTER=75 TEXT= 'N.B.,_homology_between_mosses_and_tracheophytes_not_agreed_to_by_all_co-authors';
+	TEXT  TAXON=8 CHARACTER=86 TEXT= 'polymorphic_in_order;__Riella_has_differentiated_cells';
+	TEXT  TAXON=18 CHARACTER=94 TEXT= 'state_difficult_to_determine_--_maybe_all_costa!';
+	TEXT  TAXON=22 CHARACTER=102 TEXT= not_sure_if_homologous_with_lycophytes;
+END;
+
+BEGIN MACCLADE;
+v 3.0
+-1322664995
+1100&/0
+0
+0
+END;

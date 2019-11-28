@@ -1,0 +1,337 @@
+#NEXUS 
+[MacClade 3.01 registered to Equator, UCMP]
+
+BEGIN DATA;
+DIMENSIONS  NTAX=60 NCHAR=110;
+FORMAT MISSING=? GAP=-  SYMBOLS= " a b c d e f g h i j k l m n o p q r s t u v w x y z";
+OPTIONS  MSTAXA=UNCERTAIN ;
+
+CHARLABELS
+	[1]	habitat	[2]	life_history	[3]	attached_to_substrate?	[4]	radial_symmetry	[5]	growth_form
+	[6]	veg._cells_contiguous	[7]	multinucleate_veg._cells	[8]	coenocytic	[9]	distromatic_foliar_thalli	[10]	plasmodesmata
+	[11]	parenchyma	[12]	filaments	[13]	filaments_with_acuminate_tips	[14]	'cells_spindle-shaped'	[15]	zoospores
+	[16]	'autospores/colonies'	[17]	vegetative_cell_w._flagella	[18]	gamete_production	[19]	'multiple_sporulation/fission'	[20]	type_of_sex
+	[21]	chloroplast_shape	[22]	pyrenoids	[23]	thylakoid_membranes_trav._pyr.	[24]	number_of_flagellae	[25]	ret._of_flagella_during_div.
+	[26]	angle_of_basal_bodies	[27]	flagellar_beat	[28]	basal_bodies_distant_in_devel.	[29]	flagellae_extend_to_right	[30]	flag._app._with_180_deg._sym.
+	[31]	absolute_orientation	[32]	BB_overlap_in_mot._cells	[33]	BB_core_connection	[34]	mitotic_spindle_type	[35]	mitotic_spindle_closed
+	[36]	spindle_collapsing_at_telophase	[37]	cupping_microtubules	[38]	microtub._in_plane_of_cell_div.	[39]	phragmoplast	[40]	cell_plate_in_cytokinesis
+	[41]	centrioles_bet._daughter_nucleu	[42]	lactate_fermentation	[43]	Chaeto._autolysin_lyses_sporang	[44]	hydrogenase	[45]	secondary_carotenoids
+	[46]	siphonoxanthin	[47]	gelatin_liquifaction	[48]	photosyst._II	[49]	dormant_zygote_produced	[50]	sporulation
+	[51]	'Zellteilung[_vs._sporulation]'	[52]	common_matrix	[53]	papillae_on_veg._cells	[54]	crystalline_cell_wall	[55]	stigma
+	[56]	#_of_contractile_vacuoles	[57]	apical_insertion_of_flagella	[58]	zoosporangia_abscise	[59]	zoosporangia_operculate	[60]	zoosporangial_exit_plug
+	[61]	keeled_flagella	[62]	urea_amidolyase	[63]	terminal_cap	[64]	prominent_proximal_sheath	[65]	'organic_scales/covering'
+	[66]	transverse_septum	[67]	proximal_septum	[68]	SMAC	[69]	diaphasis	[70]	distal_fiber_in_motile_cell
+	[71]	specialized_zoosporangia	[72]	MLS_present	[73]	glycollate_oxidase	[74]	oogonium_assoc._w._sterile_cell	[75]	eggs_retained_in_oogonium
+	[76]	apical_cell_growth	[77]	flavonoids	[78]	zygote_retained	[79]	placental_transfer_cells	[80]	true_antheridia
+	[81]	archegonia	[82]	embryo	[83]	cuticle	[84]	monoterpenes	[85]	lunularic_acid
+	[86]	elaters	[87]	oil_bodies	[88]	'D-Methionine'	[89]	stomata	[90]	vertical_division_of_zygote
+	[91]	pseudoelaters	[92]	xylem	[93]	phloem	[94]	perine_on_spores	[95]	aerial_sporophyte_axis
+	[96]	columella_in_sporangium	[97]	multicellular_rhizoids	[98]	leaves_on_gametophyte	[99]	articulated_peristome	[100]	independent_sporophyte
+	[101]	branched_sporophyte	[102]	orn._tracheid_walls	[103]	true_lignin	[104]	megaphylls	[105]	trichomes
+	[106]	vascular_cambium	[107]	eustele	[108]	seeds	[109]	axillary_branching	[110]	flowers
+	;
+STATELABELS  
+	1  freshwater brackish_or_marine terrestrial,
+	2  haplontic diplontic isomorphic_alt. heteromorphic_alt.,
+	3  no yes,
+	4  no yes,
+	5  unicell._or_coccoid multicellular coenobic,
+	6  no yes,
+	7  no yes,
+	8  no yes,
+	9  absent present,
+	10  absent present,
+	11  absent present,
+	12  no 'yes,_unbranched' 'yes,_branched' 'yes,multi-axial',
+	13  no yes,
+	14  no yes,
+	15  absent present 'present,flattened',
+	16  no yes,
+	17  no yes,
+	18  holocarpic heterocarpic,
+	19  no yes,
+	20  isogamy anisogamy oogamy,
+	21  cup reticulated lateral_cup 'H-shaped' 'bi-polar' sets_of_comp.rings incomp._rings multiple_disks spiral stellate plate axile,
+	22  absent present,
+	23  no yes,
+	24  2 4 1 4+ 0,
+	25  no yes,
+	26  angled perpendicular parallel,
+	27  'trailing-undulating' breast_stroke,
+	28  no yes,
+	29  no yes,
+	30  no yes,
+	31  CCW CW DO,
+	32  absent present,
+	33  absent present,
+	34  metacentri centric,
+	35  absent present,
+	36  absent present,
+	37  no yes,
+	38  absent present,
+	39  no yes,
+	40  no yes,
+	41  no yes,
+	42  absent present,
+	43  no yes,
+	44  no yes,
+	45  no yes,
+	46  absent present,
+	47  no yes,
+	48  low_molec._wt. high_molec._wt.,
+	49  no yes,
+	50  absent present,
+	51  no yes,
+	52  no yes,
+	53  no yes,
+	54  no yes,
+	55  no yes,
+	56  2 2+ 1 absent,
+	57  no yes,
+	58  no yes,
+	59  no yes,
+	60  no yes,
+	61  no yes,
+	62  no yes,
+	63  absent bilobed 'plate-like',
+	64  no yes,
+	65  no yes,
+	66  absent present,
+	67  absent present,
+	68  absent present,
+	69  absent present,
+	70  absent present,
+	71  absent present,
+	72  no yes,
+	73  no yes,
+	74  no yes,
+	75  no yes,
+	76  no yes,
+	77  no yes,
+	78  no yes,
+	79  no yes,
+	80  no yes,
+	81  no yes,
+	82  no yes,
+	83  no yes,
+	84  no yes,
+	85  no yes,
+	86  no yes,
+	87  no yes,
+	88  no yes,
+	89  no yes,
+	90  no yes,
+	91  no yes,
+	92  no yes,
+	93  no yes,
+	94  no yes,
+	95  no yes,
+	96  no yes,
+	97  no yes,
+	98  no yes,
+	99  no yes,
+	100  no yes,
+	101  no yes,
+	102  no yes,
+	103  no yes,
+	104  no yes,
+	105  no yes,
+	106  no yes,
+	107  no yes,
+	108  no yes,
+	109  no yes,
+	110  no yes,
+;
+
+MATRIX
+Glycine_max                        cdbabbaaabbaaaaaabacha??a????a??abaaaabba????a??babaa??daaaaa?aaa??aaaa?bbbbbbb??bb?aaabbaabbbbaaaabbbbbbbbbbb
+Oryza_sativa                       cdbabbaaabbaaaaaabacha??a????a??abaaaabba????a??babaa??daaaaa?aaa??aaaa?bbbbbbb??bb?aaabbaabbbbaaaabbbbbbbbbbb
+Zamia_pumila                       cdbabbaaabbaaaaaabacha??a????a??abaaaabba????a??babaa?adaaaaa?aaaaaaaaabbbbbbbbbbbb?aaabbaabbbbaaaabbbbbbbbbaa
+Psilotum                           cdbabbaaabbaaaaaabacha??a????a??abaaaabba????a??babaa??daaaaa?aaa??aaaabbbbbbbbbbbb?aaabbaabbbbaaaabbbbbaaaaaa
+Equisetum_arvense                  cdbabbaaabbaaaaaabacha??a????a??abaaaabba????a??babaa?adaaaaa?aaaaaaaaabbbbbbbbbbbb?aaabbaabbbbaaaabbbbaaaaaaa
+Atrichum                           cdbabbaaabbaaaaaabacha??a?a?ba??abaaaabba????a??babaaa?daaaaa?aaaaaaaaabbbbbabbbbbb?aaabbaabbbbbbbaaaaaaaaaaaa
+Fissidens_taxifolius               cdbabbaaabbaaaaaabacha??aaa?ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbbbbbbbbaaaabbaabbbbbbbbaaaaaaaaaaa
+Plagiomnium_cuspidatum             cdbabbaaabbaaaaaabacha??aaa?ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbbbbbbbbaaaabbaabbbbbbbbaaaaaaaaaaa
+Notothylas_breutellii              cdbabbaaabbaaaaaabachb??aaa?ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbabbbbbbaaaabbbbaaaabaaaaaaaaaaaaaa
+Phaeoceros_laevis                  cdbabbaaabbaaaaaabachb??aaa?ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbabbbbbbaaaabbbbaaaabaaaaaaaaaaaaaa
+Porella_pinnata                    cdbabbaaabbaaaaaabacha??aaa?ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaa
+Conocephalum_conicum               cdbabbaaabbaaaaaabacha??aaa?ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaa
+Asterella_tenella                  cdbabbaaabbaaaaaabacha??aaa?ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaa
+Riccia                             cdbabbaaabbaaaaaabacha??aa??ba?babaaaabba????a??babaaaadaaaaa?aaaaaaaaabbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaa
+Coleochaete_nitellarum             aababbaaabbbaabaabacbbaaaaaabaababaaaabba????a??bbbaaaa?aaaaa?aabaaaaaabbbbaabbaaaaaaaa?aaaaaaaaaaaaaaaaaaaaaa
+Klebsormidium_flaccidum            aaaab?aaababaabaaaaabbaaaaaabaababaaaaaba????a??bbbaaaa?aa?aaaaaaaaaaaa?baaaaaaaaaaaaaa?aaaaaaaaaaaaaaaaaaaaaa
+Micromonas_pusila                  b?aaaaaaaaaaaabab?a?abacb?aaa???abbaaaaa?????a???baaaaadaaaaa?aaabbaaaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Mantoniella_squamata               b?aaaaaaaaaaaabab?a?abacbaaaaaababbaaaaa?????a?b?baaaabdaaaaa?aabbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Nephroselmis_pyriformis            b?aaaaaaaaaaaabab?a?abaababaab?babbaaaaa?????a???baaaaacbaaaa?aabbabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Pedinomonas_minutissima            b?aaaaaaaaaaaabab?a?abacb?a?ab??abbaaaaa?????a???baaaabcaaaaa?aaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Tetraselmis_carteriiformis         b?aaaaaaaaaaaabab?a?ababbcbbabaaaabbbbaaa????a???baaaababaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Enteromorpha_intestinalis          bcbabbaabaaaaabaaabbgbababbaabababbaaaaaa????a?aabbaba??baaaaabbabababaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Ulva_fasciata                      bcbabbaabaaaaabaaabbgbababbaabababbaaaaaa??b?a?aabbaba??baaaaabbabababaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Ulothrix_zonata                    adbabbaaaaabaabaaabagbababbaabababbaaaaaa?a??a?aabbabababaaaa?abbbababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Cymopolia_barbata                  bbbbbbbbaaadaaaaabbbhba?a?ba?b??abbaaaaaa???????abaaaa?dbabaa?aaa???b?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Batophora_oerstedtii               bbbbbbaaa?acaabaabbahb??abba?bababbaaaaaa???????abaaaabdbabaa?a?aaabbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Codium_decorticatum                bbbabbbbaaadaaaaabbbhbaeabbaabababbaaaaaa????b?babaaaa?dbaaaa?aaa???a?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Cladophoropsis_membranosa          bcbabbbaaaacaabaabba?bababbaab??abbaaaaaa????a?aabbaaa??baaba?a?a???a?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Blastophysa_rhizopus               bcbabbbaabacaabaabba?bababbaabababbaaaaaa????b?babbaaa?dba?ba?aaaaa?ab?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Trentepohlia_sp.                   ccbabbaaabacaabaabbaba?babbaabababbaaa?a?????a??abbaaaa?bbaab?a???aaa?bb?aabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Cephaleuros_parasiticus            ccbabbaaabacaabaabbaba?babbaabababbaaa?a?????a??abbaaaa?bbaab?a??aaaa?bb?aabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Characium_vacuolatum               aabaaaaaaaaaabbaaaba?bbaa?baabbaabbbabaa?????a??abaaab??baaaa?aaaba?abaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Dunaliella_parva                   baaaaaaaaaaaaababaaaabbab?b?abbaa?????aa?????a???baaaa?dbaaaa?aaa???abaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlamydomonas_reinhardtii          aaaaaaaaaaaaaabababaabbaaabaabbaabbbabaab??b?a?abbaaabbabaaaabaaabababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Volvox_carteri                     aaaacaaaaaaaaaabbbbc?b?a???babbaabbba?aa?????a???babab??baaaa?aaa???abaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlorococcopsis_min                aaaaaaaaaaaaaabaaaba?bbaa?baabbaabbbabaa?????a??abaaab??baaaa?aaabaaabaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Draparnaldia_plumosa               aababbaaabacbabaaabagbababbaabbaabbbababa?b??a??bbbabababaaaabaaabababaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Uronema_belkae                     aababbaaababbabaaabagbababbaabbaabbbababa?b??a??bbbabababaaaa?aaabababaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlamydomonas_moewusii             aaaaaaaaaaaaaabababaab?aaab?abbaa?????aa?????a??bbaabbbabaaaa?aaa???abaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Stephanosphaera_pluvialis          aaaacaaaaaaaaaabbabacbbababbabbaabbbabaa?????a??bbabbbbbbaaaa?aaa??babaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Carteria_radiosa                   aaaaaaaaaaaaaabababaabbbaabaabbaa?????aa?????a??bbaabbbabaaaa?aaaba?abaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Gonium_pectorale                   aaaacaaaaaaaaaabbabaabba?cbbabbaabbbabaa?????a??bbababbabaaaa?aaabababaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlorella_kessleri                 aaaaaaaaaaaaaaaba?b??b??a???????????abaa?a?baaa??baaa??d?aaa????a???a?a??aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlorella_vulgaris                 aaaaaaaaaaaaaaaba?b?ab??a???????????abaa?b?aaaa??baaa??d?aaa?b??a???a?a?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Prototheca_wickerhamii             aaaaaaaaaaaaaaaba?b??b??a???????????abaa?????a???baaa??d?aaa????a???a?a??aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlorella_protothecoides           aaaaaaaaaaaaaaaba?b??b??a???????????abaa?b?aaaa??baaa??d?aaa????a???a?a??aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlorella_minutissima              aaaaaaaaaaaaaaaba?b??b??a???????????abaa?a?aaaa??baaa??d?aaa????a???a?a??aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Neochloris_aquaticus               aaaaaabaaaaaaabaaaba?baaa?baabcabbbbabaa?????a??abaaaa??baaaa?aaabababaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Neochloris_vigenis                 aaaaaabaaaaaaabaaaba?baaa??aabcabbbbabaa?????a??abaaaa??baaaa?aaaba?abaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Pediastrum_duplex                  aaaacbaaaaaaaabaaaba?b?aabbaabcabbbbabaab????a??bbaaaab?baaaa?ababababaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Scenedesmus_obliquus               aaaacbaaaaaaaaabaaba?b?ea???a????bbbabaa???bbab??baaaa???aaaabaaa???a?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Characium_hindakii                 aabaaabaaaaaabbaaaba?baaa?baabca?bbbabaa?????a??abaaaa??baaaa?aaaba?abaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Chlorella_fusca                    aaaaaaaaaaaaaaaba?b?ab??a???????????abaa?b?bbab??baaa??d?aaa????a???a?a??aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+'Ankistrodesmus_falcatus(sti)'     aaaaaaaaaaaaababa?b??b??a???????????abaa?????a???baaa??d?aaa????a???a?a??aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Pseudotrebouxia_gigantea           aaaaaaaaaaaaaacaa?a??baaa?baaba?aabbbbaaa????a???baaaa?dbaaaa?aaabaaabaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Pleurastrum_terrestre              aaaabbaaaaabaacaa?a??baaa?baaba?aabbbbaaa????a???baaaa?dbaaaa?aaabaaabaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Characium_perforatum               aabaaaaaaaaaabbaaaba?bbaa?baababa?bb?aaa?????a??abaaaa??baaaa?aaaba?abaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Parietochloris_pseudoalveolaris    aaaaaaaaaaaaaabaaaba?bbaa?baababa?bb?aaa?????a??abaaaa??baaaa?caabaaabaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Friedmannia_israelensis            {ac}aaaaaaaaaaaaacaaaa??baaabbaababaabbbbaaa????a???baaaa?dbaaaa?aaabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Hypothetical_ancestor              baaaaaaaaaaaaabababa?aaaaaaaaa?baaaaaaaaa????a?aabaaaaadaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+;
+END;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+
+END; 
+
+
+BEGIN NOTES;
+	TEXT  CHARACTER=26 TEXT= 'relative_to_direction_of_motion_--_Mark''s_#21';
+	TEXT  CHARACTER=14 TEXT= 'vegetative_cells_or_zoospores__Mark''s_#42';
+	TEXT  CHARACTER=24 TEXT= 'on_vegetative_cells_or_zoospores__Mark''s_#43';
+	TEXT  CHARACTER=5 TEXT= 'Mark''s_#1_(modified_c=coenobic)';
+	TEXT  CHARACTER=18 TEXT= 'Mark''s_#3';
+	TEXT  CHARACTER=20 TEXT= 'Mark''s_#6_(modified)';
+	TEXT  CHARACTER=21 TEXT= 'Mark''s_#7-perhaps_omit?';
+	TEXT  CHARACTER=43 TEXT= 'Mark''s_#15';
+	TEXT  CHARACTER=25 TEXT= 'Mark''s_#18';
+	TEXT  CHARACTER=28 TEXT= 'BB_in_motile_cells_distant_from_one_another_via_migration_in_development_--_Mark''s_#45';
+	TEXT  CHARACTER=34 TEXT= 'Mark''s_#47';
+	TEXT  CHARACTER=1 TEXT= 'of_free_living_vegetative_stage_--_Mark''s_#48';
+	TEXT  CHARACTER=17 TEXT= 'Mark''s_#49';
+	TEXT  CHARACTER=38 TEXT= 'microtubules_forming_in_plane_of_cell_division_--_Mark''s_#50';
+	TEXT  CHARACTER=36 TEXT= 'Mark''s_#51';
+	TEXT  CHARACTER=7 TEXT= 'Mark''s_#52-related_to_#8.';
+	TEXT  CHARACTER=6 TEXT= 'in_multicellular_organism_--_Mark''s_#54';
+	TEXT  CHARACTER=12 TEXT= 'veg._cells_form_filaments_--_Mark''s_#55_(modified_-_c=branched_filaments)';
+	TEXT  CHARACTER=15 TEXT= 'Mark''s_#57-combine_with_16?';
+	TEXT  CHARACTER=11 TEXT= 'Mark''s_#58';
+	TEXT  CHARACTER=3 TEXT= 'veg._cell_or_thallus_attached_--_Mark''s_#60_(Modify_def_to_include_attachment_by_specialized_structure?)';
+	TEXT  CHARACTER=10 TEXT= 'Mark''s_#62-are_all_of_these_structurally_similar?';
+	TEXT  CHARACTER=2 TEXT= 'Mark''s_#63_(modified,_d_=_heteromorphic_alt.)_CHECK_CODING!';
+	TEXT  CHARACTER=35 TEXT= 'with_distinct_membrane_--_Mark''s_#64';
+	TEXT  CHARACTER=42 TEXT= 'in_veg._cell_--_Mark''s_#67';
+	TEXT  CHARACTER=16 TEXT= 'produced_by_vegetative_thallus_or_cells_--_Mark''s_#68';
+	TEXT  CHARACTER=44 TEXT= 'produced_by_veg._cells_--_Mark''s_#69';
+	TEXT  CHARACTER=45 TEXT= 'produced_by_veg._cell_--_Mark''s_#70';
+	TEXT  CHARACTER=47 TEXT= 'veg._cells_capable_--_Mark''s_#71';
+	TEXT  CHARACTER=49 TEXT= 'Mark''s_#72';
+	TEXT  CHARACTER=51 TEXT= 'in_veg._cells_--_Mark''s_#77';
+	TEXT  CHARACTER=52 TEXT= 'surrounds_cells_--_Mark''s_#80';
+	TEXT  CHARACTER=53 TEXT= 'Mark''s_#83-CHECK_if_includes_zoospores.';
+	TEXT  CHARACTER=13 TEXT= 'Mark''s_#84';
+	TEXT  CHARACTER=40 TEXT= 'in_veg_cells__-_Mark''s_#86';
+	TEXT  CHARACTER=54 TEXT= 'in_veg_cells_or_zoospores_--_Mark''s_#87';
+	TEXT  CHARACTER=41 TEXT= 'between_nucleus_and_plane_of_cleavage_--_Mark''s_#88';
+	TEXT  CHARACTER=19 TEXT= 'in_veg._cells,_to_produce_zoospores_or_gametes_--_Mark''s_#89';
+	TEXT  CHARACTER=55 TEXT= 'in_veg._cells_or_zoospores_--_Mark''s_#92';
+	TEXT  CHARACTER=56 TEXT= 'in_veg_cells_or_zoospores_--_Mark''s_#93_(modified,_d=absent)';
+	TEXT  CHARACTER=23 TEXT= 'thylakoid_membranes_traverse_pyrenoids_--Mark''s_#_98';
+	TEXT  CHARACTER=37 TEXT= 'surround_centrioles_during_mitosis_--_Mark''s_#101';
+	TEXT  CHARACTER=72 TEXT= 'multi-layered_structure_--_Mark''s_#102';
+	TEXT  CHARACTER=29 TEXT= 'on_motile_cells_--_Mark''s_#107';
+	TEXT  CHARACTER=73 TEXT= 'produced_by_veg._cells_--_Mark''s_#108';
+	TEXT  CHARACTER=39 TEXT= 'microtubules_formed_during_cytokinesis_--_Mark''s_#110';
+	TEXT  CHARACTER=74 TEXT= 'Mark''s_#111';
+	TEXT  CHARACTER=4 TEXT= 'if_multicellular_(?)_--_Mark''s_#164';
+	TEXT  CHARACTER=33 TEXT= 'basal_body_core_connection_--_Mark''s_#202';
+	TEXT  CHARACTER=31 TEXT= 'Mark''s_#201';
+	TEXT  CHARACTER=9 TEXT= 'Mark''s_#200';
+	TEXT  CHARACTER=32 TEXT= 'basal_body_overlap_in_motile_cells_--_Mark''s_#195';
+	TEXT  CHARACTER=50 TEXT= 'Mark''s_#194';
+	TEXT  CHARACTER=71 TEXT= 'Mark''s_#192';
+	TEXT  CHARACTER=48 TEXT= 'photosystem_II_light_harvesting_complex_--_Mark''s_#189';
+	TEXT  CHARACTER=70 TEXT= 'Mark''s_#188';
+	TEXT  CHARACTER=69 TEXT= 'Mark''s_#185';
+	TEXT  CHARACTER=27 TEXT= 'Mark''s_#180';
+	TEXT  CHARACTER=68 TEXT= 'or_system_1_fiber_--_Mark''s_#178';
+	TEXT  CHARACTER=67 TEXT= 'Mark''s_#175';
+	TEXT  CHARACTER=66 TEXT= 'Mark''s_#173';
+	TEXT  CHARACTER=60 TEXT= 'zoosporangial_exit_aperature_possesses_plug_--_Mark''s_#170';
+	TEXT  CHARACTER=46 TEXT= 'independent_of_environment_--_Mark''s_#169';
+	TEXT  CHARACTER=65 TEXT= 'of_veg._or_motile_cells_--_Mark''s_#168';
+	TEXT  CHARACTER=64 TEXT= 'Mark''s_#167';
+	TEXT  CHARACTER=63 TEXT= 'Mark''s_#166';
+	TEXT  CHARACTER=8 TEXT= 'Mark''s_#165';
+	TEXT  CHARACTER=62 TEXT= 'Mark''s_#163-modified,_includes_plate-like';
+	TEXT  CHARACTER=59 TEXT= 'Mark''s_#162';
+	TEXT  CHARACTER=61 TEXT= 'Mark''s_#160';
+	TEXT  CHARACTER=58 TEXT= 'Mark''s_#159';
+	TEXT  CHARACTER=57 TEXT= 'Mark''s_#157';
+	TEXT  CHARACTER=22 TEXT= 'Mark''s_#155';
+	TEXT  CHARACTER=109 TEXT= 'Mark''s_#154';
+	TEXT  CHARACTER=108 TEXT= 'Mark''s_#153';
+	TEXT  CHARACTER=75 TEXT= 'Mark''s_#112';
+	TEXT  CHARACTER=76 TEXT= 'Mark''s_#113';
+	TEXT  CHARACTER=77 TEXT= 'Mark''s_#114';
+	TEXT  CHARACTER=78 TEXT= 'Mark''s_#117';
+	TEXT  CHARACTER=79 TEXT= 'Mark''s_#118';
+	TEXT  CHARACTER=83 TEXT= 'Mark''s_#119';
+	TEXT  CHARACTER=80 TEXT= 'Mark''s_#120';
+	TEXT  CHARACTER=81 TEXT= 'Mark''s_#121';
+	TEXT  CHARACTER=82 TEXT= 'Mark''s_#122-maybe_should_substitute_"sporic_meiosis"_as_in_Graham_et_al._1991.';
+	TEXT  CHARACTER=84 TEXT= 'Mark''s_#123';
+	TEXT  CHARACTER=87 TEXT= 'Mark''s_#124';
+	TEXT  CHARACTER=86 TEXT= 'Mark''s_#125';
+	TEXT  CHARACTER=85 TEXT= 'Mark''s_#126';
+	TEXT  CHARACTER=89 TEXT= 'Mark''s_#127';
+	TEXT  CHARACTER=88 TEXT= 'Mark''s_#128';
+	TEXT  CHARACTER=96 TEXT= 'Mark''s_#129';
+	TEXT  CHARACTER=91 TEXT= 'Mark''s_#130';
+	TEXT  CHARACTER=93 TEXT= 'Mark''s_#133';
+	TEXT  CHARACTER=92 TEXT= 'Mark''s_#134';
+	TEXT  CHARACTER=30 TEXT= 'flagellar_apparatus_components_displaying_180_deg._rotational_symmetry_--_Mark''s_#135';
+	TEXT  CHARACTER=94 TEXT= 'Mark''s_#136';
+	TEXT  CHARACTER=95 TEXT= 'of_moss-tracheophyte_type_--_Mark''s_#137';
+	TEXT  CHARACTER=98 TEXT= 'of_moss_type_--_Mark''s_#138';
+	TEXT  CHARACTER=97 TEXT= 'Mark''s_#139';
+	TEXT  CHARACTER=103 TEXT= 'Mark''s_#140';
+	TEXT  CHARACTER=102 TEXT= 'Mark''s_#141';
+	TEXT  CHARACTER=100 TEXT= 'Mark''s_#142';
+	TEXT  CHARACTER=101 TEXT= 'Mark''s_#143';
+	TEXT  CHARACTER=104 TEXT= 'Mark''s_#146';
+	TEXT  CHARACTER=105 TEXT= 'Mark''s_#147';
+	TEXT  CHARACTER=106 TEXT= 'Mark''s_#148';
+	TEXT  CHARACTER=107 TEXT= 'Mark''s_#149';
+	TEXT  TAXON=24 CHARACTER=2 TEXT= CHECK;
+	TEXT  TAXON=26 CHARACTER=7 TEXT= check;
+	TEXT  TAXON=26 CHARACTER=8 TEXT= CHECK;
+	TEXT  TAXON=40 CHARACTER=57 TEXT= 'early_in_ontogeny,_flagella_are_apical';
+	TEXT  TAXON=35 CHARACTER=57 TEXT= flagella_apical_in_early_ontogeny;
+END;
+
+BEGIN MACCLADE;
+v 3.0
+-1322665186
+1000&/0
+0
+0
+END;

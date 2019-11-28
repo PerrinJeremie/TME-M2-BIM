@@ -1,0 +1,28 @@
+/* XPM */
+static char * print_preview_xpm[] = {
+       /* columns rows colors chars-per-pixel */
+        "16 16 6 1",
+        "  c None",
+        "a c Black",
+        "b c #FFFFFF",
+        "d c #C0C0C0",
+        "e c #808080",
+        "f c #00FFFF",
+        /* pixels */
+        "aaaaaaaaa       ",
+        "abbbbbbbaa      ",
+        "abbbbbbbada     ",
+        "abbbbbbbaaaa    ",
+        "abbbbbbbbbba    ",
+        "abbbbbbbaaaa    ",
+        "abbbbbbaeddea   ",
+        "abbbbbaeffdeba  ",
+        "abbbbbadfddeda  ",
+        "abbbbbaddddeda  ",
+        "abbbbbaeddfeba  ",
+        "abbbbbbaeddeab  ",
+        "abbbbbbbaaaaaaa ",
+        "abbbbbbbbbba aaa",
+        "aaaaaaaaaaaa  aa",
+        "                "
+        };

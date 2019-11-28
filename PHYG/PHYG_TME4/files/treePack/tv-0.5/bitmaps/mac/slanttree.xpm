@@ -1,0 +1,24 @@
+/* XPM */
+static char * slanttree_xpm[] = {
+        /* columns rows colors chars-per-pixel */
+        "16 16 2 1",
+        "  c None",
+        "a c Black",
+        /* pixels */
+        "                ",
+        "                ",
+        "          a     ",
+        "         a      ",
+        "        a       ",
+        "       a a      ",
+        "      a   a     ",
+        "     a          ",
+        "    a           ",
+        "     a          ",
+        "      a         ",
+        "       a a      ",
+        "        a       ",
+        "         a      ",
+        "          a     ",
+        "                "
+        };

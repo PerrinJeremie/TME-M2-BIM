@@ -1,0 +1,3 @@
+distancedatum.o: distancedatum.cpp distancedatum.h
+
+distancedatum.h:

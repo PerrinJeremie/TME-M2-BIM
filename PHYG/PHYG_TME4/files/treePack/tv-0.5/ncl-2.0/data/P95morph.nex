@@ -1,0 +1,1290 @@
+#NEXUS 
+[MacClade 3.05 registered to Franois Lutzoni,        ]
+
+BEGIN MacCladeStart;
+Extended;
+END;
+
+
+BEGIN DATA;
+DIMENSIONS  NTAX=51 NCHAR=77;
+FORMAT SYMBOLS= " 0 1 2 3 4" MISSING=? GAP=- ;OPTIONS  MSTAXA=VARIABLE ;
+
+CHARLABELS
+	[1]	Circinnate_vernation
+	[2]	'F-S_leaf_differentiation'
+	[3]	Blade_dissection
+	[4]	Primary_vein_form
+	[5]	Vein_orders
+	[6]	Secondary_vein_form
+	[7]	Vein_fusion
+	[8]	Areoles
+	[9]	Hydathodes
+	[10]	Blade_hairs
+	[11]	Blade_scales
+	[12]	GMC_division
+	[13]	GMC_subsid_cell_origin
+	[14]	Dromy_at_base_of_blade
+	[15]	Pulvini
+	[16]	Pneumathodes
+	[17]	Blade_articulation
+	[18]	Trophopods
+	[19]	Adaxial_outline_of_stipe|rachis
+	[20]	Sclerenchyma_coloration
+	[21]	Sclerenchyma_fibers
+	[22]	Epipetiolar_branches
+	[23]	'Stipe_stele_number_(base->apex)'
+	[24]	Xylem_configuration_in_stipe
+	[25]	Primary_xylem_bordered_pits
+	[26]	Rhizome_symmetry
+	[27]	Rhizome_stele_type
+	[28]	Rhizome_stele_cycles
+	[29]	Vascular_cambium
+	[30]	Rhizome_hairs
+	[31]	Rhizome_scales
+	[32]	Rhizome_scale_pattern
+	[33]	Roots
+	[34]	Root_hairs
+	[35]	Root_anatomy
+	[36]	Growth_habit
+	[37]	'Mucilage/latex_canals'
+	[38]	True_vessels
+	[39]	Intranuclear_paracrystals
+	[40]	Hypodermis
+	[41]	First_division_of_zygote
+	[42]	Sporangial_wall_thickness
+	[43]	Receptacle
+	[44]	Sporangial_stalk_length
+	[45]	Sporangial_stalk_width
+	[46]	Spore_output
+	[47]	Sori
+	[48]	Sorus_outline
+	[49]	Sporangial|soral_position
+	[50]	'Soral/sporangial_maturation'
+	[51]	'No._sporangia/sorus'
+	[52]	Indusium
+	[53]	Indusium_origin
+	[54]	Indus_attach_to_sorus
+	[55]	Indusium_opening
+	[56]	Annulus
+	[57]	Annulus_aspect
+	[58]	Annulus_span
+	[59]	Sporogenesis
+	[60]	Spore_laesura
+	[61]	Spores_chlorophyllous
+	[62]	Spore__equatorial_flange
+	[63]	Perispore_prominence
+	[64]	Perispore_surface
+	[65]	Exospore_structure
+	[66]	Exospore_surface
+	[67]	Spore_germination
+	[68]	Gametophyte_form
+	[69]	Gametophyte_hairs
+	[70]	Gametophytes_green
+	[71]	Gam._fungal_assoc.
+	[72]	Dependent_gametophyte
+	[73]	Antherdium_position
+	[74]	Archegonium_position
+	[75]	No._anth._wall_cells
+	[76]	No._arch_neck_tiers
+	[77]	Gemmae_producing_gametophytes
+	;
+STATELABELS  
+	1  no yes,
+	2  monomorphic 'hemi_-_at_tip' 'hemi_-_at_base' dimorphic,
+	3  simple compound,
+	4  dichotomous 'anisotomous_(pinnate)' solitary|unbranched,
+	5  one two three four_or_more,
+	6  dichotomous anisotomous,
+	7  nonanastomosing anastomosing,
+	8  without_free_included_veinlets with_free_included_veinlets,
+	9  absent present,
+	10  absent present,
+	11  absent present,
+	12  diameristic parameristic anomomeristic,
+	13  perigenous mesogenous mesoperigenous,
+	14  catadromous anadromous isodromous,
+	15  absent present,
+	16  absent present_scattered present_lines_patches,
+	17  absent present,
+	18  absent present,
+	19  convex_to_flattened sulcate,
+	20  'not_dark-pigmented' dark_pigmented,
+	21  absent present,
+	22  absent present,
+	23  'monostele->polystele' monostele 'distele->monostele' polystele distele,
+	24  'C,_U,_V,_O,_½,_arc)' 'solid_*,_T,_Æ' 'X_(sometimes_becoming_V)' 3_arches polycyclic,
+	25  scalariform circular,
+	26  radial dorsiventral,
+	27  protostele solenostele dictyostele eustele,
+	28  monocyclic polycyclic,
+	29  absent present,
+	30  absent present,
+	31  absent present,
+	32  uniformly_colored sharply_bicolored clathrate,
+	33  absent present,
+	34  absent present,
+	35  '2-5-arch' polyarch,
+	36  terrestrial epiphytic rooted_aquatic floating_aquatic,
+	37  absent present,
+	38  absent present,
+	39  absent present,
+	40  absent present,
+	41  horizontal vertical 'free-nuclear_phase',
+	42  single_cell_layer 2_or_more_cell_layers,
+	43  '(nearly)_flat' convex elongate branched,
+	44  sessile_to_short long,
+	45  'massive_(>6_cell_rows_wide)' '4-6_cell_rows_wide' '1-3_cell_rows_wide',
+	46  '1000+' '>100<1000' '<100',
+	47  absent present,
+	48  roundish elongate,
+	49  marginal 'dorsal_(abaxial)' adaxial,
+	50  ±_simultaneous gradate mixed,
+	51  'few_(<12)' many,
+	52  absent present,
+	53  marginal adaxial,
+	54  lateral basal central,
+	55  introrse extrorse suprasoral circumsoral none,
+	56  absent present,
+	57  apical lateral oblique_to_transverse vert_to_slightly_oblique,
+	58  continuous_bow interrupted_bow restricted_patch,
+	59  homosporous anisosporous heterosporous,
+	60  linear triradiate papillalike furrow circular,
+	61  no yes,
+	62  absent present,
+	63  not_prominent prominent,
+	64  '(nearly)_smooth' sculptured,
+	65  '2-layers_(blechnoid)' '3-layers' '5-layers',
+	66  '(nearly)_smooth' sculptured,
+	67  equatorial polar amorphous,
+	68  tuberous filamentous 'cordate-thalloid' 'elongate-thalloid' reduced,
+	69  absent present,
+	70  no yes,
+	71  absent present,
+	72  no yes,
+	73  embedded exposed,
+	74  embedded exposed,
+	75  ³_5 '3-(rarely)_5',
+	76  '>6' '1-5_(rarely)_6',
+	77  no 'yes,_borne_from_thallus' 'yes,_borne_from_rhizoids',
+;
+
+MATRIX
+Anemia_mexicana                1211210?01001100001010100010010?110000??1000110??0?0???1000100000112110011110
+Asplenium_filipes              1011210?110021000111102201200012110000??1001221112111011310000110012?10011110
+Azolla_caroliniana             02100?0?01002?00000000110110000?110300??101(01)22(01)0?111?120??21001100140001?0110
+Blechnum_occidentale           1011210?11102100001010300020001(01)1100001?1001221112111001310000100112110011110
+Cheiropleuria_bicuspis         1300211100011?00000010000100010?110000??1000110?12?0???1300100001002011011000
+Cyathea_lepifera               1011310?111020021010103300210010110010??101012101110???1300100110002110011000
+Blotiella_pubescens            1011311011002102001011300020010?110000??1001221102110001310000110012010011110
+Dennstaedtia_punctilobula      1011310?11002002001011100111010?110000?0100022100101(01)1213101011?0012010011110
+Histiopteris_incisa            10113110111020000010113001100110110000??1001221102110001310000000112010011110
+Lindsaea_odorata               1011100?100021000010101001000010110000??1001221102?11011310000100012010011110
+Lonchitis_hirsuta              1011310?11002000001010300110010?110000??1000221102110001310100110012010011110
+Microlepia_strigosa            1011310?11002102001010100110010?1100000?1011221001111011310100010012010011110
+Monachosorum_henryi            1011310?110020000010102001(12)0010?110000??100122101010???1310100110113010011110
+Pteridium_aquilinum            1011310?01002002001011300111010?1100011(01)1001221102110001310100010012010011110
+Calochlaena_dubia              1011310?01011102001010100010010?110010??101012100111(01)121300100000102010011000
+Dicksonia_antarctica           1011310?01002102000010330020010?1100001?101112100111(01)121300100000102010011000
+Dipteris_conjugata             1010211101011?000010100001100010110000?0100112101210???1310000001002010011000
+Davallia_mariesii              1011310?10002102101010300120001(01)110100??1001221012111011310000000112110011110
+Elaphoglossum_hybridum         1301100?01102?02001010300?200010110000??1001220?12?0???131000011001{23}110011110
+Nephrolepis_cordifolia         1011210?1010220010101030002000101100001?1001221012111011310000110012110011110
+Onoclea_sensibilis             13113110111021000100102001200010110000?01011221011111011310010110012110011110
+Rumohra_adiantiformis          1011310?001021020010103001200010110000??1001221012111231310000110012110011110
+Diplopterygium_glaucum         1010310?001021000000101001000010110000??1000?1101000???1200100001002111011000
+Stromatopteris_moniliformis    1011100?01002100001110100?000110100000?0101011101010???12000000011?0001011000
+Micropolypodium_okuboi         1001110?110021000000101000100010110100??100122101210???13101100001{01}3110011111
+Cephalomanes_thysanostomum     1011310?010??1000000?0110000010?110000??1020?1100111(01)01120011000110101?0110?1
+Lygodium_japonicum             1111310?01002000000010110100010?110000?01000110?10?11011000100110112010011110
+Angiopteris_evecta             1011310?0012001100001034(01)0210010111010?1011000111000???0??0100101122011000010
+Marsilea_quadrifolia           12100?1001002?10000000100110010?11020110101(01)22110101(01)140??2(12)001000140001??110
+Matonia_pectinata              1011310?00002000001010100111010?110000??1000121010011231210100111022010011000
+Metaxya_rostrata               1011210?0101(12)102001011100110010?110000??100012101010???13001001100?2010011000
+Botrychium_strictum            0311310?010201000000003010(12)0100?100000??0100000??0?0???0??0100001110001001000
+Osmunda_cinnamomea             1311310?010200000010101000(12)0010?110000?01000110??0?0???1120110011112011011000
+Ceratopteris_thalictroides     13113110000020000000003000210010110200??1000?2110211000131010001011201?001110
+Plagiogyria_japonica           1311210?00002?02001010100020000?110000??1001121112110001300100110012010011000
+Loxogramme_grammitoides        1001111000002?000000?01101200012110000??100022111210???1310010000103?10011111
+Polypodium_australe            1001210?111022001000103001200010110000??100122101210???13100000001{01}2110011110
+Psilotum_nudum                 030?????00020?0000?010??(01)0(01)0010?0??(01)000?01000010?000???0??0000001110001011012
+Acrostichum_aureum             11112110010021000010103400(12)10010110200?11001220?02?0???1310100010012010011110
+Adiantum_raddianum             1011310?000021000011102001(12)00010110000??1000221102110001310100110012010011110
+Coniogramme_japonica           1011311011102(012)000010101001(12)00010110000?1100022111210???1310100000?12010011110
+Platyzoma_microphyllum         1(03)11210?01002?00101110100110010?110000??100022111200???131110000011(13)010011110
+Pteris_fauriei                 1011310?010021000010101000(12)10011110000??1000221102110001310101000112010011110
+Taenitis_blechnoides           1011211001002?00001010?001(12)0010?110000??100022111210???1310101010112010011110
+Salvinia_cucullata             0(23)01211001002?00000000110110010?0??300??103(01)2210?111?120??21001100140101?0110
+Actinostachys_digitata         11020???00002?00000010100010010?110000??1000110??0?10001000000000120001011110
+Thelypteris_beddomei           1011310?010022020010102000200010110000??1000221012111011310000110112110011110
+Vittaria_flexuosa              1001111000002?000011102001(12)00012110000??100022110210???1310000000013010011111
+Lycopodium_digitatum           03020?0?00020?0000??10??1000000?110010?00100000?2??0???0??0100000100001001000
+Equisetum_arvense              0?020?0?10011?0000??00??1010010?110001?10100?0???0?0???0??04100100?3010011010
+Cycas_circinalis               0311110?01020?000000?0301030110?1?1010??2100000?10?0???0??2300??20?40001?0?10
+;
+END;
+
+BEGIN ASSUMPTIONS;
+	OPTIONS  DEFTYPE=unord PolyTcount=MINSTEPS ;
+END; 
+
+BEGIN TREES; 
+
+
+	UTREE Default_bush =  [&U] (Anemia_mexicana,Asplenium_filipes,Azolla_caroliniana,Blechnum_occidentale,Cheiropleuria_bicuspis,Cyathea_lepifera,Blotiella_pubescens,Dennstaedtia_punctilobula,Histiopteris_incisa,Lindsaea_odorata,Lonchitis_hirsuta,Microlepia_strigosa,Monachosorum_henryi,Pteridium_aquilinum,Calochlaena_dubia,Dicksonia_antarctica,Dipteris_conjugata,Davallia_mariesii,Elaphoglossum_hybridum,Nephrolepis_cordifolia,Onoclea_sensibilis,Rumohra_adiantiformis,Diplopterygium_glaucum,Stromatopteris_moniliformis,Cephalomanes_thysanostomum,Lygodium_japonicum,Angiopteris_evecta,Marsilea_quadrifolia,Matonia_pectinata,Metaxya_rostrata,Botrychium_strictum,Osmunda_cinnamomea,Ceratopteris_thalictroides,Plagiogyria_japonica,Loxogramme_grammitoides,Polypodium_australe,Psilotum_nudum,Acrostichum_aureum,Adiantum_raddianum,Coniogramme_japonica,Platyzoma_microphyllum,Taenitis_blechnoides,Salvinia_cucullata,Actinostachys_digitata,Thelypteris_beddomei,Vittaria_flexuosa);
+	UTREE Default_bush =  [&U] (Anemia_mexicana,Asplenium_filipes,Azolla_caroliniana,Blechnum_occidentale,Cheiropleuria_bicuspis,Cyathea_lepifera,Blotiella_pubescens,Dennstaedtia_punctilobula,Histiopteris_incisa,Lindsaea_odorata,Lonchitis_hirsuta,Microlepia_strigosa,Monachosorum_henryi,Pteridium_aquilinum,Calochlaena_dubia,Dicksonia_antarctica,Dipteris_conjugata,Davallia_mariesii,Elaphoglossum_hybridum,Nephrolepis_cordifolia,Onoclea_sensibilis,Rumohra_adiantiformis,Diplopterygium_glaucum,Stromatopteris_moniliformis,Cephalomanes_thysanostomum,Lygodium_japonicum,Angiopteris_evecta,Marsilea_quadrifolia,Matonia_pectinata,Metaxya_rostrata,Botrychium_strictum,Osmunda_cinnamomea,Ceratopteris_thalictroides,Plagiogyria_japonica,Loxogramme_grammitoides,Polypodium_australe,Psilotum_nudum,Acrostichum_aureum,Adiantum_raddianum,Coniogramme_japonica,Platyzoma_microphyllum,Taenitis_blechnoides,Salvinia_cucullata,Actinostachys_digitata,Thelypteris_beddomei,Vittaria_flexuosa);
+	UTREE Default_bush =  [&U] (Anemia_mexicana,Asplenium_filipes,Azolla_caroliniana,Blechnum_occidentale,Cheiropleuria_bicuspis,Cyathea_lepifera,Blotiella_pubescens,Dennstaedtia_punctilobula,Histiopteris_incisa,Lindsaea_odorata,Lonchitis_hirsuta,Microlepia_strigosa,Monachosorum_henryi,Pteridium_aquilinum,Calochlaena_dubia,Dicksonia_antarctica,Dipteris_conjugata,Davallia_mariesii,Elaphoglossum_hybridum,Nephrolepis_cordifolia,Onoclea_sensibilis,Rumohra_adiantiformis,Diplopterygium_glaucum,Stromatopteris_moniliformis,Cephalomanes_thysanostomum,Lygodium_japonicum,Angiopteris_evecta,Marsilea_quadrifolia,Matonia_pectinata,Metaxya_rostrata,Botrychium_strictum,Osmunda_cinnamomea,Ceratopteris_thalictroides,Plagiogyria_japonica,Loxogramme_grammitoides,Polypodium_australe,Psilotum_nudum,Acrostichum_aureum,Adiantum_raddianum,Coniogramme_japonica,Platyzoma_microphyllum,Taenitis_blechnoides,Salvinia_cucullata,Actinostachys_digitata,Thelypteris_beddomei,Vittaria_flexuosa);
+	UTREE  * Default_bush =  [&U] (Anemia_mexicana,Asplenium_filipes,Azolla_caroliniana,Blechnum_occidentale,Cheiropleuria_bicuspis,Cyathea_lepifera,Blotiella_pubescens,Dennstaedtia_punctilobula,Histiopteris_incisa,Lindsaea_odorata,Lonchitis_hirsuta,Microlepia_strigosa,Monachosorum_henryi,Pteridium_aquilinum,Calochlaena_dubia,Dicksonia_antarctica,Dipteris_conjugata,Davallia_mariesii,Elaphoglossum_hybridum,Nephrolepis_cordifolia,Onoclea_sensibilis,Rumohra_adiantiformis,Diplopterygium_glaucum,Stromatopteris_moniliformis,Cephalomanes_thysanostomum,Lygodium_japonicum,Angiopteris_evecta,Marsilea_quadrifolia,Matonia_pectinata,Metaxya_rostrata,Botrychium_strictum,Osmunda_cinnamomea,Ceratopteris_thalictroides,Plagiogyria_japonica,Loxogramme_grammitoides,Polypodium_australe,Psilotum_nudum,Acrostichum_aureum,Adiantum_raddianum,Coniogramme_japonica,Platyzoma_microphyllum,Taenitis_blechnoides,Salvinia_cucullata,Actinostachys_digitata,Thelypteris_beddomei,Vittaria_flexuosa);
+
+END;
+
+
+BEGIN NOTES;
+	TEXT  CHARACTER=4 TEXT= 'Vouchers_checked_for_all_and_Kubitizki_1990.___See_also_Alan''s_e-mail_05.26.94.__This_character_largely_modelled_after_Nixon_et_al._1994.';
+	TEXT  TAXON=28 CHARACTER=15 TEXT= Camus_in_Kubitzki_1990;
+	TEXT  TAXON=29 CHARACTER=15 TEXT= 'Johnson_1986,_p._10';
+	TEXT  CHARACTER=16 TEXT= vouchers;
+	TEXT  TAXON=8 CHARACTER=16 TEXT= 'not_seen_in_D._punctilobula,_but_well_documented_in_many_other_Dennstaedtia_spp.__Kubitzki_1990;_ARS_pers._obs.';
+	TEXT  TAXON=14 CHARACTER=16 TEXT= 'Bower_1923,_p._169';
+	TEXT  TAXON=15 CHARACTER=16 TEXT= Kubitzki_1990;
+	TEXT  TAXON=16 CHARACTER=16 TEXT= 'D._Palmer_(pers._comm.)';
+	TEXT  TAXON=17 CHARACTER=16 TEXT= 'Bower_1923,_p.168';
+	TEXT  TAXON=18 CHARACTER=16 TEXT= Kubitzki_1990;
+	TEXT  TAXON=19 CHARACTER=16 TEXT= 'ARS_12/13/94_e-mail_to_KMP:__In_Elaphoglossum,_the_ventilation_bands_are_not_visible_in_the_voucher,_but_may_be_there_in_living_material_(see_Mickel_&_Atehortua_1980;_also_Lloyd_1970,_and_Kubitzki_1990).';
+	TEXT  TAXON=27 CHARACTER=16 TEXT= fresh_material;
+	TEXT  TAXON=35 CHARACTER=16 TEXT= 'Bower_1923,_1926';
+	TEXT  TAXON=10 CHARACTER=16 TEXT= 'Kramer_1957,_p._112';
+	TEXT  TAXON=3 CHARACTER=50 TEXT= 'Eames_1936,_p._256';
+	TEXT  CHARACTER=50 TEXT= vouchers_checked;
+	TEXT  TAXON=5 CHARACTER=50 TEXT= 'Bower_1928,_p._205';
+	TEXT  TAXON=8 CHARACTER=50 TEXT= 'Bower_1923,_p._215';
+	TEXT  TAXON=9 CHARACTER=50 TEXT= voucher;
+	TEXT  TAXON=11 CHARACTER=50 TEXT= voucher;
+	TEXT  TAXON=12 CHARACTER=50 TEXT= 'Eames_1936;_"M._speluncae"';
+	TEXT  TAXON=13 CHARACTER=50 TEXT= 'Kramer_1990:_±_simultaneously_maturing';
+	TEXT  TAXON=14 CHARACTER=50 TEXT= 'Bower_1923,_Eames_1936';
+	TEXT  TAXON=15 CHARACTER=50 TEXT= Kramer_1990;
+	TEXT  TAXON=16 CHARACTER=50 TEXT= Kramer_1990;
+	TEXT  TAXON=17 CHARACTER=50 TEXT= 'gradate_maturation_in_other_sp._of_Dipteris_---_Bower_1923';
+	TEXT  TAXON=21 CHARACTER=50 TEXT= 'Bower,_Eames_1936;_Labouriau_1958,_p._131';
+	TEXT  TAXON=23 CHARACTER=50 TEXT= Kramer_1990;
+	TEXT  TAXON=24 CHARACTER=50 TEXT= Kramer_1990;
+	TEXT  TAXON=27 CHARACTER=50 TEXT= 'sporangia_are_solitary,_but_mature_simultaneously_with_respect_to_adjacent_sporangia';
+	TEXT  TAXON=29 CHARACTER=50 TEXT= 'Eames_1936,_p._213';
+	TEXT  TAXON=30 CHARACTER=50 TEXT= Kramer_1990;
+	TEXT  TAXON=31 CHARACTER=50 TEXT= 'Kramer_1990,_Qiu_et_al._1995';
+	TEXT  TAXON=33 CHARACTER=50 TEXT= 'Kramer_1990:_±simultaneous';
+	TEXT  TAXON=35 CHARACTER=50 TEXT= voucher;
+	TEXT  TAXON=36 CHARACTER=50 TEXT= voucher;
+	TEXT  TAXON=42 CHARACTER=50 TEXT= 'Tryon_1961,_p._95';
+	TEXT  TAXON=45 CHARACTER=50 TEXT= 'Eames_1936,_p._256';
+	TEXT  TAXON=7 CHARACTER=22 TEXT= Troop_&_Mickel_1968;
+	TEXT  TAXON=8 CHARACTER=22 TEXT= 'Troop_&_Mickel_1968_-_citing_Conrad_(1908)_for_this_species';
+	TEXT  TAXON=9 CHARACTER=22 TEXT= Troop_&_Mickel_1968;
+	TEXT  TAXON=11 CHARACTER=22 TEXT= Troop_&_Mickel_1968;
+	TEXT  TAXON=12 CHARACTER=22 TEXT= Kubitizki_1990;
+	TEXT  TAXON=14 CHARACTER=22 TEXT= 'Troop_&_Mickel_1968_-_citing_Webster_1958_for_this_sp.';
+	TEXT  TAXON=31 CHARACTER=22 TEXT= Troop_&_Mickel_1968;
+	TEXT  TAXON=35 CHARACTER=22 TEXT= 'Kubitizki_1990:_"occasional_stolons_spring_from_a_leaf_base";_Ogura_1972:_"in_Plagiogyria_pycnophylla"';
+	TEXT  CHARACTER=22 TEXT= 'vouchers;_Troop_&_Mickel_1968';
+	TEXT  CHARACTER=26 TEXT= vouchers;
+	TEXT  TAXON=24 CHARACTER=26 TEXT= 'N/A.___Kaplan_1977,_p._43';
+	TEXT  TAXON=27 CHARACTER=26 TEXT= 'Holttum_1964,_p.478';
+	TEXT  CHARACTER=60 TEXT= Tryon_and_Lugardon__1991;
+	TEXT  TAXON=21 CHARACTER=61 TEXT= Kubitzki_1990;
+	TEXT  TAXON=25 CHARACTER=61 TEXT= Kubitzki_1990;
+	TEXT  TAXON=26 CHARACTER=61 TEXT= Kubitzki_1990;
+	TEXT  TAXON=33 CHARACTER=61 TEXT= Kubitzki_1990;
+	TEXT  TAXON=36 CHARACTER=61 TEXT= 'Kubitzki_1990;_green_at_time_of_dispersal';
+	TEXT  CHARACTER=62 TEXT= Tryon_&_Lugardon_1991;
+	TEXT  CHARACTER=59 TEXT= 'Bell_1979,_Sheffield_&_Bell_1987,_Tryon_&_Lugardon_1991';
+	TEXT  CHARACTER=61 TEXT= 'Kubitzki_1990,_Tryon_&_Lugardon_1991';
+	TEXT  CHARACTER=63 TEXT= 'Lloyd_1981:_Polypodium;_Tryon_&_Lugardon_1991_-_see_especially_the_family_and_generic_descriptions.';
+	TEXT  TAXON=6 CHARACTER=63 TEXT= see_Sphaeropteris_in_Tryon_&Lugardon_1991;
+	TEXT  CHARACTER=64 TEXT= 'Lloyd_1981:_Polypodium;_Tryon_&_Lugardon_1991_-_see_especially_family_and_generic_descriptions.';
+	TEXT  TAXON=1 CHARACTER=64 TEXT= 'T&L_1991,_p._109,_Fig._11:_granulate';
+	TEXT  TAXON=4 CHARACTER=64 TEXT= 'T&L_1991,_p._531,_Figs._1&2';
+	TEXT  TAXON=5 CHARACTER=64 TEXT= 'T&L_1991,_p._80,_Fig._1,_3:_rugulate';
+	TEXT  TAXON=9 CHARACTER=64 TEXT= 'T&L_1991,_pg._290,_text:_fine_irregular_surface';
+	TEXT  TAXON=10 CHARACTER=64 TEXT= 'T&L_1991,_p._298-99,_Figs._15_and_17.__uniformly_granulate';
+	TEXT  TAXON=11 CHARACTER=64 TEXT= 'T&L_1991,_p._291-293_and_Figs._1-6:_essentially_granulate_-_some_coarse_surface_deposits.__KMP_originally_scored_this_as_0.__ARS_changed_to_1_03/95,_deciding_that_the_coarse_surface_deposits_were_actually_part_of_the_perispore_sculpturing.';
+	TEXT  TAXON=41 CHARACTER=64 TEXT= 'T&L_1991,_p._175_(text):_irregularly_rugulate,_papillate';
+	TEXT  TAXON=8 CHARACTER=64 TEXT= 'KMP_had_originally_scored_as_1_based_on_T&L_1991,_p._271_text;_ARS_changed_to_?_03/95';
+	TEXT  TAXON=16 CHARACTER=64 TEXT= 'KMP_had_originally_scored_as_1_based_on_T&L_1991_,_p._231_Fig._1;_ARS_changed_to_0__03/95.__See_also_Figs._10-12._Prob_ok_as_0.';
+	TEXT  TAXON=6 CHARACTER=64 TEXT= see_Sphaeropteris_in_Tryon_&Lugardon_1991;
+	TEXT  TAXON=6 CHARACTER=66 TEXT= see_Sphaeropteris_in_Tryon_&Lugardon_1991.__KMP_had_originally_scored_as_1_based_on_Cyathea_photos_in_T&L.__ARS_changed_to_0_based_on_Sphaeropteris.;
+	TEXT  TAXON=42 CHARACTER=64 TEXT= 'KMP_had_originally_scored_as_1_based_on_T&L_1991,_p._123-;_ARS_changed_to_0__03/95.___See_Fig._5_-_perispore=_coalescent_granulate_material,_therefore_prob_better_as_0.';
+	TEXT  CHARACTER=65 TEXT= '_Tryon_&_Lugardon_1991_-_see_especially_the_family_and_generic_descriptions._See_also_general_introductory_comments_to_book_where_T&L_define_a_2-layered_exospore_as_a_blechnoid_exospore.';
+	TEXT  CHARACTER=66 TEXT= '_Tryon_&_Lugardon_1991_-_see_especially_the_family_and_generic_descriptions.';
+	TEXT  TAXON=37 CHARACTER=64 TEXT= 'Close_relatives_P._vulgare_&_P._glycyrrhiza_are_smooth.__P._virginianum:_some_with_more_elaborate_perispore,_cf._T_&_L_131.15-17_with_131.18-19.__Also_131:21-22:_echinate_perispore.__UC_has_LM_picture_of_P._australe_spore_attached_to_specimen:_smooth';
+	TEXT  TAXON=17 CHARACTER=58 TEXT= 'ARS_did_a_sporangial_mount:_interrupted_bow._See_Bierhorst_1971,_pgs._307_(top_of_2nd_column),_312_(Figs._16-15,_c,d)_and_p._313_(Figs._16-16,_a,b).';
+	TEXT  TAXON=29 CHARACTER=54 TEXT= 'Eames_p._210-211,_Fig._137b.__Indusium_sealed_&_cup-shaped_(basal_attach?_each_sorus_surrounded_by_indusium,_which_originates_from_base_of__sorus).__See_also_Campbell_1893_&_Johnson_1898a,1898b,_1933_and_4/17/95_emails';
+	TEXT  CHARACTER=52 TEXT= vouchers_seen_for_all;
+	TEXT  TAXON=42 CHARACTER=52 TEXT= 'margin_of_pouch-like_segments_is_unmodified';
+	TEXT  TAXON=46 CHARACTER=52 TEXT= 'ARS_email_4/18/95,_4:17:_indusiate:_has_reflexed_margin.__See_voucher_and_Bierhorst_(1971)_p._223_and_fig._14.6.';
+	TEXT  TAXON=3 CHARACTER=53 TEXT= '_KP_email_4/21/95:_12:39.__Too_little_tissue_to_know_what_is_going_on.__Uncertain_where_the_indusia_originates_from_-_abaxial_or_adaxial_,_therefore_?__Eames_(1936):_sporocarps_(indusia=sporocarp_wall)_on_lower_lobe_are_borne_terminally.';
+	TEXT  TAXON=29 CHARACTER=53 TEXT= 'Eames_p._210-211:_sorus_marginal.__Fig._137b:_indusium_partly_from_abaxial_leaf_surface_and_partly_from__leaf_margin._See_papers_by_Campbell_1893_&_Johnson_1898a,1898b.,_1933.__See_also_4/17/95_emails.';
+	TEXT  TAXON=45 CHARACTER=53 TEXT= 'KP_email_4/21/95:_12:39.__Too_little_tissue_to_know_what_is_going_on.__Uncertain_where_indusium_originates_from_-_abaxial_or_adaxial_,_therefore_?__Eames_(1936):_sporocarps_(indusia=sporocarp_wall)__terminal_upon_a_branch_of_a_segment_of_submersed_leaf';
+	TEXT  TAXON=46 CHARACTER=53 TEXT= '_See_voucher_and_Bierhorst_(1971)_p._223_and_fig._14.6.';
+	TEXT  TAXON=21 CHARACTER=54 TEXT= 'Bower_1928,_p.155,_fig._681.__T&T_1982,_p.586,_fig._4,__-_looks_like_a_laterally_attached_hood-like_indusium;_is_supposed_to_be_same_as_Matteucia.__But_see_Bower_1928,_p._153,_fig._L_-_basal?__No_-_see_Labouriau_1958,_p._131';
+	TEXT  TAXON=26 CHARACTER=54 TEXT= 'ARS_email_4/21/95,_1:58';
+	TEXT  TAXON=45 CHARACTER=54 TEXT= Eames_1936;
+	TEXT  TAXON=46 CHARACTER=54 TEXT= 'ARS_email_4/18/95,_4:17pm:_indusiate:_has_reflexed_margin.__See_voucher_and_Bierhorst_(1971)_p._223_and_fig._14.6.';
+	TEXT  TAXON=3 CHARACTER=55 TEXT= 'distal_pore:_Bower_1928,_p.260.__Eames_1936,_P._245-246';
+	TEXT  CHARACTER=53 TEXT= vouchers_seen_for_all;
+	TEXT  CHARACTER=54 TEXT= vouchers_seen_for_all;
+	TEXT  CHARACTER=55 TEXT= vouchers_seen_for_all;
+	TEXT  TAXON=8 CHARACTER=55 TEXT= 'segment_margin_and_abaxial_cells_contribute_±_equally_to_the_formation_of_a_"cup".';
+	TEXT  TAXON=15 CHARACTER=55 TEXT= '"cup"_is_bilobed,_"valves"_connate_@_base';
+	TEXT  TAXON=16 CHARACTER=55 TEXT= 'cup_is_bilobed,_"valves"_connate_@_base';
+	TEXT  TAXON=21 CHARACTER=55 TEXT= 'Bower_1928,_p.153-155,_figs._678_and_681.__T&T_1982,_p.586,_fig._4,__-_looks_like_a_laterally_attached_hood-like_indusium;_is_supposed_to_be_same_as_Matteucia_-_which_appears_extrorse.__Yes_see_Labouriau_1958,_p._131';
+	TEXT  TAXON=26 CHARACTER=55 TEXT= 'ARS_email:_4/21/95,_10:15.';
+	TEXT  TAXON=29 CHARACTER=55 TEXT= 'Eames_1936,_p._209-211,_p.214.__See_also_Gifford_and_Foster''s_figures_on_Marsilea_and_papers_by_Campbell_1893_&_Johnson_1898a,1898b,_1933';
+	TEXT  TAXON=45 CHARACTER=55 TEXT= 'Eames_1936,_P._233,_fig._148.';
+	TEXT  CHARACTER=27 TEXT= 'States_scored_mainly_from_Kubitizki_(1990)_and_Ogura_(1972).__Some_clarifications_taken_from_Schmid_(1982).__White_&_Turner_1988:_Calochlaena._Qiu_et_al_1995:_Metaxya.';
+	TEXT  TAXON=1 CHARACTER=27 TEXT= 'Ogura_1972:_"mexicana"_=_typical_solenostele';
+	TEXT  TAXON=3 CHARACTER=27 TEXT= 'Schmid_1982,_p._880-881:__not_protostele';
+	TEXT  TAXON=14 CHARACTER=27 TEXT= 'Schmid_1982,_p._901-902:_not_a_dictyostele,_but_a_solenostele.';
+	TEXT  TAXON=15 CHARACTER=27 TEXT= White_&_Turner_1988;
+	TEXT  TAXON=20 CHARACTER=27 TEXT= 'See_also_Schmid_1982,_p._900.';
+	TEXT  TAXON=25 CHARACTER=27 TEXT= 'Schmid_1982:_ectophloic_siphonostele.__Ogura_1972:_protostele_with_parenchymatous_pith.__Acc._to_Schmid,_p._890,_ectophloic_siphonosteles_lack_leaf_gaps,_therefore_I_scored_as_solenostele.';
+	TEXT  TAXON=26 CHARACTER=27 TEXT= 'see_also_Schmid_1982,_p._881';
+	TEXT  TAXON=28 CHARACTER=27 TEXT= Hill_&_Camus_1986;
+	TEXT  TAXON=31 CHARACTER=27 TEXT= Qiu_et_al._1995;
+	TEXT  TAXON=33 CHARACTER=27 TEXT= 'Schmid_1982,_p._889';
+	TEXT  TAXON=38 CHARACTER=27 TEXT= 'See_also_Schmid_1982,_p._900_and_Kubitizki_1990_-_solenostele_between_rhizome_and_aerial_stem.';
+	TEXT  TAXON=42 CHARACTER=27 TEXT= 'Schmid_1982:_ectophloic_siphonostele.__Ogura_1972:_medullated_protostele_with_parenchymatous_pith.__Acc._to_Schmid,_p._890,_ectophloic_siphonosteles_lack_leaf_gaps,_therefore_I_scored_as_solenostele.';
+	TEXT  TAXON=45 CHARACTER=27 TEXT= 'Schmid_1982,_p._880-881:__not_protostele';
+	TEXT  TAXON=46 CHARACTER=27 TEXT= 'Schmid_1982,_p._889:_ectophloic_siphonostele.__Ogura_1972:_medullated_protostele_with_parenchymatous_pith.__Acc._to_Schmid,_p._890,_ectophloic_siphonosteles_lack_leaf_gaps,_therefore_I_scored_as_solenostele.';
+	TEXT  TAXON=48 CHARACTER=27 TEXT= 'See_also_Schmid_1982,_p._890';
+	TEXT  CHARACTER=28 TEXT= 'polycyclic_includes_Ogura''s_(1972)_acyclostele_term,_and_the_IIB1c_and_IIB2c_terms_in_Schmid''s_(1983)_Table_1_-_see_pp._868-873.';
+	TEXT  TAXON=6 CHARACTER=28 TEXT= 'Ogura_1972,_Kubitizki_1990,_Schmid_1982_(IIB2c)';
+	TEXT  TAXON=8 CHARACTER=28 TEXT= 'Ogura_1972,_Kubitizki_1990,_Schmid_1982_(IIB1c)';
+	TEXT  TAXON=14 CHARACTER=28 TEXT= 'Ogura_1972,_Kubitizki_1990,_Schmid_1982_(IIB1c)_-_see_also_p._902';
+	TEXT  TAXON=28 CHARACTER=28 TEXT= 'Ogura_1972,_Hill_and_Camus_1986,_Schmid_1982_(IIB2c)';
+	TEXT  TAXON=30 CHARACTER=28 TEXT= 'Ogura_1972,_Kubitizki_1990,_Schmid_1982_(IIB1c)';
+	TEXT  TAXON=34 CHARACTER=28 TEXT= 'Ogura_1972_-_p._358,_Schmid_1982_(IIB2c)';
+	TEXT  TAXON=39 CHARACTER=28 TEXT= 'Ogura_1972,_Schmid_1982_(IIB1c)';
+	TEXT  TAXON=43 CHARACTER=28 TEXT= '_Kubitizki_1990,_Schmid_1982_(IIB1c)';
+	TEXT  CHARACTER=23 TEXT= 'N.B._For_base->_apex_of_stipe,_NOT_the_rachis!___Used_mostly_the_following_references:__Kubitizki_1990,_Ogura_1972,_Lin_&_DeVol_1977,_1978,_Keating_1968.';
+	TEXT  TAXON=3 CHARACTER=23 TEXT= 'Bierhorst_1971,_Warmbrodt_&_Evert_1978';
+	TEXT  TAXON=7 CHARACTER=23 TEXT= 'Ogura_1972,_p._116_(as_Lonchitis_pubescens).__Voucher_(see_ARS_email_5/2/95).';
+	TEXT  TAXON=13 CHARACTER=23 TEXT= 'Nair_&_Sen_1974,_Kubitizki_1990';
+	TEXT  TAXON=15 CHARACTER=23 TEXT= White_&_Turner_1988;
+	TEXT  TAXON=1 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972';
+	TEXT  TAXON=2 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972';
+	TEXT  TAXON=4 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972,_Lin_&_DeVol_1978';
+	TEXT  TAXON=5 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972,_Lin_&_DeVol_1978';
+	TEXT  TAXON=6 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972';
+	TEXT  TAXON=8 CHARACTER=23 TEXT= 'Keating_1968,_Ogura_1972';
+	TEXT  TAXON=9 CHARACTER=23 TEXT= 'Keating_1968,_Ogura_1972';
+	TEXT  TAXON=10 CHARACTER=23 TEXT= _Ogura_1972;
+	TEXT  TAXON=11 CHARACTER=23 TEXT= Keating_1968;
+	TEXT  TAXON=12 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972';
+	TEXT  TAXON=14 CHARACTER=23 TEXT= 'Keating_1968,_Ogura_1972';
+	TEXT  TAXON=16 CHARACTER=23 TEXT= _Ogura_1972;
+	TEXT  TAXON=17 CHARACTER=23 TEXT= Lin__&_DeVol_1978;
+	TEXT  TAXON=18 CHARACTER=23 TEXT= 'Lin_&_DeVol_1978,_p._91';
+	TEXT  TAXON=19 CHARACTER=23 TEXT= 'Ogura_1972,_p._378';
+	TEXT  TAXON=20 CHARACTER=23 TEXT= 'Ogura_1972,_P._115,_Fig._114b.__Note_where_bundles_fuse=rachis,_not_stipe!';
+	TEXT  TAXON=21 CHARACTER=23 TEXT= 'Ogura_1972,_p._378';
+	TEXT  TAXON=22 CHARACTER=23 TEXT= Kubitzi_1990;
+	TEXT  TAXON=23 CHARACTER=23 TEXT= _Ogura_1972;
+	TEXT  TAXON=24 CHARACTER=23 TEXT= Ogura_1972;
+	TEXT  TAXON=25 CHARACTER=23 TEXT= voucher;
+	TEXT  TAXON=26 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972_-_p._345_and_pp._108-109';
+	TEXT  TAXON=27 CHARACTER=23 TEXT= Lin_and_DeVol_1978._p._86;
+	TEXT  TAXON=28 CHARACTER=23 TEXT= 'Ogura_1972,_p._300-301.__Polycyclic.';
+	TEXT  TAXON=29 CHARACTER=23 TEXT= 'Ogura_1972,_p._108';
+	TEXT  TAXON=30 CHARACTER=23 TEXT= 'Ogura_1972,_p._108_and_386';
+	TEXT  TAXON=31 CHARACTER=23 TEXT= 'Ogura_1972,_p._372_"Amphidesmium",_Keating_1968';
+	TEXT  TAXON=32 CHARACTER=23 TEXT= 'Ogura_1972,_p._288-289_and_p._112.__Bierhorst_1971,_fig._11-7F.';
+	TEXT  TAXON=33 CHARACTER=23 TEXT= 'Ogura_1972,_p._108,_p._99';
+	TEXT  TAXON=34 CHARACTER=23 TEXT= 'Ogura_1972,_p._359;_p._109,_Fig._110:C.';
+	TEXT  TAXON=35 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972_-_p._364-366.';
+	TEXT  TAXON=36 CHARACTER=23 TEXT= 'voucher_(see_ARS_email_5/2/95)';
+	TEXT  TAXON=37 CHARACTER=23 TEXT= 'Kubitzi_1990,_Ogura_1972_-_p._391';
+	TEXT  TAXON=38 CHARACTER=23 TEXT= 'N/A.__Gifford_&_Foster:__Psilotum_nudum_has_no_leaf_trace_(it_also_has_no_stipe!)';
+	TEXT  TAXON=39 CHARACTER=23 TEXT= 'Ogura_1972,_p._356';
+	TEXT  TAXON=40 CHARACTER=23 TEXT= 'living_material_-_no_voucher_-_see_ARS_email_5/2/95.';
+	TEXT  TAXON=41 CHARACTER=23 TEXT= 'Lin_&_DeVol_1977,_p._97';
+	TEXT  TAXON=42 CHARACTER=23 TEXT= 'Ogura_1972,_p._335,_Fig._379D';
+	TEXT  TAXON=43 CHARACTER=23 TEXT= 'ARS_email_5/2/95';
+	TEXT  TAXON=44 CHARACTER=23 TEXT= 'ARS_email_5/2/95';
+	TEXT  TAXON=45 CHARACTER=23 TEXT= 'Bierhorst_1971,_p._341_"simple";_Ogura_1972,_p._401,_fig._452';
+	TEXT  TAXON=46 CHARACTER=23 TEXT= 'Ogura_1972,_p._109';
+	TEXT  TAXON=47 CHARACTER=23 TEXT= 'Lin_&_DeVol_1978,_p._87;_Kubitzki_1990';
+	TEXT  TAXON=48 CHARACTER=23 TEXT= 'voucher_(see_ARS_email_5/2/95)';
+	TEXT  CHARACTER=24 TEXT= 'Stipe,_NOT_rachis!__Though_state_0_seems_broad,_all_are_variations_on_the_horseshoe_shape.';
+	TEXT  TAXON=1 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972';
+	TEXT  TAXON=2 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972';
+	TEXT  TAXON=3 CHARACTER=24 TEXT= 'Bierhorst_1971,_Warmbrodt_&_Evert_1978';
+	TEXT  TAXON=4 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972,_Lin_&_DeVol_1978';
+	TEXT  TAXON=5 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972_-_p._109,_Lin_&_DeVol_1978';
+	TEXT  TAXON=6 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972,_p.111';
+	TEXT  TAXON=7 CHARACTER=24 TEXT= 'voucher;_Ogura_1972,_p._116,_fig._115:C.';
+	TEXT  TAXON=8 CHARACTER=24 TEXT= 'Keating_1968,_Ogura_1972';
+	TEXT  TAXON=9 CHARACTER=24 TEXT= 'ARS_email_5/3/95;_Ogura_1972';
+	TEXT  TAXON=10 CHARACTER=24 TEXT= Ogura_1972;
+	TEXT  TAXON=11 CHARACTER=24 TEXT= Ogura_1972;
+	TEXT  TAXON=12 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972';
+	TEXT  TAXON=13 CHARACTER=24 TEXT= Kubitizki_1990;
+	TEXT  TAXON=14 CHARACTER=24 TEXT= Keating_1968;
+	TEXT  TAXON=15 CHARACTER=24 TEXT= White_&_Turner_1988;
+	TEXT  TAXON=16 CHARACTER=24 TEXT= _Ogura_1972;
+	TEXT  TAXON=17 CHARACTER=24 TEXT= Lin_&_DeVol_1978;
+	TEXT  TAXON=18 CHARACTER=24 TEXT= 'Lin_&_DeVol_1978,_p._91';
+	TEXT  TAXON=19 CHARACTER=24 TEXT= 'Ogura_1972,_p._378';
+	TEXT  TAXON=20 CHARACTER=24 TEXT= '_Ogura_1972,_p._115,_fig._114b_(note_the_bundles_fuse_together_in_rachis,_NOT_stipe!).';
+	TEXT  TAXON=21 CHARACTER=24 TEXT= '_Ogura_1972,_p._378';
+	TEXT  TAXON=22 CHARACTER=24 TEXT= Kubitizki_1990;
+	TEXT  TAXON=23 CHARACTER=24 TEXT= Kubitizki_1990;
+	TEXT  TAXON=24 CHARACTER=24 TEXT= Kubitizki_1990;
+	TEXT  TAXON=25 CHARACTER=24 TEXT= 'Ogura_1972,_p._108,_p._391';
+	TEXT  TAXON=26 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972,_p._345_and_108-9.__See_ARS_email_5/2/95';
+	TEXT  TAXON=27 CHARACTER=24 TEXT= '"T".__Kubitizki_1990,_Lin_&_DeVol_1978,_p._86';
+	TEXT  TAXON=28 CHARACTER=24 TEXT= 'concentric_rings.__Ogura_1972,_p._300-301';
+	TEXT  TAXON=29 CHARACTER=24 TEXT= 'ARS_email_5/2/95.__Bower_1926,_p._180;_Ogura_1972,_p._397,_figs._445,_447';
+	TEXT  TAXON=30 CHARACTER=24 TEXT= 'Ogura_1972,_p._108,_p._386.__"semicircular"';
+	TEXT  TAXON=31 CHARACTER=24 TEXT= 'Ogura_1972,_p._372.__"Amphidesmium"';
+	TEXT  TAXON=32 CHARACTER=24 TEXT= 'Ogura_1972,_p._288-289,_p._112;_Bierhorst_1971,_fig._11-7F.';
+	TEXT  TAXON=33 CHARACTER=24 TEXT= 'Ogura_1972,_p._108,_p._99';
+	TEXT  TAXON=34 CHARACTER=24 TEXT= 'Ogura_1972,_p._359,_p._109_Fig._110:C';
+	TEXT  TAXON=35 CHARACTER=24 TEXT= 'Kubitizki_1990,_Ogura_1972,_p._366_(top).';
+	TEXT  TAXON=36 CHARACTER=24 TEXT= 'voucher;_ARS_email_5/2/95.';
+	TEXT  TAXON=37 CHARACTER=24 TEXT= 'Ogura_1972,_p._391,_Kubitizki_1990';
+	TEXT  TAXON=38 CHARACTER=24 TEXT= 'NA_(Gifford_&_Foster:_P._nudum_has_no_leaf_trace)';
+	TEXT  TAXON=39 CHARACTER=24 TEXT= 'Ogura_1972,_p._356,_fig._404';
+	TEXT  TAXON=40 CHARACTER=24 TEXT= 'Lin_&_DeVol_1978,_p._87,_Table_3';
+	TEXT  TAXON=41 CHARACTER=24 TEXT= 'Lin_&_DeVol_1978,_p._87,_Table_3';
+	TEXT  TAXON=42 CHARACTER=24 TEXT= 'Ogura_1972,_p._335,_Fig._379D';
+	TEXT  TAXON=43 CHARACTER=24 TEXT= 'Lin_&_DeVol_1978,_p._87,_Table_3';
+	TEXT  TAXON=44 CHARACTER=24 TEXT= 'ARS_email_5/2/95';
+	TEXT  TAXON=45 CHARACTER=24 TEXT= 'Ogura_1972,_p._401,_Bierhorst_1971,_p._341_"simple"';
+	TEXT  TAXON=46 CHARACTER=24 TEXT= 'Lin_&_DeVol_1978,_p.__86;_Ogura_1972,_p._329:_lines_7-8_from_bottom';
+	TEXT  TAXON=47 CHARACTER=24 TEXT= 'Kubitizki_1990,_Lin_&_DeVol_1978';
+	TEXT  TAXON=48 CHARACTER=24 TEXT= 'ARS_email_5/2/95';
+	TEXT  TAXON=28 CHARACTER=25 TEXT= 'ARS_email_5/4/95.__Bierhorst_1960,_fig._52';
+	TEXT  TAXON=32 CHARACTER=25 TEXT= 'Bierhorst_1960,_White_1963b,_Kim_et_al._1993';
+	TEXT  TAXON=38 CHARACTER=25 TEXT= 'Bierhorst_1960;_1971_-_p._166';
+	TEXT  TAXON=28 CHARACTER=41 TEXT= 'Bower_1923,_p.302;_Bierhorst_1971,_p.363';
+	TEXT  TAXON=32 CHARACTER=41 TEXT= 'Bierhorst_1971,_p._147';
+	TEXT  TAXON=38 CHARACTER=41 TEXT= 'Bierhorst_1971,_p._186';
+	TEXT  CHARACTER=41 TEXT= 'Gifford_and_Foster_1988,_p._68';
+	TEXT  CHARACTER=72 TEXT= 'All_homosporous_ferns_have_independent_gametophytes_(exosporic).__Heterosporous_ferns_have_gametophytes_that_are_dependent_on_the_sporophyte_(endosporic).';
+	TEXT  TAXON=51 CHARACTER=41 TEXT= 'NA.__There_is_an_initial_free_nuclear_period_where_a_large_no._of_nuclei__aggregate_toward_inward-directed_end_of_embryo.__Cell_walls_form_progressively_in_upward_direction.__Not_comparable_to_horiz/vert_division_of_zygote_in_cellular_individuals.';
+	TEXT  CHARACTER=15 TEXT= As_defined_in_text;
+	TEXT  TAXON=8 CHARACTER=62 TEXT= 'Tryon_&_Lugardon_1991;_p._271,_fig.5';
+	TEXT  TAXON=51 CHARACTER=15 TEXT= ARS_Fax_10_May_95;
+	TEXT  TAXON=51 CHARACTER=16 TEXT= ARS_Fax_10_May_95;
+	TEXT  TAXON=3 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_"rugulate"';
+	TEXT  TAXON=4 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_"gemmulate"';
+	TEXT  TAXON=5 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_"slightly_rugulate"';
+	TEXT  TAXON=14 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_"finely_undulate"';
+	TEXT  TAXON=17 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_"rugulate"';
+	TEXT  TAXON=20 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_"slightly_undulate"';
+	TEXT  TAXON=23 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_"rugulate"';
+	TEXT  TAXON=30 CHARACTER=66 TEXT= 'Tryon_&_Lugardon_1991:_p._73,_Fig._4';
+	TEXT  TAXON=41 CHARACTER=66 TEXT= 'KMP_had_originally_scored_as_0;_ARS_changed_to_?_03/95:__can''t_really_tell_from_Tryon_&_Lugardon_1991.';
+	TEXT  TAXON=42 CHARACTER=66 TEXT= 'See_Tryon_&Lugardon_1991,_Fig_32.5_"ridged_exospore"';
+	TEXT  TAXON=51 CHARACTER=60 TEXT= 'Dehgan_&_Dehgan_1988.__This_score_is_for_free-sporing_microspores.__Megaspores_are_not_free-sporing.';
+	TEXT  TAXON=51 CHARACTER=59 TEXT= 'spores_of_Cycadaceae_appear_to_be_more_or_less_the_same_size,_but_more_importantly,_they_are_not_of_the_same_behaviour.__Female_sporogenesis_entails_degeneration_of_three_megaspores_and_only_one_functional_megaspore_is_formed.';
+	TEXT  TAXON=51 CHARACTER=61 TEXT= 'No_green_color_reported_(Dehgan_&_Dehgan_1988)';
+	TEXT  TAXON=51 CHARACTER=62 TEXT= Dehgan_&_Dehgan_1988;
+	TEXT  TAXON=51 CHARACTER=63 TEXT= 'NA;_no_perispore_in_Cycadales';
+	TEXT  TAXON=51 CHARACTER=64 TEXT= 'NA;_no_perispore_in_Cycadales';
+	TEXT  TAXON=51 TEXT= 'General_cycad_refs_used_for_scoring:__Gifford_&Foster_1988,_Bierhorst_1971,_Rothwell_&_Serbert_1994,_Kubitizki_1990,_Crane_1988,_Dehgan_&_Dehgan_1988,_Jones_1993,_Stevenson_1990';
+	TEXT  TAXON=51 CHARACTER=65 TEXT= 'Dehgan_&_Dehgan_1988,_p._1502-1503';
+	TEXT  TAXON=51 CHARACTER=66 TEXT= 'Dehgan_&_Dehgan_1988,_p._1507';
+	TEXT  TAXON=51 CHARACTER=46 TEXT= 'Gifford_&_Foster_1988,_p._369.___Score_for_microspores_only.__Megaspores_are_not_free-sporing,_so_they_were_not_scored_(only_one_functional_megaspore_produced/megasporangium).';
+	TEXT  CHARACTER=46 TEXT= 'See_"Spore-output"_table_in_Bower_1923,_p._262-263.';
+	TEXT  TAXON=1 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263';
+	TEXT  TAXON=3 CHARACTER=46 TEXT= 'Megaspores_=_1/sporangium.__Microspores=32-64/sporangium.';
+	TEXT  TAXON=5 CHARACTER=46 TEXT= 'Kubitizki_1990,_Bower_1923,_p._262-263';
+	TEXT  TAXON=23 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263';
+	TEXT  TAXON=24 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263;_Bierhorst_1971';
+	TEXT  TAXON=25 CHARACTER=46 TEXT= Kubitizki_1990;
+	TEXT  TAXON=26 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263.__Score_reported_could_be_incorrect;_the_character_appears_to_be_polymorphic_for_the_family_(see_Vandenboschia,_also_Hymenophyllaceae);_literature_reports_may_be_incorrect,_in_part.';
+	TEXT  TAXON=27 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263';
+	TEXT  TAXON=28 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263';
+	TEXT  TAXON=29 CHARACTER=46 TEXT= 'Microspores:_64/sporangium;_Megaspores:_1/sporangium';
+	TEXT  TAXON=32 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263';
+	TEXT  TAXON=33 CHARACTER=46 TEXT= Bierhorst_1971;
+	TEXT  TAXON=38 CHARACTER=46 TEXT= White_et._al_1977;
+	TEXT  TAXON=46 CHARACTER=46 TEXT= 'Bower_1923,_p._262-263';
+	TEXT  TAXON=45 CHARACTER=46 TEXT= 'Megaspores:_1/sporangium.__Microspores:_32/sporangium';
+	TEXT  TAXON=51 CHARACTER=2 TEXT= Gifford_&_Foster_1988;
+	TEXT  TAXON=42 CHARACTER=2 TEXT= see_KMP_files_for_drawings_and_reasoning;
+	TEXT  TAXON=45 CHARACTER=2 TEXT= 'see_KMP_files_for_drawings_and_reasoning.__In_hemidimorphic_comparison,_sporangiferous_trusses_appear_to_be_initiated_ftom_the_base_of_dissected_leaf_(see_Bierhorst_1971)';
+	TEXT  CHARACTER=2 TEXT= vouchers_looked_at_for_all;
+	TEXT  TAXON=32 CHARACTER=2 TEXT= 'Bierhorst,_1971,_p._137,_beginning_about_line_9';
+	TEXT  TAXON=51 CHARACTER=10 TEXT= both_branched_and_unbranched_hairs;
+	TEXT  TAXON=51 CHARACTER=11 TEXT= ARS_Fax_10_May_95;
+	TEXT  TAXON=51 CHARACTER=17 TEXT= 'eventually,_the_petioles_of_some_cycads_break_off_rather_cleanly,_e.g.,_Dioon,_but_Cycas_does_not_(Jones_1993,_p._124,_126);_also_pinna_of_some_genera_abscise,_e.g._Zamia,_but_not_in_Cycas.';
+	TEXT  CHARACTER=10 TEXT= Vouchers_checked_for_all;
+	TEXT  CHARACTER=11 TEXT= Vouchers_checked_for_all;
+	TEXT  TAXON=39 CHARACTER=10 TEXT= hairs_very_short;
+	TEXT  TAXON=45 CHARACTER=10 TEXT= 'Kubitizki_1990_-_papillae_-_usually_interpreted_as_4_fused_hairs_atop,_which_are_uniseriate_hairs';
+	TEXT  TAXON=2 CHARACTER=10 TEXT= 'hairs_very_short,_appressed';
+	TEXT  TAXON=3 CHARACTER=10 TEXT= 'see_FNA_1993_(1-2_celled_papillae)';
+	TEXT  CHARACTER=17 TEXT= Vouchers_checked_for_all;
+	TEXT  TAXON=6 CHARACTER=17 TEXT= 'Specimens_don''t_show_it,_but_many_spp._are_clearly_articulate';
+	TEXT  CHARACTER=36 TEXT= Vouchers_checked_when_there_was_any_doubt;
+	TEXT  TAXON=2 CHARACTER=36 TEXT= 'probably_on_wet_rocks_-_related_spp.';
+	TEXT  TAXON=17 CHARACTER=36 TEXT= sometimes_epipetric;
+	TEXT  TAXON=18 CHARACTER=36 TEXT= Voucher;
+	TEXT  TAXON=19 CHARACTER=36 TEXT= 'moist_earth_banks;_wet_rock_faces_(Burrows_1990)';
+	TEXT  TAXON=20 CHARACTER=36 TEXT= Voucher;
+	TEXT  TAXON=24 CHARACTER=36 TEXT= Voucher;
+	TEXT  TAXON=25 CHARACTER=36 TEXT= 'Voucher;_"on_mossy_tree_trunk"';
+	TEXT  TAXON=26 CHARACTER=36 TEXT= 'or_on_wet_rocks_-_related_spp.';
+	TEXT  TAXON=29 CHARACTER=36 TEXT= seasonally_dry_areas;
+	TEXT  TAXON=36 CHARACTER=36 TEXT= 'Voucher_-_"on_rocky_bank"';
+	TEXT  TAXON=37 CHARACTER=36 TEXT= 'Voucher_;_or_on_wet_rocks';
+	TEXT  TAXON=38 CHARACTER=36 TEXT= 'Voucher_"high_up_on_tree",_but_also_know_to_occur_on_calcareous_cliffs,_therefore_not_always_epiphytic.__See_ARS_email_2/6/95_(10:21)';
+	TEXT  TAXON=39 CHARACTER=36 TEXT= 'Voucher_"mangrove_swamp"';
+	TEXT  TAXON=40 CHARACTER=36 TEXT= 'Voucher_"rupicolous"';
+	TEXT  TAXON=42 CHARACTER=36 TEXT= Voucher;
+	TEXT  TAXON=48 CHARACTER=36 TEXT= 'Voucher_"on_muddy_rock";_Note:_many_spp._(but_not_all)_of_Vittaria_are_epiphytic!';
+	TEXT  TAXON=51 CHARACTER=36 TEXT= ARS_Fax_10_May_95;
+	TEXT  TAXON=51 CHARACTER=3 TEXT= ARS_Fax_10_May_95;
+	TEXT  CHARACTER=3 TEXT= Vouchers_checked_for_all;
+	TEXT  TAXON=24 CHARACTER=3 TEXT= Voucher;
+	TEXT  TAXON=51 CHARACTER=4 TEXT= ARS_Fax_10_May_95;
+	TEXT  TAXON=23 CHARACTER=4 TEXT= Voucher;
+	TEXT  TAXON=30 CHARACTER=4 TEXT= 'Wagner_1952.__The_leaf_of_Matonia_is_similar_to_the_pedate_leaves_of_Adiantum,_where_the_early_leaves_are_clearly_pinnate,_but_the_pinnae_of_mature_leaves_are_re-oriented_so_as_to_make_the_leaf_look_dichotomously_branched._See_also_Mickel_def''n_of_pedate';
+	TEXT  TAXON=45 CHARACTER=4 TEXT= 'wet_mount_of_leaf_from_voucher_shows_a_main_vein_running_up_the_center_of_large,_sterile_leaf.';
+	TEXT  CHARACTER=5 TEXT= 'Vouchers_checked_for_all_and_Kubitizki_1990.___See_also_Alan''s_e-mail_05.26.94.__This_character_largely_modelled_after_Nixon_et_al._1994.';
+	TEXT  TAXON=51 CHARACTER=5 TEXT= 'Cycas_has_a_single,_unbranched_vein_per_pinna,_therefore_2_vein_orders';
+	TEXT  TAXON=38 CHARACTER=5 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=4 TEXT= NA;
+	TEXT  CHARACTER=7 TEXT= 'Vouchers_checked_for_all_and_Kubitizki_1990.___See_also_Alan''s_e-mail_05.26.94.__This_character_largely_modelled_after_Nixon_et_al._1994.';
+	TEXT  TAXON=51 CHARACTER=7 TEXT= _See_general_Cycas_references.__Scored_the_same_way_by_Nixon_et_al_1994;
+	TEXT  TAXON=51 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=7 TEXT= NA;
+	TEXT  TAXON=46 CHARACTER=7 TEXT= NA;
+	TEXT  TAXON=1 CHARACTER=7 TEXT= Voucher;
+	TEXT  TAXON=7 CHARACTER=7 TEXT= Voucher;
+	TEXT  TAXON=9 CHARACTER=7 TEXT= Voucher;
+	TEXT  TAXON=21 CHARACTER=7 TEXT= Voucher;
+	TEXT  TAXON=30 CHARACTER=7 TEXT= Voucher.__Only_fertile_blades_have_vein_fusion_around_sori;
+	TEXT  TAXON=41 CHARACTER=7 TEXT= Voucher;
+	TEXT  CHARACTER=8 TEXT= 'Vouchers_checked_for_all_and_Kubitizki_1990.___See_also_Alan''s_e-mail_05.26.94.__This_character_largely_modelled_after_Nixon_et_al._1994.';
+	TEXT  TAXON=1 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=2 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=3 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=4 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=6 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=8 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=10 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=11 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=12 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=13 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=14 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=15 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=16 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=18 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=19 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=20 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=22 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=23 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=24 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=25 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=26 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=27 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=28 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=31 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=32 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=35 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=37 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=40 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=42 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=43 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=46 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=47 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=30 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=30 CHARACTER=5 TEXT= 'Scored_as_3_because_the_pseudodichotomous_blade_(trichotomous-pedate;_Kubitzki,_1990)_is_apparently_derived_by_repeated_development_of_successive_basal_basiscopic_pinnules,_creating_a_scorpioid_cymose_blade_pattern';
+	TEXT  TAXON=51 CHARACTER=12 TEXT= 'stomata_haplocheilic_(Rothwell_&_Serbet_1994,_p._473,_char._12;_ring_of_subsidiary_cells_(Bierhorst_1971,_p._408).';
+	TEXT  TAXON=51 CHARACTER=13 TEXT= 'Sen_&_De_1992,_p._256_-_perigenous_stomata_in_extant_cycads,_similar_to_ophioglossoids';
+	TEXT  CHARACTER=12 TEXT= 'see_text_for_important_references.__Where_Sen_&_De_1992_had_a_predominance_of_type_shown,_I_scored_for_most_predominant_type.__If_Kondo_1962__and_Sen_&_De_conflicted_over_same_species,_I_followed_Kondo.';
+	TEXT  CHARACTER=13 TEXT= 'see_text_for_important_references._Where_Sen_&_De_1992_had_a_predominance_of_type_shown,_I_scored_for_most_predominant_type.__If_Kondo_1962__and_Sen_&_De_conflicted_over_same_species,_I_followed_Kondo.';
+	TEXT  TAXON=1 CHARACTER=12 TEXT= 'Kondo_1962_(specifies_mexicana),_Payne_1979,_Kubitzki_1990';
+	TEXT  TAXON=2 CHARACTER=12 TEXT= 'Kondo_1962,_Payne_1979,_Kubitizki_1990_(principally_polocytic)';
+	TEXT  TAXON=3 CHARACTER=12 TEXT= 'Sen_&_De_1991:_parameristic_infrequent;_Van_Cottem_1973';
+	TEXT  TAXON=4 CHARACTER=12 TEXT= 'Kondo_1962_(specified_occidentale),_Sen_&_De_1992,_Van_Cottem_1973';
+	TEXT  TAXON=5 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=6 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=7 CHARACTER=12 TEXT= Sen_&_De_1992;
+	TEXT  TAXON=8 CHARACTER=12 TEXT= 'Sen_&_De_1992,_Kondo_1962';
+	TEXT  TAXON=9 CHARACTER=12 TEXT= 'Sen_&_De_1992,_Kondo_1962';
+	TEXT  TAXON=10 CHARACTER=12 TEXT= Sen_&_De_1992;
+	TEXT  TAXON=11 CHARACTER=12 TEXT= 'Thurston_1969;__guess_from_Van_Cottem_1973,_p._67';
+	TEXT  TAXON=12 CHARACTER=12 TEXT= 'Sen_&_De_1992,_Kondo_1962';
+	TEXT  TAXON=13 CHARACTER=12 TEXT= 'Sen_&_De_1992,_Kondo_1962';
+	TEXT  TAXON=14 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=15 CHARACTER=12 TEXT= Kubitizki_1990;
+	TEXT  TAXON=16 CHARACTER=12 TEXT= 'Sen_&_De_1992:_rarely_parameristic';
+	TEXT  TAXON=17 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=18 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=19 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=20 CHARACTER=12 TEXT= _Sen_&_De_1992;
+	TEXT  TAXON=21 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=22 CHARACTER=12 TEXT= 'Sen_&_De_1992:_rarely_parameristic;_Kondo_1962';
+	TEXT  TAXON=23 CHARACTER=12 TEXT= 'Sen_&_De_1992,_Van_Cottem_1973:_"uniformity_in_Gleicheniaceae"_-_see_Dicranopteris;_Thurston_1969:_subtype_a';
+	TEXT  TAXON=24 CHARACTER=12 TEXT= Van_Cottem_1973?_White_1977?;
+	TEXT  TAXON=25 CHARACTER=12 TEXT= 'Van_Cottem_1973,_Kondo_1962';
+	TEXT  TAXON=26 CHARACTER=12 TEXT= 'NA,_Eames_1932';
+	TEXT  TAXON=27 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=28 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=29 CHARACTER=12 TEXT= 'Kubitizki_1990,_Mickel_&_Votava_1971';
+	TEXT  TAXON=30 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=31 CHARACTER=12 TEXT= 'Sen_&_De_1992:_rarely_diameristic';
+	TEXT  TAXON=32 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992,_see_also_arguments_in_Payne_1979.';
+	TEXT  TAXON=33 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992,_see_also_arguments_in_Payne_1979.';
+	TEXT  TAXON=34 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992.__I_let_Kondo_override_Sen_&_De,_when_Kondo_has_our_exact_species';
+	TEXT  TAXON=35 CHARACTER=12 TEXT= 'Kondo_1962,_Payne_1979';
+	TEXT  TAXON=36 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=37 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=38 CHARACTER=12 TEXT= 'Pant_&_Khare_1971,_White_1977';
+	TEXT  TAXON=39 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=40 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=41 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=42 CHARACTER=12 TEXT= 'Kubitizki_1990,_see_Tryon_1961,_fig._9.';
+	TEXT  TAXON=43 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=44 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992.__I_let_Kondo_override_Sen_&_De';
+	TEXT  TAXON=45 CHARACTER=12 TEXT= 'Sen_&_De_1992:_rarely_parameristic';
+	TEXT  TAXON=46 CHARACTER=12 TEXT= Kondo_1962;
+	TEXT  TAXON=47 CHARACTER=12 TEXT= Sen_&_De_1992;
+	TEXT  TAXON=48 CHARACTER=12 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=1 CHARACTER=13 TEXT= 'Kondo_1962_(specifies_mexicana),_Payne_1979,_Kubitzki_1990';
+	TEXT  TAXON=2 CHARACTER=13 TEXT= 'Kondo_1962,_Payne_1979,_Kubitizki_1990_(principally_polocytic)';
+	TEXT  TAXON=3 CHARACTER=13 TEXT= 'Van_Cottem_1973,_Sen_&_De_1992';
+	TEXT  TAXON=4 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992,_Van_Cottem_1973';
+	TEXT  TAXON=5 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=6 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=7 CHARACTER=13 TEXT= Sen_&_De_1992;
+	TEXT  TAXON=8 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=9 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=10 CHARACTER=13 TEXT= Sen_&_De_1992;
+	TEXT  TAXON=11 CHARACTER=13 TEXT= 'Thurston_1969;_guess_from_Van_Cottem_1973,_p._67';
+	TEXT  TAXON=12 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=13 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=14 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=15 CHARACTER=13 TEXT= Kubitzki_1990;
+	TEXT  TAXON=16 CHARACTER=13 TEXT= '_Sen_&_De_1992:_rarely_mesogenous';
+	TEXT  TAXON=17 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=18 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=19 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=20 CHARACTER=13 TEXT= Sen_&_De_1992;
+	TEXT  TAXON=21 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=22 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=23 CHARACTER=13 TEXT= 'Sen_&_De_1992,_Van_Cottem_1973,_Thurston_1969:_subtype_a';
+	TEXT  TAXON=24 CHARACTER=13 TEXT= 'Van_Cottem_1973,_White_1977';
+	TEXT  TAXON=25 CHARACTER=13 TEXT= 'Van_Cottem_1973,_Kondo_1962';
+	TEXT  TAXON=26 CHARACTER=13 TEXT= 'NA,_Eames_1932';
+	TEXT  TAXON=27 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=28 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=29 CHARACTER=13 TEXT= 'Kubitizki_1990,_Mickel_&_Votava_1971';
+	TEXT  TAXON=30 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=31 CHARACTER=13 TEXT= 'Kubitizki_1990,_Sen_&_De_1992,_Payne_1979';
+	TEXT  TAXON=32 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992,_see_Payne_1979_for_arguments';
+	TEXT  TAXON=33 CHARACTER=13 TEXT= 'Sen_&_De_1992,_see_Payne_1979_for_arguments';
+	TEXT  TAXON=34 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=35 CHARACTER=13 TEXT= 'Kondo_1962,_Payne_1979';
+	TEXT  TAXON=36 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=37 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=38 CHARACTER=13 TEXT= 'Pant_&_Khare_1971,_White_1977';
+	TEXT  TAXON=39 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=40 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=41 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=42 CHARACTER=13 TEXT= Kubitizki_1990;
+	TEXT  TAXON=43 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=44 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  TAXON=45 CHARACTER=13 TEXT= 'Sen_&_De_1992:_"rarely_mesogenous"';
+	TEXT  TAXON=46 CHARACTER=13 TEXT= Kondo_1962;
+	TEXT  TAXON=47 CHARACTER=13 TEXT= Sen_&_De_1992;
+	TEXT  TAXON=48 CHARACTER=13 TEXT= 'Kondo_1962,_Sen_&_De_1992';
+	TEXT  CHARACTER=1 TEXT= Gifford_&_Foster_1988;
+	TEXT  CHARACTER=6 TEXT= 'Vouchers_for_all.__Cf._char_28:_Nixon_et_al._(1994)';
+	TEXT  TAXON=51 CHARACTER=6 TEXT= 'mous.__Hard_to_find_herbarium_specimen_with_basal_pinnae,_therefore_we_followed_Kubitizki_1990';
+	TEXT  TAXON=41 CHARACTER=14 TEXT= 'often_2_states_on_same_frond!__Kubitizki_1990:_"variously_anadromous,_isodromous,_catadromous"';
+	TEXT  TAXON=45 CHARACTER=14 TEXT= NA;
+	TEXT  TAXON=46 CHARACTER=14 TEXT= NA;
+	TEXT  TAXON=48 CHARACTER=14 TEXT= NA;
+	TEXT  TAXON=5 CHARACTER=14 TEXT= 'NA_-_dichotomous_primary_venation';
+	TEXT  TAXON=17 CHARACTER=14 TEXT= 'NA_-_dichotomous_primary_venation';
+	TEXT  TAXON=51 CHARACTER=30 TEXT= Gen_refs;
+	TEXT  CHARACTER=30 TEXT= 'vouchers;_Kubitizki_1990';
+	TEXT  TAXON=3 CHARACTER=30 TEXT= FNA;
+	TEXT  CHARACTER=31 TEXT= 'vouchers;_Kubitizki_1990';
+	TEXT  TAXON=3 CHARACTER=31 TEXT= FNA;
+	TEXT  TAXON=51 CHARACTER=31 TEXT= No_evidence_for_from_gen._refs.;
+	TEXT  CHARACTER=32 TEXT= 'vouchers;_Kubitizki_1990';
+	TEXT  TAXON=1 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=3 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=5 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=7 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=8 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=11 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=12 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=13 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=14 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=15 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=16 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=26 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=27 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=29 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=30 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=31 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=32 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=35 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=42 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=44 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=45 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=46 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=51 CHARACTER=32 TEXT= NA;
+	TEXT  CHARACTER=37 TEXT= 'A_zero_score_indicates_no_mention_of_the_presence_of_canals_in_the_literature,_rather_than_a_positive_statement_that_they_do_not_occur_in_a_particular_taxon';
+	TEXT  TAXON=3 CHARACTER=37 TEXT= 'Kubitizki_1990:_"has_mucilage"_-_prob_due_to_cyanobacteria_colonies_and_not_actial_canals.';
+	TEXT  TAXON=6 CHARACTER=37 TEXT= 'Ogura_1972;_Mickel_1974,_p._476.__Cut_stems/petioles_of_Cyatheaceae_sometimes_exude_mucilage,_but_mucliage_canals_not_well-documented';
+	TEXT  TAXON=15 CHARACTER=37 TEXT= 'White_and_Turner_1988:_mucilage_canals_in_petioles';
+	TEXT  TAXON=28 CHARACTER=37 TEXT= 'Kubitizki_1990:_mucilage_ducts';
+	TEXT  TAXON=35 CHARACTER=37 TEXT= 'Tryon_&_Tryon_1982:_has_mucilage_secreting_trichomes';
+	TEXT  TAXON=51 CHARACTER=37 TEXT= Gen_refs;
+	TEXT  CHARACTER=38 TEXT= 'Gifford_&_Foster_1988,_White_1961,_1963.';
+	TEXT  TAXON=14 CHARACTER=38 TEXT= 'Gifford_&_Foster_1988:_in_rhizome,_petiole,_root';
+	TEXT  TAXON=29 CHARACTER=38 TEXT= 'White_1961,_1963:_roots_only';
+	TEXT  TAXON=51 CHARACTER=38 TEXT= Gen_cycad_refs;
+	TEXT  CHARACTER=29 TEXT= 'Bierhorst_1971,_Gifford_and_Foster_1988';
+	TEXT  TAXON=32 CHARACTER=29 TEXT= 'Most_gen_refs.__Unifacial_-_produces_secondary_xylem_centripetally_only.__See_also_G.W._Rothwell_&_E.E._Karrfalt.__1996.__Origin_and_ontogeny_of_tissues_in_the_ophioglossaceous_fern_Botrychium.__AJB_86_(6:Abstracts):48.';
+	TEXT  TAXON=51 CHARACTER=29 TEXT= Gen_cycad_refs;
+	TEXT  CHARACTER=39 TEXT= Fabbri_&_Menicanti_1970.__Data_unavailable_for_most_taxa.;
+	TEXT  TAXON=51 CHARACTER=39 TEXT= Unknown;
+	TEXT  CHARACTER=40 TEXT= Payne_and_Peterson_1973.__Information_available_only_for_a_few_taxa;
+	TEXT  TAXON=14 CHARACTER=40 TEXT= 'Payne_and_Peterson_1973_reported_hypodermis_present_in_aquilinum_and_absent_in_latiusculum_(=aquilinum).__Therefore_it_is_prob._a_polymorphic_character_in_the_species';
+	TEXT  TAXON=51 CHARACTER=40 TEXT= uncertain;
+	TEXT  CHARACTER=21 TEXT= 'Ogura_1972,_p._92';
+	TEXT  TAXON=32 CHARACTER=21 TEXT= 'Ogura_1972,_p._288:_"no_mechanical_tissue_[in_petiole]"';
+	TEXT  TAXON=51 CHARACTER=22 TEXT= Gen_refs;
+	TEXT  TAXON=45 CHARACTER=26 TEXT= 'Bower_1923,_p._68-69';
+	TEXT  TAXON=51 CHARACTER=26 TEXT= Gen_refs;
+	TEXT  TAXON=51 CHARACTER=27 TEXT= 'Gen_refs;_Schmid_1982,_Beck_et_al_1982.';
+	TEXT  TAXON=51 CHARACTER=21 TEXT= 'No_mention_of_sclerenchyma_in_cycads_in_Stevensen,_G&F,_Bierhorst,_etc.__This_is_somewhat_surprising_and_perhaps_there_is_sclerenchyma,_so_leave_as_a_?_for_now.';
+	TEXT  TAXON=51 CHARACTER=28 TEXT= Gen_refs;
+	TEXT  CHARACTER=25 TEXT= 'Bierhorst_1960,_White_1963b,_Kim_et_al._1993';
+	TEXT  TAXON=51 CHARACTER=25 TEXT= Gen_refs;
+	TEXT  CHARACTER=33 TEXT= Vouchers;
+	TEXT  TAXON=38 CHARACTER=33 TEXT= Kubitizki_1990;
+	TEXT  TAXON=45 CHARACTER=33 TEXT= Kubitizki_1990;
+	TEXT  TAXON=51 CHARACTER=33 TEXT= Gen_refs;
+	TEXT  CHARACTER=34 TEXT= vouchers;
+	TEXT  TAXON=51 CHARACTER=34 TEXT= Could_find_no_information_for_root_hairs;
+	TEXT  TAXON=51 CHARACTER=35 TEXT= 'up_to_8_protoxylem_points_(Bierhorst_1971,_p._377);_branch_roots_mostly_diarch';
+	TEXT  TAXON=38 CHARACTER=35 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=34 TEXT= NA;
+	TEXT  TAXON=45 CHARACTER=34 TEXT= NA;
+	TEXT  TAXON=45 CHARACTER=35 TEXT= NA;
+	TEXT  TAXON=23 CHARACTER=34 TEXT= Smith_&_Smith_13107_UC;
+	TEXT  TAXON=24 CHARACTER=34 TEXT= 'rhizoids_on_stems_(how_it_absorbs);_Bierhorst_1971,_p._200';
+	TEXT  TAXON=28 CHARACTER=34 TEXT= 'Hill_and_Camus_1986:_hairs_are_multicellular_(most_ferns_have_unicellular_hairs_on_roots)';
+	TEXT  TAXON=29 CHARACTER=34 TEXT= 'Johnson_1986,_p._9';
+	TEXT  TAXON=32 CHARACTER=34 TEXT= 'Hill_&_Camus_1986;_Bierhorst_1971,_p._132';
+	TEXT  TAXON=39 CHARACTER=34 TEXT= 'Adams_and_Tomlinson_1979_-_Amer._Fern_J._69:_42-46';
+	TEXT  CHARACTER=35 TEXT= 'Bierhorst_1971,_p._296_-_all_filicalean_ferns_have_2-4_protoxylem_points';
+	TEXT  TAXON=1 CHARACTER=35 TEXT= 'Bierhotst_1971,_p._262';
+	TEXT  TAXON=4 CHARACTER=35 TEXT= 'Bierhorst_1971,_p._296';
+	TEXT  TAXON=24 CHARACTER=35 TEXT= 'Bierhorst_1971,_p._200';
+	TEXT  TAXON=27 CHARACTER=35 TEXT= 'Bierhorst_1971,_p._262';
+	TEXT  TAXON=28 CHARACTER=35 TEXT= 'Bierhorst_1971,_p._353';
+	TEXT  TAXON=29 CHARACTER=35 TEXT= 'Johnson_1986,_p.9;_Bierhorst_1971,_p._330_(diarch)';
+	TEXT  TAXON=32 CHARACTER=35 TEXT= 'Kubitizki_1990,_Bierhorst_1971,_p._132:_(2-5_arch)';
+	TEXT  TAXON=33 CHARACTER=35 TEXT= 'Bierhorst_1971:_triarch';
+	TEXT  TAXON=46 CHARACTER=35 TEXT= 'No_reference_explicitly_says_it_is_2-5_arch,_but_there_is_no_evidence_to_the_contrary.__Bierhorst_1971,_p._260_does_not_say_Schizeaceae_is_different_from_Anemia_and_Lygodium_in_this_way.';
+	TEXT  TAXON=51 CHARACTER=42 TEXT= Gen_refs;
+	TEXT  CHARACTER=42 TEXT= 'General_references_(G&F_1988,_Bierhorst_1971...)';
+	TEXT  TAXON=51 CHARACTER=47 TEXT= 'Microsporangia_more_or_less_acrostichoid_in_Cycas_circinalis_(Bierhorst_1971,_p._379,_fig._20-7A);_in_some_other_cycads,_microsporangia_are_sometimes_in_discrete_sori';
+	TEXT  CHARACTER=47 TEXT= 'Vouchers;_Tryon_&_Tryon_1982,_Kubitizki_1990,_Bierhorst_1971,_Eames_1936,_Hill_&_Camus_1986';
+	TEXT  TAXON=3 CHARACTER=47 TEXT= 'In_juvenile_megasporocarps_micro-_and_megasporangia_begin_to_grow,_but_eventually_the_microsporangia_die_leaving_a_single_functional_megasporangium.__Hence,_the_megasporangia_do_not_form_sori,_but_the_microsporangia_do.';
+	TEXT  TAXON=5 CHARACTER=47 TEXT= sporangia_uniformly_distributed_over_lower_surface;
+	TEXT  TAXON=28 CHARACTER=47 TEXT= 'Hill_&_Camus_1986,_Bierhorst_1971:_sporangia_are_free_(not_fused)_but_clustered_in_sori';
+	TEXT  TAXON=29 CHARACTER=47 TEXT= 'Eames_1936:_microsporangia_clustered_together_in_a_sorus.__Same_for_megasporangia.';
+	TEXT  TAXON=34 CHARACTER=47 TEXT= 'ARS_email_1/10/95';
+	TEXT  TAXON=35 CHARACTER=47 TEXT= Tryon_&_Tryon_1982;
+	TEXT  TAXON=39 CHARACTER=47 TEXT= sporangia_spread_uniformly_on_undersurface_of_lamina;
+	TEXT  TAXON=45 CHARACTER=47 TEXT= 'microsporangia_and_megasporangia_are_in_different_sori,_but_both_are_clustered_in_sori';
+	TEXT  TAXON=46 CHARACTER=47 TEXT= sporangia_are_solitary_on_sporangiophores;
+	TEXT  TAXON=51 CHARACTER=48 TEXT= NA;
+	TEXT  CHARACTER=48 TEXT= 'Vouchers;_Bierhorst_1971,_Eames_1936,_Hill_&_Camus_1986,_Kubitizki_1990,_Tryon_&_Tryon_1982.__Round_sori_=_roughly_as_long_as_wide;_elongate_sori_=_longer_than_wide_-_discrete_or_confluent_sori.';
+	TEXT  TAXON=1 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=5 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=19 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=27 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=32 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=34 CHARACTER=48 TEXT= 'ARS_email_1/10/95';
+	TEXT  TAXON=35 CHARACTER=48 TEXT= 'Bower_1926,_p._277';
+	TEXT  TAXON=39 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=46 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=51 CHARACTER=52 TEXT= General_references;
+	TEXT  TAXON=51 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=51 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=51 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=1 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=5 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=6 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=17 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=19 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=23 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=24 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=25 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=23 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=24 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=25 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=23 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=24 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=25 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=28 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=28 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=28 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=31 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=31 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=31 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=32 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=32 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=32 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=36 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=37 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=39 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=36 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=37 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=39 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=36 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=37 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=39 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=41 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=41 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=41 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=42 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=42 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=42 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=44 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=44 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=44 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=48 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=48 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=48 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=13 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=13 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=13 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=1 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=1 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=5 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=6 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=5 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=6 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=17 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=17 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=19 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=19 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=20 CHARACTER=54 TEXT= 'sub-lateral:_see_ARS_email_4/21/95_@_10:34';
+	TEXT  TAXON=47 CHARACTER=54 TEXT= 'ARS_email_4/24/95_@_8:42am';
+	TEXT  CHARACTER=56 TEXT= 'Bierhorst_1971,_Bower_1923,_Tryon_and_Tryon_1982';
+	TEXT  TAXON=51 CHARACTER=56 TEXT= 'cells_of_sporangium_wall_collectively_called_an_"annulus"_by_Jeffrey_(1971),_but_do_not_function_as_such_(Bierhorst_1971,_p._380)';
+	TEXT  CHARACTER=57 TEXT= 'Kubitizki_1990,_Bower_1923,_1926,_1928,_Tryon_and_Tryon_1982,_Qiu_et_al_1995';
+	TEXT  TAXON=51 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=51 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=3 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=4 CHARACTER=57 TEXT= 'Bierhorst_1971,_p._314';
+	TEXT  TAXON=1 CHARACTER=57 TEXT= Kubitizki_1990;
+	TEXT  TAXON=2 CHARACTER=57 TEXT= T&T_1982;
+	TEXT  TAXON=5 CHARACTER=57 TEXT= 'Kubitizki_1990,_Bower_1923,_p._254';
+	TEXT  TAXON=6 CHARACTER=57 TEXT= 'Kubitizki_1990,_Bower_1926,_p._300';
+	TEXT  TAXON=7 CHARACTER=57 TEXT= 'Bower_1926,_p._271.__N.B._for_Dennstaedtiaceae:__T&T_1982_say_"vertical_to_slightly_oblique,_at_least_the_indurated_portion_interrupted_by_the_stalk".__Bower_:_"these_sporangia_show_only_faint_traces_of_obliquity_of_the_annulus_-_it_is_almost_vertical"';
+	TEXT  TAXON=17 CHARACTER=57 TEXT= 'Kubitizki_1990:_"slightly_oblique"';
+	TEXT  TAXON=23 CHARACTER=57 TEXT= 'Bower_1926,_p._205';
+	TEXT  TAXON=30 CHARACTER=57 TEXT= 'Kubitizki_1990,_Bower_1926,_p._224';
+	TEXT  TAXON=31 CHARACTER=57 TEXT= 'Qiu_et_al._1995,_T&T_1982,_Kubitizki_1990';
+	TEXT  TAXON=28 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=29 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=32 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=57 TEXT= Bower;
+	TEXT  TAXON=34 CHARACTER=57 TEXT= 'Bower_1928,_p._71';
+	TEXT  TAXON=35 CHARACTER=57 TEXT= 'Kubitizki_1990:_"slightly_oblique";_Bower_1926,_p._276-281';
+	TEXT  TAXON=38 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=45 CHARACTER=57 TEXT= NA;
+	TEXT  CHARACTER=58 TEXT= 'Kubitizki_1990,_Bower_1923,_1926,_1928,_Tryon_and_Tryon_1982,_Qiu_et_al_1995';
+	TEXT  TAXON=3 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=4 CHARACTER=58 TEXT= 'Bierhorst_1971,_p._314';
+	TEXT  TAXON=5 CHARACTER=58 TEXT= '_Bower_1923,_p._254';
+	TEXT  TAXON=6 CHARACTER=58 TEXT= 'Bower_1926,_p._300';
+	TEXT  TAXON=7 CHARACTER=58 TEXT= 'Bower_1926,_p._271._(For_all_dennstaedtioids)';
+	TEXT  TAXON=23 CHARACTER=58 TEXT= 'Bower_1926,_p._205';
+	TEXT  TAXON=24 CHARACTER=58 TEXT= 'Bower_1926,_p._205';
+	TEXT  TAXON=28 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=29 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=30 CHARACTER=58 TEXT= 'Bower_1926,_p._224;_Kubitizki_1990';
+	TEXT  TAXON=31 CHARACTER=58 TEXT= 'Qiu_et_al_1995,_Kubitizki_1990,_T&T_1982';
+	TEXT  TAXON=32 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=34 CHARACTER=58 TEXT= 'Bower_1928,_p._71';
+	TEXT  TAXON=35 CHARACTER=58 TEXT= 'Bower_1926,_p._276';
+	TEXT  TAXON=38 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=45 CHARACTER=58 TEXT= NA;
+	TEXT  CHARACTER=43 TEXT= 'Vouchers_checked_for_most;_Bierhorst_1971,_Bower_1923,_1926,_1928,_Kubitiaki_1990,_Qiu_et_al_1995,_T&T_1982.__See_also_ARS_e-mail_1/11/95_(10:02am)';
+	TEXT  TAXON=51 CHARACTER=43 TEXT= Gen_refs;
+	TEXT  TAXON=3 CHARACTER=43 TEXT= 'Bierhorst_1971,_p._346_(c),_Campbell_1918,_p._392';
+	TEXT  TAXON=29 CHARACTER=43 TEXT= 'Eames_1936,_Gupta_1962,_Johnson_1986:_ridge,_Bierhorst_1971,_p._332,_Fig._A';
+	TEXT  TAXON=45 CHARACTER=43 TEXT= 'branched:_Eames,_p._232;_Bierhorst_1971,_p._344-5;_Campbell_1918,_p._379';
+	TEXT  CHARACTER=44 TEXT= 'Vouchers_checked_for_most;_Bierhorst_1971,_Campbell_1918,_Eames_1936,_Gupta_1962,_Kubitizki_1990,_Marschall_1925';
+	TEXT  TAXON=51 CHARACTER=44 TEXT= Gen_refs;
+	TEXT  TAXON=3 CHARACTER=44 TEXT= 'microsporangia_=_1;_megasporangia_=_0:_Bierhorst_1971,_p._344,_2nd_column_-_"eventually_microsporangial_initials_appear_on_the_stalk_below"_-_indicating_that_the_megasporangium_has_a_stalk.__Fig._18-5D_-_short_stalk;_Eames_1936';
+	TEXT  TAXON=29 CHARACTER=44 TEXT= 'microsporangium_=_1;_megasporangium_=_0;_Gupta_1962,_p._66_"short_stalk"_and_p._55;_Bierhorst_1971,_p._334_&_336;_Eames_1936';
+	TEXT  TAXON=30 CHARACTER=44 TEXT= Kubitizki_1990;
+	TEXT  TAXON=35 CHARACTER=44 TEXT= yet_another_character_differentiating_this_taxon_from_Osmunda!;
+	TEXT  TAXON=45 CHARACTER=44 TEXT= 'microsporangia_=_1:_Bierhorst_1971,_p._344_"stalks_of_microsporangia_are_longer,_thinner".__megasporangia_=_0:_Bierhorst_1971,_p._344,_1st_column:_"short_stalked_megasporangia";_Eames_1936,_p._233';
+	TEXT  CHARACTER=45 TEXT= 'Vouchers;_Bierhorst_1968,_1971,_Campbell_1918,_Gupta_1962,_Eames_1936,_Kubitizki_1990,_Marschall_1925';
+	TEXT  TAXON=3 CHARACTER=45 TEXT= 'both_microsporangia_and_megasporangia;_Eames_1936';
+	TEXT  TAXON=5 CHARACTER=45 TEXT= 'Kubitizki_1990:_4-seriate';
+	TEXT  TAXON=6 CHARACTER=45 TEXT= 'Kubitizki_1990:_4-seriate';
+	TEXT  TAXON=7 CHARACTER=45 TEXT= 'Kubitizki_1990:_score=2_for_all_dennstaedtioids';
+	TEXT  TAXON=15 CHARACTER=45 TEXT= 'Kubitizki_1990:_dicksonioids_to_6-seriate';
+	TEXT  TAXON=17 CHARACTER=45 TEXT= 'Kubitizki_1990:_4-seriate';
+	TEXT  TAXON=23 CHARACTER=45 TEXT= 'NA,_since_sporangia_are_sessile';
+	TEXT  TAXON=24 CHARACTER=45 TEXT= Bierhorst_1968;
+	TEXT  TAXON=26 CHARACTER=45 TEXT= 'NA,_sporangia_nearly_sessile';
+	TEXT  TAXON=29 CHARACTER=45 TEXT= 'microsporangia_and_megasporangia_=_2;_Bierhorst_1971,_Gupta_1962,_p._55';
+	TEXT  TAXON=30 CHARACTER=45 TEXT= Kubitzki_1990;
+	TEXT  TAXON=31 CHARACTER=45 TEXT= 'Kubitizki_1990:_4-seriate';
+	TEXT  TAXON=33 CHARACTER=45 TEXT= Kubitizki_1990;
+	TEXT  TAXON=34 CHARACTER=45 TEXT= 'NA,_sporangia_are_sessile_-_there_is_no_stalk';
+	TEXT  TAXON=35 CHARACTER=45 TEXT= 'Kubitizki_1990:_ca._6-seriate';
+	TEXT  TAXON=36 CHARACTER=45 TEXT= 'Kubitizki_1990:_polypodioids=2';
+	TEXT  TAXON=39 CHARACTER=45 TEXT= 'Kubitizki_1990:_pterids=2';
+	TEXT  TAXON=45 CHARACTER=45 TEXT= 'Bierhorst_1971,_p._344;_Eames_1936,_p._234-235,_fig._149_&_151';
+	TEXT  TAXON=51 CHARACTER=45 TEXT= Gen_refs;
+	TEXT  CHARACTER=49 TEXT= 'See_text_for_explanation_of_scores_restricted_to_taxa_with_bladed_fertile_fronds/segments_only_and_for_references.';
+	TEXT  TAXON=1 CHARACTER=49 TEXT= 'NA,_fertile_segments_without_leaf_blade';
+	TEXT  TAXON=3 CHARACTER=49 TEXT= 'NA,_fertile_lobe_modified_to_have_no_leaf_blade;_sporangium_essentially_terminal_on_modified_submerged_lobe';
+	TEXT  TAXON=21 CHARACTER=49 TEXT= 'Although_Onoclea_fertile_blade_segments_are_very_reduced_(see_Tryon_&_Tryon_1982,_p._588),_the_sori_are_clearly_arranged_on_the_dorsal_surface.';
+	TEXT  TAXON=29 CHARACTER=49 TEXT= 'We_consider_the_sporocarp_wall_of_Marsileaceae_taxa_to_be_homologous_to_a_leaf_blade,_and_sori_borne_marginally_on_this_blade_(see_Eames_1936,_p._211_and_Gupta_1962)';
+	TEXT  TAXON=32 CHARACTER=49 TEXT= 'NA,_fertile_segments_without_leaf_blade';
+	TEXT  TAXON=33 CHARACTER=49 TEXT= 'NA,_fertile_segments_without_leaf_blade';
+	TEXT  TAXON=38 CHARACTER=49 TEXT= 'NA,_in_axil_of_leaf:_terminal_on_axil?__Complex_situation_(see_Bierhorst_1971,_Eames_1936,_Ogura_1972,_Tryon_&_Tryon_1982,_Wagner_1977)';
+	TEXT  TAXON=42 CHARACTER=49 TEXT= Kubitizki_1990;
+	TEXT  TAXON=45 CHARACTER=49 TEXT= 'NA,_fertile_segments_without_leaf_blades';
+	TEXT  TAXON=46 CHARACTER=49 TEXT= 'NA,_fertile_segments_without_leaf_blades';
+	TEXT  TAXON=51 CHARACTER=49 TEXT= 'Microsporangia_are_arranged_on_dorsal_surface_of_microsporophyll.__Megasporangia_are_arranged_along_the_sporophyll_margin_(0),_but_I_scored_here_only_for_free-sporing_sporangial_tissues.__Only_microspores_are_free-sporing_in_Cycas.';
+	TEXT  TAXON=51 CHARACTER=50 TEXT= Gen_refs;
+	TEXT  CHARACTER=68 TEXT= 'Predominantly_sensu_Nayar_and_Kaur_1971_plus_some_primary_literature,_Bierhorst_1971,_Bower_1923,_1926,_1928,_Eames_1936,_Kubitizki_1990,__Tryon_and_Tryon_1982.';
+	TEXT  TAXON=13 CHARACTER=68 TEXT= Nair_and_Sen_1974;
+	TEXT  TAXON=51 CHARACTER=68 TEXT= Gen_refs;
+	TEXT  CHARACTER=69 TEXT= Followed_Nayar_&_Kaur_1971_primarily.__See_text_for_other_gen_refs_that_were_checked;
+	TEXT  TAXON=2 CHARACTER=69 TEXT= 'Both_naked_and_hairy_gametophytes_occur_in_this_genus.__Nayar_and_Kaur_mention_which_sub-groups_of_Asplenium_have_hairy_or_naked_gametophytes,_but_we_did_not_verify_subgroup_of_this_sp.__It_is_probably_hairy.';
+	TEXT  TAXON=36 CHARACTER=69 TEXT= 'naked_and_hairy_gametophytes_occur_in_this_genus.__ARS_email_9:21_1/6/95_(prob._hairy)';
+	TEXT  TAXON=51 CHARACTER=69 TEXT= Gen_refs;
+	TEXT  CHARACTER=70 TEXT= See_text_for_gametophyte_refs;
+	TEXT  TAXON=51 CHARACTER=70 TEXT= Gen_refs;
+	TEXT  TAXON=3 CHARACTER=70 TEXT= Eames_1936;
+	TEXT  CHARACTER=71 TEXT= 'Primary_refs:_Boullard_1957,_1979,_Campbell_1908,_Holloway_1930,_Bierhorst_1971,_Nayar_&_Kaur_1971';
+	TEXT  TAXON=26 CHARACTER=71 TEXT= 'Boullard_1979;_also_checked_Holloway_1930_-_unclear,_Hymenophylls_may_be_susceptible_to_fungal_infection';
+	TEXT  TAXON=33 CHARACTER=71 TEXT= Campbell_1908;
+	TEXT  TAXON=34 CHARACTER=71 TEXT= 'Uncertain_-_Mahabale_1948;_Boullard_1957';
+	TEXT  TAXON=46 CHARACTER=71 TEXT= 'Bierhorst_1971;_Nayar_&_Kaur_1971';
+	TEXT  TAXON=23 CHARACTER=71 TEXT= Boullard_refs;
+	TEXT  TAXON=51 CHARACTER=71 TEXT= Gen_refs;
+	TEXT  TAXON=51 CHARACTER=72 TEXT= Gen_refs;
+	TEXT  TAXON=42 CHARACTER=72 TEXT= Duckett_&_Pang_1985;
+	TEXT  TAXON=51 CHARACTER=73 TEXT= 'NA_-_there_are_no_anterhidia_in_Cycadaceae';
+	TEXT  CHARACTER=73 TEXT= 'Bierhorst_1971,_Eames_1936,_Gifford_&_Foster_1988,_Nayar_&_Kaur_1971.__See_text_for_comments_on_heterosporous_ferns';
+	TEXT  CHARACTER=74 TEXT= 'Bierhorst_1971,_Eames_1936,_Gifford_&_Foster_1988,_Nayar_&_Kaur_1971.___See_text_for_comments_on_heterosporous_ferns';
+	TEXT  TAXON=45 CHARACTER=74 TEXT= 'Eames_1936,_p._237:_"Archegonia_deeply_sunken".__Salvinia''s_female_gametophyte_undergoes_considerably_more_vegetative_growth_than_other_heterosporous_ferns,_though_this_is_much_less_than_homosporous_ferns';
+	TEXT  TAXON=3 CHARACTER=73 TEXT= 'Ambiguous;_see_character_description';
+	TEXT  TAXON=3 CHARACTER=74 TEXT= 'Eames,_p._254,_fig._166A:_cellular_gametophyte_-_archegonia_appear_deeply_embedded';
+	TEXT  TAXON=29 CHARACTER=73 TEXT= 'Ambiguous;_see_character_description';
+	TEXT  TAXON=29 CHARACTER=74 TEXT= 'Ambiguous;_see_character_description';
+	TEXT  TAXON=32 CHARACTER=74 TEXT= 'Bierhorst_1971,_Eames_1936';
+	TEXT  TAXON=45 CHARACTER=73 TEXT= 'Ambiguous;_see_character_description';
+	TEXT  TAXON=51 CHARACTER=74 TEXT= Gen_refs;
+	TEXT  CHARACTER=75 TEXT= 'Bierhorst_1971,_Campbell_1892,_Eames_1936,_Gifford_&_Foster_1988,_Nayar_&_Kaur_1971,_Stokey_&_Atkinson_1956,_M.D._Turner_(pers._comm._-_Metaxya).';
+	TEXT  TAXON=1 CHARACTER=75 TEXT= '(3-rarely_5),_Nayar_&_Kaur_1971';
+	TEXT  TAXON=2 CHARACTER=75 TEXT= '"3"_Tryon_&_Tryon_1982,_Nayar_&_Kaur_1971';
+	TEXT  TAXON=3 CHARACTER=75 TEXT= '"few"';
+	TEXT  TAXON=4 CHARACTER=75 TEXT= '"3"';
+	TEXT  TAXON=5 CHARACTER=75 TEXT= '"numerous",_Nayar_&_Kaur_1971';
+	TEXT  TAXON=6 CHARACTER=75 TEXT= '"5",_Tryon_&_Tryon_1982,_Nayar_&_Kaur_1971';
+	TEXT  TAXON=7 CHARACTER=75 TEXT= '"3"_for_all_dennstaedtioids';
+	TEXT  TAXON=15 CHARACTER=75 TEXT= '"5+"_for_all_dicksonioids,_Tryon_&_Tryon_1982,_Nayar_&_Kaur_1971';
+	TEXT  TAXON=17 CHARACTER=75 TEXT= '"numerous",_Nayar_&_Kaur_1971';
+	TEXT  TAXON=23 CHARACTER=75 TEXT= '"6-10"_for_gleichenioids,_Nayar_&_Kaur_1971,_Tryon_&_Tryon_1982';
+	TEXT  TAXON=25 CHARACTER=75 TEXT= '"3",_Tryon_&_Tryon_1982';
+	TEXT  TAXON=26 CHARACTER=75 TEXT= '"5+"_for_all_hymenophylls,_Tryon_&_Tryon_1982';
+	TEXT  TAXON=27 CHARACTER=75 TEXT= '"3-rarely_5"';
+	TEXT  TAXON=28 CHARACTER=75 TEXT= '"numerous",_Tryon_&_Tryon_1982';
+	TEXT  TAXON=29 CHARACTER=75 TEXT= Campbell_1892;
+	TEXT  TAXON=30 CHARACTER=75 TEXT= '"numerous",_Nayar_&_Kaur_1971';
+	TEXT  TAXON=31 CHARACTER=75 TEXT= '"5+",_Tryon_&_Tryon_1982';
+	TEXT  TAXON=32 CHARACTER=75 TEXT= '"numerous",_Tryon_&_Tryon_1982';
+	TEXT  TAXON=33 CHARACTER=75 TEXT= '"8-25_cells",_Tryon_&_Tryon_1982,_Nayar_&_Kaur_1971';
+	TEXT  TAXON=34 CHARACTER=75 TEXT= '"3"';
+	TEXT  TAXON=35 CHARACTER=75 TEXT= '"numerous/variable"_,_Tryon_&_Tryon_1982';
+	TEXT  TAXON=36 CHARACTER=75 TEXT= '"3"';
+	TEXT  TAXON=37 CHARACTER=75 TEXT= '"3"';
+	TEXT  TAXON=38 CHARACTER=75 TEXT= '"numerous",_Gifford_&_Foster_1988';
+	TEXT  TAXON=39 CHARACTER=75 TEXT= '"3"_for_all_pteroids';
+	TEXT  TAXON=45 CHARACTER=75 TEXT= Eames_1936;
+	TEXT  TAXON=46 CHARACTER=75 TEXT= '"3-rarely_5"';
+	TEXT  TAXON=47 CHARACTER=75 TEXT= '"3"';
+	TEXT  TAXON=48 CHARACTER=75 TEXT= '"3"';
+	TEXT  TAXON=51 CHARACTER=75 TEXT= 'NA_-_There_are_no_antheridia_in_Cycadaceae';
+	TEXT  CHARACTER=76 TEXT= 'Bierhorst_1971,_Bower_1926,_Eames_1936,_Nayar_&_Kaur_1971_(p._321),_Stokey_&_Atkinson_1956,_M.D._Turner_(pers._comm.)';
+	TEXT  TAXON=1 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=2 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=3 CHARACTER=76 TEXT= '3-4,_Eames_1936';
+	TEXT  TAXON=4 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=5 CHARACTER=76 TEXT= '6-8_(7-12)';
+	TEXT  TAXON=6 CHARACTER=76 TEXT= '6-8';
+	TEXT  TAXON=7 CHARACTER=76 TEXT= '4-5_for_all_dennstaedtioids';
+	TEXT  TAXON=15 CHARACTER=76 TEXT= '6-8+_for_all_dicksonioids';
+	TEXT  TAXON=17 CHARACTER=76 TEXT= '6-8';
+	TEXT  TAXON=23 CHARACTER=76 TEXT= '8-10_for_all_gleichenioids';
+	TEXT  TAXON=25 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=26 CHARACTER=76 TEXT= 4?_7?_Nayar_&_Kaur_1971;
+	TEXT  TAXON=27 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=28 CHARACTER=76 TEXT= '2-3-4,_Nayar_&_Kaur_1971,_Eames_1936,_Bierhorst_1971';
+	TEXT  TAXON=29 CHARACTER=76 TEXT= 2;
+	TEXT  TAXON=30 CHARACTER=76 TEXT= '7-12';
+	TEXT  TAXON=31 CHARACTER=76 TEXT= '6-8_(Mel_Turner,_pers._comm.)';
+	TEXT  TAXON=32 CHARACTER=76 TEXT= '7-8,_Bower,_Eames_1936';
+	TEXT  TAXON=33 CHARACTER=76 TEXT= '6,_Eames_1936';
+	TEXT  TAXON=34 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=35 CHARACTER=76 TEXT= '6-8,_Stokey_&_Atkinson_1956';
+	TEXT  TAXON=36 CHARACTER=76 TEXT= 3;
+	TEXT  TAXON=37 CHARACTER=76 TEXT= '3-5';
+	TEXT  TAXON=38 CHARACTER=76 TEXT= '4-6';
+	TEXT  TAXON=39 CHARACTER=76 TEXT= '4-5_for_all_pteroids';
+	TEXT  TAXON=45 CHARACTER=76 TEXT= '3-4';
+	TEXT  TAXON=46 CHARACTER=76 TEXT= 3;
+	TEXT  TAXON=47 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=48 CHARACTER=76 TEXT= '4-5';
+	TEXT  TAXON=51 CHARACTER=76 TEXT= 'Apparently,_only_1_cell_high_in_Dioon';
+	TEXT  CHARACTER=77 TEXT= 'Farrar_1967,_1974,_Nayar_&_Kaur_1971';
+	TEXT  TAXON=25 CHARACTER=77 TEXT= 'Farrar_1967:_present_for_Grammitis_nimbata,_a_close_relative';
+	TEXT  TAXON=26 CHARACTER=77 TEXT= 'Farrar_1974,_Nayar_&_Kaur_1971';
+	TEXT  TAXON=36 CHARACTER=77 TEXT= 'present_in_L._involuta_and_L._lanceolata:_Nayar_&_Kaur_1971,_p._364,_365.__Quite_possibly_in_this_sp.';
+	TEXT  TAXON=48 CHARACTER=77 TEXT= Farrar_1974;
+	TEXT  TAXON=51 CHARACTER=77 TEXT= 'gametophytes_are_not_free-living';
+	TEXT  CHARACTER=67 TEXT= 'Nayar_&_Kaur_1968,_1971.__See_text_for_other_refs';
+	TEXT  TAXON=3 CHARACTER=67 TEXT= See_figs._in_Eames_1936;
+	TEXT  TAXON=13 CHARACTER=67 TEXT= see_figs._in_Nair_&_Sen_1974;
+	TEXT  TAXON=24 CHARACTER=67 TEXT= 'early_stages_not_known_-_becoming_spherical_mass_later_on';
+	TEXT  TAXON=29 CHARACTER=67 TEXT= 'Prob_polar,_see_Campbell_1892_and_Eames_1936';
+	TEXT  TAXON=31 CHARACTER=67 TEXT= Early_stages_not_known;
+	TEXT  TAXON=32 CHARACTER=67 TEXT= Nayar_&_Kaur_1971_say_Botrychium_is_polar_and_then_say_that_early_stages_are_not_known.__Confusing?;
+	TEXT  TAXON=37 CHARACTER=67 TEXT= 'Nayar_&_Kaur_1968,_1971';
+	TEXT  TAXON=38 CHARACTER=67 TEXT= 'Bierhorst_1971,_p._187;_Darnell-Smith_1917,_fig._6;_Whittier_1975:__Looks_polar,_first_wall_parallel_to_equatorial_plane.';
+	TEXT  TAXON=42 CHARACTER=67 TEXT= 'Tryon_1964,_Duckett_&_Pang_1984';
+	TEXT  TAXON=51 CHARACTER=67 TEXT= 'free-nuclear_division_of_megaspore;_uncertain_about_megaspores';
+	TEXT  TAXON=3 CHARACTER=6 TEXT= NA;
+	TEXT  TAXON=29 CHARACTER=6 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=6 TEXT= NA;
+	TEXT  TAXON=46 CHARACTER=6 TEXT= NA;
+	TEXT  CHARACTER=51 TEXT= Vouchers_checked_for_all;
+	TEXT  TAXON=1 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=5 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=3 CHARACTER=51 TEXT= 'Microsporangia_form_sori.__Megasporangia_do_not_form_sori_-_one_megasporangium/megasporocarp';
+	TEXT  TAXON=8 CHARACTER=51 TEXT= '5_sporangia/sorus_-_voucher';
+	TEXT  TAXON=10 CHARACTER=51 TEXT= 'Some_Lindsaea_spp._have_more_that_12_sporangia/sorus.__Voucher_has_sori_broken_up_-_can''t_tell.';
+	TEXT  TAXON=17 CHARACTER=51 TEXT= Herbarium_specimens;
+	TEXT  TAXON=19 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=23 CHARACTER=51 TEXT= 'Voucher;_Kubitizki_1990';
+	TEXT  TAXON=24 CHARACTER=51 TEXT= 'Voucher_has_15-20_sporangia/sorus.__Kubitizki_1990';
+	TEXT  TAXON=27 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=28 CHARACTER=51 TEXT= Voucher;
+	TEXT  TAXON=29 CHARACTER=51 TEXT= 'Johnson_1986,_p._35_species_description_for_quadrifolia:_12_microsporangia/sorus;_3-7_sporangia/sorus';
+	TEXT  TAXON=30 CHARACTER=51 TEXT= 'Bower_1926:_6-9_sporangia/sorus';
+	TEXT  TAXON=32 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=33 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=51 TEXT= voucher;
+	TEXT  TAXON=39 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=42 CHARACTER=51 TEXT= 'Voucher:_hardly_room_for_12!__Tryon_1961,_p._95:__"sporangia_in_several_stages_of_development_are_found_along_a_single_vein_and_up_to_13_have_been_observed_on_a_single_pinna"';
+	TEXT  TAXON=45 CHARACTER=51 TEXT= 'Eames_1936,_p._234_(top)';
+	TEXT  TAXON=46 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=51 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=38 CHARACTER=77 TEXT= 'Bierhorst_1971,_p._186;__Farrar_&_Johnson-Groh_1990,_p._1168';
+	TEXT  TAXON=32 CHARACTER=77 TEXT= 'there_are_"gemmae"_(brood_bodies)_borne_on_underground_stems;_no_gemmae_on_gametophytes';
+	TEXT  TAXON=50 TEXT= 'Bierhorst_1971,_Boullard_1979,_Brown_1976,_Gifford_&_Foster_1988,_FNA_1992,_Kubitizki_1990,_Ogura_1972,_Schmid_1982,_Tryon_&_Lugardon_1990,_Tryon_&_Tryon_1982,_Brown_1976,_Duckett_1973,_Hauke_1957,_1979,_Johnson_1937,_Scagel_1984';
+	TEXT  TAXON=50 CHARACTER=1 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=2 TEXT= 'NA;_following_arguments_of_Bierhorst_1971_&_Ogura_1972_-_no-one_takes_stand_on_whether_the_sporangiophore_is_leaf_or_stem.__There_are_no_"fertile_leaves".__Sporangiophores_likely_of_stem_origin_with_sporangia_attached_directly_to_stems.';
+	TEXT  TAXON=50 CHARACTER=3 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=4 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=5 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=6 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=7 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=9 TEXT= 'Ogura_1972,_pgs._124,_125,_248;_Scagel_et_al._1984,_p._441;_Johnson_1937';
+	TEXT  TAXON=50 CHARACTER=10 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=11 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=12 TEXT= 'Parallel_to_preceding_wall:_see_Ogura_1972,_p._242,_Fig._269,_esp._269-4,_269-5.__See_also_email_to_ARS_June_1_1995.__See_also_Hauke_1957,_p._178';
+	TEXT  TAXON=50 CHARACTER=13 TEXT= 'See_Hauke_1957,_p._178,_and_esp._Fig._2:__"Strasburger_pointed_out_that_the_2_outer_cells_were_subsidiary_cells";_Ogura_1972,_p._242,_Fig._269,_esp._Fig._269-4_and_269-5.__Mesogenous_origin_is_very_clear_for_subsidiary_cells.__See_email_to_ARS_6/1/95';
+	TEXT  TAXON=50 CHARACTER=14 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=15 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=16 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=17 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=18 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=19 TEXT= 'NA_(leaves_are_sessile)';
+	TEXT  TAXON=50 CHARACTER=20 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=21 TEXT= 'Ogura_1972,_p._242_"colorless_sclerenchyma";_Brown_1976:_"collenchyme_annulaire"_-_did_tests_showing_E._arvense_did_not_have_sclerenchyma,_but_collenchyma';
+	TEXT  TAXON=50 CHARACTER=22 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=23 TEXT= 'NA_(no_stipe)';
+	TEXT  TAXON=50 CHARACTER=24 TEXT= 'NA_(no_stipe)';
+	TEXT  TAXON=50 CHARACTER=25 TEXT= 'see_Bierhorst_1971,_p._85_and_Fig._27-8_(f-k)';
+	TEXT  TAXON=50 CHARACTER=26 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=27 TEXT= 'Schmid_1982,_p._905';
+	TEXT  TAXON=50 CHARACTER=28 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=29 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=30 TEXT= 'herbarium_specimens;_Hauke_1979:_p._391;_Ogura_1972,_p._240;_Scagel_et_al._1984,_p._441';
+	TEXT  TAXON=50 CHARACTER=31 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=33 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=34 TEXT= herbarium_specimens;
+	TEXT  TAXON=50 CHARACTER=35 TEXT= 'Gifford_&_Foster_1988,_p._187_"triarch_or_tetrarch".__Ogura_1972,_p._247,_249.';
+	TEXT  TAXON=50 CHARACTER=36 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=37 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=38 TEXT= 'Bierhorst_1971,_p._87';
+	TEXT  TAXON=50 CHARACTER=39 TEXT= not_mentionned_in_Fabbri_&_Menicanti_1970;
+	TEXT  TAXON=50 CHARACTER=40 TEXT= 'Ogura_1972,_p._129:_"hypodermis_is_present_only_on_abaxial_side_of_leaf"';
+	TEXT  TAXON=50 CHARACTER=41 TEXT= 'Gifford_&_Foster_1988,_p._68,_Fig._6-1';
+	TEXT  TAXON=50 CHARACTER=42 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=43 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=44 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=45 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=46 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=47 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=49 TEXT= 'NA_(since_the_sporangiophores_have_no_blades)';
+	TEXT  TAXON=50 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=52 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=50 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=56 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=50 CHARACTER=59 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=60 TEXT= 'T&L_1991,_p._586:_"circular_aperture_with_large_subapertural_opturator_in_Equisetum_is_unique_in_pteridophytes"';
+	TEXT  TAXON=50 CHARACTER=61 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=62 TEXT= T&L_1991;
+	TEXT  TAXON=50 CHARACTER=63 TEXT= 'see_T&L_1991,_p._587,_Fig._11,_to_see_how_thin_perispore_is_relative_to_exospore';
+	TEXT  TAXON=50 CHARACTER=64 TEXT= 'abundant_spherules_seem_to_be_part_of_the_epispore_morphology_-_see_T&L_1991';
+	TEXT  TAXON=50 CHARACTER=65 TEXT= 'T&L_1991,_p._586';
+	TEXT  TAXON=50 CHARACTER=66 TEXT= 'T&L_1991,_p._587,__Figs._8_&_12:_exospore_looks_smooth';
+	TEXT  TAXON=50 CHARACTER=67 TEXT= 'Bierhorst_1971,_p._94_shows_that_the_spore_sheds_its_outer_coat_before_dividing.__Therefore_it_is_impossible_to_determine_the_orientation_of_the_first_division_with_reference_to_the_aperture_since_it_is_no_longer_there_for_reference.';
+	TEXT  TAXON=50 CHARACTER=68 TEXT= 'Duckett_1973:__looks_elongate-thalloid/branched_-_eventually_forming_a_pin-cushion_shape,_i.e._there_is_ultimately_more_dimensionality_here_than_in_other_ribbon-like_gametophytes.__T&T_1982_say_"thallose_strap-shaped,_branched".';
+	TEXT  TAXON=50 CHARACTER=69 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=70 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=71 TEXT= Boullard_1979;
+	TEXT  TAXON=50 CHARACTER=72 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=73 TEXT= 'Duckett_1973,_Hauke_1979,_p._392';
+	TEXT  TAXON=50 CHARACTER=74 TEXT= Duckett_1973;
+	TEXT  TAXON=50 CHARACTER=75 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=76 TEXT= Gen_refs;
+	TEXT  TAXON=50 CHARACTER=77 TEXT= Gen_refs;
+	TEXT  TAXON=49 TEXT= 'Bierhorst_1971,_Bruce_1979,_Eames_1936,_FNA_1992,_Gifford_&_Foster_1988,_Kubitizki_1990,_Ogura_1072,_Ollgaard_1987,_Pixley_1968,_Rolleri_1972,_Tryon_&_Lugardon_1991,_Tryon_&_Tryon_1982,_Wagner_&_Beitel_1992,_Whittier_1981';
+	TEXT  TAXON=49 CHARACTER=1 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=2 TEXT= 'Gifford_&_Foster_1988:_"the_sporophylls_may_be_aggregated_into_definite_strobili_and_may_be_quite_different_from_vegetative_leaves"_and_they_refer_to_a_photo_of_L._digitatum;_herbarium_specimens';
+	TEXT  TAXON=49 CHARACTER=3 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=4 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=5 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=6 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=7 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=8 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=9 TEXT= 'no_mention_of_in_Ogura_1972,_p._124';
+	TEXT  TAXON=49 CHARACTER=10 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=11 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=12 TEXT= 'Ogura_1972,_p._122:_compares_Lycopodium_with_Marattiaceae,_Osmundaceae,_and_Ophioglossaceae.__See_also_Rolleri_1972:_good_drawings_of_L._thyoides_(p._270)_a_closely_related_sp.,_that_shows_the_perigenous_pattern.';
+	TEXT  TAXON=49 CHARACTER=13 TEXT= 'Ogura_1972,_p._122;_Rolleri_1972';
+	TEXT  TAXON=49 CHARACTER=14 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=15 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=16 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=17 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=18 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=19 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=20 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=21 TEXT= Ogura_1972;
+	TEXT  TAXON=49 CHARACTER=22 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=23 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=24 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=25 TEXT= 'Bierhorst_1971,_p._9';
+	TEXT  TAXON=49 CHARACTER=26 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=27 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=28 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=29 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=30 TEXT= herbarium_specimens;
+	TEXT  TAXON=49 CHARACTER=31 TEXT= herbarium_specimens;
+	TEXT  TAXON=49 CHARACTER=32 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=33 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=34 TEXT= 'Ogura_1972,_p._135;_herbarium_specimens';
+	TEXT  TAXON=49 CHARACTER=35 TEXT= 'See_original_notes_&__emails_on_the_topic_-_6/6-9/95.__Pixley_1968,_p._160:_"ontogeny_in_Ly._roots_with_crescentic_xylem_in_tr-sec__seen_to_involve_3_or_more_protoxylem_groups".__See_also_Bierhorst_1971,_p._12;_Gifford_&_Foster_1988,_p._114.__See_text';
+	TEXT  TAXON=49 CHARACTER=36 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=37 TEXT= 'Ogura_1972,_p._129_(leaves),_p._203_(stem),_p._211,_last_line_of_leaf_section.__Wagner_&_Beitel_1992,_p._680:_scored_mucilage_canals_present_for_Diphasiastrum';
+	TEXT  TAXON=49 CHARACTER=38 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=39 TEXT= no_mention_of_in_Fabbri_&_Menicanti_1970;
+	TEXT  TAXON=49 CHARACTER=40 TEXT= 'Bierhorst_1971,_p._9_refers_to_hypodermis_in_stem.__Ogura_1972_does_not_mention_a_hypodermis_for_Lycopodium_leaves,_and_our_scores_are_for_leaves_only.';
+	TEXT  TAXON=49 CHARACTER=41 TEXT= Gifford_&_Foster_1988;
+	TEXT  TAXON=49 CHARACTER=42 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=43 TEXT= 'Gifford_&_Foster_1988,_Fig._9-10B';
+	TEXT  TAXON=49 CHARACTER=44 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=45 TEXT= 'photos_in_Gifford_&_Foster_1988;_also_figs._in_Bierhorst_1971_-_looks_like_many_more_than_10_cells_wide.__From_herbarium_specimens,_it_appears_sporangia_have_short_stalk_or_pad_that_is_many_cells_wide';
+	TEXT  TAXON=49 CHARACTER=46 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=47 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=48 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=49 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=50 TEXT= 'NA;_see_definition_in_text_-_since_there_is_only_one_sporangium_per_leaf,_then_NA.';
+	TEXT  TAXON=49 CHARACTER=51 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=52 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=53 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=54 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=55 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=56 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=57 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=58 TEXT= NA;
+	TEXT  TAXON=49 CHARACTER=59 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=60 TEXT= T&L_1991;
+	TEXT  TAXON=49 CHARACTER=61 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=62 TEXT= 'although_T&L_1991_talk_about_a_"flange-like_structure_near_the_equator"_in_Lycopodium_(p._596),_in_Wagner_&_Beitel_1992,_p._681,_equatorial_ridge_is_scored_as_absent_for_Diphasiastrum';
+	TEXT  TAXON=49 CHARACTER=63 TEXT= T&L_1991;
+	TEXT  TAXON=49 CHARACTER=64 TEXT= T&L_1991;
+	TEXT  TAXON=49 CHARACTER=65 TEXT= 'See_original_notes_for_reasoning.__T&L_1991,_p._6_&_p._590:_main_layer_formed_by_lamellae_...as_spores_mature,__lamellae__scarcely_apparent_&_form_compact_layer._...characteristic_diffuse_inner_layer...provides_useful_recognition_feature_of_Ly._spores.';
+	TEXT  TAXON=49 CHARACTER=66 TEXT= T&L_1991;
+	TEXT  TAXON=49 CHARACTER=67 TEXT= 'Eames_1936,_p._13,_Fig._11.__Looks_like_equatorial_germination:_first_cell_wall_parallel_to_polar_axis_of_spore';
+	TEXT  TAXON=49 CHARACTER=68 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=69 TEXT= 'Whittier_1981:_no_evidence_of_hairs;_Bruce_1979:_"no_paraphyses_around_sex_organs";_no_indication_of_hairs';
+	TEXT  TAXON=49 CHARACTER=70 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=71 TEXT= Whittier_1981;
+	TEXT  TAXON=49 CHARACTER=72 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=73 TEXT= 'Whittier_1981:_"embedded";_Gifford_&_Foster_1988_drawings';
+	TEXT  TAXON=49 CHARACTER=74 TEXT= 'Whittier_1981:_"necks_extend_well_above_the_gametophyte_surfaces";_Bruce_1979,_figs._36,_41:_shows_them_well_protruding;_figs._in_Gifford_&_Foster_also';
+	TEXT  TAXON=49 CHARACTER=75 TEXT= Gen_refs;
+	TEXT  TAXON=49 CHARACTER=76 TEXT= 'G&F_1988:_arch_with_6_or_more_neck_canal_cells;_from_figs._arch_neck_cell_tiers_seem_fewer_than_6.__Eames_1936,_fig._14_and_his_text:_4-6_cells_high.__However,_see_Bruce_1979,_figs._32,_36,_37,_and_41_esp.__Necks_look_at_least_7-10_cells_long.';
+	TEXT  TAXON=49 CHARACTER=77 TEXT= Gen_refs;
+	TEXT  TAXON=27 CHARACTER=2 TEXT= 'FNA:_fertile_pinnae_borne_toward_apex_of_fertile_leaves';
+	TEXT  TAXON=29 CHARACTER=2 TEXT= 'Wagner_&_Wagner_1977,_p._254';
+	TEXT  TAXON=38 CHARACTER=30 TEXT= 'Ogura_1972,_p._16';
+	TEXT  TAXON=24 CHARACTER=33 TEXT= 'Bierhorst_1971,_p._196:_"limited_number_of_true_roots"';
+END;
+
+BEGIN MACCLADE;
+Version 3.05;
+LastModified -1350143145;
+Singles 1000&/0;
+END;
+
