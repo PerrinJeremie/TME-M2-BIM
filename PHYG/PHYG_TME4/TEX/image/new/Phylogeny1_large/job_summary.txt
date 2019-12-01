@@ -1,5 +1,0 @@
-Target:        Phylogeny Reconstruction
-Bootstrapping: No
-Job Created:   2019-10-28 11:16:10
-Job Started:   2019-10-28 11:16:43
-Job Finished:  2019-10-28 11:17:10

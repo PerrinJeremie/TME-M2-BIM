@@ -1,3 +1,6 @@
-distancedatum.o: distancedatum.cpp distancedatum.h
+distancedatum.o: distancedatum.cpp /usr/include/stdc-predef.h \
+ distancedatum.h
+
+/usr/include/stdc-predef.h:
 
 distancedatum.h:
