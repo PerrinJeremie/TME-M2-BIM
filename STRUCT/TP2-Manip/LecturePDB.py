@@ -527,7 +527,7 @@ def kirchhoff_matrix(CA_list, force, cut_distance):
 		matrix[i,i] = - np.sum(matrix[i,:])
 	return matrix
 
-def writePDB_elastic(nomFiIn,nomFiOut,lesAtomes, kirchhoff,chaineVoulue=["A"],modelVoulu='1',allAtoms=False):
+def writePDB_elastic(nomFiIn,nomFiOut,lesAtomes, kirchhoff,L,chaineVoulue=["A"],modelVoulu='1',allAtoms=False,ampl = 7):
 	try:
 		f = open(nomFiIn, "r")
 	except IOError:
@@ -552,6 +552,7 @@ def writePDB_elastic(nomFiIn,nomFiOut,lesAtomes, kirchhoff,chaineVoulue=["A"],mo
 	re_model = re.compile("^MODEL")
 	re_end = re.compile("^END")
 	re_conect = re.compile("^CONECT")
+	re_het = re.compile("^HET")
 	exp=None
 	resol=None
 	nbmdl=None
@@ -562,17 +563,9 @@ def writePDB_elastic(nomFiIn,nomFiOut,lesAtomes, kirchhoff,chaineVoulue=["A"],mo
 	i = 0
 	for ligne in f:
 		if re_atom.search(ligne):
-			c,a=getAtom(ligne,allAtoms)
-			#print modelVoulu, numModel, c, chaineVoulue, a
-			if (numModel==None):
-				numModel=0
-			if (a!=None and (numModel==0 or str(numModel)==modelVoulu) and c in chaineVoulue) :
-				writeAtom(ligne,g,lesAtomes[i])
-				i+=1
+			continue
 		else:
-			if re_end.search(ligne):
-				write_CONECT(kirchhoff, lesAtomes, g)
-			elif re_conect.search(ligne):
+			if re_end.search(ligne) or re_conect.search(ligne) or re_het.search(ligne):
 				continue
 			g.write(ligne)
 			if re_expdta.search(ligne):
@@ -589,6 +582,44 @@ def writePDB_elastic(nomFiIn,nomFiOut,lesAtomes, kirchhoff,chaineVoulue=["A"],mo
 				lesResHelix+=getISeqNumHelix(ligne)
 			elif re_sheet.search(ligne):
 				lesResHelix+=getiSeqNumSheet(ligne)
+	numModel = 1
+	for i in np.arange(-np.pi/2,np.pi/2+0.01,np.pi/10):
+		g.write("MODEL " + "    " + str(numModel).rjust(4) + "\n")
+		l = mod_atoms(lesAtomes,L,i,ampl)
+		write_atomlist(l,g)
+		g.write("ENDMDL\n")
+		numModel += 1
+	write_CONECT(kirchhoff, lesAtomes,g)
+
+	
+def mod_atoms(lesAtomes,L,t,ampl):
+	l = []
+	for i in range(len(lesAtomes)):
+		a = lesAtomes[i]
+		f = L[i]*ampl*np.sin(t)
+		p = Atom( a.x + f, a.y + f, a.z + f, a.numRes, a.resType, a.sse,a.bvalue,a.chain,a.atomname,a.atomnum)
+		l.append(p)
+	return l
+
+def write_oneatom(a,file):
+	file.write("ATOM  ")
+	file.write(str(a.atomnum).rjust(5))
+	file.write("  CA  ")
+	file.write(a.resType)
+	file.write(" A")
+	file.write(str(a.numRes).rjust(4))
+	file.write("".rjust(4))
+	file.write("{:8.3f}".format(a.x))
+	file.write("{:8.3f}".format(a.y))
+	file.write("{:8.3f}".format(a.z))
+	file.write("\n")
+	
+	
+
+def write_atomlist(atomes,file):
+	for a in atomes:
+		write_oneatom(a,file)
+	
 
 def write_CONECT(kirchhoff, lesAtomes, file):
 
@@ -614,8 +645,9 @@ def main() :
 	_, _, _, _, lesAtomes=readPDB(filename1,chaineVoulue=["A"])
 
 	kirchhoff = kirchhoff_matrix(lesAtomes, 1, 7)
-	writePDB_elastic(filename1,'output.pdb',lesAtomes,kirchhoff,chaineVoulue=["A"])
 
+	diag, L = np.linalg.eigh(kirchhoff)
+	writePDB_elastic(filename1,'output.pdb',lesAtomes,kirchhoff,L[:,1],chaineVoulue=["A"])
 
 	#_ = calculCV(lesAtomes1,20)
 	#writePDB(filename1,filename2,lesAtomes1,["A","B"])
