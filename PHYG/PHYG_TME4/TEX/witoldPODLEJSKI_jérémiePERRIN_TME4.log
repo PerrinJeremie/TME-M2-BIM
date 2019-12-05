@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.13)  5 DEC 2019 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.13)  5 DEC 2019 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,62 +632,65 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<image/Nj_ex2.pdf, id=1, 1394.96156pt x 715.92468pt>
+<image/Nj_ex2.pdf, id=1, 646.81653pt x 642.48032pt>
 File: image/Nj_ex2.pdf Graphic file (type pdf)
 <use image/Nj_ex2.pdf>
-Package pdftex.def Info: image/Nj_ex2.pdf  used on input line 46.
-(pdftex.def)             Requested size: 345.0pt x 177.05807pt.
-<image/Ml_ex2.pdf, id=3, 1394.96156pt x 715.92468pt>
-File: image/Ml_ex2.pdf Graphic file (type pdf)
-<use image/Ml_ex2.pdf>
-Package pdftex.def Info: image/Ml_ex2.pdf  used on input line 51.
-(pdftex.def)             Requested size: 345.0pt x 177.05807pt.
+Package pdftex.def Info: image/Nj_ex2.pdf  used on input line 48.
+(pdftex.def)             Requested size: 345.0pt x 342.6795pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./image/Nj_ex2.pdf>]
-<image/Nj_ex3.pdf, id=30, 1394.96156pt x 715.92468pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<image/Ml_ex2.pdf, id=13, 646.81653pt x 642.48032pt>
+File: image/Ml_ex2.pdf Graphic file (type pdf)
+<use image/Ml_ex2.pdf>
+Package pdftex.def Info: image/Ml_ex2.pdf  used on input line 53.
+(pdftex.def)             Requested size: 345.0pt x 342.6795pt.
+ [2 <./image/Nj_ex2.pdf>]
+<image/Nj_ex3.pdf, id=41, 646.81653pt x 642.48032pt>
 File: image/Nj_ex3.pdf Graphic file (type pdf)
 <use image/Nj_ex3.pdf>
-Package pdftex.def Info: image/Nj_ex3.pdf  used on input line 58.
-(pdftex.def)             Requested size: 345.0pt x 177.05807pt.
-<image/Ml_ex3.pdf, id=32, 1394.96156pt x 715.92468pt>
+Package pdftex.def Info: image/Nj_ex3.pdf  used on input line 62.
+(pdftex.def)             Requested size: 345.0pt x 342.6795pt.
+ [3 <./image/Ml_ex2.pdf>]
+<image/Ml_ex3.pdf, id=55, 646.81653pt x 642.48032pt>
 File: image/Ml_ex3.pdf Graphic file (type pdf)
 <use image/Ml_ex3.pdf>
-Package pdftex.def Info: image/Ml_ex3.pdf  used on input line 63.
-(pdftex.def)             Requested size: 345.0pt x 177.05807pt.
- [2 <./image/Ml_ex2.pdf> <./image/Nj_ex3.pdf>]
-<image/NJ_supertree.pdf, id=67, 1394.96156pt x 715.92468pt>
+Package pdftex.def Info: image/Ml_ex3.pdf  used on input line 67.
+(pdftex.def)             Requested size: 345.0pt x 342.6795pt.
+ [4 <./image/Nj_ex3.pdf>]
+<image/NJ_supertree.pdf, id=88, 646.81653pt x 642.48032pt>
 File: image/NJ_supertree.pdf Graphic file (type pdf)
 <use image/NJ_supertree.pdf>
-Package pdftex.def Info: image/NJ_supertree.pdf  used on input line 70.
-(pdftex.def)             Requested size: 345.0pt x 177.05807pt.
-<image/ML_supertree.pdf, id=69, 1394.96156pt x 715.92468pt>
+Package pdftex.def Info: image/NJ_supertree.pdf  used on input line 77.
+(pdftex.def)             Requested size: 345.0pt x 342.6795pt.
+ [5 <./image/Ml_ex3.pdf>]
+<image/ML_supertree.pdf, id=106, 646.81653pt x 642.48032pt>
 File: image/ML_supertree.pdf Graphic file (type pdf)
 <use image/ML_supertree.pdf>
-Package pdftex.def Info: image/ML_supertree.pdf  used on input line 75.
-(pdftex.def)             Requested size: 345.0pt x 177.05807pt.
- [3 <./image/Ml_ex3.pdf> <./image/NJ_supertree.pdf>]
-[4 <./image/ML_supertree.pdf>] (./witoldPODLEJSKI_jérémiePERRIN_TME4.aux) ) 
+Package pdftex.def Info: image/ML_supertree.pdf  used on input line 82.
+(pdftex.def)             Requested size: 345.0pt x 342.6795pt.
+ [6 <./image/NJ_supertree.pdf>] [7 <./image/ML_supertree.pdf>]
+(./witoldPODLEJSKI_jérémiePERRIN_TME4.aux) ) 
 Here is how much of TeX's memory you used:
- 4519 strings out of 494923
- 57426 string characters out of 6180741
+ 4521 strings out of 494923
+ 57448 string characters out of 6180741
  125904 words of memory out of 5000000
- 7736 multiletter control sequences out of 15000+600000
- 12899 words of font info for 38 fonts, out of 8000000 for 9000
+ 7737 multiletter control sequences out of 15000+600000
+ 13585 words of font info for 39 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,6n,35p,303b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
- <
-/home/witold/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
- </home/witold/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600p
-k> </home/witold/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.60
-0pk> </home/witold/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.
-600pk> </home/witold/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm172
-8.600pk>
-Output written on witoldPODLEJSKI_jérémiePERRIN_TME4.pdf (4 pages, 133623 byt
-es).
+ 41i,6n,35p,351b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/witold/.texlive2017/texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/witold/.texlive2017/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/witold/.texlive2017/t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/witold/.texlive2017
+/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/witold/.texlive20
+17/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/witold/.texlive
+2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on witoldPODLEJSKI_jérémiePERRIN_TME4.pdf (7 pages, 2235869 by
+tes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 306 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
