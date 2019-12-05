@@ -1,0 +1,147 @@
+\documentclass[]{article}
+
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % If you write in English
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amssymb,amsmath}
+\usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{fancyvrb}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=1em, % separation between frame and text
+	rulecolor=\color{Gray},
+	%,
+	labelposition=topline
+}
+
+%opening
+\title{TME5 - PHYG}
+\author{Witold PODLEJSKI \& Jérémie PERRIN}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercise 1: Networks with toy example}
+
+\subsection{Question 1}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.8]{image/ex1qt1.png}
+	\caption{ The tree inferred with the Split-Decomposition algoritm on generated data }
+\end{figure}
+
+\subsection{Question 2}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.35]{image/ex1qt2a.png}
+	\caption{ The network inferred with the Split-Decomposition algoritm on generated data }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.35]{image/ex1qt2b.png}
+	\caption{ The tree obtained by cutting the last network }
+\end{figure}
+
+We deleted the selected edges in Figure 2 to build a tree (Figure 3) similar to the one in Figure 1.
+
+\subsection{Question 3}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.5]{image/ex1qt3arti2.png}
+	\caption{ The network obtained with \textit{Cluster Network} }
+\end{figure}
+
+Blue edges are the edges preventing our phylogenetic network to be a tree. They 
+
+\subsection{Question 4}
+
+\texttt{artificial1.txt} can be explained by a tree but \texttt{artificial2.txt} cannot as the reconstructed trees using each gene are not compatible to a tree structure. We thus make the hypothesis that there have been two reticulation events.
+
+\section{Exercise 2: Networks with mammals}
+\subsection{Question 1-2}
+
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics*[scale=0.3]{image/ex2qt2.pdf}
+ 	\caption{ The tree obtained with \textit{Split Decomposition} for all mamals }
+ \end{figure}
+ 
+\subsection{Question 3}
+
+In this network, the mouse (\textit{Mus musculus}) and the rat (\textit{Rattus norvegicus}) are each other closest neighbour. This is compatible with the tree built \textit{via} NJ and UPGMA.
+
+\subsection{Question 4}
+The network computed by \texttt{SplitsTree} puts the pig (\textit{Sus scrofa}) closer to the horse (\textit{Equus caballus}) than to the cow (\textit{Bos taurus}). This is wrong according to the right tree built by Neigbor-joining.
+
+\subsection{Question 5}
+As it is very unlikely that an reticulation event have occured. We can explain this result by some aproximations due to the methode or due to the data.
+
+\section{Exercise 2: Bootstrapping with mammals}
+
+\subsection{Question 1-2}
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.3]{image/ex3qt2.png}
+	\caption{ The tree obtained with \textit{Boostraped UPGMA} }
+\end{figure}
+
+The bootstrapped tree is not right neither about pig, cow and horse.
+
+\subsection{Question 3}
+The numbers on the branches represent the percentage of simulations where this  branch was present, amongst the 1000 simulations on random subsets of our dataset. It represents the stability of the branch according to our dataset.
+\subsection{Question 4}
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.8]{image/ex3qt4.png}
+	\caption{ Zoom on   \textit{Sus scrofa}/\textit{Equus caballus} branch}
+\end{figure}
+
+The branch leading to the node \textit{Sus scrofa}/\textit{Equus caballus} has a likelihood of 80.2\%.
+
+\subsection{Question 5}
+This number indicates that UPGMA is not very assertive about the existence of this branch.
+
+\subsection{Question 6}
+If we run the bootstrap with only 10 simulations, the confidence of the branch from which the divergence \textit{Sus scrofa}/\textit{Equus caballus} emerges is 80\%.
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.8]{image/ex3qt6.png}
+	\caption{ The same zoom as Figure 7 but with 10 run of boostrap }
+\end{figure}
+
+\subsection{Question 7}
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.8]{image/ex3qt7.png}
+	\caption{ The tree with NJ boostraped 1000 times }
+\end{figure}
+
+With NJ, the two grouped species are \textit{Sus scrofa} and \textit{Bos taurus}, with a confidence of 99.9\%, which is way more significant than the branch inferred by UPGMA.
+
+
+
+\end{document}
