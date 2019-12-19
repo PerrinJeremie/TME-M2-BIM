@@ -39,9 +39,16 @@
 
 \section{Exercise 1}
 \subsection{Question 1}
-content
+To build phylogenetic trees with thousands species we have to find shared genes over all theses species. These genes have to be conserved to be meaning full in term of phylogeny.\\
+Because of this amont of species, we have to handle data fragmentation, we can do it in post or pre-processing (tree building).\\
+In one hand we can build one big tree from a giant concatenation of all genes famillies we want to used. In an other hand we can create small trees and merge them into a supertree.
 \subsection{Question 2}
-content
+\textbf{Maximum Agreement Subtree algoritm:} We can define a restriction of a tree witch is a subtree compatible to the original one and with a subset of it's leaves.\\
+ We then search for all the subtree what are a restriction of a collection of trees and the one with the greatest size will be the MAST of this collection. 
+\\
+\\
+\textbf{Maximum Compatible Tree algoritm:} We define that a tree refine an other if we can go from one to the other by contracting some of his edges. \\
+Then, we search for all the subtree what refine a collection of trees and the one with the greatest size will be the MCT of this collection. 
 \section{Exercise 2}
 
 \begin{figure}[H]
@@ -68,7 +75,7 @@ The results of NJ and ML algoritm are equivalent, except for the \textit{RAT} wi
 	\caption{ The tree inferred with the Most-Likelihood algoritm on all gene famillies}
 \end{figure}
 
-We can observe that the results are even worst than the last result with one familly. This can be explained by the fact that we do not manage the batch effect.\\
+We can observe that the results are even worst than the last result with one familly. This can be explained by the fact that we do not handle the effect of data fragmentation.\\
 The results are again similar between the two different algoritms.
 
 \section{Exercise 4}

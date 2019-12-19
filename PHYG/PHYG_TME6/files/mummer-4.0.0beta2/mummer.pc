@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: MUMmer
+Description: MUMmer genome alignment tool
+Version: 4.0.0beta2
+Libs: -L${libdir} -lumdmummer -pthread
+Cflags: -I${includedir}/mummer-4.0.0beta2/include
