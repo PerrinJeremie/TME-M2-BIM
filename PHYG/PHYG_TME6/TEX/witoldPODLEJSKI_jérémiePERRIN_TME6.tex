@@ -1,0 +1,161 @@
+\documentclass[]{article}
+
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} % If you write in English
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{amssymb,amsmath}
+\usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{fancyvrb}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+% redefine \VerbatimInput
+\RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%
+{fontsize=\footnotesize,
+	%
+	frame=lines,  % top and bottom rule only
+	framesep=1em, % separation between frame and text
+	rulecolor=\color{Gray},
+	%,
+	labelposition=topline
+}
+
+%opening
+\title{TME6 - PHYG}
+\author{Witold PODLEJSKI \& Jérémie PERRIN}
+
+\begin{document}
+
+\maketitle
+
+\section{Exercise 1: Whole Genome Alignment}
+
+\subsection{Question 1}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.4]{image/Hpylori.png}
+	\caption{ Helicobacter pylori genoms alignment }
+\end{figure}
+
+There is two big events that can be notice,the blue alignment indicate two part of genom that have been exchange et are in reverse order. That can be explain by two inversion events of the central part of the genome, the first one on a biiger part.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.7]{image/reportq1.png}
+	\caption{ Report about estimated number of event for Helicobacter pylori }
+\end{figure}
+
+\subsection{Question 2}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.4]{image/Pgingivalis_381.png}
+	\caption{ Porphyromonas gingivalis genoms alignment (ATCC33277 - 381HG) }
+\end{figure}
+
+There is no big event that recompose the genome, we can only see some noise. Maybe it is due to small addition events.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.7]{image/reportq2381.png}
+	\caption{ Report about estimated number of event for Porphyromonas gingivalis (ATCC33277 - 381HG) }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.4]{image/Pgingivalis_HG.png}
+	\caption{  Porphyromonas gingivalis genoms alignment (ATCC33277 - HG66) }
+\end{figure}
+
+In this case there have been a lot of event and we can see small part of genom that are quite well align but they are mixed up in the genome.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.7]{image/reportq2HG.png}
+	\caption{ Report about estimated number of event for Porphyromonas gingivalis (ATCC33277 - HG66) }
+\end{figure}
+ 
+
+\section{Exercise 2: Comparative Genomics}
+\subsection{Question 1}
+
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics*[scale=0.4]{image/q1.png}
+ 	\caption{ Genome comparison between Salmonella Typhi and Escherichia coli}
+ \end{figure}
+
+We can see that genomes are very close, there is one big inversion event that can be seen (blue part).
+
+ 
+\subsection{Question 2 - 3}
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.3]{image/q2.png}
+	\caption{ Genome comparison between P. falciparum and P. knowlesi (alignments bigger that 300 pb)}
+\end{figure}
+
+We can se that there is a small and well preserved part of the P. falciparum chromosome that is found in P. knowlesi genome.
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.3]{image/q3.png}
+	\caption{ Genome comparison between P. falciparum and P. knowlesi (conserved part Zoom)}
+\end{figure}
+
+In that particular part of the genomes, the genes order are globally the sames.
+
+\subsection{Question 4}
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.3]{image/q4.png}
+	\caption{ Genome comparison between P. falciparum and P. knowlesi (insersion zoom) }
+\end{figure}
+There is a place where the similarity is broken up, this is due to a gene insertion (red gene in the top).
+
+\subsection{Question 5}
+
+We can not realy see conserved regions that are not annoted in the P.
+knowlesi genome.
+
+\subsection{Question 7}
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.3]{image/q7.png}
+	\caption{ Genome comparison between L. major and T. brucei }
+\end{figure}
+
+Whith these genomes, we can retrieve the sames cases than with the last ones (conserved order of gene with some disimilarity in some places). The particulatity of this genome is that there is mostly matches between reverse strand (blue part).
+
+\section{Exercise 3: Bootstrapping}
+
+\subsection{Question 1}
+
+ \begin{figure}[H]
+	\centering
+	\includegraphics*[scale=0.45]{image/tree.pdf}
+	\caption{ The tree obtained with bootstrap }
+\end{figure}
+
+
+\subsection{Question 2}
+
+Given this tree we can think that the doctor is actually gulty, his HIV genome is close from those from the patients.
+
+\subsection{Question 3}
+
+We are quite confident because the branch that separated the control group with the doctor group are retreive in many bootstrap run (900 over 1000). So the doctor is always put with his patient and we conclude that he have transmited his disease.
+
+\end{document}
