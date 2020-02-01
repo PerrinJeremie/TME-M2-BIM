@@ -125,6 +125,7 @@ if __name__ == '__main__':
         genome = read_sequences(input_path + species + ".fsa" )
         positions = read_gff(input_path + species + ".gff")
         for record in genome:
+            distance = distance_to_upstream(str(record.id),positions)
             if test_trg(record,trg,trg_seq):
                 gc_stat_trg.append(GC(record.seq))
                 length_stat_trg.append(np.log(len(record))/np.log(2))
@@ -145,7 +146,6 @@ if __name__ == '__main__':
                 if int(re.search(r"LEN:(.+?);",record.description).group(1)) > 0:
                     gc_stat.append(GC(record.seq))
                     length_stat.append(np.log(len(record))/np.log(10))
-                    distance = distance_to_upstream(str(record.id),positions)
                     if distance >= 0:
                         if distance == 0:
                             distance_stat.append(0)
@@ -157,37 +157,42 @@ if __name__ == '__main__':
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("GC content (%)")
     plt.title("GC content of non de novo gene")
+    plt.suptitle("Nb gene = " + str(len(gc_stat)),fontsize=8)
 
     plt.figure()
     plt.hist(length_stat,100, weights=np.ones(len(length_stat)) / len(length_stat))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("log10(size)")
     plt.title("Gene length of non de novo gene")
+    plt.suptitle("Nb gene = " + str(len(length_stat)),fontsize=8)
 
     plt.figure()
     plt.hist(distance_stat,100, weights=np.ones(len(distance_stat)) / len(distance_stat))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("log10(distance to upstream gene)")
     plt.title("Distance to upstream gene for non de novo gene")
-
+    plt.suptitle("Nb gene = " + str(len(distance_stat)),fontsize=8)
 
     plt.figure()
     plt.hist(gc_stat_orf,100,weights=np.ones(len(gc_stat_orf)) / len(gc_stat_orf))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("GC content (%)")
     plt.title("GC content of orphan gene")
+    plt.suptitle("Nb gene = " + str(len(gc_stat_orf)),fontsize=8)
 
     plt.figure()
     plt.hist(length_stat_orf,100, weights=np.ones(len(length_stat_orf)) / len(length_stat_orf))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("log10(size)")
     plt.title("Gene length of orphan gene")
+    plt.suptitle("Nb gene = " + str(len(length_stat_orf)),fontsize=8)
 
     plt.figure()
     plt.hist(distance_stat_orf,100, weights=np.ones(len(distance_stat_orf)) / len(distance_stat_orf))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("log10(distance to upstream gene)")
     plt.title("Distance to upstream gene for orphan gene")
+    plt.suptitle("Nb gene = " + str(len(distance_stat_orf)),fontsize=8)
 
 
     plt.figure()
@@ -195,17 +200,20 @@ if __name__ == '__main__':
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("GC content (%)")
     plt.title("GC content of TRG gene")
+    plt.suptitle("Nb gene = " + str(len(gc_stat_trg)),fontsize=8)
 
     plt.figure()
     plt.hist(length_stat_trg,100, weights=np.ones(len(length_stat_trg)) / len(length_stat_trg))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("log10(size)")
     plt.title("Gene length of TRG gene")
+    plt.suptitle("Nb gene = " + str(len(length_stat_trg)),fontsize=8)
 
     plt.figure()
     plt.hist(distance_stat_trg,100, weights=np.ones(len(distance_stat_trg)) / len(distance_stat_trg))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("log10(distance to upstream gene)")
     plt.title("Distance to upstream gene for TRG gene")
+    plt.suptitle("Nb gene = " + str(len(distance_stat_trg)),fontsize=8)
 
     plt.show()
