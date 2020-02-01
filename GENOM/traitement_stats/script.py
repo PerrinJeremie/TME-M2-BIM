@@ -1,6 +1,7 @@
 from Bio import SeqIO
 from Bio import AlignIO
 import os
+from Bio.Data import CodonTable
 from Bio.SubsMat import MatrixInfo as matlist
 from Bio.Align.Applications import ClustalOmegaCommandline
 from itertools import combinations
@@ -18,7 +19,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import PercentFormatter
 from Bio.Alphabet import IUPAC
+from Bio.Data import CodonTable
 import re
+import itertools
 
 def list_dir(basepath):
     fastas = []
@@ -79,6 +82,11 @@ def distance_to_upstream(gene,position):
             return end - positions[prefix + "." + str(num)]["end"]
     return -1
 
+def compute_identity(gene1,gene2):
+    aln = pairwise2.align.globalxx(gene1 ,gene2)[0]
+    matches = sum(aa1 == aa2 for aa1, aa2 in zip(aln[0], aln[1]))
+    pct_identity = 100.0 * matches / len(aln[0])
+    return pct_identity
 def compute_kaks(gene1,gene2):
 
     prot1 = str(translate(gene1.seq))
@@ -92,22 +100,23 @@ def compute_kaks(gene1,gene2):
     prot1, prot2, score, begin, end = aln
 
     nuc1 = SeqRecord(Seq(str(gene1.seq), alphabet=IUPAC.IUPACUnambiguousDNA()), id='nuc1')
-    nuc2 = SeqRecord(Seq(str(gene1.seq), alphabet=IUPAC.IUPACUnambiguousDNA()), id='nuc2')
-
+    nuc2 = SeqRecord(Seq(str(gene2.seq), alphabet=IUPAC.IUPACUnambiguousDNA()), id='nuc2')
     prot1 = SeqRecord(Seq(prot1, alphabet=IUPAC.protein),id='pro1')
     prot2 = SeqRecord(Seq(prot2, alphabet=IUPAC.protein),id='pro2')
-    aln = MultipleSeqAlignment([prot1, prot2])
-    print('fffffffffff')
-    codon_aln = codonalign.build(aln, [nuc1, nuc2])
 
-    dn,ds = cal_dn_ds(codon_aln[0], codon_aln[1],method='YN00')
+    aln = MultipleSeqAlignment([prot1, prot2])
+
+    codon_aln = codonalign.build(aln, [nuc1, nuc2],max_score=10)
+
+    dn,ds = cal_dn_ds(codon_aln[0], codon_aln[1], method="ML",codon_table=CodonTable.unambiguous_dna_by_id[1])
+    print(dn,ds,len(gene1))
     return dn/ds
 
 if __name__ == '__main__':
     input_path = "../sequences_geniques/"
     trg_seq = {}
     orphans = np.genfromtxt("orphan_final",dtype=str)
-    trg = read_trg("trgs_final")
+    trgs = read_trg("trgs_final")
     gc_stat = []
     length_stat = []
     distance_stat = []
@@ -126,7 +135,7 @@ if __name__ == '__main__':
         positions = read_gff(input_path + species + ".gff")
         for record in genome:
             distance = distance_to_upstream(str(record.id),positions)
-            if test_trg(record,trg,trg_seq):
+            if test_trg(record,trgs,trg_seq):
                 gc_stat_trg.append(GC(record.seq))
                 length_stat_trg.append(np.log(len(record))/np.log(2))
                 if distance >= 0:
@@ -151,6 +160,15 @@ if __name__ == '__main__':
                             distance_stat.append(0)
                         else:
                             distance_stat.append(np.log(distance)/np.log(10))
+
+    identity_stat = []
+    for trg in trgs:
+        identity_temp = []
+        for pair in itertools.combinations(trg,2):
+            identity_temp = compute_identity(trg_seq[pair[0]],trg_seq[pair[1]])
+        identity_stat.append(np.mean(np.array(identity_temp)))
+
+    # print(compute_kaks(trg_seq[trg[0][0]],trg_seq[trg[0][1]]))
 
     plt.figure()
     plt.hist(gc_stat,100,weights=np.ones(len(gc_stat)) / len(gc_stat))
@@ -216,4 +234,10 @@ if __name__ == '__main__':
     plt.title("Distance to upstream gene for TRG gene")
     plt.suptitle("Nb gene = " + str(len(distance_stat_trg)),fontsize=8)
 
+    plt.figure()
+    plt.hist(identity_stat,100,weights=np.ones(len(identity_stat)) / len(identity_stat))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("Identity (%)")
+    plt.title("Identity between trg groups")
+    plt.suptitle("Nb trg group = " + str(len(identity_stat)),fontsize=8)
     plt.show()
