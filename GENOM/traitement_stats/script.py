@@ -1,14 +1,25 @@
 from Bio import SeqIO
 from Bio import AlignIO
 import os
+from Bio.SubsMat import MatrixInfo as matlist
 from Bio.Align.Applications import ClustalOmegaCommandline
 from itertools import combinations
 from Bio.SeqUtils import GC, GC_skew
 from Bio import pairwise2
+from Bio.codonalign.codonseq import cal_dn_ds
+from Bio.Alphabet import generic_dna, generic_protein
+from Bio.Align import MultipleSeqAlignment
+from Bio import codonalign
+from Bio.Seq import translate
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+from Bio.codonalign import build
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import PercentFormatter
+from Bio.Alphabet import IUPAC
 import re
+
 def list_dir(basepath):
     fastas = []
     for entry in os.listdir(basepath):
@@ -23,77 +34,178 @@ def read_sequences(filepath):
     return sequences
 
 
-
-def construct_alignment(fastas):
-    for seq_record in SeqIO.parse("ls_orchid.fasta", "fasta"):
-        print(seq_record.id)
-        print(repr(seq_record.seq))
-        print(len(seq_record))
-
-
 def write_sequences(filepath,sequences):
     with open(filepath, 'w') as handle:
         SeqIO.write(sequences, handle, 'fasta')
 
-
-def align_sequences(infile,outfile):
-    #alignments = pairwise2.align.globalxx(seq1, seq2)
-    command = './files/clustalo/clustalo -i '+infile +' -o '+ outfile +' --outfmt=phy --force'
-    os.system(command)
-
-# def read_alignment(filename):
-#     align = AlignIO.read(filename, "phylip")
-#     return align
-#
-# def write_alignement(filepath,alignement):
-#     with open(filepath, 'w') as handle:
-#         AlignIO.write(alignement, handle, 'phylip')
-
-def select_sequence(sequences, species, ensure_all=False):
-    selected_sequences =[]
-    for sp in species:
-        for seq in sequences:
-            if sp in seq.id:
-                seq.id = sp
-                selected_sequences.append(seq)
-                break
-    if len(selected_sequences) != len(species) and ensure_all:
-        return None
-    return selected_sequences
+def read_trg(filepath):
+    file = open(filepath,"r")
+    txt = file.read().split("\n")
+    trg=[]
+    for line in txt:
+        trg.append(line.split("\t"))
+    file.close()
+    return trg
 
 def read_gff(filepath):
+    positions = {}
     file = open(filepath,"r")
     for line in file.readlines():
         line=line.split("\t")
-        debut = line[3]
-        fin = line[4]
+        start = int(line[3])
+        end = int(line[4])
         regex = r"Gene=(.+?);"
         name = re.search(regex, line[-1]).group(1)
+        positions[name] = {"start":start,"end":end}
     file.close()
+    return positions
+
+def test_trg(gene,trgs,trg_seq):
+    for trg in trgs:
+        if str(gene.id) in trg:
+            trg_seq[str(gene.id)] = gene
+            return True
+    return False
+def test_orfan(orphans,gene):
+    return str(gene.id) in orphans
+
+def distance_to_upstream(gene,position):
+    prefix,num = gene.split('.')
+    num = int(num)
+    end = position[gene]["start"]
+    while num > 1:
+        num -= 1
+        if prefix + "." + str(num) in positions:
+            return end - positions[prefix + "." + str(num)]["end"]
+    return -1
+
+def compute_kaks(gene1,gene2):
+
+    prot1 = str(translate(gene1.seq))
+    prot2 = str(translate(gene2.seq))
+
+    # matrix = matlist.blosum62
+    # gap_open = -10
+    # gap_extend = -0.5
+    # aln = pairwise2.align.globalds(prot1 ,prot2, matrix, gap_open, gap_extend)[0]
+    aln = pairwise2.align.globalxx(prot1 ,prot2)[0]
+    prot1, prot2, score, begin, end = aln
+
+    nuc1 = SeqRecord(Seq(str(gene1.seq), alphabet=IUPAC.IUPACUnambiguousDNA()), id='nuc1')
+    nuc2 = SeqRecord(Seq(str(gene1.seq), alphabet=IUPAC.IUPACUnambiguousDNA()), id='nuc2')
+
+    prot1 = SeqRecord(Seq(prot1, alphabet=IUPAC.protein),id='pro1')
+    prot2 = SeqRecord(Seq(prot2, alphabet=IUPAC.protein),id='pro2')
+    aln = MultipleSeqAlignment([prot1, prot2])
+    print('fffffffffff')
+    codon_aln = codonalign.build(aln, [nuc1, nuc2])
+
+    dn,ds = cal_dn_ds(codon_aln[0], codon_aln[1],method='YN00')
+    return dn/ds
 
 if __name__ == '__main__':
     input_path = "../sequences_geniques/"
-    trg = {}
-    bayanus = read_sequences(input_path + "Sbayanus.fsa" )
-    cerevisiae = read_sequences(input_path + "Scerevisiae.fsa" )
-    kudriavzevii = read_sequences(input_path + "Skudriavzevii.fsa" )
-    mikatae = read_sequences(input_path + "Smikatae.fsa" )
-    paradoxus = read_sequences(input_path + "Sparadoxus.fsa" )
-    read_gff(input_path + "Sbayanus.gff")
+    trg_seq = {}
+    orphans = np.genfromtxt("orphan_final",dtype=str)
+    trg = read_trg("trgs_final")
+    gc_stat = []
+    length_stat = []
+    distance_stat = []
 
-    # gc_stat = []
-    # length_stat = []
-    # # gc_skew_stat = []
-    # for record in bayanus:
-    #     gc_stat.append(GC(record.seq))
-    #     if len(record) > 10000:
-    #         print(len(record))
-    #         print(record)
-    #     length_stat.append(np.log(len(record)))
-    #     # gc_skew_stat.append(GC_skew(record.seq))
-    # plt.figure()
-    # plt.hist(gc_stat,100)
-    # plt.figure()
-    # plt.hist(length_stat,100, weights=np.ones(len(length_stat)) / len(length_stat))
-    # plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    # plt.show()
+    gc_stat_orf = []
+    length_stat_orf = []
+    distance_stat_orf = []
+
+    gc_stat_trg = []
+    length_stat_trg = []
+    distance_stat_trg = []
+
+
+    for species in {"Sbayanus","Scerevisiae","Skudriavzevii","Smikatae","Sparadoxus"}:
+        genome = read_sequences(input_path + species + ".fsa" )
+        positions = read_gff(input_path + species + ".gff")
+        for record in genome:
+            if test_trg(record,trg,trg_seq):
+                gc_stat_trg.append(GC(record.seq))
+                length_stat_trg.append(np.log(len(record))/np.log(2))
+                if distance >= 0:
+                    if distance == 0:
+                        distance_stat_trg.append(0)
+                    else:
+                        distance_stat_trg.append(np.log(distance)/np.log(10))
+            elif test_orfan(orphans,record):
+                gc_stat_orf.append(GC(record.seq))
+                length_stat_orf.append(np.log(len(record))/np.log(2))
+                if distance >= 0:
+                    if distance == 0:
+                        distance_stat_orf.append(0)
+                    else:
+                        distance_stat_orf.append(np.log(distance)/np.log(10))
+            else:
+                if int(re.search(r"LEN:(.+?);",record.description).group(1)) > 0:
+                    gc_stat.append(GC(record.seq))
+                    length_stat.append(np.log(len(record))/np.log(10))
+                    distance = distance_to_upstream(str(record.id),positions)
+                    if distance >= 0:
+                        if distance == 0:
+                            distance_stat.append(0)
+                        else:
+                            distance_stat.append(np.log(distance)/np.log(10))
+
+    plt.figure()
+    plt.hist(gc_stat,100,weights=np.ones(len(gc_stat)) / len(gc_stat))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("GC content (%)")
+    plt.title("GC content of non de novo gene")
+
+    plt.figure()
+    plt.hist(length_stat,100, weights=np.ones(len(length_stat)) / len(length_stat))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(size)")
+    plt.title("Gene length of non de novo gene")
+
+    plt.figure()
+    plt.hist(distance_stat,100, weights=np.ones(len(distance_stat)) / len(distance_stat))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(distance to upstream gene)")
+    plt.title("Distance to upstream gene for non de novo gene")
+
+
+    plt.figure()
+    plt.hist(gc_stat_orf,100,weights=np.ones(len(gc_stat_orf)) / len(gc_stat_orf))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("GC content (%)")
+    plt.title("GC content of orphan gene")
+
+    plt.figure()
+    plt.hist(length_stat_orf,100, weights=np.ones(len(length_stat_orf)) / len(length_stat_orf))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(size)")
+    plt.title("Gene length of orphan gene")
+
+    plt.figure()
+    plt.hist(distance_stat_orf,100, weights=np.ones(len(distance_stat_orf)) / len(distance_stat_orf))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(distance to upstream gene)")
+    plt.title("Distance to upstream gene for orphan gene")
+
+
+    plt.figure()
+    plt.hist(gc_stat_trg,100,weights=np.ones(len(gc_stat_trg)) / len(gc_stat_trg))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("GC content (%)")
+    plt.title("GC content of TRG gene")
+
+    plt.figure()
+    plt.hist(length_stat_trg,100, weights=np.ones(len(length_stat_trg)) / len(length_stat_trg))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(size)")
+    plt.title("Gene length of TRG gene")
+
+    plt.figure()
+    plt.hist(distance_stat_trg,100, weights=np.ones(len(distance_stat_trg)) / len(distance_stat_trg))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(distance to upstream gene)")
+    plt.title("Distance to upstream gene for TRG gene")
+
+    plt.show()
