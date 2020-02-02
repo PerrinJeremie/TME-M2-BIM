@@ -23,6 +23,7 @@ from Bio.Data import CodonTable
 from scipy import stats
 import re
 import itertools
+import seaborn as sns
 
 def list_dir(basepath):
     fastas = []
@@ -185,6 +186,10 @@ if __name__ == '__main__':
 
     # print(compute_kaks(trg_seq[trg[0][0]],trg_seq[trg[0][1]]))
 
+
+
+
+
     plt.figure()
     plt.hist(gc_stat,100,weights=np.ones(len(gc_stat)) / len(gc_stat))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
@@ -222,6 +227,32 @@ if __name__ == '__main__':
 
     plt.show()
 
+    print("Length of gene")
+    print("Classic genes and orphans")
+    t, p_orf = stats.ttest_ind(length_stat,length_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p_orf))
+    print("Classic genes and TRG")
+    t, p = stats.ttest_ind(length_stat,length_stat_trg,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+    print("TRG genes and orphans")
+    t, p = stats.ttest_ind(length_stat_trg,length_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+
+    sns.set(style="ticks", palette="pastel")
+    tips = sns.load_dataset("tips")
+    sns.boxplot(data=[length_stat,length_stat_orf,length_stat_trg])
+    sns.despine(offset=10, trim=True)
+    plt.xticks(plt.xticks()[0], ["Non de novo","orphan","Trg"],fontsize=15)
+
+    x1, x2 = 0, 1   # columns 'Sat' and 'Sun' (first column: 0, see plt.xticks())
+    y, h, col = max(max(length_stat),max(length_stat)) + 1, 2, 'k'
+    plt.plot([x1, x1, x2, x2], [y, y+h, y+h, y], lw=1.5, c=col)
+    plt.text((x1+x2)*.5, y+h, "***", ha='center', va='bottom', color=col,fontsize=15)
+    plt.ylabel("Gene size(log2)",fontsize=15)
+
     plt.figure()
     plt.hist(length_stat,100, weights=np.ones(len(length_stat)) / len(length_stat))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
@@ -243,19 +274,7 @@ if __name__ == '__main__':
     plt.title("Gene length of TRG gene")
     plt.suptitle("Nb gene = " + str(len(length_stat_trg)),fontsize=8)
 
-    print("Length of gene")
-    print("Classic genes and orphans")
-    t, p = stats.ttest_ind(length_stat,length_stat_orf,equal_var=False)
-    print("t = " + str(t))
-    print("p = " + str(p))
-    print("Classic genes and TRG")
-    t, p = stats.ttest_ind(length_stat,length_stat_trg,equal_var=False)
-    print("t = " + str(t))
-    print("p = " + str(p))
-    print("TRG genes and orphans")
-    t, p = stats.ttest_ind(length_stat_trg,length_stat_orf,equal_var=False)
-    print("t = " + str(t))
-    print("p = " + str(p))
+
 
     plt.show()
 
