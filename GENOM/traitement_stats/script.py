@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import PercentFormatter
 from Bio.Alphabet import IUPAC
 from Bio.Data import CodonTable
+from scipy import stats
 import re
 import itertools
 
@@ -72,16 +73,30 @@ def test_trg(gene,trgs,trg_seq):
 def test_orfan(orphans,gene):
     return str(gene.id) in orphans
 
-def distance_to_upstream(gene,position):
+def distance_to_nearest(gene,position):
     prefix,num = gene.split('.')
     num = int(num)
-    end = position[gene]["start"]
-    while num > 1:
-        num -= 1
-        if prefix + "." + str(num) in positions:
-            return end - positions[prefix + "." + str(num)]["end"]
-    return -1
+    gene_start = position[gene]["start"]
+    gene_end = position[gene]["end"]
+    upstream_dist = float('inf')
+    k = num
+    while k > 1:
+        k -= 1
+        if prefix + "." + str(k) in positions:
+            upstream_dist = gene_start - positions[prefix + "." + str(k)]["end"]
+            break
+    k = num
+    downstream_dist = float('inf')
+    while k < 5000:
+        k += 1
+        if prefix + "." + str(k) in positions:
+            downstream_dist = positions[prefix + "." + str(k)]["start"] - gene_end
+            break
+    distance = min(upstream_dist,downstream_dist)
 
+    if distance == float('inf'):
+        return -1
+    return distance
 def compute_identity(gene1,gene2):
     aln = pairwise2.align.globalxx(gene1 ,gene2)[0]
     matches = sum(aa1 == aa2 for aa1, aa2 in zip(aln[0], aln[1]))
@@ -115,8 +130,8 @@ def compute_kaks(gene1,gene2):
 if __name__ == '__main__':
     input_path = "../sequences_geniques/"
     trg_seq = {}
-    orphans = np.genfromtxt("orphan_final",dtype=str)
-    trgs = read_trg("trgs_final")
+    orphans = np.genfromtxt("orphan_final2",dtype=str)
+    trgs = read_trg("trgs_final2")
     gc_stat = []
     length_stat = []
     distance_stat = []
@@ -134,7 +149,7 @@ if __name__ == '__main__':
         genome = read_sequences(input_path + species + ".fsa" )
         positions = read_gff(input_path + species + ".gff")
         for record in genome:
-            distance = distance_to_upstream(str(record.id),positions)
+            distance = distance_to_nearest(str(record.id),positions)
             if test_trg(record,trgs,trg_seq):
                 gc_stat_trg.append(GC(record.seq))
                 length_stat_trg.append(np.log(len(record))/np.log(2))
@@ -154,19 +169,19 @@ if __name__ == '__main__':
             else:
                 if int(re.search(r"LEN:(.+?);",record.description).group(1)) > 0:
                     gc_stat.append(GC(record.seq))
-                    length_stat.append(np.log(len(record))/np.log(10))
+                    length_stat.append(np.log(len(record))/np.log(2))
                     if distance >= 0:
                         if distance == 0:
                             distance_stat.append(0)
                         else:
                             distance_stat.append(np.log(distance)/np.log(10))
 
-    identity_stat = []
-    for trg in trgs:
-        identity_temp = []
-        for pair in itertools.combinations(trg,2):
-            identity_temp = compute_identity(trg_seq[pair[0]],trg_seq[pair[1]])
-        identity_stat.append(np.mean(np.array(identity_temp)))
+    # identity_stat = []
+    # for trg in trgs:
+    #     identity_temp = []
+    #     for pair in itertools.combinations(trg,2):
+    #         identity_temp = compute_identity(trg_seq[pair[0]],trg_seq[pair[1]])
+    #     identity_stat.append(np.mean(np.array(identity_temp)))
 
     # print(compute_kaks(trg_seq[trg[0][0]],trg_seq[trg[0][1]]))
 
@@ -178,40 +193,11 @@ if __name__ == '__main__':
     plt.suptitle("Nb gene = " + str(len(gc_stat)),fontsize=8)
 
     plt.figure()
-    plt.hist(length_stat,100, weights=np.ones(len(length_stat)) / len(length_stat))
-    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    plt.xlabel("log10(size)")
-    plt.title("Gene length of non de novo gene")
-    plt.suptitle("Nb gene = " + str(len(length_stat)),fontsize=8)
-
-    plt.figure()
-    plt.hist(distance_stat,100, weights=np.ones(len(distance_stat)) / len(distance_stat))
-    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    plt.xlabel("log10(distance to upstream gene)")
-    plt.title("Distance to upstream gene for non de novo gene")
-    plt.suptitle("Nb gene = " + str(len(distance_stat)),fontsize=8)
-
-    plt.figure()
     plt.hist(gc_stat_orf,100,weights=np.ones(len(gc_stat_orf)) / len(gc_stat_orf))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
     plt.xlabel("GC content (%)")
     plt.title("GC content of orphan gene")
     plt.suptitle("Nb gene = " + str(len(gc_stat_orf)),fontsize=8)
-
-    plt.figure()
-    plt.hist(length_stat_orf,100, weights=np.ones(len(length_stat_orf)) / len(length_stat_orf))
-    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    plt.xlabel("log10(size)")
-    plt.title("Gene length of orphan gene")
-    plt.suptitle("Nb gene = " + str(len(length_stat_orf)),fontsize=8)
-
-    plt.figure()
-    plt.hist(distance_stat_orf,100, weights=np.ones(len(distance_stat_orf)) / len(distance_stat_orf))
-    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    plt.xlabel("log10(distance to upstream gene)")
-    plt.title("Distance to upstream gene for orphan gene")
-    plt.suptitle("Nb gene = " + str(len(distance_stat_orf)),fontsize=8)
-
 
     plt.figure()
     plt.hist(gc_stat_trg,100,weights=np.ones(len(gc_stat_trg)) / len(gc_stat_trg))
@@ -220,24 +206,100 @@ if __name__ == '__main__':
     plt.title("GC content of TRG gene")
     plt.suptitle("Nb gene = " + str(len(gc_stat_trg)),fontsize=8)
 
+    print("CG content of gene")
+    print("Classic genes and orphans")
+    t, p = stats.ttest_ind(gc_stat,gc_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+    print("Classic genes and TRG")
+    t, p = stats.ttest_ind(gc_stat,gc_stat_trg,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+    print("TRG genes and orphans")
+    t, p = stats.ttest_ind(gc_stat_trg,gc_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+
+    plt.show()
+
+    plt.figure()
+    plt.hist(length_stat,100, weights=np.ones(len(length_stat)) / len(length_stat))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log2(size)")
+    plt.title("Gene length of non de novo gene")
+    plt.suptitle("Nb gene = " + str(len(length_stat)),fontsize=8)
+
+    plt.figure()
+    plt.hist(length_stat_orf,100, weights=np.ones(len(length_stat_orf)) / len(length_stat_orf))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log2(size)")
+    plt.title("Gene length of orphan gene")
+    plt.suptitle("Nb gene = " + str(len(length_stat_orf)),fontsize=8)
+
     plt.figure()
     plt.hist(length_stat_trg,100, weights=np.ones(len(length_stat_trg)) / len(length_stat_trg))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    plt.xlabel("log10(size)")
+    plt.xlabel("log2(size)")
     plt.title("Gene length of TRG gene")
     plt.suptitle("Nb gene = " + str(len(length_stat_trg)),fontsize=8)
+
+    print("Length of gene")
+    print("Classic genes and orphans")
+    t, p = stats.ttest_ind(length_stat,length_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+    print("Classic genes and TRG")
+    t, p = stats.ttest_ind(length_stat,length_stat_trg,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+    print("TRG genes and orphans")
+    t, p = stats.ttest_ind(length_stat_trg,length_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+
+    plt.show()
+
+    plt.figure()
+    plt.hist(distance_stat,100, weights=np.ones(len(distance_stat)) / len(distance_stat))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(distance to nearest gene)")
+    plt.title("Distance to nearest gene for non de novo gene")
+    plt.suptitle("Nb gene = " + str(len(distance_stat)),fontsize=8)
+
+    plt.figure()
+    plt.hist(distance_stat_orf,100, weights=np.ones(len(distance_stat_orf)) / len(distance_stat_orf))
+    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    plt.xlabel("log10(distance to nearest gene)")
+    plt.title("Distance to nearest gene for orphan gene")
+    plt.suptitle("Nb gene = " + str(len(distance_stat_orf)),fontsize=8)
 
     plt.figure()
     plt.hist(distance_stat_trg,100, weights=np.ones(len(distance_stat_trg)) / len(distance_stat_trg))
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    plt.xlabel("log10(distance to upstream gene)")
-    plt.title("Distance to upstream gene for TRG gene")
+    plt.xlabel("log10(distance to nearest gene)")
+    plt.title("Distance to nearest gene for TRG gene")
     plt.suptitle("Nb gene = " + str(len(distance_stat_trg)),fontsize=8)
 
-    plt.figure()
-    plt.hist(identity_stat,100,weights=np.ones(len(identity_stat)) / len(identity_stat))
-    plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    plt.xlabel("Identity (%)")
-    plt.title("Identity between trg groups")
-    plt.suptitle("Nb trg group = " + str(len(identity_stat)),fontsize=8)
+
+
+    print("Distance to nearest gene")
+    print("Classic genes and orphans")
+    t, p = stats.ttest_ind(distance_stat,distance_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+    print("Classic genes and TRG")
+    t, p = stats.ttest_ind(distance_stat,distance_stat_trg,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+    print("TRG genes and orphans")
+    t, p = stats.ttest_ind(distance_stat_trg,distance_stat_orf,equal_var=False)
+    print("t = " + str(t))
+    print("p = " + str(p))
+
+    # plt.figure()
+    # plt.hist(identity_stat,100,weights=np.ones(len(identity_stat)) / len(identity_stat))
+    # plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
+    # plt.xlabel("Identity (%)")
+    # plt.title("Identity between trg groups")
+    # plt.suptitle("Nb trg group = " + str(len(identity_stat)),fontsize=8)
     plt.show()
